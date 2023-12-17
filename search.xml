@@ -1008,6 +1008,36 @@
       </tags>
   </entry>
   <entry>
+    <title>alist分享站合集</title>
+    <url>/blog/posts/99c9062b.html</url>
+    <content><![CDATA[<h4 id="alist简介"><a href="#alist简介" class="headerlink" title="alist简介"></a>alist简介</h4><p>alist资源站是一个支持多存储的文件列表程序，AList 支持多个存储提供商，包括本地存储、阿里云盘、夸克云盘、189云盘、OneDrive、Google Drive等，且易于拓展。支持文件在线预览，图片、视频、打包下载，简单的来说AList资源站是把个人网盘里的资源以网站模式公开分享。</p>
+<p><a href="https://pan.clun.top/">https://pan.clun.top/</a> 雨呢网盘 视频 动漫 写真<br><a href="https://alist.aqingyuan.repl.co">https://alist.aqingyuan.repl.co</a> 晴园<br><a href="https://al.chirmyram.com">https://al.chirmyram.com</a> 七米蓝<br><a href="https://alist.advanced360.top">https://alist.advanced360.top</a> Banana的资源站<br><a href="https://ruipan.bestruirui.repl.co">https://ruipan.bestruirui.repl.co</a> 小瑞<br><a href="https://pan.arley.cn">https://pan.arley.cn</a> Arley’s Drive<br><a href="https://apps.weixinqqq.com">https://apps.weixinqqq.com</a> 微资源<br>www.kugutsu.ml (NSFW) Puppet Studio<br><a href="https://zi0.cc/">https://zi0.cc/</a> 梓澪の妙妙屋 ASMR 游戏 番剧 插画<br><a href="https://ys.urlsdh.com/go/?url=aHR0cHM6Ly9pbWV4Y2xvdWQudG9wLw%3D%3D">https://imexcloud.top/</a> AList 经典电影中字<br><a href="http://alist.xiaoya.pro/">http://alist.xiaoya.pro/</a> 小雅的AList 大量影视 有点失效<br><a href="https://alist.ygxz.xyz/">https://alist.ygxz.xyz/</a> 小站的AList<br><a href="https://tczhongyi.toc.icu/">https://tczhongyi.toc.icu/</a> AList 影视剧合集 4K原盘<br><a href="https://asca0121.toc.icu/">https://asca0121.toc.icu/</a> 日负斗金 4K影视 动漫 剧集<br><a href="https://alist.ouo3.repl.co/">https://alist.ouo3.repl.co/</a> OUO 大佬们的站 其他的AList站<br><a href="https://dl.6r.pw:6080/">https://dl.6r.pw:6080/</a> AList网盘 电影 壁纸 视频<br><a href="https://alist.ucu520.top/">https://alist.ucu520.top/</a> 开心ucu-AList 漫画 学习 音乐<br><a href="http://81.68.240.111:1688/">http://81.68.240.111:1688/</a> AList看剧学习资源大全<br><a href="https://pan.hxft.xyz/">https://pan.hxft.xyz/</a> 软件 电影<br><a href="http://81.70.1.225:5244/">http://81.70.1.225:5244/</a> 看の电の视 动漫<br><a href="https://pan.arley.cn/">https://pan.arley.cn/</a> Arley’s Drive 图片 电影 游戏<br><a href="https://apps.weixinqqq.com/">https://apps.weixinqqq.com/</a> 资源站.随意盘 教程 正规小视频 音乐<br><a href="https://bdys.top/">https://bdys.top/</a> bdys 电影动漫韩剧日剧等媒体库资源，提供在线播放，个人资源低调观看<br><a href="https://pan.cqtjy.cn/">https://pan.cqtjy.cn/</a> 老谭alist 影视 4K在线观看 办公系统软件电子书资料等<br><a href="https://alist.azad.asia/">https://alist.azad.asia/</a> azad个人云盘 影视4k在线 电影美剧丰富、MV、学习教程等资源<br><a href="https://pan.110014.xyz/">https://pan.110014.xyz/</a> 电喵大战皮卡丘<br><a href="https://alist.prpr.run/">https://alist.prpr.run/</a> pr盘 动漫日番在线看，考研资料，高分电影、漫威等影视作品，独特得是看站长收集了许多国家的影视作品和外语。<br><a href="https://pan.ecve.cn/">https://pan.ecve.cn/</a> ECVE资源小站，全影视资源1-10个文件夹，10有最新的恶鬼看起来，阿里网盘线路4K高清播放，看电影资源多。<br><a href="http://shicheng.wang:555">http://shicheng.wang:555</a> 若水分享、学习资源、我的影视、软件分享，一个看影视片的alist资源站，新片很多。<br><a href="https://alist.ccome.site">https://alist.ccome.site</a> 动漫，影视 音乐、壁纸、AI绘画，杂货铺，仓库 Cosplay。<br><a href="https://www.asmrgay.com/">https://www.asmrgay.com/</a> asmr<br><a href="https://www.aliyundrive.com/s/AjPaykzLJnw">https://www.aliyundrive.com/s/AjPaykzLJnw</a></p>
+]]></content>
+      <categories>
+        <category>内容分享</category>
+        <category>资源</category>
+      </categories>
+      <tags>
+        <tag>alist</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>解决npm install安装太慢</title>
+    <url>/blog/posts/npminstall.html</url>
+    <content><![CDATA[<h2 id="设置-npm-registry"><a href="#设置-npm-registry" class="headerlink" title="设置 npm registry"></a>设置 npm registry</h2><ul>
+<li>本文方法为将npm registry更改为<strong>淘宝镜像</strong>，提升安装速度。</li>
+</ul>
+<h3 id="1-临时使用"><a href="#1-临时使用" class="headerlink" title="1.临时使用"></a>1.临时使用</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm --registry https://registry.npm.taobao.org install express</span><br></pre></td></tr></table></figure>
+<h3 id="2-持久使用"><a href="#2-持久使用" class="headerlink" title="2.持久使用"></a>2.持久使用</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> registry https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+<p>使用<strong>mac</strong>需要权限的话，前面需要加<strong>sudo</strong>，然后输入密码。<br>配置后可通过下面方式来验证是否成功：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm config get registry</span><br></pre></td></tr></table></figure>
+<p><img src="https://pic.imgdb.cn/item/6579c2efc458853aef76618c.webp" alt=""></p>
+<h3 id="3-通过cnpm使用"><a href="#3-通过cnpm使用" class="headerlink" title="3.通过cnpm使用"></a>3.通过cnpm使用</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g cnpm --registry=https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>npm</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Win11安装杜比全景声方法</title>
     <url>/blog/posts/3464e4f.html</url>
     <content><![CDATA[<h1 id="在-Windows-11-中安装杜比全景声"><a href="#在-Windows-11-中安装杜比全景声" class="headerlink" title="在 Windows 11 中安装杜比全景声"></a>在 Windows 11 中安装杜比全景声</h1><h4 id="一个人可以在剧院享受的氛围。-因此，在本指南中，您将学习-如何在-Windows-11-中免费启用或安装杜比全景声"><a href="#一个人可以在剧院享受的氛围。-因此，在本指南中，您将学习-如何在-Windows-11-中免费启用或安装杜比全景声" class="headerlink" title="一个人可以在剧院享受的氛围。 因此，在本指南中，您将学习 如何在 Windows 11 中免费启用或安装杜比全景声."></a>一个人可以在剧院享受的氛围。 因此，在本指南中，您将学习 <strong>如何在 Windows 11 中免费启用或安装杜比全景声</strong>.</h4><h4 id="同时，-杜比全景声-是目前可用的最具创新性的音响系统之一。-微软的-Xbox-One-和索尼的-PlayStation-4-都兼容出色的硬件，因此可以轻松地为游戏机使用经过杜比全景声-Dolby-Atmos-认证的音响系统。-不幸的是，对于-Windows-10-11-PC-来说，情况并非如此。"><a href="#同时，-杜比全景声-是目前可用的最具创新性的音响系统之一。-微软的-Xbox-One-和索尼的-PlayStation-4-都兼容出色的硬件，因此可以轻松地为游戏机使用经过杜比全景声-Dolby-Atmos-认证的音响系统。-不幸的是，对于-Windows-10-11-PC-来说，情况并非如此。" class="headerlink" title="同时， 杜比全景声 是目前可用的最具创新性的音响系统之一。 微软的 Xbox One 和索尼的 PlayStation 4 都兼容出色的硬件，因此可以轻松地为游戏机使用经过杜比全景声 (Dolby Atmos) 认证的音响系统。 不幸的是，对于 Windows 10/11 PC 来说，情况并非如此。"></a>同时， <strong>杜比全景声</strong> 是目前可用的最具创新性的音响系统之一。 微软的 Xbox One 和索尼的 PlayStation 4 都兼容出色的硬件，因此可以轻松地为游戏机使用经过杜比全景声 (Dolby Atmos) 认证的音响系统。 不幸的是，对于 Windows 10/11 PC 来说，情况并非如此。</h4><h2 id="杜比音频与杜比全景声：有什么区别？"><a href="#杜比音频与杜比全景声：有什么区别？" class="headerlink" title="杜比音频与杜比全景声：有什么区别？"></a>杜比音频与杜比全景声：有什么区别？</h2><p>杜比音频是一种 2D 音频技术，可以提高您正在观看的任何内容的音质，无论是体育赛事、流媒体电影，甚至是 DVD 或蓝光。</p>
@@ -1072,36 +1102,6 @@
       <tags>
         <tag>Windows</tag>
         <tag>杜比</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>alist分享站合集</title>
-    <url>/blog/posts/99c9062b.html</url>
-    <content><![CDATA[<h4 id="alist简介"><a href="#alist简介" class="headerlink" title="alist简介"></a>alist简介</h4><p>alist资源站是一个支持多存储的文件列表程序，AList 支持多个存储提供商，包括本地存储、阿里云盘、夸克云盘、189云盘、OneDrive、Google Drive等，且易于拓展。支持文件在线预览，图片、视频、打包下载，简单的来说AList资源站是把个人网盘里的资源以网站模式公开分享。</p>
-<p><a href="https://pan.clun.top/">https://pan.clun.top/</a> 雨呢网盘 视频 动漫 写真<br><a href="https://alist.aqingyuan.repl.co">https://alist.aqingyuan.repl.co</a> 晴园<br><a href="https://al.chirmyram.com">https://al.chirmyram.com</a> 七米蓝<br><a href="https://alist.advanced360.top">https://alist.advanced360.top</a> Banana的资源站<br><a href="https://ruipan.bestruirui.repl.co">https://ruipan.bestruirui.repl.co</a> 小瑞<br><a href="https://pan.arley.cn">https://pan.arley.cn</a> Arley’s Drive<br><a href="https://apps.weixinqqq.com">https://apps.weixinqqq.com</a> 微资源<br>www.kugutsu.ml (NSFW) Puppet Studio<br><a href="https://zi0.cc/">https://zi0.cc/</a> 梓澪の妙妙屋 ASMR 游戏 番剧 插画<br><a href="https://ys.urlsdh.com/go/?url=aHR0cHM6Ly9pbWV4Y2xvdWQudG9wLw%3D%3D">https://imexcloud.top/</a> AList 经典电影中字<br><a href="http://alist.xiaoya.pro/">http://alist.xiaoya.pro/</a> 小雅的AList 大量影视 有点失效<br><a href="https://alist.ygxz.xyz/">https://alist.ygxz.xyz/</a> 小站的AList<br><a href="https://tczhongyi.toc.icu/">https://tczhongyi.toc.icu/</a> AList 影视剧合集 4K原盘<br><a href="https://asca0121.toc.icu/">https://asca0121.toc.icu/</a> 日负斗金 4K影视 动漫 剧集<br><a href="https://alist.ouo3.repl.co/">https://alist.ouo3.repl.co/</a> OUO 大佬们的站 其他的AList站<br><a href="https://dl.6r.pw:6080/">https://dl.6r.pw:6080/</a> AList网盘 电影 壁纸 视频<br><a href="https://alist.ucu520.top/">https://alist.ucu520.top/</a> 开心ucu-AList 漫画 学习 音乐<br><a href="http://81.68.240.111:1688/">http://81.68.240.111:1688/</a> AList看剧学习资源大全<br><a href="https://pan.hxft.xyz/">https://pan.hxft.xyz/</a> 软件 电影<br><a href="http://81.70.1.225:5244/">http://81.70.1.225:5244/</a> 看の电の视 动漫<br><a href="https://pan.arley.cn/">https://pan.arley.cn/</a> Arley’s Drive 图片 电影 游戏<br><a href="https://apps.weixinqqq.com/">https://apps.weixinqqq.com/</a> 资源站.随意盘 教程 正规小视频 音乐<br><a href="https://bdys.top/">https://bdys.top/</a> bdys 电影动漫韩剧日剧等媒体库资源，提供在线播放，个人资源低调观看<br><a href="https://pan.cqtjy.cn/">https://pan.cqtjy.cn/</a> 老谭alist 影视 4K在线观看 办公系统软件电子书资料等<br><a href="https://alist.azad.asia/">https://alist.azad.asia/</a> azad个人云盘 影视4k在线 电影美剧丰富、MV、学习教程等资源<br><a href="https://pan.110014.xyz/">https://pan.110014.xyz/</a> 电喵大战皮卡丘<br><a href="https://alist.prpr.run/">https://alist.prpr.run/</a> pr盘 动漫日番在线看，考研资料，高分电影、漫威等影视作品，独特得是看站长收集了许多国家的影视作品和外语。<br><a href="https://pan.ecve.cn/">https://pan.ecve.cn/</a> ECVE资源小站，全影视资源1-10个文件夹，10有最新的恶鬼看起来，阿里网盘线路4K高清播放，看电影资源多。<br><a href="http://shicheng.wang:555">http://shicheng.wang:555</a> 若水分享、学习资源、我的影视、软件分享，一个看影视片的alist资源站，新片很多。<br><a href="https://alist.ccome.site">https://alist.ccome.site</a> 动漫，影视 音乐、壁纸、AI绘画，杂货铺，仓库 Cosplay。<br><a href="https://www.asmrgay.com/">https://www.asmrgay.com/</a> asmr<br><a href="https://www.aliyundrive.com/s/AjPaykzLJnw">https://www.aliyundrive.com/s/AjPaykzLJnw</a></p>
-]]></content>
-      <categories>
-        <category>内容分享</category>
-        <category>资源</category>
-      </categories>
-      <tags>
-        <tag>alist</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>解决npm install安装太慢</title>
-    <url>/blog/posts/npminstall.html</url>
-    <content><![CDATA[<h2 id="设置-npm-registry"><a href="#设置-npm-registry" class="headerlink" title="设置 npm registry"></a>设置 npm registry</h2><ul>
-<li>本文方法为将npm registry更改为<strong>淘宝镜像</strong>，提升安装速度。</li>
-</ul>
-<h3 id="1-临时使用"><a href="#1-临时使用" class="headerlink" title="1.临时使用"></a>1.临时使用</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm --registry https://registry.npm.taobao.org install express</span><br></pre></td></tr></table></figure>
-<h3 id="2-持久使用"><a href="#2-持久使用" class="headerlink" title="2.持久使用"></a>2.持久使用</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> registry https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
-<p>使用<strong>mac</strong>需要权限的话，前面需要加<strong>sudo</strong>，然后输入密码。<br>配置后可通过下面方式来验证是否成功：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm config get registry</span><br></pre></td></tr></table></figure>
-<p><img src="https://pic.imgdb.cn/item/6579c2efc458853aef76618c.webp" alt=""></p>
-<h3 id="3-通过cnpm使用"><a href="#3-通过cnpm使用" class="headerlink" title="3.通过cnpm使用"></a>3.通过cnpm使用</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g cnpm --registry=https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>]]></content>
-      <tags>
-        <tag>npm</tag>
       </tags>
   </entry>
   <entry>
@@ -1358,6 +1358,26 @@
       </tags>
   </entry>
   <entry>
+    <title>实用软件&amp;网站整理</title>
+    <url>/blog/posts/a5115977.html</url>
+    <content><![CDATA[<h2 id="软件分享"><a href="#软件分享" class="headerlink" title="软件分享"></a>软件分享</h2><p>注：以下大部分内容为免费或破解版本</p>
+<h3 id="Coodesker"><a href="#Coodesker" class="headerlink" title="Coodesker"></a>Coodesker</h3><p>Coodesker：自动分类整理桌面上的快捷方式、目录、图片等文件<br>以前为免费软件，虽然在github上，但是就挂了个仓库<br>现在已经开始收费了，但是我感觉老版本就够用<br><a class="btn-anzhiyu " href="regular::Coodesker最后一个免费版本::https://wwll.lanzout.com/iveV71c8woyh::fa-solid fa-play-circle" title=""></a><br><a class="btn-anzhiyu " href="regular::Coodesker20.0.7激活版本::https://wwll.lanzout.com/iEhYW1cbw46h::fa-solid fa-play-circle" title=""></a><br>激活版下载密码：bpwp</p>
+<h3 id="KMS激活工具"><a href="#KMS激活工具" class="headerlink" title="KMS激活工具"></a>KMS激活工具</h3><p>采用当前最先进的激活技术，几乎涵盖了Windows全版本同Office全版本的激活，支持最新的Win11系统、Win10全版本包括Win10 LTSC的数字权利激活，非常强大，是激活系统首选的一款激活工具。<br><a class="btn-anzhiyu " href="regular::前往下载::https://wwll.lanzout.com/iIXeE1c8wp8h::fa-solid fa-play-circle" title=""></a></p>
+<h3 id="PotPlayer视频播放器"><a href="#PotPlayer视频播放器" class="headerlink" title="PotPlayer视频播放器"></a>PotPlayer视频播放器</h3><p>PotPlayer继承了 KMPlayer 所有的优点，拥有异常强大的内置音视频解码器，可以支持几乎全部音乐、视频文件格式的播放。采用 VC++ 进行了全面重构，并且原生支持64位操作系统，使得 PotPlayer 在 Windows 10 等新系统上，无论性能、兼容性和稳定性上的表现均比 KMP 要好不少；硬件加速、流畅优秀的全高清视<br>频播放效果、强大的选项、滤镜、外挂式管理、DXVA等硬件解码；以及非常丰富且强大的设置选项，被誉为Win平台上最优秀的免费影音全能格式播放器。<br><a class="btn-anzhiyu " href="regular::前往下载::https://wwll.lanzout.com/i53vQ1c8wpgf::fa-solid fa-play-circle" title=""></a><br>密码:a2k0</p>
+<h3 id="Rainmeter雨滴"><a href="#Rainmeter雨滴" class="headerlink" title="Rainmeter雨滴"></a>Rainmeter雨滴</h3><p>雨滴皮肤（Rainmeter皮肤），是一些有特定功能的Windows桌面小工具。一些复杂的皮肤则看起来像是小型应用程序，风格相近的皮肤则可以组成一个套装或者主题。任何一个雨滴皮肤在不同电脑上工作都是不完全相同的，这取决于使用者对它的调整和修饰。<br><a class="btn-anzhiyu " href="regular::前往官网下载::https://www.rainmeter.net/::fa-solid fa-play-circle" title=""></a></p>
+<h3 id="几何画板-已破解"><a href="#几何画板-已破解" class="headerlink" title="几何画板(已破解)"></a>几何画板(已破解)</h3><p>几何画板为从三年级到大学的各个级别的学生提供了一种有形的，可视化的方<br>式来学习数学，从而提高他们的参与度、理解力和成就。<br>几何画板现已停售，这里准备了v5.0.6的破解版本<br><a class="btn-anzhiyu " href="regular::前往下载::https://wwll.lanzout.com/iLwf71c8wqyj::fa-solid fa-play-circle" title=""></a></p>
+<p><a href="https://gofile.cc/lre4/bandizip.exe">https://gofile.cc/lre4/bandizip.exe</a><br><a href="https://gofile.cc/jrY7/coodesker.zip">https://gofile.cc/jrY7/coodesker.zip</a><br><a href="https://gofile.cc/551a/kms.zip">https://gofile.cc/551a/kms.zip</a><br><a href="https://gofile.cc/QrEQ/firpe-v182.exe">https://gofile.cc/QrEQ/firpe-v182.exe</a><br><a href="https://gofile.cc/WW5E/idm.exe">https://gofile.cc/WW5E/idm.exe</a><br><a href="https://gofile.cc/K7Xk/potplayer.exe">https://gofile.cc/K7Xk/potplayer.exe</a><br><a href="https://gofile.cc/1kYp/rustdesk-64.exe">https://gofile.cc/1kYp/rustdesk-64.exe</a><br><a href="https://gofile.cc/zq40/ventoy-1095-windows.zip">https://gofile.cc/zq40/ventoy-1095-windows.zip</a><br><a href="https://gofile.cc/0L0l/.zip">https://gofile.cc/0L0l/.zip</a><br><a href="https://gofile.cc/DJyq/acrobat-pro-dc-pdf.iso">https://gofile.cc/DJyq/acrobat-pro-dc-pdf.iso</a></p>
+]]></content>
+      <categories>
+        <category>内容分享</category>
+        <category>软件</category>
+      </categories>
+      <tags>
+        <tag>软件</tag>
+        <tag>网站</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>建站过程</title>
     <url>/blog/posts/35aa5673.html</url>
     <content><![CDATA[<p>本文并非专业教程，请谨慎参考！</p>
@@ -1499,26 +1519,6 @@
       </tags>
   </entry>
   <entry>
-    <title>实用软件&amp;网站整理</title>
-    <url>/blog/posts/a5115977.html</url>
-    <content><![CDATA[<h2 id="软件分享"><a href="#软件分享" class="headerlink" title="软件分享"></a>软件分享</h2><p>注：以下大部分内容为免费或破解版本</p>
-<h3 id="Coodesker"><a href="#Coodesker" class="headerlink" title="Coodesker"></a>Coodesker</h3><p>Coodesker：自动分类整理桌面上的快捷方式、目录、图片等文件<br>以前为免费软件，虽然在github上，但是就挂了个仓库<br>现在已经开始收费了，但是我感觉老版本就够用<br><a class="btn-anzhiyu " href="regular::Coodesker最后一个免费版本::https://wwll.lanzout.com/iveV71c8woyh::fa-solid fa-play-circle" title=""></a><br><a class="btn-anzhiyu " href="regular::Coodesker20.0.7激活版本::https://wwll.lanzout.com/iEhYW1cbw46h::fa-solid fa-play-circle" title=""></a><br>激活版下载密码：bpwp</p>
-<h3 id="KMS激活工具"><a href="#KMS激活工具" class="headerlink" title="KMS激活工具"></a>KMS激活工具</h3><p>采用当前最先进的激活技术，几乎涵盖了Windows全版本同Office全版本的激活，支持最新的Win11系统、Win10全版本包括Win10 LTSC的数字权利激活，非常强大，是激活系统首选的一款激活工具。<br><a class="btn-anzhiyu " href="regular::前往下载::https://wwll.lanzout.com/iIXeE1c8wp8h::fa-solid fa-play-circle" title=""></a></p>
-<h3 id="PotPlayer视频播放器"><a href="#PotPlayer视频播放器" class="headerlink" title="PotPlayer视频播放器"></a>PotPlayer视频播放器</h3><p>PotPlayer继承了 KMPlayer 所有的优点，拥有异常强大的内置音视频解码器，可以支持几乎全部音乐、视频文件格式的播放。采用 VC++ 进行了全面重构，并且原生支持64位操作系统，使得 PotPlayer 在 Windows 10 等新系统上，无论性能、兼容性和稳定性上的表现均比 KMP 要好不少；硬件加速、流畅优秀的全高清视<br>频播放效果、强大的选项、滤镜、外挂式管理、DXVA等硬件解码；以及非常丰富且强大的设置选项，被誉为Win平台上最优秀的免费影音全能格式播放器。<br><a class="btn-anzhiyu " href="regular::前往下载::https://wwll.lanzout.com/i53vQ1c8wpgf::fa-solid fa-play-circle" title=""></a><br>密码:a2k0</p>
-<h3 id="Rainmeter雨滴"><a href="#Rainmeter雨滴" class="headerlink" title="Rainmeter雨滴"></a>Rainmeter雨滴</h3><p>雨滴皮肤（Rainmeter皮肤），是一些有特定功能的Windows桌面小工具。一些复杂的皮肤则看起来像是小型应用程序，风格相近的皮肤则可以组成一个套装或者主题。任何一个雨滴皮肤在不同电脑上工作都是不完全相同的，这取决于使用者对它的调整和修饰。<br><a class="btn-anzhiyu " href="regular::前往官网下载::https://www.rainmeter.net/::fa-solid fa-play-circle" title=""></a></p>
-<h3 id="几何画板-已破解"><a href="#几何画板-已破解" class="headerlink" title="几何画板(已破解)"></a>几何画板(已破解)</h3><p>几何画板为从三年级到大学的各个级别的学生提供了一种有形的，可视化的方<br>式来学习数学，从而提高他们的参与度、理解力和成就。<br>几何画板现已停售，这里准备了v5.0.6的破解版本<br><a class="btn-anzhiyu " href="regular::前往下载::https://wwll.lanzout.com/iLwf71c8wqyj::fa-solid fa-play-circle" title=""></a></p>
-<p><a href="https://gofile.cc/lre4/bandizip.exe">https://gofile.cc/lre4/bandizip.exe</a><br><a href="https://gofile.cc/jrY7/coodesker.zip">https://gofile.cc/jrY7/coodesker.zip</a><br><a href="https://gofile.cc/551a/kms.zip">https://gofile.cc/551a/kms.zip</a><br><a href="https://gofile.cc/QrEQ/firpe-v182.exe">https://gofile.cc/QrEQ/firpe-v182.exe</a><br><a href="https://gofile.cc/WW5E/idm.exe">https://gofile.cc/WW5E/idm.exe</a><br><a href="https://gofile.cc/K7Xk/potplayer.exe">https://gofile.cc/K7Xk/potplayer.exe</a><br><a href="https://gofile.cc/1kYp/rustdesk-64.exe">https://gofile.cc/1kYp/rustdesk-64.exe</a><br><a href="https://gofile.cc/zq40/ventoy-1095-windows.zip">https://gofile.cc/zq40/ventoy-1095-windows.zip</a><br><a href="https://gofile.cc/0L0l/.zip">https://gofile.cc/0L0l/.zip</a><br><a href="https://gofile.cc/DJyq/acrobat-pro-dc-pdf.iso">https://gofile.cc/DJyq/acrobat-pro-dc-pdf.iso</a></p>
-]]></content>
-      <categories>
-        <category>内容分享</category>
-        <category>软件</category>
-      </categories>
-      <tags>
-        <tag>软件</tag>
-        <tag>网站</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>徽州行</title>
     <url>/blog/posts/596431e6.html</url>
     <content><![CDATA[<h1 id="活动简介"><a href="#活动简介" class="headerlink" title="活动简介"></a>活动简介</h1><p>一、活动时间 : 2023 年 11 月 11-14 日 (4 天)<br>二、活动地点: 徽州黄山<br>三、活动内容:<br>11 月 11 日乘高铁到黄山北站研学徽州文化博物馆、黄山城市展览馆<br>11 月 12 日参观历史文化遗产影县—宏村、守拙园<br>11 月 13 日黄山“放飞理想”教育活动<br>11 月 14 日参观徽菜博物馆，参观屯溪老街，乘高铁回京</p>
@@ -1535,24 +1535,6 @@
       <tags>
         <tag>徽州</tag>
         <tag>研学</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>风铃投票制作教程</title>
-    <url>/blog/posts/Fengling.html</url>
-    <content><![CDATA[<p>此文章为风铃系统制作逻辑问卷的教程</p>
-<p>本次研学展示完活动成果后需要进行投票选出3个大家喜欢的小组，<br>由此制作了此问卷，因为3班也要用，就写个文章吧，微信一条条发也怪麻烦的（这个好像也挺麻烦）</p>
-<p>需求一：3个类型，分别最佳创意小组，最专业小组，最受欢迎小组<br>需求二：一个人可以每项推荐一组，3项都要选，但是不能都选同一组（原话）<br>需求三：每个人只能完成一次（可选）</p>
-<h1 id="一、系统选取"><a href="#一、系统选取" class="headerlink" title="一、系统选取"></a>一、系统选取</h1><p>本来想用问卷星制作的，但是找了半天没有找到符合<strong>需求2</strong>中<strong>不能复选</strong>的题目逻辑<br>于是便找了半天，找到了一个支持此逻辑的问卷平台：<strong>风铃系统</strong><br><a class="btn-anzhiyu " href="/blog/center%20large::%E7%82%B9%E5%87%BB%E5%89%8D%E5%BE%80%E9%A3%8E%E9%93%83%E7%B3%BB%E7%BB%9F::https:/www.powercx.com/::fa-solid%20fa-arrow-right" title=""></a><br>进入官网后，点击 <strong>登录/注册</strong> 登陆账号<br><img src="https://pic.imgdb.cn/item/656b12e5c458853aef83edf2.webp" alt=""><br>登陆完成后，点击<strong>我的问卷</strong><br><img src="https://pic.imgdb.cn/item/656b12e5c458853aef83eed5.webp" alt=""><br>进入界面后，点击<strong>创建项目</strong> -&gt; <strong>空白创建</strong><br><img src="https://pic.imgdb.cn/item/656bdb39c458853aef3cfc7d.webp" alt=""><br><img src="https://pic.imgdb.cn/item/656b12e5c458853aef83efc6.webp" alt=""><br>填写问卷信息，选择<strong>经典模式</strong>，问卷就创建完成了</p>
-<h1 id="二、问卷制作"><a href="#二、问卷制作" class="headerlink" title="二、问卷制作"></a>二、问卷制作</h1><h1 id="1-创建题目"><a href="#1-创建题目" class="headerlink" title="1.创建题目"></a>1.创建题目</h1><p>点击<strong>添加问题</strong>，选择<strong>单选</strong><br><img src="https://pic.imgdb.cn/item/656b184ac458853aef9db6e4.webp" alt=""><br>点击题目下方的<strong>批量编辑</strong>，导入选项（小组的名称及姓名）<br><img src="https://pic.imgdb.cn/item/656b184ac458853aef9db5e6.webp" alt=""></p>
-<h1 id="2-创建逻辑"><a href="#2-创建逻辑" class="headerlink" title="2.创建逻辑"></a>2.创建逻辑</h1><p>新建<strong>第二题</strong>，删除其自带的选项，并点击右侧底部的<strong>选项带入</strong><br><img src="https://pic.imgdb.cn/item/656b184ac458853aef9db4d3.webp" alt=""><br>按照如图所示填写逻辑<br><img src="https://pic.imgdb.cn/item/656b184ac458853aef9db43b.webp" alt=""><br>点击确定，第二题的选项就导入成功了，第三题也是按照同样的方法，导入<strong>第二题的<em>未选中项</em></strong> 即可</p>
-<h1 id="三、问卷发布设置（可选）"><a href="#三、问卷发布设置（可选）" class="headerlink" title="三、问卷发布设置（可选）"></a>三、问卷发布设置（可选）</h1><h2 id="设置作答限制"><a href="#设置作答限制" class="headerlink" title="设置作答限制"></a>设置作答限制</h2><p><strong>需求3</strong>我采用了控制IP和设备作答频次限制的形式，这种方法并不能绝对的保证每个人只能做一次，但是可以大大减小刷题的概率<br>点击上方<strong>设置</strong>，选择<strong>作答设置</strong>，勾选<strong>设备作答频次限制</strong>和<strong>IP作答频次限制</strong><br><img src="https://pic.imgdb.cn/item/656b1bfbc458853aefb00040.webp" alt=""></p>
-<h1 id="四、发布及查看统计信息"><a href="#四、发布及查看统计信息" class="headerlink" title="四、发布及查看统计信息"></a>四、发布及查看统计信息</h1><p>点击上方的<strong>发布</strong>，选择<strong>发布问卷</strong>，在<strong>设置</strong>里找到<strong>发布链接</strong>，即可分享作答了<br>统计信息点击<strong>报表</strong>即可显示<br><img src="https://pic.imgdb.cn/item/656b1bfbc458853aefb000d8.webp" alt=""><br>如果想要把作答数据由高到低进行显示，按照如下图所示步骤执行即可（懒得打字了）<br><img src="https://pic.imgdb.cn/item/656b1bfcc458853aefb001b9.webp" alt=""></p>
-]]></content>
-      <tags>
-        <tag>投票</tag>
-        <tag>风铃系统</tag>
-        <tag>教程</tag>
       </tags>
   </entry>
   <entry>
@@ -1578,6 +1560,24 @@
       <tags>
         <tag>Github</tag>
         <tag>Windows</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>风铃投票制作教程</title>
+    <url>/blog/posts/Fengling.html</url>
+    <content><![CDATA[<p>此文章为风铃系统制作逻辑问卷的教程</p>
+<p>本次研学展示完活动成果后需要进行投票选出3个大家喜欢的小组，<br>由此制作了此问卷，因为3班也要用，就写个文章吧，微信一条条发也怪麻烦的（这个好像也挺麻烦）</p>
+<p>需求一：3个类型，分别最佳创意小组，最专业小组，最受欢迎小组<br>需求二：一个人可以每项推荐一组，3项都要选，但是不能都选同一组（原话）<br>需求三：每个人只能完成一次（可选）</p>
+<h1 id="一、系统选取"><a href="#一、系统选取" class="headerlink" title="一、系统选取"></a>一、系统选取</h1><p>本来想用问卷星制作的，但是找了半天没有找到符合<strong>需求2</strong>中<strong>不能复选</strong>的题目逻辑<br>于是便找了半天，找到了一个支持此逻辑的问卷平台：<strong>风铃系统</strong><br><a class="btn-anzhiyu " href="/blog/center%20large::%E7%82%B9%E5%87%BB%E5%89%8D%E5%BE%80%E9%A3%8E%E9%93%83%E7%B3%BB%E7%BB%9F::https:/www.powercx.com/::fa-solid%20fa-arrow-right" title=""></a><br>进入官网后，点击 <strong>登录/注册</strong> 登陆账号<br><img src="https://pic.imgdb.cn/item/656b12e5c458853aef83edf2.webp" alt=""><br>登陆完成后，点击<strong>我的问卷</strong><br><img src="https://pic.imgdb.cn/item/656b12e5c458853aef83eed5.webp" alt=""><br>进入界面后，点击<strong>创建项目</strong> -&gt; <strong>空白创建</strong><br><img src="https://pic.imgdb.cn/item/656bdb39c458853aef3cfc7d.webp" alt=""><br><img src="https://pic.imgdb.cn/item/656b12e5c458853aef83efc6.webp" alt=""><br>填写问卷信息，选择<strong>经典模式</strong>，问卷就创建完成了</p>
+<h1 id="二、问卷制作"><a href="#二、问卷制作" class="headerlink" title="二、问卷制作"></a>二、问卷制作</h1><h1 id="1-创建题目"><a href="#1-创建题目" class="headerlink" title="1.创建题目"></a>1.创建题目</h1><p>点击<strong>添加问题</strong>，选择<strong>单选</strong><br><img src="https://pic.imgdb.cn/item/656b184ac458853aef9db6e4.webp" alt=""><br>点击题目下方的<strong>批量编辑</strong>，导入选项（小组的名称及姓名）<br><img src="https://pic.imgdb.cn/item/656b184ac458853aef9db5e6.webp" alt=""></p>
+<h1 id="2-创建逻辑"><a href="#2-创建逻辑" class="headerlink" title="2.创建逻辑"></a>2.创建逻辑</h1><p>新建<strong>第二题</strong>，删除其自带的选项，并点击右侧底部的<strong>选项带入</strong><br><img src="https://pic.imgdb.cn/item/656b184ac458853aef9db4d3.webp" alt=""><br>按照如图所示填写逻辑<br><img src="https://pic.imgdb.cn/item/656b184ac458853aef9db43b.webp" alt=""><br>点击确定，第二题的选项就导入成功了，第三题也是按照同样的方法，导入<strong>第二题的<em>未选中项</em></strong> 即可</p>
+<h1 id="三、问卷发布设置（可选）"><a href="#三、问卷发布设置（可选）" class="headerlink" title="三、问卷发布设置（可选）"></a>三、问卷发布设置（可选）</h1><h2 id="设置作答限制"><a href="#设置作答限制" class="headerlink" title="设置作答限制"></a>设置作答限制</h2><p><strong>需求3</strong>我采用了控制IP和设备作答频次限制的形式，这种方法并不能绝对的保证每个人只能做一次，但是可以大大减小刷题的概率<br>点击上方<strong>设置</strong>，选择<strong>作答设置</strong>，勾选<strong>设备作答频次限制</strong>和<strong>IP作答频次限制</strong><br><img src="https://pic.imgdb.cn/item/656b1bfbc458853aefb00040.webp" alt=""></p>
+<h1 id="四、发布及查看统计信息"><a href="#四、发布及查看统计信息" class="headerlink" title="四、发布及查看统计信息"></a>四、发布及查看统计信息</h1><p>点击上方的<strong>发布</strong>，选择<strong>发布问卷</strong>，在<strong>设置</strong>里找到<strong>发布链接</strong>，即可分享作答了<br>统计信息点击<strong>报表</strong>即可显示<br><img src="https://pic.imgdb.cn/item/656b1bfbc458853aefb000d8.webp" alt=""><br>如果想要把作答数据由高到低进行显示，按照如下图所示步骤执行即可（懒得打字了）<br><img src="https://pic.imgdb.cn/item/656b1bfcc458853aefb001b9.webp" alt=""></p>
+]]></content>
+      <tags>
+        <tag>投票</tag>
+        <tag>风铃系统</tag>
+        <tag>教程</tag>
       </tags>
   </entry>
 </search>
