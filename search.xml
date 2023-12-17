@@ -1,6 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hexo压缩资源插件</title>
+    <url>/blog/posts/minifier.html</url>
+    <content><![CDATA[<p>文章来自插件hexo-all-minifier<a href="https://www.npmjs.com/package/hexo-all-minifier">官方文档</a></p>
+<h2 id="安装">安装</h2>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">npm install hexo-all-minifier --save</span></span><br></pre></td></tr></table></figure>
+
+<p>对于Mac用户，也许您需要安装更多的东西</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">brew install libtool automake autoconf nasm</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="用法">用法</h2>
+<p>只需将这一行放在 hexo-site 的配置文件中即可启用此插件。</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">all_minifier:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<p>如果您需要进一步控制此插件，请参阅以下选项。</p>
+<h2 id="选项">选项</h2>
+<p>🌟🆕 <strong>！新增功能</strong></p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">js_concator:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">bundle_path:</span> <span class="string">'/js/bundle.js'</span></span><br><span class="line">  <span class="attr">front:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">silent:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>enable</strong> - 启用 Js concator。缺省值为
+.<code>false</code></li>
+<li><strong>bundle_path</strong> -
+捆绑脚本的输出路径。它将被设置为根目录的绝对路径。</li>
+<li><strong>front</strong> - 将捆绑脚本放在标记中所有脚本的前面。默认为
+，这意味着捆绑脚本将放在其他脚本的后面。<code>body``false</code></li>
+<li><strong>silent</strong> - 禁用日志记录优化信息。缺省值为
+.<code>false</code></li>
+</ul>
+<h3 id="concator-会将所有本地脚本连接成一个-bundle-脚本并将其附加到-html-标签的末尾-在未来的版本中将允许更多细节控制body"><a href="https://www.npmjs.com/package/hexo-all-minifier#the-concator-will-concat-all-local-scripts-into-one-bundle-script-and-attach-it-to-the-end-of-htmls-body-tagmore-detail-control-will-be-allowed-in-the-future-version"></a>concator
+会将所有本地脚本连接成一个 bundle 脚本，并将其附加到 html 标签的末尾。
+在未来的版本中将允许更多细节控制。<code>body</code></h3>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">html_minifier:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">ignore_error:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">silent:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">exclude:</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>enable</strong> - 启用 HTML 压缩器。缺省值为
+.<code>true</code></li>
+<li><strong>ignore_error</strong> - 忽略解析html时发生的错误。</li>
+<li><strong>silent</strong> - 禁用日志记录优化信息。缺省值为
+.<code>false</code></li>
+<li><strong>exclude</strong> - 排除文件。Glob 是支持。</li>
+</ul>
+<hr>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">css_minifier:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">silent:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">exclude:</span> </span><br><span class="line">    <span class="bullet">-</span> <span class="string">'*.min.css'</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>enable</strong> - 启用 CSS 压缩器。缺省值为
+.<code>true</code></li>
+<li><strong>silent</strong> - 禁用日志记录优化信息。缺省值为
+.<code>false</code></li>
+<li><strong>exclude</strong> - 排除文件。Glob 是支持。</li>
+</ul>
+<hr>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">js_minifier:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">mangle:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">silent:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">output:</span></span><br><span class="line">  <span class="attr">compress:</span></span><br><span class="line">  <span class="attr">exclude:</span> </span><br><span class="line">    <span class="bullet">-</span> <span class="string">'*.min.js'</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>enable</strong> - 启用 JS 压缩器。缺省值为
+.<code>true</code></li>
+<li><strong>mangle</strong>：Mangle 文件名</li>
+<li><strong>output</strong>：输出选项。如果它是空的，请将其从 .yml
+文件中删除！否则，它将设置为 ，这与
+不同。<code>null``undefined</code></li>
+<li><strong>compress</strong>：压缩选项。如果它是空的，请将其从 .yml
+文件中删除！否则，它将设置为 ，这与
+不同。<code>null``undefined</code></li>
+<li><strong>silent</strong> - 禁用日志记录优化信息。缺省值为
+.<code>false</code></li>
+<li><strong>exclude</strong>：排除文件。Glob 是支持。</li>
+</ul>
+<hr>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">image_minifier:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">interlaced:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">multipass:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">optimizationLevel:</span> <span class="number">2</span></span><br><span class="line">  <span class="attr">pngquant:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">progressive:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">silent:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>enable</strong> - 启用图像缩小器。缺省值为
+.<code>true</code></li>
+<li><strong>interlaced</strong> - 用于渐进式渲染的隔行扫描 gif.缺省值为
+.<code>false</code></li>
+<li><strong>multipass</strong> - 多次优化 svg，直到完全优化。缺省值为
+.<code>false</code></li>
+<li><strong>optimizationLevel</strong> - 选择介于 0 和 7
+之间的优化级别。缺省值为 .<code>2</code></li>
+<li><strong>pngquant</strong> - 启用 <a href="https://github.com/imagemin/imagemin-pngquant">imagemin-pngquant</a> 插件。缺省值为
+.<code>false</code></li>
+<li><strong>progressive</strong> - 无损转换为渐进式。缺省值为
+.<code>false</code></li>
+<li><strong>silent</strong> - 禁用日志记录优化信息。缺省值为
+.<code>false</code></li>
+<li><strong>exclude</strong> - 排除特定类型的图像文件，输入值可以是 ,, ,
+或 。默认值为 null。不支持 Glob。<code>gif``jpg``png``svg</code></li>
+</ul>
+]]></content>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>插件</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Github文件上传(Git)</title>
     <url>/blog/posts/e732d5f6.html</url>
     <content><![CDATA[<h2 id="1创建-github-代码仓库">1.创建 GitHub 代码仓库</h2>
@@ -125,102 +221,6 @@ Variables</a> 中添加了 <code>all_posts</code> 和 <code>hidden_posts</co
       </categories>
       <tags>
         <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo压缩资源插件</title>
-    <url>/blog/posts/minifier.html</url>
-    <content><![CDATA[<p>文章来自插件hexo-all-minifier<a href="https://www.npmjs.com/package/hexo-all-minifier">官方文档</a></p>
-<h2 id="安装">安装</h2>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">npm install hexo-all-minifier --save</span></span><br></pre></td></tr></table></figure>
-
-<p>对于Mac用户，也许您需要安装更多的东西</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">brew install libtool automake autoconf nasm</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="用法">用法</h2>
-<p>只需将这一行放在 hexo-site 的配置文件中即可启用此插件。</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">all_minifier:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-
-<p>如果您需要进一步控制此插件，请参阅以下选项。</p>
-<h2 id="选项">选项</h2>
-<p>🌟🆕 <strong>！新增功能</strong></p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">js_concator:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">bundle_path:</span> <span class="string">'/js/bundle.js'</span></span><br><span class="line">  <span class="attr">front:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">silent:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><strong>enable</strong> - 启用 Js concator。缺省值为
-.<code>false</code></li>
-<li><strong>bundle_path</strong> -
-捆绑脚本的输出路径。它将被设置为根目录的绝对路径。</li>
-<li><strong>front</strong> - 将捆绑脚本放在标记中所有脚本的前面。默认为
-，这意味着捆绑脚本将放在其他脚本的后面。<code>body``false</code></li>
-<li><strong>silent</strong> - 禁用日志记录优化信息。缺省值为
-.<code>false</code></li>
-</ul>
-<h3 id="concator-会将所有本地脚本连接成一个-bundle-脚本并将其附加到-html-标签的末尾-在未来的版本中将允许更多细节控制body"><a href="https://www.npmjs.com/package/hexo-all-minifier#the-concator-will-concat-all-local-scripts-into-one-bundle-script-and-attach-it-to-the-end-of-htmls-body-tagmore-detail-control-will-be-allowed-in-the-future-version"></a>concator
-会将所有本地脚本连接成一个 bundle 脚本，并将其附加到 html 标签的末尾。
-在未来的版本中将允许更多细节控制。<code>body</code></h3>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">html_minifier:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">ignore_error:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">silent:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">exclude:</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><strong>enable</strong> - 启用 HTML 压缩器。缺省值为
-.<code>true</code></li>
-<li><strong>ignore_error</strong> - 忽略解析html时发生的错误。</li>
-<li><strong>silent</strong> - 禁用日志记录优化信息。缺省值为
-.<code>false</code></li>
-<li><strong>exclude</strong> - 排除文件。Glob 是支持。</li>
-</ul>
-<hr>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">css_minifier:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">silent:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">exclude:</span> </span><br><span class="line">    <span class="bullet">-</span> <span class="string">'*.min.css'</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><strong>enable</strong> - 启用 CSS 压缩器。缺省值为
-.<code>true</code></li>
-<li><strong>silent</strong> - 禁用日志记录优化信息。缺省值为
-.<code>false</code></li>
-<li><strong>exclude</strong> - 排除文件。Glob 是支持。</li>
-</ul>
-<hr>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">js_minifier:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">mangle:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">silent:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">output:</span></span><br><span class="line">  <span class="attr">compress:</span></span><br><span class="line">  <span class="attr">exclude:</span> </span><br><span class="line">    <span class="bullet">-</span> <span class="string">'*.min.js'</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><strong>enable</strong> - 启用 JS 压缩器。缺省值为
-.<code>true</code></li>
-<li><strong>mangle</strong>：Mangle 文件名</li>
-<li><strong>output</strong>：输出选项。如果它是空的，请将其从 .yml
-文件中删除！否则，它将设置为 ，这与
-不同。<code>null``undefined</code></li>
-<li><strong>compress</strong>：压缩选项。如果它是空的，请将其从 .yml
-文件中删除！否则，它将设置为 ，这与
-不同。<code>null``undefined</code></li>
-<li><strong>silent</strong> - 禁用日志记录优化信息。缺省值为
-.<code>false</code></li>
-<li><strong>exclude</strong>：排除文件。Glob 是支持。</li>
-</ul>
-<hr>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">image_minifier:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">interlaced:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">multipass:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">optimizationLevel:</span> <span class="number">2</span></span><br><span class="line">  <span class="attr">pngquant:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">progressive:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">silent:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><strong>enable</strong> - 启用图像缩小器。缺省值为
-.<code>true</code></li>
-<li><strong>interlaced</strong> - 用于渐进式渲染的隔行扫描 gif.缺省值为
-.<code>false</code></li>
-<li><strong>multipass</strong> - 多次优化 svg，直到完全优化。缺省值为
-.<code>false</code></li>
-<li><strong>optimizationLevel</strong> - 选择介于 0 和 7
-之间的优化级别。缺省值为 .<code>2</code></li>
-<li><strong>pngquant</strong> - 启用 <a href="https://github.com/imagemin/imagemin-pngquant">imagemin-pngquant</a> 插件。缺省值为
-.<code>false</code></li>
-<li><strong>progressive</strong> - 无损转换为渐进式。缺省值为
-.<code>false</code></li>
-<li><strong>silent</strong> - 禁用日志记录优化信息。缺省值为
-.<code>false</code></li>
-<li><strong>exclude</strong> - 排除特定类型的图像文件，输入值可以是 ,, ,
-或 。默认值为 null。不支持 Glob。<code>gif``jpg``png``svg</code></li>
-</ul>
-]]></content>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>插件</tag>
       </tags>
   </entry>
   <entry>
@@ -1343,53 +1343,6 @@ how to learn anything</h2>
       </tags>
   </entry>
   <entry>
-    <title>alist分享站合集</title>
-    <url>/blog/posts/99c9062b.html</url>
-    <content><![CDATA[<h4 id="alist简介">alist简介</h4>
-<p>alist资源站是一个支持多存储的文件列表程序，AList
-支持多个存储提供商，包括本地存储、阿里云盘、夸克云盘、189云盘、OneDrive、Google
-Drive等，且易于拓展。支持文件在线预览，图片、视频、打包下载，简单的来说AList资源站是把个人网盘里的资源以网站模式公开分享。</p>
-<p>https://pan.clun.top/ 雨呢网盘 视频 动漫 写真
-https://alist.aqingyuan.repl.co 晴园 https://al.chirmyram.com 七米蓝
-https://alist.advanced360.top Banana的资源站
-https://ruipan.bestruirui.repl.co 小瑞 https://pan.arley.cn Arley’s
-Drive https://apps.weixinqqq.com 微资源 www.kugutsu.ml (NSFW) Puppet
-Studio https://zi0.cc/ 梓澪の妙妙屋 ASMR 游戏 番剧 插画 <a href="https://ys.urlsdh.com/go/?url=aHR0cHM6Ly9pbWV4Y2xvdWQudG9wLw%3D%3D">https://imexcloud.top/</a>
-AList 经典电影中字 http://alist.xiaoya.pro/ 小雅的AList 大量影视
-有点失效 https://alist.ygxz.xyz/ 小站的AList
-https://tczhongyi.toc.icu/ AList 影视剧合集 4K原盘
-https://asca0121.toc.icu/ 日负斗金 4K影视 动漫 剧集
-https://alist.ouo3.repl.co/ OUO 大佬们的站 其他的AList站
-https://dl.6r.pw:6080/ AList网盘 电影 壁纸 视频
-https://alist.ucu520.top/ 开心ucu-AList 漫画 学习 音乐
-http://81.68.240.111:1688/ AList看剧学习资源大全
-https://pan.hxft.xyz/ 软件 电影 http://81.70.1.225:5244/ 看の电の视 动漫
-https://pan.arley.cn/ Arley’s Drive 图片 电影 游戏
-https://apps.weixinqqq.com/ 资源站.随意盘 教程 正规小视频 音乐
-https://bdys.top/ bdys
-电影动漫韩剧日剧等媒体库资源，提供在线播放，个人资源低调观看
-https://pan.cqtjy.cn/ 老谭alist 影视 4K在线观看 办公系统软件电子书资料等
-https://alist.azad.asia/ azad个人云盘 影视4k在线
-电影美剧丰富、MV、学习教程等资源 https://pan.110014.xyz/ 电喵大战皮卡丘
-https://alist.prpr.run/ pr盘
-动漫日番在线看，考研资料，高分电影、漫威等影视作品，独特得是看站长收集了许多国家的影视作品和外语。
-https://pan.ecve.cn/
-ECVE资源小站，全影视资源1-10个文件夹，10有最新的恶鬼看起来，阿里网盘线路4K高清播放，看电影资源多。
-http://shicheng.wang:555
-若水分享、学习资源、我的影视、软件分享，一个看影视片的alist资源站，新片很多。
-https://alist.ccome.site 动漫，影视 音乐、壁纸、AI绘画，杂货铺，仓库
-Cosplay。 https://www.asmrgay.com/ asmr
-https://www.aliyundrive.com/s/AjPaykzLJnw</p>
-]]></content>
-      <categories>
-        <category>内容分享</category>
-        <category>资源</category>
-      </categories>
-      <tags>
-        <tag>alist</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Win11安装杜比全景声方法</title>
     <url>/blog/posts/3464e4f.html</url>
     <content><![CDATA[<h1 id="在-windows-11-中安装杜比全景声">在 Windows 11
@@ -1483,6 +1436,53 @@ DVD 或蓝光。</p>
       <tags>
         <tag>Windows</tag>
         <tag>杜比</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>alist分享站合集</title>
+    <url>/blog/posts/99c9062b.html</url>
+    <content><![CDATA[<h4 id="alist简介">alist简介</h4>
+<p>alist资源站是一个支持多存储的文件列表程序，AList
+支持多个存储提供商，包括本地存储、阿里云盘、夸克云盘、189云盘、OneDrive、Google
+Drive等，且易于拓展。支持文件在线预览，图片、视频、打包下载，简单的来说AList资源站是把个人网盘里的资源以网站模式公开分享。</p>
+<p>https://pan.clun.top/ 雨呢网盘 视频 动漫 写真
+https://alist.aqingyuan.repl.co 晴园 https://al.chirmyram.com 七米蓝
+https://alist.advanced360.top Banana的资源站
+https://ruipan.bestruirui.repl.co 小瑞 https://pan.arley.cn Arley’s
+Drive https://apps.weixinqqq.com 微资源 www.kugutsu.ml (NSFW) Puppet
+Studio https://zi0.cc/ 梓澪の妙妙屋 ASMR 游戏 番剧 插画 <a href="https://ys.urlsdh.com/go/?url=aHR0cHM6Ly9pbWV4Y2xvdWQudG9wLw%3D%3D">https://imexcloud.top/</a>
+AList 经典电影中字 http://alist.xiaoya.pro/ 小雅的AList 大量影视
+有点失效 https://alist.ygxz.xyz/ 小站的AList
+https://tczhongyi.toc.icu/ AList 影视剧合集 4K原盘
+https://asca0121.toc.icu/ 日负斗金 4K影视 动漫 剧集
+https://alist.ouo3.repl.co/ OUO 大佬们的站 其他的AList站
+https://dl.6r.pw:6080/ AList网盘 电影 壁纸 视频
+https://alist.ucu520.top/ 开心ucu-AList 漫画 学习 音乐
+http://81.68.240.111:1688/ AList看剧学习资源大全
+https://pan.hxft.xyz/ 软件 电影 http://81.70.1.225:5244/ 看の电の视 动漫
+https://pan.arley.cn/ Arley’s Drive 图片 电影 游戏
+https://apps.weixinqqq.com/ 资源站.随意盘 教程 正规小视频 音乐
+https://bdys.top/ bdys
+电影动漫韩剧日剧等媒体库资源，提供在线播放，个人资源低调观看
+https://pan.cqtjy.cn/ 老谭alist 影视 4K在线观看 办公系统软件电子书资料等
+https://alist.azad.asia/ azad个人云盘 影视4k在线
+电影美剧丰富、MV、学习教程等资源 https://pan.110014.xyz/ 电喵大战皮卡丘
+https://alist.prpr.run/ pr盘
+动漫日番在线看，考研资料，高分电影、漫威等影视作品，独特得是看站长收集了许多国家的影视作品和外语。
+https://pan.ecve.cn/
+ECVE资源小站，全影视资源1-10个文件夹，10有最新的恶鬼看起来，阿里网盘线路4K高清播放，看电影资源多。
+http://shicheng.wang:555
+若水分享、学习资源、我的影视、软件分享，一个看影视片的alist资源站，新片很多。
+https://alist.ccome.site 动漫，影视 音乐、壁纸、AI绘画，杂货铺，仓库
+Cosplay。 https://www.asmrgay.com/ asmr
+https://www.aliyundrive.com/s/AjPaykzLJnw</p>
+]]></content>
+      <categories>
+        <category>内容分享</category>
+        <category>资源</category>
+      </categories>
+      <tags>
+        <tag>alist</tag>
       </tags>
   </entry>
   <entry>
@@ -1777,72 +1777,6 @@ https://gofile.cc/DJyq/acrobat-pro-dc-pdf.iso</p>
       </tags>
   </entry>
   <entry>
-    <title>解决Github的访问问题</title>
-    <url>/blog/posts/714d1047.html</url>
-    <content><![CDATA[<p>Github是一个基于Git版本控制系统的代码托管平台。</p>
-<p>Github上有着很多开源的免费的软件及资料，但是因为网络问腿，导致Github的访问速度极其的慢，甚至有的时候上不去
-下面，我给出了几个方法，能够解决这个问题</p>
-<h2 id="1watt-toolkit">1.Watt Toolkit</h2>
-<p>「Watt Toolkit」原名Steam++，是一个开源跨平台的多功能 Steam 工具箱。
-<img src="https://s2.loli.net/2023/10/22/oWHj9GgrPe7NVyC.webp"></p>
-<a class="btn-anzhiyu " href="/blog/center%20large::%E5%89%8D%E5%BE%80Watt%20Toolkit%E5%AE%98%E7%BD%91%E4%B8%8B%E8%BD%BD::https:/steampp.net/::fa-solid%20fa-download" title=""></a>
-
-<p>进入软件界面后，点击左侧的网络加速选项卡，勾选Github，点击右上角的“一键加速“
-<img src="https://s2.loli.net/2023/10/22/MsDri4PQEy5lFLc.webp"></p>
-<h2 id="2更改hosts文件">2.更改hosts文件</h2>
-<p>通过修改本地 hosts 文件，试图解决：</p>
-<p>GitHub 访问速度慢的问题 GitHub 项目中的图片显示不出的问题</p>
-<h3 id="1下载hosts管理工具switchhosts">1.下载hosts管理工具<strong>SwitchHosts</strong></h3>
-<p><img src="https://s2.loli.net/2023/10/22/LXJjSyzU4cZdrTC.webp"></p>
-<a class="btn-anzhiyu " href="/blog/center%20large::SwitchHosts%E7%9A%84Github%E4%B8%BB%E9%A1%B5::https:/github.com/oldj/SwitchHosts/tree/v4.1.2::fa-solid%20fa-arrow-right" title=""></a>
-
-<p>当然，如果上不去Github的话，可以通过下面蓝奏云链接下载最新版本（目前截至v4.1.2）</p>
-<a class="btn-anzhiyu " href="regular::前往蓝奏云分享链接::https://wwll.lanzout.com/b04es5obc::fa-solid fa-download" title=""></a>密码:7s3t
-
-<h3 id="2安装配置">2.安装配置</h3>
-<p>安装完成后，我们打开软件，就可以看到如下界面: <img src="https://s2.loli.net/2023/10/22/6n7ipcA5CUdfBLt.webp">
-我们点击左侧的加号，进入配置界面 Hosts类型：远程 Hosts标题：随意
-URL：https://raw.hellogithub.com/hosts</p>
-<div class="note warning flat"><p>请将此链接粘贴到选项框中</p>
-</div>
-
-<p>自动刷新：建议选择1小时 <img src="https://s2.loli.net/2023/10/22/CMzHoDT3PhpFQ5i.webp">
-填写完成后，点击确定，就配置完成了</p>
-<h3 id="3问题解决">3.问题解决</h3>
-<p>点击左侧名称后的按钮，如果你显示的如下界面（提示操作成功） <img src="https://s2.loli.net/2023/10/22/V5aJKjuG9QTLfcA.webp">
-那么恭喜你，你的配置完成了 如果是下面这种： <img src="https://s2.loli.net/2023/10/22/qrQyT4w5Ks3j7uB.webp">
-请继续往下设置</p>
-<h4 id="31-找到hosts文件">3.1 找到hosts文件</h4>
-<p>Hosts文件一般都在电脑的“C:\Windows\System32\drivers\etc“文件夹下，我们打开这个文件夹，找到hosts文件
-<img src="https://s2.loli.net/2023/10/22/cmrDo9vPJsafNiw.webp"></p>
-<h4 id="32-修改hosts文件权限">3.2 修改hosts文件权限</h4>
-<p>右键hosts文件，选择<strong>属性</strong>， <img src="https://s2.loli.net/2023/10/22/b6qCFxJQwd5Ep9B.webp">
-选择<strong>编辑</strong> <img src="https://s2.loli.net/2023/10/22/Ac3lXS9YWut7wmV.webp">
-将<strong>组成用户名</strong>中第一个和最后一个选项（Users）的<strong>修改</strong>和<strong>写入</strong>勾选
-<img src="https://s2.loli.net/2023/10/22/v5fbjVmGrAEkX6M.webp"></p>
-<h4 id="33-验证修改">3.3 验证修改</h4>
-<p>点击确定，返回<strong>SwitchHosts</strong>界面，若显示如下界面，那么就修改成功了
-<img src="https://s2.loli.net/2023/10/22/V5aJKjuG9QTLfcA.webp"></p>
-<h4 id="34-清除dns缓存">3.4 清除DNS缓存</h4>
-<p>若发现以上设置都没有问题了，但是仍然访问不了Github，那么可以试试清除电脑的DNS缓存
-这里以Win11举例：
-鼠标右键点击“开始菜单”或者按“Win+X”弹出窗口，找到“Windows
-终端(管理员)”。如下图： <img src="https://s2.loli.net/2023/10/22/4eamPvjlhMqI6rn.webp">
-在命令窗口输入:</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ipconfig /flushdns</span><br></pre></td></tr></table></figure>
-
-<p>按**Enter（回车键）**运行，看到已成功刷新DNS解析缓存的提示就说明DNS刷新成功了。（注：命令中间空格不可少）如下图：
-<img src="https://s2.loli.net/2023/10/22/Go41KbrZTingAzt.webp"></p>
-]]></content>
-      <categories>
-        <category>教程</category>
-      </categories>
-      <tags>
-        <tag>Github</tag>
-        <tag>Windows</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>建站过程</title>
     <url>/blog/posts/35aa5673.html</url>
     <content><![CDATA[<p>本文并非专业教程，请谨慎参考！</p>
@@ -2081,8 +2015,8 @@ xxx.github.io（xxx 是你 GitHub
         <category>记录</category>
       </categories>
       <tags>
-        <tag>Github</tag>
         <tag>Hexo</tag>
+        <tag>Github</tag>
         <tag>博客</tag>
       </tags>
   </entry>
@@ -2224,6 +2158,72 @@ xxx.github.io（xxx 是你 GitHub
         <tag>投票</tag>
         <tag>风铃系统</tag>
         <tag>教程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>解决Github的访问问题</title>
+    <url>/blog/posts/714d1047.html</url>
+    <content><![CDATA[<p>Github是一个基于Git版本控制系统的代码托管平台。</p>
+<p>Github上有着很多开源的免费的软件及资料，但是因为网络问腿，导致Github的访问速度极其的慢，甚至有的时候上不去
+下面，我给出了几个方法，能够解决这个问题</p>
+<h2 id="1watt-toolkit">1.Watt Toolkit</h2>
+<p>「Watt Toolkit」原名Steam++，是一个开源跨平台的多功能 Steam 工具箱。
+<img src="https://s2.loli.net/2023/10/22/oWHj9GgrPe7NVyC.webp"></p>
+<a class="btn-anzhiyu " href="/blog/center%20large::%E5%89%8D%E5%BE%80Watt%20Toolkit%E5%AE%98%E7%BD%91%E4%B8%8B%E8%BD%BD::https:/steampp.net/::fa-solid%20fa-download" title=""></a>
+
+<p>进入软件界面后，点击左侧的网络加速选项卡，勾选Github，点击右上角的“一键加速“
+<img src="https://s2.loli.net/2023/10/22/MsDri4PQEy5lFLc.webp"></p>
+<h2 id="2更改hosts文件">2.更改hosts文件</h2>
+<p>通过修改本地 hosts 文件，试图解决：</p>
+<p>GitHub 访问速度慢的问题 GitHub 项目中的图片显示不出的问题</p>
+<h3 id="1下载hosts管理工具switchhosts">1.下载hosts管理工具<strong>SwitchHosts</strong></h3>
+<p><img src="https://s2.loli.net/2023/10/22/LXJjSyzU4cZdrTC.webp"></p>
+<a class="btn-anzhiyu " href="/blog/center%20large::SwitchHosts%E7%9A%84Github%E4%B8%BB%E9%A1%B5::https:/github.com/oldj/SwitchHosts/tree/v4.1.2::fa-solid%20fa-arrow-right" title=""></a>
+
+<p>当然，如果上不去Github的话，可以通过下面蓝奏云链接下载最新版本（目前截至v4.1.2）</p>
+<a class="btn-anzhiyu " href="regular::前往蓝奏云分享链接::https://wwll.lanzout.com/b04es5obc::fa-solid fa-download" title=""></a>密码:7s3t
+
+<h3 id="2安装配置">2.安装配置</h3>
+<p>安装完成后，我们打开软件，就可以看到如下界面: <img src="https://s2.loli.net/2023/10/22/6n7ipcA5CUdfBLt.webp">
+我们点击左侧的加号，进入配置界面 Hosts类型：远程 Hosts标题：随意
+URL：https://raw.hellogithub.com/hosts</p>
+<div class="note warning flat"><p>请将此链接粘贴到选项框中</p>
+</div>
+
+<p>自动刷新：建议选择1小时 <img src="https://s2.loli.net/2023/10/22/CMzHoDT3PhpFQ5i.webp">
+填写完成后，点击确定，就配置完成了</p>
+<h3 id="3问题解决">3.问题解决</h3>
+<p>点击左侧名称后的按钮，如果你显示的如下界面（提示操作成功） <img src="https://s2.loli.net/2023/10/22/V5aJKjuG9QTLfcA.webp">
+那么恭喜你，你的配置完成了 如果是下面这种： <img src="https://s2.loli.net/2023/10/22/qrQyT4w5Ks3j7uB.webp">
+请继续往下设置</p>
+<h4 id="31-找到hosts文件">3.1 找到hosts文件</h4>
+<p>Hosts文件一般都在电脑的“C:\Windows\System32\drivers\etc“文件夹下，我们打开这个文件夹，找到hosts文件
+<img src="https://s2.loli.net/2023/10/22/cmrDo9vPJsafNiw.webp"></p>
+<h4 id="32-修改hosts文件权限">3.2 修改hosts文件权限</h4>
+<p>右键hosts文件，选择<strong>属性</strong>， <img src="https://s2.loli.net/2023/10/22/b6qCFxJQwd5Ep9B.webp">
+选择<strong>编辑</strong> <img src="https://s2.loli.net/2023/10/22/Ac3lXS9YWut7wmV.webp">
+将<strong>组成用户名</strong>中第一个和最后一个选项（Users）的<strong>修改</strong>和<strong>写入</strong>勾选
+<img src="https://s2.loli.net/2023/10/22/v5fbjVmGrAEkX6M.webp"></p>
+<h4 id="33-验证修改">3.3 验证修改</h4>
+<p>点击确定，返回<strong>SwitchHosts</strong>界面，若显示如下界面，那么就修改成功了
+<img src="https://s2.loli.net/2023/10/22/V5aJKjuG9QTLfcA.webp"></p>
+<h4 id="34-清除dns缓存">3.4 清除DNS缓存</h4>
+<p>若发现以上设置都没有问题了，但是仍然访问不了Github，那么可以试试清除电脑的DNS缓存
+这里以Win11举例：
+鼠标右键点击“开始菜单”或者按“Win+X”弹出窗口，找到“Windows
+终端(管理员)”。如下图： <img src="https://s2.loli.net/2023/10/22/4eamPvjlhMqI6rn.webp">
+在命令窗口输入:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ipconfig /flushdns</span><br></pre></td></tr></table></figure>
+
+<p>按**Enter（回车键）**运行，看到已成功刷新DNS解析缓存的提示就说明DNS刷新成功了。（注：命令中间空格不可少）如下图：
+<img src="https://s2.loli.net/2023/10/22/Go41KbrZTingAzt.webp"></p>
+]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>Github</tag>
+        <tag>Windows</tag>
       </tags>
   </entry>
 </search>
