@@ -224,206 +224,6 @@ Variables</a> 中添加了 <code>all_posts</code> 和 <code>hidden_posts</co
       </tags>
   </entry>
   <entry>
-    <title>Hexo常用指令集</title>
-    <url>/blog/posts/869eb1f7.html</url>
-    <content><![CDATA[<a class="btn-anzhiyu " href="/blog/center%20large::%E5%89%8D%E5%BE%80HEXO%E5%AE%98%E6%96%B9%E6%8C%87%E4%BB%A4%E6%95%99%E7%A8%8B::https:/hexo.io/zh-cn/docs/commands.html::fa-solid%20fa-play-circle" title=""></a>
-
-<h2 id="指令部分">指令部分</h2>
-<h3 id="创建">创建</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo init [folder]</span><br></pre></td></tr></table></figure>
-
-<p>新建一个网站。如果没有设置 folder ，Hexo
-默认在目前的文件夹建立网站。</p>
-<p>本命令相当于执行了以下几步：</p>
-<p>Git clone hexo-starter 和 hexo-theme-landscape
-主题到当前目录或指定目录。 使用 Yarn 1、pnpm 或 npm
-包管理器下载依赖（如有已安装多个，则列在前面的优先）。npm 默认随 Node.js
-安装。</p>
-<h3 id="new">new</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new [layout] &lt;title&gt;</span><br></pre></td></tr></table></figure>
-
-<p>新建一篇文章。如果没有设置 layout 的话，默认使用 _config.yml 中的
-default_layout 参数代替。如果标题包含空格的话，请使用引号括起来。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new <span class="string">"post title with whitespace"</span></span><br></pre></td></tr></table></figure>
-
-<p>参数 描述 -p, –path 自定义新文章的路径 -r, –replace
-如果存在同名文章，将其替换 -s, –slug 文章的
-Slug，作为新文章的文件名和发布后的 URL 默认情况下，Hexo
-会使用文章的标题来决定文章文件的路径。对于独立页面来说，Hexo
-会创建一个以标题为名字的目录，并在目录中放置一个 index.md
-文件。你可以使用 –path 参数来覆盖上述行为、自行决定文件的目录：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new page --path about/me <span class="string">"About me"</span></span><br></pre></td></tr></table></figure>
-
-<p>以上命令会创建一个 source/about/me.md 文件，同时 Front Matter 中的
-title 为 “About me”</p>
-<p>注意！title 是必须指定的！如果你这么做并不能达到你的目的：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new page --path about/me</span><br></pre></td></tr></table></figure>
-
-<p>此时 Hexo 会创建 source/_posts/about/me.md，同时 me.md 的 Front
-Matter 中的 title 为 “page”。这是因为在上述命令中，hexo-cli 将 page
-视为指定文章的标题、并采用默认的 layout。</p>
-<h3 id="generate">generate</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>生成静态文件。</p>
-<p>选项 描述 -d, –deploy 文件生成后立即部署网站 -w, –watch 监视文件变动
--b, –bail 生成过程中如果发生任何未处理的异常则抛出异常 -f, –force
-强制重新生成文件</p>
-<p>Hexo 引入了差分机制，如果 public 目录存在，那么 hexo g
-只会重新生成改动的文件。 使用该参数的效果接近 hexo clean &amp;&amp; hexo
-generate -c, –concurrency 最大同时生成文件的数量，默认无限制
-该命令可以简写为</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
-
-<h3 id="publish">publish</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo publish [layout] &lt;filename&gt;</span><br></pre></td></tr></table></figure>
-
-<p>发表草稿。</p>
-<h3 id="server">server</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
-
-<p>或者</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-
-<p>启动服务器。默认情况下，访问网址为： http://localhost:4000/。</p>
-<p>选项 描述 -p, –port 重设端口 -s, –static 只使用静态文件 -l, –log
-启动日记记录，使用覆盖记录格式</p>
-<h3 id="deploy">deploy</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>部署网站。</p>
-<p>参数 描述 -g, –generate 部署之前预先生成静态文件
-该命令可以简写为：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-
-<h3 id="render">render</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo render &lt;file1&gt; [file2] ...</span><br></pre></td></tr></table></figure>
-
-<p>渲染文件。</p>
-<p>参数 描述 -o, –output 设置输出路径</p>
-<h3 id="migrate">migrate</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo migrate &lt;<span class="built_in">type</span>&gt;</span><br></pre></td></tr></table></figure>
-
-<p>从其他博客系统 迁移内容。</p>
-<h3 id="clean">clean</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure>
-
-<p>清除缓存文件 (db.json) 和已生成的静态文件 (public)。</p>
-<p>在某些情况（尤其是更换主题后），如果发现您对站点的更改无论如何也不生效，您可能需要运行该命令。</p>
-<h3 id="list">list</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo list &lt;<span class="built_in">type</span>&gt;</span><br></pre></td></tr></table></figure>
-
-<p>列出网站资料。</p>
-<h3 id="version">version</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo version</span><br></pre></td></tr></table></figure>
-
-<p>显示 Hexo 版本。</p>
-<h3 id="选项">选项</h3>
-<h4 id="安全模式">安全模式</h4>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo --safe</span><br></pre></td></tr></table></figure>
-
-<p>在安全模式下，不会载入插件和脚本。当您在安装新插件遭遇问题时，可以尝试以安全模式重新执行。</p>
-<h4 id="调试模式">调试模式</h4>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo --debug</span><br></pre></td></tr></table></figure>
-
-<p>在终端中显示调试信息并记录到
-debug.log。当您碰到问题时，可以尝试用调试模式重新执行一次，并
-提交调试信息到 GitHub。</p>
-<h4 id="简洁模式">简洁模式</h4>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo --silent</span><br></pre></td></tr></table></figure>
-
-<p>隐藏终端信息。</p>
-<h3 id="自定义配置文件的路径">自定义配置文件的路径</h3>
-<h4 id="-使用-customyml-代替默认的-_configyml"># 使用 custom.yml
-代替默认的 _config.yml</h4>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo server --config custom.yml</span><br></pre></td></tr></table></figure>
-
-<h4 id="-使用-customyml-和-custom2json其中-custom2json-优先级更高">#
-使用 custom.yml 和 custom2.json，其中 custom2.json 优先级更高</h4>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo generate --config custom.yml,custom2.json,custom3.yml</span><br></pre></td></tr></table></figure>
-
-<p>自定义配置文件的路径，指定这个参数后将不再使用默认的 _config.yml。
-你可以使用一个 YAML 或 JSON
-文件的路径，也可以使用逗号分隔（无空格）的多个 YAML 或 JSON
-文件的路径。例如：</p>
-<h4 id="-使用-customyml-代替默认的-_configyml-1"># 使用 custom.yml
-代替默认的 _config.yml</h4>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo server --config custom.yml</span><br></pre></td></tr></table></figure>
-
-<h4 id="-使用-customyml-custom2json-和-custom3yml其中-custom3yml-优先级最高其次是-custom2json">#
-使用 custom.yml, custom2.json 和 custom3.yml，其中 custom3.yml
-优先级最高，其次是 custom2.json</h4>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo generate --config custom.yml,custom2.json,custom3.yml</span><br></pre></td></tr></table></figure>
-
-<p>当你指定了多个配置文件以后，Hexo 会按顺序将这部分配置文件合并成一个
-_multiconfig.yml。如果遇到重复的配置，排在后面的文件的配置会覆盖排在前面的文件的配置。这个原则适用于任意数量、任意深度的
-YAML 和 JSON 文件。</p>
-<h3 id="显示草稿">显示草稿</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo --draft</span><br></pre></td></tr></table></figure>
-
-<p>显示 source/_drafts 文件夹中的草稿文章。</p>
-<h3 id="自定义-cwd">自定义 CWD</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo --cwd /path/to/cwd</span><br></pre></td></tr></table></figure>
-
-<p>自定义当前工作目录（Current working directory）的路径。</p>
-<h2 id="问题解决方案">问题解决方案</h2>
-<p>以下是我遇到过的问题的解决方案 可能并不适用于所有情况</p>
-<h3 id="hexo--d报错">hexo -d报错</h3>
-<p>在博客目录中选择“在终端中打开”，输入：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-
-<p>如果使用了加速器加速了GitHub，可以尝试关闭加速器重试</p>
-]]></content>
-      <categories>
-        <category>工具</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Linux入门-初识Linux</title>
-    <url>/blog/posts/7dfef69c.html</url>
-    <content><![CDATA[<p>最近我打算学习一下Linux 以本文记录一下我的学习过程</p>
-<h1 id="一关于linux">一、关于Linux</h1>
-<h2 id="linux的诞生">Linux的诞生</h2>
-<p>Linux创始人: 林纳斯 托瓦兹 Linux 诞生于1991年，作者上大学期间
-因为创始人在上大学期间经常需要浏览新闻和处理邮件，发现现有的操作系统不好用,
-于是他决心自己写一个保护模式下的操作系统，这就是Linux的原型，
-当时他21岁，后来经过全世界网友的支持,
-现在能够兼容多种硬件，成为最为流行的服务器操作系统之一。 <img src="https://pic.imgdb.cn/item/65634875c458853aef5abdbb.webp"> <img src="https://pic.imgdb.cn/item/65634875c458853aef5abe42.webp"></p>
-<h2 id="linux内核">Linux内核</h2>
-<p>Linux系统的组成如下：
-<strong>Linux系统内核</strong>、<strong>系统级应用程序</strong>两部分组成。
-内核提供系统最核心的功能，如：调度CPU、调度内存、调度文件系统、调度网络通讯、调度IO等。
-系统级应用程序，可以理解为出厂自带程序，可供用户快速上手操作系统，如：文件管理器、任务管理器、图片查看、音乐播放等。</p>
-<p>比如，播放音乐，无论用户使用自带音乐播放器或是自行安装的第三方播放器均是由播放器程序，调用内核提供的相关功能，由内核调度CPU解码、音响发声等。
-<img src="https://pic.imgdb.cn/item/65634875c458853aef5abeb4.webp">
-<img src="https://pic.imgdb.cn/item/65634875c458853aef5abf1c.webp">
-可以看出，内核是Linux操作系统最核心的所在，系统级应用程序只是锦上添花。
-Linux内核是免费开源的，任何人都可以下载内核源码并查看且修改。
-可以通过：https://www.kernel.org 去下载Linux内核</p>
-<p>内核是免费、开源的，这也就代表了：
-任何人都可以获得并修改内核，并且自行集成系统级程序
-提供了内核+系统级程序的完整封装，称之为Linux发行版 <img src="https://pic.imgdb.cn/item/65634875c458853aef5abf5e.webp"> <img src="https://pic.imgdb.cn/item/656348afc458853aef5be85b.webp"></p>
-<h1 id="二安装linux">二、安装Linux</h1>
-<p>在这里我用了虚拟机的方法安装Linux CentOS系统</p>
-<div class="note warning flat"><p>Linux不同发行版中的基础命令100%是相同的，只有个别软件细节不同</p>
-</div>
-
-<p>我个人认为Hyper-V虚拟机比VMware要稍微流畅一些
-所以我在这里选用Hyper-V安装CentOS
-如果你不是Windows11，那就只能用别的啦，比如VMware</p>
-<h2 id="1下载centos镜像">1.下载CentOS镜像</h2>
-]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Markdown基本语法</title>
     <url>/blog/posts/5d36ff15.html</url>
     <content><![CDATA[<p>本文目的为方便查找 以下内容均取自<a href="https://markdown.com.cn/basic-syntax/">Markdown官网</a></p>
@@ -1343,6 +1143,206 @@ how to learn anything</h2>
       </tags>
   </entry>
   <entry>
+    <title>Hexo常用指令集</title>
+    <url>/blog/posts/869eb1f7.html</url>
+    <content><![CDATA[<a class="btn-anzhiyu " href="/blog/center%20large::%E5%89%8D%E5%BE%80HEXO%E5%AE%98%E6%96%B9%E6%8C%87%E4%BB%A4%E6%95%99%E7%A8%8B::https:/hexo.io/zh-cn/docs/commands.html::fa-solid%20fa-play-circle" title=""></a>
+
+<h2 id="指令部分">指令部分</h2>
+<h3 id="创建">创建</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo init [folder]</span><br></pre></td></tr></table></figure>
+
+<p>新建一个网站。如果没有设置 folder ，Hexo
+默认在目前的文件夹建立网站。</p>
+<p>本命令相当于执行了以下几步：</p>
+<p>Git clone hexo-starter 和 hexo-theme-landscape
+主题到当前目录或指定目录。 使用 Yarn 1、pnpm 或 npm
+包管理器下载依赖（如有已安装多个，则列在前面的优先）。npm 默认随 Node.js
+安装。</p>
+<h3 id="new">new</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new [layout] &lt;title&gt;</span><br></pre></td></tr></table></figure>
+
+<p>新建一篇文章。如果没有设置 layout 的话，默认使用 _config.yml 中的
+default_layout 参数代替。如果标题包含空格的话，请使用引号括起来。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new <span class="string">"post title with whitespace"</span></span><br></pre></td></tr></table></figure>
+
+<p>参数 描述 -p, –path 自定义新文章的路径 -r, –replace
+如果存在同名文章，将其替换 -s, –slug 文章的
+Slug，作为新文章的文件名和发布后的 URL 默认情况下，Hexo
+会使用文章的标题来决定文章文件的路径。对于独立页面来说，Hexo
+会创建一个以标题为名字的目录，并在目录中放置一个 index.md
+文件。你可以使用 –path 参数来覆盖上述行为、自行决定文件的目录：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new page --path about/me <span class="string">"About me"</span></span><br></pre></td></tr></table></figure>
+
+<p>以上命令会创建一个 source/about/me.md 文件，同时 Front Matter 中的
+title 为 “About me”</p>
+<p>注意！title 是必须指定的！如果你这么做并不能达到你的目的：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new page --path about/me</span><br></pre></td></tr></table></figure>
+
+<p>此时 Hexo 会创建 source/_posts/about/me.md，同时 me.md 的 Front
+Matter 中的 title 为 “page”。这是因为在上述命令中，hexo-cli 将 page
+视为指定文章的标题、并采用默认的 layout。</p>
+<h3 id="generate">generate</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>生成静态文件。</p>
+<p>选项 描述 -d, –deploy 文件生成后立即部署网站 -w, –watch 监视文件变动
+-b, –bail 生成过程中如果发生任何未处理的异常则抛出异常 -f, –force
+强制重新生成文件</p>
+<p>Hexo 引入了差分机制，如果 public 目录存在，那么 hexo g
+只会重新生成改动的文件。 使用该参数的效果接近 hexo clean &amp;&amp; hexo
+generate -c, –concurrency 最大同时生成文件的数量，默认无限制
+该命令可以简写为</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
+
+<h3 id="publish">publish</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo publish [layout] &lt;filename&gt;</span><br></pre></td></tr></table></figure>
+
+<p>发表草稿。</p>
+<h3 id="server">server</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+
+<p>或者</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+
+<p>启动服务器。默认情况下，访问网址为： http://localhost:4000/。</p>
+<p>选项 描述 -p, –port 重设端口 -s, –static 只使用静态文件 -l, –log
+启动日记记录，使用覆盖记录格式</p>
+<h3 id="deploy">deploy</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>部署网站。</p>
+<p>参数 描述 -g, –generate 部署之前预先生成静态文件
+该命令可以简写为：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+<h3 id="render">render</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo render &lt;file1&gt; [file2] ...</span><br></pre></td></tr></table></figure>
+
+<p>渲染文件。</p>
+<p>参数 描述 -o, –output 设置输出路径</p>
+<h3 id="migrate">migrate</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo migrate &lt;<span class="built_in">type</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<p>从其他博客系统 迁移内容。</p>
+<h3 id="clean">clean</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure>
+
+<p>清除缓存文件 (db.json) 和已生成的静态文件 (public)。</p>
+<p>在某些情况（尤其是更换主题后），如果发现您对站点的更改无论如何也不生效，您可能需要运行该命令。</p>
+<h3 id="list">list</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo list &lt;<span class="built_in">type</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<p>列出网站资料。</p>
+<h3 id="version">version</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo version</span><br></pre></td></tr></table></figure>
+
+<p>显示 Hexo 版本。</p>
+<h3 id="选项">选项</h3>
+<h4 id="安全模式">安全模式</h4>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo --safe</span><br></pre></td></tr></table></figure>
+
+<p>在安全模式下，不会载入插件和脚本。当您在安装新插件遭遇问题时，可以尝试以安全模式重新执行。</p>
+<h4 id="调试模式">调试模式</h4>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo --debug</span><br></pre></td></tr></table></figure>
+
+<p>在终端中显示调试信息并记录到
+debug.log。当您碰到问题时，可以尝试用调试模式重新执行一次，并
+提交调试信息到 GitHub。</p>
+<h4 id="简洁模式">简洁模式</h4>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo --silent</span><br></pre></td></tr></table></figure>
+
+<p>隐藏终端信息。</p>
+<h3 id="自定义配置文件的路径">自定义配置文件的路径</h3>
+<h4 id="-使用-customyml-代替默认的-_configyml"># 使用 custom.yml
+代替默认的 _config.yml</h4>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo server --config custom.yml</span><br></pre></td></tr></table></figure>
+
+<h4 id="-使用-customyml-和-custom2json其中-custom2json-优先级更高">#
+使用 custom.yml 和 custom2.json，其中 custom2.json 优先级更高</h4>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo generate --config custom.yml,custom2.json,custom3.yml</span><br></pre></td></tr></table></figure>
+
+<p>自定义配置文件的路径，指定这个参数后将不再使用默认的 _config.yml。
+你可以使用一个 YAML 或 JSON
+文件的路径，也可以使用逗号分隔（无空格）的多个 YAML 或 JSON
+文件的路径。例如：</p>
+<h4 id="-使用-customyml-代替默认的-_configyml-1"># 使用 custom.yml
+代替默认的 _config.yml</h4>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo server --config custom.yml</span><br></pre></td></tr></table></figure>
+
+<h4 id="-使用-customyml-custom2json-和-custom3yml其中-custom3yml-优先级最高其次是-custom2json">#
+使用 custom.yml, custom2.json 和 custom3.yml，其中 custom3.yml
+优先级最高，其次是 custom2.json</h4>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo generate --config custom.yml,custom2.json,custom3.yml</span><br></pre></td></tr></table></figure>
+
+<p>当你指定了多个配置文件以后，Hexo 会按顺序将这部分配置文件合并成一个
+_multiconfig.yml。如果遇到重复的配置，排在后面的文件的配置会覆盖排在前面的文件的配置。这个原则适用于任意数量、任意深度的
+YAML 和 JSON 文件。</p>
+<h3 id="显示草稿">显示草稿</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo --draft</span><br></pre></td></tr></table></figure>
+
+<p>显示 source/_drafts 文件夹中的草稿文章。</p>
+<h3 id="自定义-cwd">自定义 CWD</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo --cwd /path/to/cwd</span><br></pre></td></tr></table></figure>
+
+<p>自定义当前工作目录（Current working directory）的路径。</p>
+<h2 id="问题解决方案">问题解决方案</h2>
+<p>以下是我遇到过的问题的解决方案 可能并不适用于所有情况</p>
+<h3 id="hexo--d报错">hexo -d报错</h3>
+<p>在博客目录中选择“在终端中打开”，输入：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
+<p>如果使用了加速器加速了GitHub，可以尝试关闭加速器重试</p>
+]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux入门-初识Linux</title>
+    <url>/blog/posts/7dfef69c.html</url>
+    <content><![CDATA[<p>最近我打算学习一下Linux 以本文记录一下我的学习过程</p>
+<h1 id="一关于linux">一、关于Linux</h1>
+<h2 id="linux的诞生">Linux的诞生</h2>
+<p>Linux创始人: 林纳斯 托瓦兹 Linux 诞生于1991年，作者上大学期间
+因为创始人在上大学期间经常需要浏览新闻和处理邮件，发现现有的操作系统不好用,
+于是他决心自己写一个保护模式下的操作系统，这就是Linux的原型，
+当时他21岁，后来经过全世界网友的支持,
+现在能够兼容多种硬件，成为最为流行的服务器操作系统之一。 <img src="https://pic.imgdb.cn/item/65634875c458853aef5abdbb.webp"> <img src="https://pic.imgdb.cn/item/65634875c458853aef5abe42.webp"></p>
+<h2 id="linux内核">Linux内核</h2>
+<p>Linux系统的组成如下：
+<strong>Linux系统内核</strong>、<strong>系统级应用程序</strong>两部分组成。
+内核提供系统最核心的功能，如：调度CPU、调度内存、调度文件系统、调度网络通讯、调度IO等。
+系统级应用程序，可以理解为出厂自带程序，可供用户快速上手操作系统，如：文件管理器、任务管理器、图片查看、音乐播放等。</p>
+<p>比如，播放音乐，无论用户使用自带音乐播放器或是自行安装的第三方播放器均是由播放器程序，调用内核提供的相关功能，由内核调度CPU解码、音响发声等。
+<img src="https://pic.imgdb.cn/item/65634875c458853aef5abeb4.webp">
+<img src="https://pic.imgdb.cn/item/65634875c458853aef5abf1c.webp">
+可以看出，内核是Linux操作系统最核心的所在，系统级应用程序只是锦上添花。
+Linux内核是免费开源的，任何人都可以下载内核源码并查看且修改。
+可以通过：https://www.kernel.org 去下载Linux内核</p>
+<p>内核是免费、开源的，这也就代表了：
+任何人都可以获得并修改内核，并且自行集成系统级程序
+提供了内核+系统级程序的完整封装，称之为Linux发行版 <img src="https://pic.imgdb.cn/item/65634875c458853aef5abf5e.webp"> <img src="https://pic.imgdb.cn/item/656348afc458853aef5be85b.webp"></p>
+<h1 id="二安装linux">二、安装Linux</h1>
+<p>在这里我用了虚拟机的方法安装Linux CentOS系统</p>
+<div class="note warning flat"><p>Linux不同发行版中的基础命令100%是相同的，只有个别软件细节不同</p>
+</div>
+
+<p>我个人认为Hyper-V虚拟机比VMware要稍微流畅一些
+所以我在这里选用Hyper-V安装CentOS
+如果你不是Windows11，那就只能用别的啦，比如VMware</p>
+<h2 id="1下载centos镜像">1.下载CentOS镜像</h2>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Win11安装杜比全景声方法</title>
     <url>/blog/posts/3464e4f.html</url>
     <content><![CDATA[<h1 id="在-windows-11-中安装杜比全景声">在 Windows 11
@@ -2114,53 +2114,6 @@ xxx.github.io（xxx 是你 GitHub
       </tags>
   </entry>
   <entry>
-    <title>风铃投票制作教程</title>
-    <url>/blog/posts/Fengling.html</url>
-    <content><![CDATA[<p>此文章为风铃系统制作逻辑问卷的教程</p>
-<p>本次研学展示完活动成果后需要进行投票选出3个大家喜欢的小组，
-由此制作了此问卷，因为3班也要用，就写个文章吧，微信一条条发也怪麻烦的（这个好像也挺麻烦）</p>
-<p>需求一：3个类型，分别最佳创意小组，最专业小组，最受欢迎小组
-需求二：一个人可以每项推荐一组，3项都要选，但是不能都选同一组（原话）
-需求三：每个人只能完成一次（可选）</p>
-<h1 id="一系统选取">一、系统选取</h1>
-<p>本来想用问卷星制作的，但是找了半天没有找到符合<strong>需求2</strong>中<strong>不能复选</strong>的题目逻辑
-于是便找了半天，找到了一个支持此逻辑的问卷平台：<strong>风铃系统</strong></p>
-<a class="btn-anzhiyu " href="/blog/center%20large::%E7%82%B9%E5%87%BB%E5%89%8D%E5%BE%80%E9%A3%8E%E9%93%83%E7%B3%BB%E7%BB%9F::https:/www.powercx.com/::fa-solid%20fa-arrow-right" title=""></a>
-
-<p>进入官网后，点击 <strong>登录/注册</strong> 登陆账号 <img src="https://pic.imgdb.cn/item/656b12e5c458853aef83edf2.webp">
-登陆完成后，点击<strong>我的问卷</strong> <img src="https://pic.imgdb.cn/item/656b12e5c458853aef83eed5.webp">
-进入界面后，点击<strong>创建项目</strong> -&gt;
-<strong>空白创建</strong> <img src="https://pic.imgdb.cn/item/656bdb39c458853aef3cfc7d.webp"> <img src="https://pic.imgdb.cn/item/656b12e5c458853aef83efc6.webp">
-填写问卷信息，选择<strong>经典模式</strong>，问卷就创建完成了</p>
-<h1 id="二问卷制作">二、问卷制作</h1>
-<h1 id="1创建题目">1.创建题目</h1>
-<p>点击<strong>添加问题</strong>，选择<strong>单选</strong> <img src="https://pic.imgdb.cn/item/656b184ac458853aef9db6e4.webp">
-点击题目下方的<strong>批量编辑</strong>，导入选项（小组的名称及姓名）
-<img src="https://pic.imgdb.cn/item/656b184ac458853aef9db5e6.webp"></p>
-<h1 id="2创建逻辑">2.创建逻辑</h1>
-<p>新建<strong>第二题</strong>，删除其自带的选项，并点击右侧底部的<strong>选项带入</strong>
-<img src="https://pic.imgdb.cn/item/656b184ac458853aef9db4d3.webp">
-按照如图所示填写逻辑 <img src="https://pic.imgdb.cn/item/656b184ac458853aef9db43b.webp">
-点击确定，第二题的选项就导入成功了，第三题也是按照同样的方法，导入<strong>第二题的<em>未选中项</em></strong>
-即可</p>
-<h1 id="三问卷发布设置可选">三、问卷发布设置（可选）</h1>
-<h2 id="设置作答限制">设置作答限制</h2>
-<p><strong>需求3</strong>我采用了控制IP和设备作答频次限制的形式，这种方法并不能绝对的保证每个人只能做一次，但是可以大大减小刷题的概率
-点击上方<strong>设置</strong>，选择<strong>作答设置</strong>，勾选<strong>设备作答频次限制</strong>和<strong>IP作答频次限制</strong>
-<img src="https://pic.imgdb.cn/item/656b1bfbc458853aefb00040.webp"></p>
-<h1 id="四发布及查看统计信息">四、发布及查看统计信息</h1>
-<p>点击上方的<strong>发布</strong>，选择<strong>发布问卷</strong>，在<strong>设置</strong>里找到<strong>发布链接</strong>，即可分享作答了
-统计信息点击<strong>报表</strong>即可显示 <img src="https://pic.imgdb.cn/item/656b1bfbc458853aefb000d8.webp">
-如果想要把作答数据由高到低进行显示，按照如下图所示步骤执行即可（懒得打字了）
-<img src="https://pic.imgdb.cn/item/656b1bfcc458853aefb001b9.webp"></p>
-]]></content>
-      <tags>
-        <tag>投票</tag>
-        <tag>风铃系统</tag>
-        <tag>教程</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>解决Github的访问问题</title>
     <url>/blog/posts/714d1047.html</url>
     <content><![CDATA[<p>Github是一个基于Git版本控制系统的代码托管平台。</p>
@@ -2224,6 +2177,53 @@ URL：https://raw.hellogithub.com/hosts</p>
       <tags>
         <tag>Github</tag>
         <tag>Windows</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>风铃投票制作教程</title>
+    <url>/blog/posts/Fengling.html</url>
+    <content><![CDATA[<p>此文章为风铃系统制作逻辑问卷的教程</p>
+<p>本次研学展示完活动成果后需要进行投票选出3个大家喜欢的小组，
+由此制作了此问卷，因为3班也要用，就写个文章吧，微信一条条发也怪麻烦的（这个好像也挺麻烦）</p>
+<p>需求一：3个类型，分别最佳创意小组，最专业小组，最受欢迎小组
+需求二：一个人可以每项推荐一组，3项都要选，但是不能都选同一组（原话）
+需求三：每个人只能完成一次（可选）</p>
+<h1 id="一系统选取">一、系统选取</h1>
+<p>本来想用问卷星制作的，但是找了半天没有找到符合<strong>需求2</strong>中<strong>不能复选</strong>的题目逻辑
+于是便找了半天，找到了一个支持此逻辑的问卷平台：<strong>风铃系统</strong></p>
+<a class="btn-anzhiyu " href="/blog/center%20large::%E7%82%B9%E5%87%BB%E5%89%8D%E5%BE%80%E9%A3%8E%E9%93%83%E7%B3%BB%E7%BB%9F::https:/www.powercx.com/::fa-solid%20fa-arrow-right" title=""></a>
+
+<p>进入官网后，点击 <strong>登录/注册</strong> 登陆账号 <img src="https://pic.imgdb.cn/item/656b12e5c458853aef83edf2.webp">
+登陆完成后，点击<strong>我的问卷</strong> <img src="https://pic.imgdb.cn/item/656b12e5c458853aef83eed5.webp">
+进入界面后，点击<strong>创建项目</strong> -&gt;
+<strong>空白创建</strong> <img src="https://pic.imgdb.cn/item/656bdb39c458853aef3cfc7d.webp"> <img src="https://pic.imgdb.cn/item/656b12e5c458853aef83efc6.webp">
+填写问卷信息，选择<strong>经典模式</strong>，问卷就创建完成了</p>
+<h1 id="二问卷制作">二、问卷制作</h1>
+<h1 id="1创建题目">1.创建题目</h1>
+<p>点击<strong>添加问题</strong>，选择<strong>单选</strong> <img src="https://pic.imgdb.cn/item/656b184ac458853aef9db6e4.webp">
+点击题目下方的<strong>批量编辑</strong>，导入选项（小组的名称及姓名）
+<img src="https://pic.imgdb.cn/item/656b184ac458853aef9db5e6.webp"></p>
+<h1 id="2创建逻辑">2.创建逻辑</h1>
+<p>新建<strong>第二题</strong>，删除其自带的选项，并点击右侧底部的<strong>选项带入</strong>
+<img src="https://pic.imgdb.cn/item/656b184ac458853aef9db4d3.webp">
+按照如图所示填写逻辑 <img src="https://pic.imgdb.cn/item/656b184ac458853aef9db43b.webp">
+点击确定，第二题的选项就导入成功了，第三题也是按照同样的方法，导入<strong>第二题的<em>未选中项</em></strong>
+即可</p>
+<h1 id="三问卷发布设置可选">三、问卷发布设置（可选）</h1>
+<h2 id="设置作答限制">设置作答限制</h2>
+<p><strong>需求3</strong>我采用了控制IP和设备作答频次限制的形式，这种方法并不能绝对的保证每个人只能做一次，但是可以大大减小刷题的概率
+点击上方<strong>设置</strong>，选择<strong>作答设置</strong>，勾选<strong>设备作答频次限制</strong>和<strong>IP作答频次限制</strong>
+<img src="https://pic.imgdb.cn/item/656b1bfbc458853aefb00040.webp"></p>
+<h1 id="四发布及查看统计信息">四、发布及查看统计信息</h1>
+<p>点击上方的<strong>发布</strong>，选择<strong>发布问卷</strong>，在<strong>设置</strong>里找到<strong>发布链接</strong>，即可分享作答了
+统计信息点击<strong>报表</strong>即可显示 <img src="https://pic.imgdb.cn/item/656b1bfbc458853aefb000d8.webp">
+如果想要把作答数据由高到低进行显示，按照如下图所示步骤执行即可（懒得打字了）
+<img src="https://pic.imgdb.cn/item/656b1bfcc458853aefb001b9.webp"></p>
+]]></content>
+      <tags>
+        <tag>投票</tag>
+        <tag>风铃系统</tag>
+        <tag>教程</tag>
       </tags>
   </entry>
 </search>
