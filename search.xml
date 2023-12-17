@@ -96,6 +96,31 @@
       </tags>
   </entry>
   <entry>
+    <title>Hexo如何隐藏文章</title>
+    <url>/blog/posts/36679002.html</url>
+    <content><![CDATA[<p>本 Hexo 插件可以在博客中隐藏指定的文章，并使它们仅可通过链接访问。</p>
+<p>当一篇文章被设置为「隐藏」时，它不会出现在任何列表中（包括首页、存档、分类页面、标签页面、Feed、站点地图等），也不会被搜索引擎索引（前提是搜索引擎遵守 noindex 标签）。</p>
+<p>只有知道文章链接的人才可以访问被隐藏的文章。</p>
+<p>Github地址：<a href="https://github.com/printempw/hexo-hide-posts">https://github.com/printempw/hexo-hide-posts</a></p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>在站点根目录下执行<code>npm install hexo-hide-posts --save</code></p>
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>在站点目录下的<code>_config.yml</code>中如下配置：</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># hexo-hide-posts</span></span><br><span class="line"><span class="attr">hide_posts:</span></span><br><span class="line">  <span class="comment"># 可以改成其他你喜欢的名字</span></span><br><span class="line">  <span class="attr">filter:</span> <span class="string">hidden</span></span><br><span class="line">  <span class="comment"># 指定你想要传递隐藏文章的位置，比如让所有隐藏文章在存档页面可见</span></span><br><span class="line">  <span class="comment"># 常见的位置有：index, tag, category, archive, sitemap, feed, etc.</span></span><br><span class="line">  <span class="comment"># 留空则默认全部隐藏</span></span><br><span class="line">  <span class="attr">public_generators:</span> []</span><br><span class="line">  <span class="comment"># 为隐藏的文章添加 noindex meta 标签，阻止搜索引擎收录</span></span><br><span class="line">  <span class="attr">noindex:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<p>举个栗子：设置 <code>filter: secret</code> 之后，你就可以在 front-matter 中使用 <code>secret: true</code> 来隐藏文章了。</p>
+<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><p>在文章的属性中定义 <code>hidden: true</code> 即可隐藏文章。</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 'Hidden Post'</span><br><span class="line">date: '2021/03/05 21:45:14'</span><br><span class="line">hidden: true</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<p>虽然首页上被隐藏了，但你仍然可以通过 <code>https://hexo.test/lorem-ipsum/</code> 链接访问它。</p>
+<p>你可以在命令行运行 <code>hexo hidden:list</code> 来获取当前所有的已隐藏文章列表。</p>
+<p>插件也在 <a href="https://hexo.io/api/locals">Local Variables</a> 中添加了 <code>all_posts</code> 和 <code>hidden_posts</code> 变量，供自定义主题使用。</p>
+<p>文章摘自：<a href="https://blog.garryde.com/archives/37712.html">https://blog.garryde.com/archives/37712.html</a></p>
+]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo常用指令集</title>
     <url>/blog/posts/869eb1f7.html</url>
     <content><![CDATA[<a class="btn-anzhiyu " href="/blog/center%20large::%E5%89%8D%E5%BE%80HEXO%E5%AE%98%E6%96%B9%E6%8C%87%E4%BB%A4%E6%95%99%E7%A8%8B::https:/hexo.io/zh-cn/docs/commands.html::fa-solid%20fa-play-circle" title=""></a>
@@ -157,31 +182,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo如何隐藏文章</title>
-    <url>/blog/posts/36679002.html</url>
-    <content><![CDATA[<p>本 Hexo 插件可以在博客中隐藏指定的文章，并使它们仅可通过链接访问。</p>
-<p>当一篇文章被设置为「隐藏」时，它不会出现在任何列表中（包括首页、存档、分类页面、标签页面、Feed、站点地图等），也不会被搜索引擎索引（前提是搜索引擎遵守 noindex 标签）。</p>
-<p>只有知道文章链接的人才可以访问被隐藏的文章。</p>
-<p>Github地址：<a href="https://github.com/printempw/hexo-hide-posts">https://github.com/printempw/hexo-hide-posts</a></p>
-<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>在站点根目录下执行<code>npm install hexo-hide-posts --save</code></p>
-<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>在站点目录下的<code>_config.yml</code>中如下配置：</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># hexo-hide-posts</span></span><br><span class="line"><span class="attr">hide_posts:</span></span><br><span class="line">  <span class="comment"># 可以改成其他你喜欢的名字</span></span><br><span class="line">  <span class="attr">filter:</span> <span class="string">hidden</span></span><br><span class="line">  <span class="comment"># 指定你想要传递隐藏文章的位置，比如让所有隐藏文章在存档页面可见</span></span><br><span class="line">  <span class="comment"># 常见的位置有：index, tag, category, archive, sitemap, feed, etc.</span></span><br><span class="line">  <span class="comment"># 留空则默认全部隐藏</span></span><br><span class="line">  <span class="attr">public_generators:</span> []</span><br><span class="line">  <span class="comment"># 为隐藏的文章添加 noindex meta 标签，阻止搜索引擎收录</span></span><br><span class="line">  <span class="attr">noindex:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-<p>举个栗子：设置 <code>filter: secret</code> 之后，你就可以在 front-matter 中使用 <code>secret: true</code> 来隐藏文章了。</p>
-<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><p>在文章的属性中定义 <code>hidden: true</code> 即可隐藏文章。</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 'Hidden Post'</span><br><span class="line">date: '2021/03/05 21:45:14'</span><br><span class="line">hidden: true</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-<p>虽然首页上被隐藏了，但你仍然可以通过 <code>https://hexo.test/lorem-ipsum/</code> 链接访问它。</p>
-<p>你可以在命令行运行 <code>hexo hidden:list</code> 来获取当前所有的已隐藏文章列表。</p>
-<p>插件也在 <a href="https://hexo.io/api/locals">Local Variables</a> 中添加了 <code>all_posts</code> 和 <code>hidden_posts</code> 变量，供自定义主题使用。</p>
-<p>文章摘自：<a href="https://blog.garryde.com/archives/37712.html">https://blog.garryde.com/archives/37712.html</a></p>
-]]></content>
-      <categories>
-        <category>教程</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Linux入门-初识Linux</title>
     <url>/blog/posts/7dfef69c.html</url>
     <content><![CDATA[<p>最近我打算学习一下Linux<br>以本文记录一下我的学习过程</p>
@@ -197,409 +197,6 @@
       </categories>
       <tags>
         <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>TED视频分享</title>
-    <url>/blog/posts/df7635ee.html</url>
-    <content><![CDATA[<p>本页将分享一些TED的听力视频<br>将提供视频文件和中英字幕文件<br>下载后放置同一文件夹内<br>并使用相同名称即可</p>
-<h2 id="The-first-20-hours-—-how-to-learn-anything"><a href="#The-first-20-hours-—-how-to-learn-anything" class="headerlink" title="The first 20 hours — how to learn anything"></a>The first 20 hours — how to learn anything</h2><p><img src="https://pic.imgdb.cn/item/6541053fc458853aef4b2d0f.webp" alt=""><br>原视频链接：<a href="https://www.youtube.com/watch?v=5MgBikgcWnY&amp;t=10s">前往YouTube</a><br>官网文章链接：<a href="https://ideas.ted.com/dont-have-10000-hours-to-learn-something-new-thats-fine-all-you-need-is-20-hours/">前往TED官网</a><br>官网文章转载：<a href="https://flumbrix1145.github.io/blog/2023/10/31/Don%E2%80%99t-have-10-000-hours-to-learn-something-new-That%E2%80%99s-fine-%E2%80%94-all-you-need-is-20-hours/">点击前往</a><br><a class="btn-anzhiyu " href="regular::下载视频文件::https://gofile.cc/deLy/the-first-20-hours-how-to-learn-anything-josh-kaufman-tedxcsu.mp4::fa-solid fa-download" title=""></a><a class="btn-anzhiyu " href="regular::下载字幕文件::https://gofile.cc/prDW/the-first-20-hours-how-to-learn-anything-josh-kaufman-tedxcsu.srt::fa-solid fa-download" title=""></a></p>
-]]></content>
-      <categories>
-        <category>学习</category>
-        <category>英语</category>
-      </categories>
-      <tags>
-        <tag>TED</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Win11安装杜比全景声方法</title>
-    <url>/blog/posts/3464e4f.html</url>
-    <content><![CDATA[<h1 id="在-Windows-11-中安装杜比全景声"><a href="#在-Windows-11-中安装杜比全景声" class="headerlink" title="在 Windows 11 中安装杜比全景声"></a>在 Windows 11 中安装杜比全景声</h1><h4 id="一个人可以在剧院享受的氛围。-因此，在本指南中，您将学习-如何在-Windows-11-中免费启用或安装杜比全景声"><a href="#一个人可以在剧院享受的氛围。-因此，在本指南中，您将学习-如何在-Windows-11-中免费启用或安装杜比全景声" class="headerlink" title="一个人可以在剧院享受的氛围。 因此，在本指南中，您将学习 如何在 Windows 11 中免费启用或安装杜比全景声."></a>一个人可以在剧院享受的氛围。 因此，在本指南中，您将学习 <strong>如何在 Windows 11 中免费启用或安装杜比全景声</strong>.</h4><h4 id="同时，-杜比全景声-是目前可用的最具创新性的音响系统之一。-微软的-Xbox-One-和索尼的-PlayStation-4-都兼容出色的硬件，因此可以轻松地为游戏机使用经过杜比全景声-Dolby-Atmos-认证的音响系统。-不幸的是，对于-Windows-10-11-PC-来说，情况并非如此。"><a href="#同时，-杜比全景声-是目前可用的最具创新性的音响系统之一。-微软的-Xbox-One-和索尼的-PlayStation-4-都兼容出色的硬件，因此可以轻松地为游戏机使用经过杜比全景声-Dolby-Atmos-认证的音响系统。-不幸的是，对于-Windows-10-11-PC-来说，情况并非如此。" class="headerlink" title="同时， 杜比全景声 是目前可用的最具创新性的音响系统之一。 微软的 Xbox One 和索尼的 PlayStation 4 都兼容出色的硬件，因此可以轻松地为游戏机使用经过杜比全景声 (Dolby Atmos) 认证的音响系统。 不幸的是，对于 Windows 10/11 PC 来说，情况并非如此。"></a>同时， <strong>杜比全景声</strong> 是目前可用的最具创新性的音响系统之一。 微软的 Xbox One 和索尼的 PlayStation 4 都兼容出色的硬件，因此可以轻松地为游戏机使用经过杜比全景声 (Dolby Atmos) 认证的音响系统。 不幸的是，对于 Windows 10/11 PC 来说，情况并非如此。</h4><h2 id="杜比音频与杜比全景声：有什么区别？"><a href="#杜比音频与杜比全景声：有什么区别？" class="headerlink" title="杜比音频与杜比全景声：有什么区别？"></a>杜比音频与杜比全景声：有什么区别？</h2><p>杜比音频是一种 2D 音频技术，可以提高您正在观看的任何内容的音质，无论是体育赛事、流媒体电影，甚至是 DVD 或蓝光。</p>
-<p>另一方面，杜比全景声 (Dolby Atmos) 是一种 3D 沉浸式技术，它允许扬声器或扬声器系统“欺骗”您的大脑，让您相信您被声音“包围”——它有效地为您提供影院体验，仿佛即使您不在，您也会被扬声器包围。</p>
-<p>因此，事不宜迟，以下是在 Windows 11 中安装杜比全景声 (Dolby Atmos) 的方法：</p>
-<h2 id="步骤-1-下载杜比全景声应用程序"><a href="#步骤-1-下载杜比全景声应用程序" class="headerlink" title="步骤 1. 下载杜比全景声应用程序"></a>步骤 1. 下载杜比全景声应用程序</h2><p>前往<a href="https://www.dolby.com/">Dolby官网</a>下载杜比全景声应用程序。 </p>
-<h2 id="步骤-2-启用开发者模式"><a href="#步骤-2-启用开发者模式" class="headerlink" title="步骤 2. 启用开发者模式"></a>步骤 2. 启用开发者模式</h2><ul>
-<li>按 Windows 键 + I 打开 <strong>设置。</strong></li>
-<li>点击 <strong>隐私及安全</strong> 从左侧窗格中，然后选择 <strong>对于开发人员</strong>.</li>
-</ul>
-<p>对于开发人员</p>
-<ul>
-<li>使能够 <strong>开发商</strong> 模式，然后单击 <strong>是的</strong> 确认。</li>
-</ul>
-<p><img src="https://digitalixy.com/image/1646154525.png" alt="" title="dolby-atmos-windows-11 (2)-min"></p>
-<p>启用开发者模式</p>
-<h2 id="步骤-3-禁用驱动程序签名强制"><a href="#步骤-3-禁用驱动程序签名强制" class="headerlink" title="步骤 3. 禁用驱动程序签名强制"></a>步骤 3. 禁用驱动程序签名强制</h2><p>按住 <strong>转移</strong> 键，然后单击 <strong>重新开始</strong>.</p>
-<p>选择 <strong>疑难解答</strong> &gt; <strong>高级选项</strong> &gt; <strong>启动设置</strong> &gt; <strong>重新开始</strong> &gt; 最后，按 <strong>F7</strong> 钥匙。</p>
-<p><img src="https://digitalixy.com/image/1646154532.jpg" alt="如何在 2022 年免费在 Windows 11 PC 和笔记本电脑中安装杜比全景声" title="dolby-atmos-windows-11 (2)-min"></p>
-<p>禁用驱动程序签名强制</p>
-<h2 id="步骤-4-更新声音驱动程序"><a href="#步骤-4-更新声音驱动程序" class="headerlink" title="步骤 4. 更新声音驱动程序"></a>步骤 4. 更新声音驱动程序</h2><p>曾经，您已经从上述链接下载了杜比全景声应用程序，然后将其解压缩。 导航到 <strong>司机</strong> 文件夹，解压名为 Win11_x64 文件夹的文件。</p>
-<p><strong>右键点击</strong> 在开始菜单按钮上，然后选择 <strong>装置经理</strong> 或按 <strong>Windows 键 + X</strong> 然后选择 <strong>装置经理</strong>.</p>
-<p><img src="https://digitalixy.com/image/1646154542.png" alt="" title="dolby-atmos-windows-11-2"></p>
-<p>装置经理。</p>
-<p>现在， <strong>双击</strong> 在 <strong>声音、视频和游戏控制器</strong>, <strong>右键点击</strong> 在 <strong>高清音频设备，</strong> 然后选择 <strong>更新驱动程序</strong>.</p>
-<p><img src="https://digitalixy.com/image/1646154548.png" alt="" title="dolby-atmos-windows-11-2"></p>
-<p>更新驱动程序</p>
-<p>点击 <strong>浏览我的电脑以获取驱动程序</strong>.</p>
-<p><img src="https://digitalixy.com/image/1646154553.png" alt="" title="dolby-atmos-windows-11-2"></p>
-<p>浏览我的电脑以获取驱动程序</p>
-<p>选择 <strong>让我从计算机上的可用驱动程序列表中进行选择</strong>.</p>
-<p><img src="https://digitalixy.com/image/1646154560.png" alt="" title="dolby-atmos-windows-11-2"></p>
-<p>让我从计算机上的可用驱动程序列表中进行选择</p>
-<p>选择 <strong>有磁盘</strong> 然后点击 <strong>浏览。</strong></p>
-<p><img src="https://digitalixy.com/image/1646154565.png" alt="如何在 2022 年免费在 Windows 11 PC 和笔记本电脑中安装杜比全景声" title="dolby-atmos-windows-11-2"></p>
-<p>浏览</p>
-<p>转到解压后的杜比全景声文件夹 &gt; <strong>driver</strong> &gt; 合适的文件版本选择 <strong>hdaudio.inf</strong> 文件，然后单击 <strong>打开。</strong></p>
-<p><img src="https://digitalixy.com/image/1646154570.png" alt="如何在 2022 年免费在 Windows 11 PC 和笔记本电脑中安装杜比全景声" title="dolby-atmos-windows-11 (11)-min"></p>
-<p>选择 <strong>好的</strong>.</p>
-<p><img src="https://digitalixy.com/image/1646154577.png" alt="如何在 2022 年免费在 Windows 11 PC 和笔记本电脑中安装杜比全景声" title="dolby-atmos-windows-11 (12)-min"></p>
-<p>好的</p>
-<p>现在，选择 <strong>杜比全景声</strong> 并点击 <strong>下一个</strong>. 点击 <strong>是的</strong>.</p>
-<p><img src="https://digitalixy.com/image/1646154584.png" alt="如何在 2022 年免费在 Windows 11 PC 和笔记本电脑中安装杜比全景声" title="dolby-atmos-windows-11-2"></p>
-<p>点击 <strong>无论如何都要安装这个驱动软件，</strong> 如果系统提示您<strong>.</strong></p>
-<p>安装后，点击 <strong>关闭</strong>.</p>
-<h2 id="第-5-步。安装杜比全景声应用程序"><a href="#第-5-步。安装杜比全景声应用程序" class="headerlink" title="第 5 步。安装杜比全景声应用程序"></a>第 5 步。安装杜比全景声应用程序</h2><p>打开 <strong>杜比全景声文件</strong> 您之前提取的然后打开 <strong>应用程序</strong> 文件夹。</p>
-<p><img src="https://digitalixy.com/image/1646154591.png" alt="如何在 2022 年免费在 Windows 11 PC 和笔记本电脑中安装杜比全景声" title="dolby-atmos-windows-11-2"></p>
-<p>应用程序</p>
-<p>双击 <strong>应用程序2021</strong> 文件。</p>
-<p><img src="https://digitalixy.com/image/1646154598.png" alt="如何在 2022 年免费在 Windows 11 PC 和笔记本电脑中安装杜比全景声" title="dolby-atmos-windows-11-2"></p>
-<p>应用程序2021</p>
-<p>点击 <strong>安装</strong> 安装杜比全景声。</p>
-<p><img src="https://digitalixy.com/image/1646154609.png" alt="如何在 2022 年免费在 Windows 11 PC 和笔记本电脑中安装杜比全景声" title="dolby-atmos-windows-11-2"></p>
-<p>安装</p>
-<p>等到安装过程完成。</p>
-<p>最后，杜比全景声 (Dolby Atmos) 已成功安装在您的 Windows 11 PC 上。</p>
-]]></content>
-      <categories>
-        <category>内容分享</category>
-        <category>音效</category>
-      </categories>
-      <tags>
-        <tag>Windows</tag>
-        <tag>杜比</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>alist分享站合集</title>
-    <url>/blog/posts/99c9062b.html</url>
-    <content><![CDATA[<h4 id="alist简介"><a href="#alist简介" class="headerlink" title="alist简介"></a>alist简介</h4><p>alist资源站是一个支持多存储的文件列表程序，AList 支持多个存储提供商，包括本地存储、阿里云盘、夸克云盘、189云盘、OneDrive、Google Drive等，且易于拓展。支持文件在线预览，图片、视频、打包下载，简单的来说AList资源站是把个人网盘里的资源以网站模式公开分享。</p>
-<p><a href="https://pan.clun.top/">https://pan.clun.top/</a> 雨呢网盘 视频 动漫 写真<br><a href="https://alist.aqingyuan.repl.co">https://alist.aqingyuan.repl.co</a> 晴园<br><a href="https://al.chirmyram.com">https://al.chirmyram.com</a> 七米蓝<br><a href="https://alist.advanced360.top">https://alist.advanced360.top</a> Banana的资源站<br><a href="https://ruipan.bestruirui.repl.co">https://ruipan.bestruirui.repl.co</a> 小瑞<br><a href="https://pan.arley.cn">https://pan.arley.cn</a> Arley’s Drive<br><a href="https://apps.weixinqqq.com">https://apps.weixinqqq.com</a> 微资源<br>www.kugutsu.ml (NSFW) Puppet Studio<br><a href="https://zi0.cc/">https://zi0.cc/</a> 梓澪の妙妙屋 ASMR 游戏 番剧 插画<br><a href="https://ys.urlsdh.com/go/?url=aHR0cHM6Ly9pbWV4Y2xvdWQudG9wLw%3D%3D">https://imexcloud.top/</a> AList 经典电影中字<br><a href="http://alist.xiaoya.pro/">http://alist.xiaoya.pro/</a> 小雅的AList 大量影视 有点失效<br><a href="https://alist.ygxz.xyz/">https://alist.ygxz.xyz/</a> 小站的AList<br><a href="https://tczhongyi.toc.icu/">https://tczhongyi.toc.icu/</a> AList 影视剧合集 4K原盘<br><a href="https://asca0121.toc.icu/">https://asca0121.toc.icu/</a> 日负斗金 4K影视 动漫 剧集<br><a href="https://alist.ouo3.repl.co/">https://alist.ouo3.repl.co/</a> OUO 大佬们的站 其他的AList站<br><a href="https://dl.6r.pw:6080/">https://dl.6r.pw:6080/</a> AList网盘 电影 壁纸 视频<br><a href="https://alist.ucu520.top/">https://alist.ucu520.top/</a> 开心ucu-AList 漫画 学习 音乐<br><a href="http://81.68.240.111:1688/">http://81.68.240.111:1688/</a> AList看剧学习资源大全<br><a href="https://pan.hxft.xyz/">https://pan.hxft.xyz/</a> 软件 电影<br><a href="http://81.70.1.225:5244/">http://81.70.1.225:5244/</a> 看の电の视 动漫<br><a href="https://pan.arley.cn/">https://pan.arley.cn/</a> Arley’s Drive 图片 电影 游戏<br><a href="https://apps.weixinqqq.com/">https://apps.weixinqqq.com/</a> 资源站.随意盘 教程 正规小视频 音乐<br><a href="https://bdys.top/">https://bdys.top/</a> bdys 电影动漫韩剧日剧等媒体库资源，提供在线播放，个人资源低调观看<br><a href="https://pan.cqtjy.cn/">https://pan.cqtjy.cn/</a> 老谭alist 影视 4K在线观看 办公系统软件电子书资料等<br><a href="https://alist.azad.asia/">https://alist.azad.asia/</a> azad个人云盘 影视4k在线 电影美剧丰富、MV、学习教程等资源<br><a href="https://pan.110014.xyz/">https://pan.110014.xyz/</a> 电喵大战皮卡丘<br><a href="https://alist.prpr.run/">https://alist.prpr.run/</a> pr盘 动漫日番在线看，考研资料，高分电影、漫威等影视作品，独特得是看站长收集了许多国家的影视作品和外语。<br><a href="https://pan.ecve.cn/">https://pan.ecve.cn/</a> ECVE资源小站，全影视资源1-10个文件夹，10有最新的恶鬼看起来，阿里网盘线路4K高清播放，看电影资源多。<br><a href="http://shicheng.wang:555">http://shicheng.wang:555</a> 若水分享、学习资源、我的影视、软件分享，一个看影视片的alist资源站，新片很多。<br><a href="https://alist.ccome.site">https://alist.ccome.site</a> 动漫，影视 音乐、壁纸、AI绘画，杂货铺，仓库 Cosplay。<br><a href="https://www.asmrgay.com/">https://www.asmrgay.com/</a> asmr<br><a href="https://www.aliyundrive.com/s/AjPaykzLJnw">https://www.aliyundrive.com/s/AjPaykzLJnw</a></p>
-]]></content>
-      <categories>
-        <category>内容分享</category>
-        <category>资源</category>
-      </categories>
-      <tags>
-        <tag>alist</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>解决npm install安装太慢</title>
-    <url>/blog/posts/npminstall.html</url>
-    <content><![CDATA[<h2 id="设置-npm-registry"><a href="#设置-npm-registry" class="headerlink" title="设置 npm registry"></a>设置 npm registry</h2><ul>
-<li>本文方法为将npm registry更改为<strong>淘宝镜像</strong>，提升安装速度。</li>
-</ul>
-<h3 id="1-临时使用"><a href="#1-临时使用" class="headerlink" title="1.临时使用"></a>1.临时使用</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm --registry https://registry.npm.taobao.org install express</span><br></pre></td></tr></table></figure>
-<h3 id="2-持久使用"><a href="#2-持久使用" class="headerlink" title="2.持久使用"></a>2.持久使用</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> registry https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
-<p>使用<strong>mac</strong>需要权限的话，前面需要加<strong>sudo</strong>，然后输入密码。<br>配置后可通过下面方式来验证是否成功：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm config get registry</span><br></pre></td></tr></table></figure>
-<p><img src="https://pic.imgdb.cn/item/6579c2efc458853aef76618c.webp" alt=""></p>
-<h3 id="3-通过cnpm使用"><a href="#3-通过cnpm使用" class="headerlink" title="3.通过cnpm使用"></a>3.通过cnpm使用</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g cnpm --registry=https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>]]></content>
-      <tags>
-        <tag>npm</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>初中化学方程式</title>
-    <url>/blog/posts/22966c79.html</url>
-    <content><![CDATA[<h1 id="九年级上"><a href="#九年级上" class="headerlink" title="九年级上"></a>九年级上</h1><h2 id="走进化学世界"><a href="#走进化学世界" class="headerlink" title="走进化学世界"></a>走进化学世界</h2><p>化学是一门以试验为基础的科学。</p>
-<ul>
-<li><p>蜡烛燃烧: </p>
-<script type="math/tex; mode=display">2C_{18}H_{38} + 55O_2 \xrightarrow{\text{点燃}} 36CO_2 + 38H_2O</script></li>
-<li><p>汞氧化: </p>
-<script type="math/tex; mode=display">2Hg + O_2 \xrightarrow{\Delta} 2HgO</script></li>
-<li><p>红磷燃烧: </p>
-<script type="math/tex; mode=display">4P + 5O_2 \xrightarrow{\text{点燃}} 2P_2O_5</script></li>
-<li><p>硫: </p>
-<script type="math/tex; mode=display">S + O_2 \xrightarrow{\text{点燃}} SO_2</script></li>
-<li><p>木炭: </p>
-<script type="math/tex; mode=display">C + O_2 \xrightarrow{\text{点燃}} CO_2</script></li>
-<li><p>铁丝: </p>
-<script type="math/tex; mode=display">3Fe + 2O_2 \xrightarrow{\text{点燃}} Fe_3O_4</script></li>
-</ul>
-<h2 id="制取氧气"><a href="#制取氧气" class="headerlink" title="制取氧气"></a>制取氧气</h2><ul>
-<li><p>红磷燃烧: </p>
-<script type="math/tex; mode=display">4P + 5O_2 \xrightarrow{\text{点燃}} 2P_2O_5</script></li>
-<li><p>高锰酸钾制氧: </p>
-<script type="math/tex; mode=display">2KMnO_4 \xrightarrow{\Delta} K_2MnO_4 + MnO_2 + O_2 \uparrow</script></li>
-<li><p>过氧化氢制氧: </p>
-<script type="math/tex; mode=display">2H_2O_2 \rightarrow MnO_2 + 2H_2O + O_2 \uparrow</script></li>
-<li><p>氯酸钾制氧: </p>
-<script type="math/tex; mode=display">2KClO_3 \xrightarrow{\Delta} MnO_2 + 2KCl + 3O_2 \uparrow</script></li>
-</ul>
-<h2 id="自然界的水"><a href="#自然界的水" class="headerlink" title="自然界的水"></a>自然界的水</h2><ul>
-<li><p>水的净化</p>
-<ul>
-<li>投药消毒: <script type="math/tex; mode=display">Cl_2 + H_2O \rightarrow HCl + HClO</script></li>
-</ul>
-</li>
-<li><p>水的组成</p>
-<ul>
-<li>电解水: <script type="math/tex; mode=display">2H_2O \xrightarrow{通电} 2H_2 \uparrow + O_2 \uparrow</script></li>
-</ul>
-</li>
-<li><p>化学方程式</p>
-</li>
-<li><p>质量守恒定律</p>
-<ul>
-<li><p>铁和硫酸铜反应: </p>
-<script type="math/tex; mode=display">Fe + CuSO_4 \rightarrow Cu + FeSO_4</script></li>
-<li><p>碳酸钠固体与盐酸: </p>
-<script type="math/tex; mode=display">Na_2CO_3 + HCl \rightarrow NaCl + H_2O + CO_2 \uparrow</script></li>
-<li><p>镁燃烧: </p>
-<script type="math/tex; mode=display">2Mg + O_2 \xrightarrow{\text{点燃}} 2MgO</script></li>
-<li><p>氢气还原氧化铜: </p>
-<script type="math/tex; mode=display">CuO + H_2 \xrightarrow{\Delta} Cu + H_2O</script></li>
-</ul>
-</li>
-<li><p>如何正确书写化学方程式</p>
-<ul>
-<li>硫酸铜与氢氧化钠: <script type="math/tex; mode=display">CuSO_4 + 2NaOH \rightarrow Na_2SO_4 + Cu(OH)_2 \downarrow</script></li>
-</ul>
-</li>
-<li><p>利用化学方程式的简单计算</p>
-<ul>
-<li>煅烧石灰石: <script type="math/tex; mode=display">CaCO_3 \xrightarrow{\text{高温}} CaO + CO_2 \uparrow</script></li>
-</ul>
-</li>
-<li><p>碳和碳的氧化物</p>
-<ul>
-<li>金刚石、石墨和 C60</li>
-<li><p>碳完全燃烧: </p>
-<script type="math/tex; mode=display">C + O_2 \xrightarrow{\text{点燃}} CO_2</script></li>
-<li><p>碳不完全燃烧: </p>
-<script type="math/tex; mode=display">2C + O_2 \xrightarrow{\text{点燃}} 2CO</script></li>
-<li><p>碳还原氧化铜: </p>
-<script type="math/tex; mode=display">2CuO + C \xrightarrow{\text{高温}} 2Cu + CO_2 \uparrow</script></li>
-<li><p>碳还原氧化铁: </p>
-<script type="math/tex; mode=display">2Fe_2O_3 + 3C \xrightarrow{\text{高温}} 4Fe + 3CO_2 \uparrow</script></li>
-<li><p>碳还原二氧化碳: </p>
-<script type="math/tex; mode=display">CO_2 + C \xrightarrow{\text{高温}} 2CO</script></li>
-</ul>
-</li>
-<li><p>二氧化碳制取的研究</p>
-<ul>
-<li>制取二氧化碳: <script type="math/tex; mode=display">CaCO_3 + 2HCl \rightarrow CaCl_2 + H_2O + CO_2 \uparrow</script></li>
-</ul>
-</li>
-<li><p>二氧化碳和一氧化碳</p>
-<ul>
-<li><p>二氧化碳与水: </p>
-<script type="math/tex; mode=display">CO_2 + H_2O \rightarrow H_2CO_3</script></li>
-<li><p>碳酸分解: </p>
-<script type="math/tex; mode=display">H_2CO_3 \rightarrow CO_2 \uparrow + H_2O</script></li>
-<li><p>氢氧化钙(澄清石灰水)检验二氧化碳: </p>
-<script type="math/tex; mode=display">Ca(OH)_2 + CO_2 \rightarrow CaCO_3 \downarrow + H_2O</script></li>
-<li><p>一氧化碳燃烧: </p>
-<script type="math/tex; mode=display">2CO + O_2 \xrightarrow{\text{点燃}} 2CO_2</script></li>
-</ul>
-</li>
-</ul>
-<h2 id="燃料及其利用"><a href="#燃料及其利用" class="headerlink" title="燃料及其利用"></a>燃料及其利用</h2><ul>
-<li><p>燃料的合理利用与开发</p>
-</li>
-<li><p>生石灰与水反应: </p>
-<script type="math/tex; mode=display">CaO + H_2O \rightarrow Ca(OH)_2</script></li>
-<li><p>镁和稀盐酸: </p>
-<script type="math/tex; mode=display">Mg + 2HCl \rightarrow MgCl_2 + H_2 \uparrow</script></li>
-<li><p>甲烷(天然气)燃烧: </p>
-<script type="math/tex; mode=display">CH_4 + 2O_2 \xrightarrow{\text{点燃}} 2H_2O + CO_2</script></li>
-<li><p>乙醇(酒精)燃烧: </p>
-<script type="math/tex; mode=display">C_2H_5OH + 3O_2 \xrightarrow{\text{点燃}} 2CO_2 + 3H_2O</script></li>
-<li><p>锌与稀硫酸制氢: </p>
-<script type="math/tex; mode=display">Zn + H_2SO_4 \rightarrow ZnSO_4 + H_2 \uparrow</script></li>
-</ul>
-<h1 id="九年级下"><a href="#九年级下" class="headerlink" title="九年级下"></a>九年级下</h1><h2 id="酸和碱"><a href="#酸和碱" class="headerlink" title="酸和碱"></a>酸和碱</h2><h3 id="常见的酸和碱"><a href="#常见的酸和碱" class="headerlink" title="常见的酸和碱"></a>常见的酸和碱</h3><h4 id="酸与活泼金属反应"><a href="#酸与活泼金属反应" class="headerlink" title="酸与活泼金属反应"></a>酸与活泼金属反应</h4><ul>
-<li><p>金属与稀盐酸反应</p>
-<ul>
-<li><p>镁: </p>
-<script type="math/tex; mode=display">Mg + 2HCl \rightarrow MgCl_2 + H_2 \uparrow</script></li>
-<li><p>镁: </p>
-<script type="math/tex; mode=display">Zn + 2HCl \rightarrow ZnCl_2 + H_2 \uparrow</script></li>
-<li><p>铁: </p>
-<script type="math/tex; mode=display">Fe + 2HCl \rightarrow FeCl_2 + H_2 \uparrow</script></li>
-<li><p>铝: </p>
-<script type="math/tex; mode=display">2Al + 6HCl \rightarrow 2AlCl_3 + 3H_2 \uparrow</script></li>
-</ul>
-</li>
-</ul>
-<h4 id="酸与金属氧化物反应"><a href="#酸与金属氧化物反应" class="headerlink" title="酸与金属氧化物反应"></a>酸与金属氧化物反应</h4><ul>
-<li><p>铁锈</p>
-<ul>
-<li><p>与稀盐酸反应: </p>
-<script type="math/tex; mode=display">Fe_2O_3 + 6HCl \rightarrow 2FeCl_3 + 3H_2O</script></li>
-<li><p>与稀硫酸反应: </p>
-<script type="math/tex; mode=display">Fe_2O_3 + 3H_2SO_4 \rightarrow Fe_2(SO_4)_3 + 3H_2O</script></li>
-</ul>
-</li>
-<li><p>氧化铜</p>
-<ul>
-<li><p>与稀盐酸反应: </p>
-<script type="math/tex; mode=display">CuO + 2HCl \rightarrow CuCl_2 + H_2O</script></li>
-<li><p>与稀硫酸反应: </p>
-<script type="math/tex; mode=display">CuO + H_2SO_4 = CuSO_4 + H_2O</script></li>
-</ul>
-</li>
-<li><p>氢氧化钙制取</p>
-<script type="math/tex; mode=display">CaO + H_2O \rightarrow Ca(OH)_2</script></li>
-</ul>
-<h3 id="碱与非金属氧化物作用"><a href="#碱与非金属氧化物作用" class="headerlink" title="碱与非金属氧化物作用"></a>碱与非金属氧化物作用</h3><h4 id="与二氧化碳反应"><a href="#与二氧化碳反应" class="headerlink" title="与二氧化碳反应"></a>与二氧化碳反应</h4><ul>
-<li><p>氢氧化钙</p>
-<script type="math/tex; mode=display">Ca(OH)_2 + CO_2 \rightarrow CaCO_3 \downarrow + H_2O</script></li>
-<li><p>氢氧化钠</p>
-<script type="math/tex; mode=display">2NaOH + CO_2 \rightarrow Na_2CO_3 + H_2O</script></li>
-<li><p>氢氧化钾</p>
-<script type="math/tex; mode=display">2KOH + CO_2 \rightarrow K_2CO_3 + H_2O</script></li>
-</ul>
-<h4 id="与二氧化硫反应"><a href="#与二氧化硫反应" class="headerlink" title="与二氧化硫反应"></a>与二氧化硫反应</h4><ul>
-<li><p>氢氧化钙</p>
-<script type="math/tex; mode=display">Ca(OH)_2 + SO_2 \rightarrow CaSO_3 \downarrow + H_2O</script></li>
-<li><p>氢氧化纳</p>
-<script type="math/tex; mode=display">2NaOH + SO_2 \rightarrow Na_2SO_3 + H_2O</script></li>
-</ul>
-<h4 id="与三氧化硫反应"><a href="#与三氧化硫反应" class="headerlink" title="与三氧化硫反应"></a>与三氧化硫反应</h4><ul>
-<li><p>氢氧化钙</p>
-<script type="math/tex; mode=display">Ca(OH)_2 + SO_3 \rightarrow CaSO_4 + H_2O</script></li>
-<li><p>氢氧化纳</p>
-<script type="math/tex; mode=display">2NaOH + SO_3 \rightarrow Na_2SO_4 + H_2O</script></li>
-</ul>
-<h3 id="酸和碱的中和反应"><a href="#酸和碱的中和反应" class="headerlink" title="酸和碱的中和反应"></a>酸和碱的中和反应</h3><h4 id="酸与碱反应"><a href="#酸与碱反应" class="headerlink" title="酸与碱反应"></a>酸与碱反应</h4><ul>
-<li><p>稀盐酸</p>
-<ul>
-<li><p>氢氧化钠</p>
-<script type="math/tex; mode=display">NaOH + HCl \rightarrow NaCl + H_2O</script></li>
-<li><p>氢氧化钙</p>
-<script type="math/tex; mode=display">Ca(OH)_2 + 2HCl \rightarrow CaCl_2 + 2H_2O</script></li>
-<li><p>氢氧化钡</p>
-<script type="math/tex; mode=display">Ba(OH)_2 + 2HCl \rightarrow BaCl_2 + 2H_2O</script></li>
-<li><p>氢氧化铝</p>
-<script type="math/tex; mode=display">Al(OH)_3 + 3HCl \rightarrow AlCl_3 + 3H_2O</script></li>
-</ul>
-</li>
-<li><p>稀硫酸</p>
-<ul>
-<li><p>氢氧化钠</p>
-<script type="math/tex; mode=display">2NaOH + H_2SO_4 \rightarrow Na_2SO_4 + 2H_2O</script></li>
-<li><p>氢氧化钙</p>
-<script type="math/tex; mode=display">Ca(OH)_2 + H_2SO_4 \rightarrow CaSO_4 + 2H_2O</script></li>
-</ul>
-</li>
-</ul>
-<h3 id="碳酸钠制法-侯氏制碱法："><a href="#碳酸钠制法-侯氏制碱法：" class="headerlink" title="碳酸钠制法-侯氏制碱法："></a>碳酸钠制法-侯氏制碱法：</h3><ul>
-<li><script type="math/tex; mode=display">NH_3 + H_2O + CO_2 \rightarrow NH_4HCO_3</script></li>
-<li><script type="math/tex; mode=display">NH_4HCO_3 + NaCl \rightarrow NH_4Cl + NaHCO_3 \downarrow</script></li>
-<li><script type="math/tex; mode=display">2NaHCO_3 \rightarrow Na_2CO_3 + CO_2 \uparrow + H_2O</script></li>
-</ul>
-<h2 id="盐-化肥"><a href="#盐-化肥" class="headerlink" title="盐 化肥"></a>盐 化肥</h2><ul>
-<li>生活中常见的盐</li>
-</ul>
-<h3 id="与盐酸反应"><a href="#与盐酸反应" class="headerlink" title="与盐酸反应"></a>与盐酸反应</h3><ul>
-<li><p><strong>盐酸</strong></p>
-<ul>
-<li><p><strong>碳酸钙反应</strong>:</p>
-<script type="math/tex; mode=display">CaCO_3 + 2HCl \rightarrow CaCl_2 + H_2CO_3</script><script type="math/tex; mode=display">H_2CO_3 \rightarrow CO_2 \uparrow + H_2O</script><script type="math/tex; mode=display">CaCO_3 + 2HCl \rightarrow CaCl_2 + H_2O + CO_2 \uparrow</script></li>
-<li><p><strong>碳酸钠(苏打)反应</strong>:</p>
-<script type="math/tex; mode=display">Na_2CO_3 + 2HCl \rightarrow 2NaCl + CO_2 \uparrow + H_2O</script></li>
-<li><p><strong>碳酸氢钠(小苏打)反应</strong>:</p>
-<script type="math/tex; mode=display">NaHCO_3 + HCl \rightarrow NaCl + CO_2 \uparrow + H_2O</script></li>
-<li><p><strong>碳酸钠与石灰水反应</strong>:</p>
-<script type="math/tex; mode=display">Na_2CO_3 + Ca(OH)_2 \rightarrow CaCO_3 \downarrow + 2NaOH</script></li>
-<li><p><strong>加热碳酸氢钠反应</strong>:</p>
-<script type="math/tex; mode=display">2NaHCO_3 \xrightarrow{\Delta} Na_2CO_3 + H_2O + CO_2 \uparrow</script></li>
-<li><p><strong>碳酸钠与氯化钙反应</strong>:</p>
-<script type="math/tex; mode=display">Na_2CO_3 + CaCl_2 \rightarrow CaCO_3 \downarrow + 2NaCl</script></li>
-<li><p><strong>硫酸铜溶液反应</strong>:</p>
-<ul>
-<li><p><strong>氢氧化钠</strong>:</p>
-<script type="math/tex; mode=display">CuSO_4 + 2NaOH \rightarrow Cu(OH)_2 \downarrow + Na_2SO_4</script></li>
-<li><p><strong>氯化钡</strong>:</p>
-<script type="math/tex; mode=display">CuSO_4 + BaCl_2 \rightarrow BaSO_4 \downarrow + CuCl_2</script></li>
-</ul>
-</li>
-<li><p><strong>氯化钠与硝酸银反应</strong>:</p>
-<script type="math/tex; mode=display">NaCl + AgNO_3 \rightarrow AgCl \downarrow + NaNO_3</script></li>
-<li><p><strong>氯化钡与硫酸钠反应</strong>:</p>
-<script type="math/tex; mode=display">BaCl_2 + Na_2SO_4 \rightarrow BaSO_4 \downarrow + 2NaCl</script></li>
-</ul>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>学习</category>
-        <category>化学</category>
-      </categories>
-      <tags>
-        <tag>化学方程式</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>作文实用素材方法整理</title>
-    <url>/blog/posts/113bdaa7.html</url>
-    <content><![CDATA[<p>本页为整理的我自己和找来的素材和页面模板<br>仅限参考</p>
-<h2 id="素材整理"><a href="#素材整理" class="headerlink" title="素材整理"></a>素材整理</h2><p>待补充</p>
-<h2 id="写作技巧"><a href="#写作技巧" class="headerlink" title="写作技巧"></a>写作技巧</h2><h3 id="1-从生活中找例子"><a href="#1-从生活中找例子" class="headerlink" title="1.从生活中找例子"></a>1.从生活中找例子</h3><p>简单来说，想不到素材的时候，从生活中找相关的例子去用，比如：<br><img src="https://s2.loli.net/2023/10/21/HBC5rXm9ENqczlQ.webp" alt=""><br>方法：观点句+生活例子+领域描述，如：<br><img src="https://s2.loli.net/2023/10/21/SDG46o5O1eRhHYL.webp" alt=""></p>
-<h3 id="2-正反面论述"><a href="#2-正反面论述" class="headerlink" title="2.正反面论述"></a>2.正反面论述</h3><p>方法：正面论述+反面论述+观点，如：<br><img src="https://s2.loli.net/2023/10/21/L9ZnVHFcq4Ez2kj.webp" alt=""><br>方法：错误选项+正确选项+观点做法，如：<br><img src="https://s2.loli.net/2023/10/21/ysoliO9k4BNFbTj.webp" alt=""></p>
-<h2 id="开头模板"><a href="#开头模板" class="headerlink" title="开头模板"></a>开头模板</h2><h3 id="1-XXX与XXX合力"><a href="#1-XXX与XXX合力" class="headerlink" title="1.XXX与XXX合力"></a>1.XXX与XXX合力</h3><h4 id="原文："><a href="#原文：" class="headerlink" title="原文："></a>原文：</h4><p><img src="https://s2.loli.net/2023/10/20/oyizuWSjgM4qI39.webp" alt="原文"></p>
-<h4 id="模板："><a href="#模板：" class="headerlink" title="模板："></a>模板：</h4><p><img src="https://s2.loli.net/2023/10/20/9TCzapWNmkAPQsc.webp" alt="模板"></p>
-<h4 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h4><p><img src="https://s2.loli.net/2023/10/20/LMq67ScyVJjUgBx.webp" alt="示例"></p>
-<h2 id="结尾模板"><a href="#结尾模板" class="headerlink" title="结尾模板"></a>结尾模板</h2><p>待补充</p>
-]]></content>
-      <categories>
-        <category>学习</category>
-        <category>语文</category>
-      </categories>
-      <tags>
-        <tag>作文</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>实用软件&amp;网站整理</title>
-    <url>/blog/posts/a5115977.html</url>
-    <content><![CDATA[<h2 id="软件分享"><a href="#软件分享" class="headerlink" title="软件分享"></a>软件分享</h2><p>注：以下大部分内容为免费或破解版本</p>
-<h3 id="Coodesker"><a href="#Coodesker" class="headerlink" title="Coodesker"></a>Coodesker</h3><p>Coodesker：自动分类整理桌面上的快捷方式、目录、图片等文件<br>以前为免费软件，虽然在github上，但是就挂了个仓库<br>现在已经开始收费了，但是我感觉老版本就够用<br><a class="btn-anzhiyu " href="regular::Coodesker最后一个免费版本::https://wwll.lanzout.com/iveV71c8woyh::fa-solid fa-play-circle" title=""></a><br><a class="btn-anzhiyu " href="regular::Coodesker20.0.7激活版本::https://wwll.lanzout.com/iEhYW1cbw46h::fa-solid fa-play-circle" title=""></a><br>激活版下载密码：bpwp</p>
-<h3 id="KMS激活工具"><a href="#KMS激活工具" class="headerlink" title="KMS激活工具"></a>KMS激活工具</h3><p>采用当前最先进的激活技术，几乎涵盖了Windows全版本同Office全版本的激活，支持最新的Win11系统、Win10全版本包括Win10 LTSC的数字权利激活，非常强大，是激活系统首选的一款激活工具。<br><a class="btn-anzhiyu " href="regular::前往下载::https://wwll.lanzout.com/iIXeE1c8wp8h::fa-solid fa-play-circle" title=""></a></p>
-<h3 id="PotPlayer视频播放器"><a href="#PotPlayer视频播放器" class="headerlink" title="PotPlayer视频播放器"></a>PotPlayer视频播放器</h3><p>PotPlayer继承了 KMPlayer 所有的优点，拥有异常强大的内置音视频解码器，可以支持几乎全部音乐、视频文件格式的播放。采用 VC++ 进行了全面重构，并且原生支持64位操作系统，使得 PotPlayer 在 Windows 10 等新系统上，无论性能、兼容性和稳定性上的表现均比 KMP 要好不少；硬件加速、流畅优秀的全高清视<br>频播放效果、强大的选项、滤镜、外挂式管理、DXVA等硬件解码；以及非常丰富且强大的设置选项，被誉为Win平台上最优秀的免费影音全能格式播放器。<br><a class="btn-anzhiyu " href="regular::前往下载::https://wwll.lanzout.com/i53vQ1c8wpgf::fa-solid fa-play-circle" title=""></a><br>密码:a2k0</p>
-<h3 id="Rainmeter雨滴"><a href="#Rainmeter雨滴" class="headerlink" title="Rainmeter雨滴"></a>Rainmeter雨滴</h3><p>雨滴皮肤（Rainmeter皮肤），是一些有特定功能的Windows桌面小工具。一些复杂的皮肤则看起来像是小型应用程序，风格相近的皮肤则可以组成一个套装或者主题。任何一个雨滴皮肤在不同电脑上工作都是不完全相同的，这取决于使用者对它的调整和修饰。<br><a class="btn-anzhiyu " href="regular::前往官网下载::https://www.rainmeter.net/::fa-solid fa-play-circle" title=""></a></p>
-<h3 id="几何画板-已破解"><a href="#几何画板-已破解" class="headerlink" title="几何画板(已破解)"></a>几何画板(已破解)</h3><p>几何画板为从三年级到大学的各个级别的学生提供了一种有形的，可视化的方<br>式来学习数学，从而提高他们的参与度、理解力和成就。<br>几何画板现已停售，这里准备了v5.0.6的破解版本<br><a class="btn-anzhiyu " href="regular::前往下载::https://wwll.lanzout.com/iLwf71c8wqyj::fa-solid fa-play-circle" title=""></a></p>
-<p><a href="https://gofile.cc/lre4/bandizip.exe">https://gofile.cc/lre4/bandizip.exe</a><br><a href="https://gofile.cc/jrY7/coodesker.zip">https://gofile.cc/jrY7/coodesker.zip</a><br><a href="https://gofile.cc/551a/kms.zip">https://gofile.cc/551a/kms.zip</a><br><a href="https://gofile.cc/QrEQ/firpe-v182.exe">https://gofile.cc/QrEQ/firpe-v182.exe</a><br><a href="https://gofile.cc/WW5E/idm.exe">https://gofile.cc/WW5E/idm.exe</a><br><a href="https://gofile.cc/K7Xk/potplayer.exe">https://gofile.cc/K7Xk/potplayer.exe</a><br><a href="https://gofile.cc/1kYp/rustdesk-64.exe">https://gofile.cc/1kYp/rustdesk-64.exe</a><br><a href="https://gofile.cc/zq40/ventoy-1095-windows.zip">https://gofile.cc/zq40/ventoy-1095-windows.zip</a><br><a href="https://gofile.cc/0L0l/.zip">https://gofile.cc/0L0l/.zip</a><br><a href="https://gofile.cc/DJyq/acrobat-pro-dc-pdf.iso">https://gofile.cc/DJyq/acrobat-pro-dc-pdf.iso</a></p>
-]]></content>
-      <categories>
-        <category>内容分享</category>
-        <category>软件</category>
-      </categories>
-      <tags>
-        <tag>软件</tag>
-        <tag>网站</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>徽州行</title>
-    <url>/blog/posts/596431e6.html</url>
-    <content><![CDATA[<h1 id="活动简介"><a href="#活动简介" class="headerlink" title="活动简介"></a>活动简介</h1><p>一、活动时间 : 2023 年 11 月 11-14 日 (4 天)<br>二、活动地点: 徽州黄山<br>三、活动内容:<br>11 月 11 日乘高铁到黄山北站研学徽州文化博物馆、黄山城市展览馆<br>11 月 12 日参观历史文化遗产影县—宏村、守拙园<br>11 月 13 日黄山“放飞理想”教育活动<br>11 月 14 日参观徽菜博物馆，参观屯溪老街，乘高铁回京</p>
-<h1 id="DAY-1"><a href="#DAY-1" class="headerlink" title="DAY 1"></a>DAY 1</h1><p>惠州城市展馆<br>徽商：徽州最有名的是徽商，从十三四岁开始外出经商，以木头等资源<br>黄山<br>惠州有更多的人文历史，黄山人们希望改回徽州（人文情感丰富）<br>黄山市依托山水天城，大力传承历史文化，坚持以人为本，加强规划管理，保徽建徽改徽，山水融城 水墨徽州<br>歙砚 歙州再到徽州 方腊歙州人 1987改为黄山市<br>建筑集中，徽派建筑形成，马头墙，放众木头多，马头墙用来防止火灾，封锁火势。<br>拐弯抹角，在惠州历史中富有美德。直角，邻里之间方便搬运东西上不让天，下不让地，中间让邻里和气。<br>作退一步想<br>徽商随家人外出，才能得到帮助<br>建筑：墙倒屋不塌， 即使塌了，整体结构也不会被破坏。<br>榫卯<br>基：稳固 础：支撑<br>马头墙：封锁火势，封火墙。南方房子人字形，方便排水，在人字形两边，略高，挡住火势，不至于烧到邻里。<br>明堂天井：一楼不开窗，防火防盗防小偷。在二楼开天井，由于采光和通风（直接）隐喻：<br>牌坊：代表家族的地位（取决于皇上）主任对社会的贡献。玉质 恩荣 圣旨 哧剑（普遍）?徽州牌坊多。大多数牌坊被摧毁，为了建设新思想<br>戏剧造型：京剧（不断融和）前身为徽剧。<br>徽州人才辈出，教育发达，科举发达。詹天佑，第一批公派留学人物。十户之村不废诵读，教育重视程度高。<br>徽州文化：<br>黄山：黄山松精神：…… 云海三四月份徽商依托新安江发展商业（农夫山泉最早水厂在千岛湖水深七十米处）<br>徽商：云纹五注铜器。徽商创造的物质财富和精神财富是惠州社会历史全面高度发展的重要方面。人口暴增，导致资源匮乏，不得不外出。经商人回乡次数少，惠州人结婚早。惠州女人留在家中掌管家事。<br>七山半水半分田，二分道路和庄园。<br>渔梁送别，母亲在岸边挥泪告别。<br>胡裕泰，卖茶。惠州自古以来种茶。<br>徽商普遍出现在江苏，苏州园林的主人大多数为惠州人。建筑有徽州的风格。徽州火腿制作工艺穿到金华 。<br>江春“布衣上交天子”  商人<br>瘦西湖旁用盐打了一座白塔。<br>河坊街：红顶商人胡雪岩，运用政治势力发展商业。<br>房屋摆设<br>胡适陶行知朱熹<br>做人做事懂分寸<br>戚继光由胡宗宪一手提拔<br>祠堂：惩戒不孝子孙</p>
-<h1 id="DAY-2"><a href="#DAY-2" class="headerlink" title="DAY 2"></a>DAY 2</h1><p>宏村<br>南湖书院坐落于村子南边，学校，义务教育，汪姓男孩可免费接受教育<br>村落聚族而居<br>hua桥<br>宏村牛型村：四座桥四条腿 两棵大树两角 村子身体<br>从奇树村搬迁，逃不掉火灾，hkd选中了宏村，落户生根<br>南方的水有回甘，软水<br>两棵大树：红娘，跟喜事有关，抬着花轿桃树走三圈，拉；老人高寿去世，抬着棺椁绕银杏树走，结白果，放入水中变为银色<br>首富房子承志堂，六十万两白银！!木雕石雕砖雕。大门各有一撇一捺，有钱，能挂到官职。一对石户，门当户对。墙体的突出，门千金门楼四两五。文革期间被红卫兵征收。破四旧，打破封建思想。佛堂，家族家庭富贵以后，想让家族绵延更长。几百年人家无非积善，行善积德，第一等好事只是读书，让所有孩子接受到教育，徽商兴建学堂。先生受村民照顾。不开窗，防火防盗防小偷。给管家开一个门，钱进口袋不乱跑。桌子半圆形四条腿，表示男主人不在家，若回来，半圆桌会拼在一起变六条腿，表示夫妻团圆。木雕损坏与文革有关，村民用黄泥封锁木雕，刻上毛主席万岁。栏杆上方形小孔，看帅哥，山清孔。快乐每从辛苦得，便宜多自吃亏来。创业难受成难知难不难，读书好营商好效好便好。福禄寿三星，老年人对钟很忌讳。横梁架上去之后再雕刻。门当，四根木柱，贫民百姓家没有，富人有。汪氏宗祠中有女性画像。弘。<br>汪姓第一人?。汪华徽州汪姓第一人，收复十五州，被供奉。宏村族长，宏村汪姓第一人。胡重，宏村水系由她主持设计修建，巨大贡献，巾帼丈夫。守拙园<br>仁教永垂 一步进房三步上床四步撞墙<br>男子住的比较好，终身平静指经商能够平平安安<br>以帽去人，下雪就是下白银，肥水不流外人田，大石槽镇宅。请先生到家中上课。<br>五柳堂。阁楼建在过道两边。老气横秋雨一鸣天地响。<br>祠堂用来祭祖或操办重要的事情，以仓库为主要使用形式。女子在结婚和去世时才能入堂。看不起我可以，但要进我家门要从商下过。商门有提升家族地位的寓意。<br>文昌宫。北有孔子南有文昌。以文会友，文人聚会。石木砖雕。十里红妆，从小准备嫁妆和棺椁。<br>酒楼。喝酒办宴席之地。鸿案春长。明方清圆。小厅堂大厢房，明。大厅堂小厢房，清。</p>
-<h1 id="DAY-3"><a href="#DAY-3" class="headerlink" title="DAY 3"></a>DAY 3</h1><p>黄山行<br>  “光明顶上彩云飞，忽见仙桃石已归；石去天涯无歇处，仍回松岭伴朝辉。”研学的第三天，我们来到了黄山市市名的来源地—黄山。乘坐缆车登山，我们遇到了一年只有50多天的云海。缆车上升时，向下望去，下方有着各种各样的奇石，翠绿茂密的松树， 有时还能看到险峻的徒步登山通道。<br>[图片 65.jpg]<br>升入云海中时，窗外视野渐渐模糊，隐约看到松树上雪白的雾凇，晶莹剔透。<br>[图片 66.jpg]<br>一段时间后，我们升入云海上方，顿时豁然开朗，云海上方的美丽景色逐渐展现在眼前。蓝天白云，头上的云彩与脚下的云海在远处连为一体，甚是美丽。<br>[图片 67.jpg]</p>
-<p>  爬过好汉坡，经过迎客松，我们的登山之行就此开始。我们翻过了几座山峰，走过了各种各样的阶梯。我们终于登上了一座小山峰。<br>[图片 68.jpg]<br>在这里我们看到了奇形怪状的石头，远处美丽的山脉和湖泊，远远望去，感觉我们的目标光明顶已经唾手可得。<br>[图片 69.jpg]<br>继续跨过一次山峰，我们即将到达光明顶。在这里，我们看到脚下整齐划一的松树，经历过前两天的大雨，松树们都显得格外苍翠挺拔。<br>[图片 70.jpg]<br>继续爬了一个坡后，我们到达了此次黄山之行的最高点—光明顶。光明顶是黄山的主峰之一，位于黄山中部，海拔1860米，为黄山第二高峰，与天都峰、莲花峰并称黄山三大主峰。顶上平坦而高旷，各个高峰尽收眼底。<br>[图片 73.jpg]<br>在这里，我们还见到了光明顶气象站，他的前身便是建于明代的大悲院寺庙，据说周围的地区天气预报都来源于这里。<br>[图片 72.jpg]<br>  在光明顶上进行了放飞理想活动后，我们便开启了下山的行程。下山途中我们见到了《红楼梦》中出现的飞来石。飞来石为自然风化生成，两大岩石之间的接触面很小，似从天外飞来，故名“飞来石”。<br>[图片 74.jpg]<br>  本次爬黄山的研学活动，让我们欣赏到了黄山的美丽景象，也让我们体会到了大自然的奇特，秀美。</p>
-<h1 id="DAY-4"><a href="#DAY-4" class="headerlink" title="DAY 4"></a>DAY 4</h1><p>  屯溪老街<br>  研学最后一天的第一站，我们来到了徽商发源地-屯溪老街。屯溪老街坐落于新安江的渐江段旁边，此地三江汇聚，西水屯局，故得名屯溪。<br>[图片 77.jpg]<br>  屯溪整条街像一条鱼骨头，主巷为最大的主心骨，旁边小巷子就是鱼骨的分支。街旁的店铺也有着一些文化，徽商以前都是是小作坊 ，临街的地方是商铺，后院是制作商品的地方，二楼就是店铺主人休息生活的地方。<br>[图片 78.jpg]<br>  对于毛豆腐，各个地方也有各个地方的特色。宏村的毛豆腐是方块形，方方正正，呈坎村则是长条形。游客来此地旅游，买的最多的就是黄山烧饼。黄山烧饼作为徽商重要的干粮 ，得益于其方便保存的特点。徽商行商的路程很长，所以带很多烧饼便能解决粮食问题。<br>  这里的主要特色还有茶。茶自古以来就是此地的的主要经济收入。在这里，四月份放还能一周的假 用来采茶叶。每次采茶，都需要爬到海拔800以上的山里。祁红巷是之前专门储存祁门红茶的地方，祁门红茶，是世界三大高香名茶之一 ，听导游说英国皇室的下午茶就是祁门红茶。<br>[图片 81.jpg]<br>祁门红茶因为大部分都最为出口商品，为了方便运输，所以制成了碎茶的形式。<br>  在屯溪老街，我们见到了各种各样的安徽特色，也领略到了各种特色商品食品背后的历史背景和文化内涵。</p>
-]]></content>
-      <categories>
-        <category>学习</category>
-        <category>研学</category>
-      </categories>
-      <tags>
-        <tag>徽州</tag>
-        <tag>研学</tag>
       </tags>
   </entry>
   <entry>
@@ -1397,28 +994,387 @@
       </tags>
   </entry>
   <entry>
-    <title>解决Github的访问问题</title>
-    <url>/blog/posts/714d1047.html</url>
-    <content><![CDATA[<p>Github是一个基于Git版本控制系统的代码托管平台。</p>
-<p>Github上有着很多开源的免费的软件及资料，但是因为网络问腿，导致Github的访问速度极其的慢，甚至有的时候上不去<br>下面，我给出了几个方法，能够解决这个问题</p>
-<h2 id="1-Watt-Toolkit"><a href="#1-Watt-Toolkit" class="headerlink" title="1.Watt Toolkit"></a>1.Watt Toolkit</h2><p>「Watt Toolkit」原名Steam++，是一个开源跨平台的多功能 Steam 工具箱。<br><img src="https://s2.loli.net/2023/10/22/oWHj9GgrPe7NVyC.webp" alt=""><br><a class="btn-anzhiyu " href="/blog/center%20large::%E5%89%8D%E5%BE%80Watt%20Toolkit%E5%AE%98%E7%BD%91%E4%B8%8B%E8%BD%BD::https:/steampp.net/::fa-solid%20fa-download" title=""></a><br>进入软件界面后，点击左侧的网络加速选项卡，勾选Github，点击右上角的”一键加速”<br><img src="https://s2.loli.net/2023/10/22/MsDri4PQEy5lFLc.webp" alt=""></p>
-<h2 id="2-更改hosts文件"><a href="#2-更改hosts文件" class="headerlink" title="2.更改hosts文件"></a>2.更改hosts文件</h2><p>通过修改本地 hosts 文件，试图解决：</p>
-<p>GitHub 访问速度慢的问题<br>GitHub 项目中的图片显示不出的问题</p>
-<h3 id="1-下载hosts管理工具SwitchHosts"><a href="#1-下载hosts管理工具SwitchHosts" class="headerlink" title="1.下载hosts管理工具SwitchHosts"></a>1.下载hosts管理工具<strong>SwitchHosts</strong></h3><p><img src="https://s2.loli.net/2023/10/22/LXJjSyzU4cZdrTC.webp" alt=""><br><a class="btn-anzhiyu " href="/blog/center%20large::SwitchHosts%E7%9A%84Github%E4%B8%BB%E9%A1%B5::https:/github.com/oldj/SwitchHosts/tree/v4.1.2::fa-solid%20fa-arrow-right" title=""></a><br>当然，如果上不去Github的话，可以通过下面蓝奏云链接下载最新版本（目前截至v4.1.2）<br><a class="btn-anzhiyu " href="regular::前往蓝奏云分享链接::https://wwll.lanzout.com/b04es5obc::fa-solid fa-download" title=""></a>密码:7s3t</p>
-<h3 id="2-安装配置"><a href="#2-安装配置" class="headerlink" title="2.安装配置"></a>2.安装配置</h3><p>安装完成后，我们打开软件，就可以看到如下界面:<br><img src="https://s2.loli.net/2023/10/22/6n7ipcA5CUdfBLt.webp" alt=""><br>我们点击左侧的加号，进入配置界面<br>Hosts类型：远程<br>Hosts标题：随意<br>URL：<a href="https://raw.hellogithub.com/hosts">https://raw.hellogithub.com/hosts</a><br><div class="note warning flat"><p>请将此链接粘贴到选项框中</p>
-</div><br>自动刷新：建议选择1小时<br><img src="https://s2.loli.net/2023/10/22/CMzHoDT3PhpFQ5i.webp" alt=""><br>填写完成后，点击确定，就配置完成了</p>
-<h3 id="3-问题解决"><a href="#3-问题解决" class="headerlink" title="3.问题解决"></a>3.问题解决</h3><p>点击左侧名称后的按钮，如果你显示的如下界面（提示操作成功）<br><img src="https://s2.loli.net/2023/10/22/V5aJKjuG9QTLfcA.webp" alt=""><br>那么恭喜你，你的配置完成了<br>如果是下面这种：<br><img src="https://s2.loli.net/2023/10/22/qrQyT4w5Ks3j7uB.webp" alt=""><br>请继续往下设置</p>
-<h4 id="3-1-找到hosts文件"><a href="#3-1-找到hosts文件" class="headerlink" title="3.1 找到hosts文件"></a>3.1 找到hosts文件</h4><p>Hosts文件一般都在电脑的”C:\Windows\System32\drivers\etc”文件夹下，我们打开这个文件夹，找到hosts文件<br><img src="https://s2.loli.net/2023/10/22/cmrDo9vPJsafNiw.webp" alt=""></p>
-<h4 id="3-2-修改hosts文件权限"><a href="#3-2-修改hosts文件权限" class="headerlink" title="3.2 修改hosts文件权限"></a>3.2 修改hosts文件权限</h4><p>右键hosts文件，选择<strong>属性</strong>，<br><img src="https://s2.loli.net/2023/10/22/b6qCFxJQwd5Ep9B.webp" alt=""><br>选择<strong>编辑</strong><br><img src="https://s2.loli.net/2023/10/22/Ac3lXS9YWut7wmV.webp" alt=""><br>将<strong>组成用户名</strong>中第一个和最后一个选项（Users）的<strong>修改</strong>和<strong>写入</strong>勾选<br><img src="https://s2.loli.net/2023/10/22/v5fbjVmGrAEkX6M.webp" alt=""></p>
-<h4 id="3-3-验证修改"><a href="#3-3-验证修改" class="headerlink" title="3.3 验证修改"></a>3.3 验证修改</h4><p>点击确定，返回<strong>SwitchHosts</strong>界面，若显示如下界面，那么就修改成功了<br><img src="https://s2.loli.net/2023/10/22/V5aJKjuG9QTLfcA.webp" alt=""></p>
-<h4 id="3-4-清除DNS缓存"><a href="#3-4-清除DNS缓存" class="headerlink" title="3.4 清除DNS缓存"></a>3.4 清除DNS缓存</h4><p>若发现以上设置都没有问题了，但是仍然访问不了Github，那么可以试试清除电脑的DNS缓存<br>这里以Win11举例：<br>鼠标右键点击“开始菜单”或者按“Win+X”弹出窗口，找到“Windows 终端(管理员)”。如下图：<br><img src="https://s2.loli.net/2023/10/22/4eamPvjlhMqI6rn.webp" alt=""><br>在命令窗口输入:<br><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ipconfig /flushdns</span><br></pre></td></tr></table></figure><br>按<strong>Enter（回车键）</strong>运行，看到已成功刷新DNS解析缓存的提示就说明DNS刷新成功了。（注：命令中间空格不可少）如下图：<br><img src="https://s2.loli.net/2023/10/22/Go41KbrZTingAzt.webp" alt=""></p>
+    <title>TED视频分享</title>
+    <url>/blog/posts/df7635ee.html</url>
+    <content><![CDATA[<p>本页将分享一些TED的听力视频<br>将提供视频文件和中英字幕文件<br>下载后放置同一文件夹内<br>并使用相同名称即可</p>
+<h2 id="The-first-20-hours-—-how-to-learn-anything"><a href="#The-first-20-hours-—-how-to-learn-anything" class="headerlink" title="The first 20 hours — how to learn anything"></a>The first 20 hours — how to learn anything</h2><p><img src="https://pic.imgdb.cn/item/6541053fc458853aef4b2d0f.webp" alt=""><br>原视频链接：<a href="https://www.youtube.com/watch?v=5MgBikgcWnY&amp;t=10s">前往YouTube</a><br>官网文章链接：<a href="https://ideas.ted.com/dont-have-10000-hours-to-learn-something-new-thats-fine-all-you-need-is-20-hours/">前往TED官网</a><br>官网文章转载：<a href="https://flumbrix1145.github.io/blog/2023/10/31/Don%E2%80%99t-have-10-000-hours-to-learn-something-new-That%E2%80%99s-fine-%E2%80%94-all-you-need-is-20-hours/">点击前往</a><br><a class="btn-anzhiyu " href="regular::下载视频文件::https://gofile.cc/deLy/the-first-20-hours-how-to-learn-anything-josh-kaufman-tedxcsu.mp4::fa-solid fa-download" title=""></a><a class="btn-anzhiyu " href="regular::下载字幕文件::https://gofile.cc/prDW/the-first-20-hours-how-to-learn-anything-josh-kaufman-tedxcsu.srt::fa-solid fa-download" title=""></a></p>
 ]]></content>
       <categories>
-        <category>教程</category>
+        <category>学习</category>
+        <category>英语</category>
       </categories>
       <tags>
-        <tag>Github</tag>
+        <tag>TED</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Win11安装杜比全景声方法</title>
+    <url>/blog/posts/3464e4f.html</url>
+    <content><![CDATA[<h1 id="在-Windows-11-中安装杜比全景声"><a href="#在-Windows-11-中安装杜比全景声" class="headerlink" title="在 Windows 11 中安装杜比全景声"></a>在 Windows 11 中安装杜比全景声</h1><h4 id="一个人可以在剧院享受的氛围。-因此，在本指南中，您将学习-如何在-Windows-11-中免费启用或安装杜比全景声"><a href="#一个人可以在剧院享受的氛围。-因此，在本指南中，您将学习-如何在-Windows-11-中免费启用或安装杜比全景声" class="headerlink" title="一个人可以在剧院享受的氛围。 因此，在本指南中，您将学习 如何在 Windows 11 中免费启用或安装杜比全景声."></a>一个人可以在剧院享受的氛围。 因此，在本指南中，您将学习 <strong>如何在 Windows 11 中免费启用或安装杜比全景声</strong>.</h4><h4 id="同时，-杜比全景声-是目前可用的最具创新性的音响系统之一。-微软的-Xbox-One-和索尼的-PlayStation-4-都兼容出色的硬件，因此可以轻松地为游戏机使用经过杜比全景声-Dolby-Atmos-认证的音响系统。-不幸的是，对于-Windows-10-11-PC-来说，情况并非如此。"><a href="#同时，-杜比全景声-是目前可用的最具创新性的音响系统之一。-微软的-Xbox-One-和索尼的-PlayStation-4-都兼容出色的硬件，因此可以轻松地为游戏机使用经过杜比全景声-Dolby-Atmos-认证的音响系统。-不幸的是，对于-Windows-10-11-PC-来说，情况并非如此。" class="headerlink" title="同时， 杜比全景声 是目前可用的最具创新性的音响系统之一。 微软的 Xbox One 和索尼的 PlayStation 4 都兼容出色的硬件，因此可以轻松地为游戏机使用经过杜比全景声 (Dolby Atmos) 认证的音响系统。 不幸的是，对于 Windows 10/11 PC 来说，情况并非如此。"></a>同时， <strong>杜比全景声</strong> 是目前可用的最具创新性的音响系统之一。 微软的 Xbox One 和索尼的 PlayStation 4 都兼容出色的硬件，因此可以轻松地为游戏机使用经过杜比全景声 (Dolby Atmos) 认证的音响系统。 不幸的是，对于 Windows 10/11 PC 来说，情况并非如此。</h4><h2 id="杜比音频与杜比全景声：有什么区别？"><a href="#杜比音频与杜比全景声：有什么区别？" class="headerlink" title="杜比音频与杜比全景声：有什么区别？"></a>杜比音频与杜比全景声：有什么区别？</h2><p>杜比音频是一种 2D 音频技术，可以提高您正在观看的任何内容的音质，无论是体育赛事、流媒体电影，甚至是 DVD 或蓝光。</p>
+<p>另一方面，杜比全景声 (Dolby Atmos) 是一种 3D 沉浸式技术，它允许扬声器或扬声器系统“欺骗”您的大脑，让您相信您被声音“包围”——它有效地为您提供影院体验，仿佛即使您不在，您也会被扬声器包围。</p>
+<p>因此，事不宜迟，以下是在 Windows 11 中安装杜比全景声 (Dolby Atmos) 的方法：</p>
+<h2 id="步骤-1-下载杜比全景声应用程序"><a href="#步骤-1-下载杜比全景声应用程序" class="headerlink" title="步骤 1. 下载杜比全景声应用程序"></a>步骤 1. 下载杜比全景声应用程序</h2><p>前往<a href="https://www.dolby.com/">Dolby官网</a>下载杜比全景声应用程序。 </p>
+<h2 id="步骤-2-启用开发者模式"><a href="#步骤-2-启用开发者模式" class="headerlink" title="步骤 2. 启用开发者模式"></a>步骤 2. 启用开发者模式</h2><ul>
+<li>按 Windows 键 + I 打开 <strong>设置。</strong></li>
+<li>点击 <strong>隐私及安全</strong> 从左侧窗格中，然后选择 <strong>对于开发人员</strong>.</li>
+</ul>
+<p>对于开发人员</p>
+<ul>
+<li>使能够 <strong>开发商</strong> 模式，然后单击 <strong>是的</strong> 确认。</li>
+</ul>
+<p><img src="https://digitalixy.com/image/1646154525.png" alt="" title="dolby-atmos-windows-11 (2)-min"></p>
+<p>启用开发者模式</p>
+<h2 id="步骤-3-禁用驱动程序签名强制"><a href="#步骤-3-禁用驱动程序签名强制" class="headerlink" title="步骤 3. 禁用驱动程序签名强制"></a>步骤 3. 禁用驱动程序签名强制</h2><p>按住 <strong>转移</strong> 键，然后单击 <strong>重新开始</strong>.</p>
+<p>选择 <strong>疑难解答</strong> &gt; <strong>高级选项</strong> &gt; <strong>启动设置</strong> &gt; <strong>重新开始</strong> &gt; 最后，按 <strong>F7</strong> 钥匙。</p>
+<p><img src="https://digitalixy.com/image/1646154532.jpg" alt="如何在 2022 年免费在 Windows 11 PC 和笔记本电脑中安装杜比全景声" title="dolby-atmos-windows-11 (2)-min"></p>
+<p>禁用驱动程序签名强制</p>
+<h2 id="步骤-4-更新声音驱动程序"><a href="#步骤-4-更新声音驱动程序" class="headerlink" title="步骤 4. 更新声音驱动程序"></a>步骤 4. 更新声音驱动程序</h2><p>曾经，您已经从上述链接下载了杜比全景声应用程序，然后将其解压缩。 导航到 <strong>司机</strong> 文件夹，解压名为 Win11_x64 文件夹的文件。</p>
+<p><strong>右键点击</strong> 在开始菜单按钮上，然后选择 <strong>装置经理</strong> 或按 <strong>Windows 键 + X</strong> 然后选择 <strong>装置经理</strong>.</p>
+<p><img src="https://digitalixy.com/image/1646154542.png" alt="" title="dolby-atmos-windows-11-2"></p>
+<p>装置经理。</p>
+<p>现在， <strong>双击</strong> 在 <strong>声音、视频和游戏控制器</strong>, <strong>右键点击</strong> 在 <strong>高清音频设备，</strong> 然后选择 <strong>更新驱动程序</strong>.</p>
+<p><img src="https://digitalixy.com/image/1646154548.png" alt="" title="dolby-atmos-windows-11-2"></p>
+<p>更新驱动程序</p>
+<p>点击 <strong>浏览我的电脑以获取驱动程序</strong>.</p>
+<p><img src="https://digitalixy.com/image/1646154553.png" alt="" title="dolby-atmos-windows-11-2"></p>
+<p>浏览我的电脑以获取驱动程序</p>
+<p>选择 <strong>让我从计算机上的可用驱动程序列表中进行选择</strong>.</p>
+<p><img src="https://digitalixy.com/image/1646154560.png" alt="" title="dolby-atmos-windows-11-2"></p>
+<p>让我从计算机上的可用驱动程序列表中进行选择</p>
+<p>选择 <strong>有磁盘</strong> 然后点击 <strong>浏览。</strong></p>
+<p><img src="https://digitalixy.com/image/1646154565.png" alt="如何在 2022 年免费在 Windows 11 PC 和笔记本电脑中安装杜比全景声" title="dolby-atmos-windows-11-2"></p>
+<p>浏览</p>
+<p>转到解压后的杜比全景声文件夹 &gt; <strong>driver</strong> &gt; 合适的文件版本选择 <strong>hdaudio.inf</strong> 文件，然后单击 <strong>打开。</strong></p>
+<p><img src="https://digitalixy.com/image/1646154570.png" alt="如何在 2022 年免费在 Windows 11 PC 和笔记本电脑中安装杜比全景声" title="dolby-atmos-windows-11 (11)-min"></p>
+<p>选择 <strong>好的</strong>.</p>
+<p><img src="https://digitalixy.com/image/1646154577.png" alt="如何在 2022 年免费在 Windows 11 PC 和笔记本电脑中安装杜比全景声" title="dolby-atmos-windows-11 (12)-min"></p>
+<p>好的</p>
+<p>现在，选择 <strong>杜比全景声</strong> 并点击 <strong>下一个</strong>. 点击 <strong>是的</strong>.</p>
+<p><img src="https://digitalixy.com/image/1646154584.png" alt="如何在 2022 年免费在 Windows 11 PC 和笔记本电脑中安装杜比全景声" title="dolby-atmos-windows-11-2"></p>
+<p>点击 <strong>无论如何都要安装这个驱动软件，</strong> 如果系统提示您<strong>.</strong></p>
+<p>安装后，点击 <strong>关闭</strong>.</p>
+<h2 id="第-5-步。安装杜比全景声应用程序"><a href="#第-5-步。安装杜比全景声应用程序" class="headerlink" title="第 5 步。安装杜比全景声应用程序"></a>第 5 步。安装杜比全景声应用程序</h2><p>打开 <strong>杜比全景声文件</strong> 您之前提取的然后打开 <strong>应用程序</strong> 文件夹。</p>
+<p><img src="https://digitalixy.com/image/1646154591.png" alt="如何在 2022 年免费在 Windows 11 PC 和笔记本电脑中安装杜比全景声" title="dolby-atmos-windows-11-2"></p>
+<p>应用程序</p>
+<p>双击 <strong>应用程序2021</strong> 文件。</p>
+<p><img src="https://digitalixy.com/image/1646154598.png" alt="如何在 2022 年免费在 Windows 11 PC 和笔记本电脑中安装杜比全景声" title="dolby-atmos-windows-11-2"></p>
+<p>应用程序2021</p>
+<p>点击 <strong>安装</strong> 安装杜比全景声。</p>
+<p><img src="https://digitalixy.com/image/1646154609.png" alt="如何在 2022 年免费在 Windows 11 PC 和笔记本电脑中安装杜比全景声" title="dolby-atmos-windows-11-2"></p>
+<p>安装</p>
+<p>等到安装过程完成。</p>
+<p>最后，杜比全景声 (Dolby Atmos) 已成功安装在您的 Windows 11 PC 上。</p>
+]]></content>
+      <categories>
+        <category>内容分享</category>
+        <category>音效</category>
+      </categories>
+      <tags>
         <tag>Windows</tag>
+        <tag>杜比</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>alist分享站合集</title>
+    <url>/blog/posts/99c9062b.html</url>
+    <content><![CDATA[<h4 id="alist简介"><a href="#alist简介" class="headerlink" title="alist简介"></a>alist简介</h4><p>alist资源站是一个支持多存储的文件列表程序，AList 支持多个存储提供商，包括本地存储、阿里云盘、夸克云盘、189云盘、OneDrive、Google Drive等，且易于拓展。支持文件在线预览，图片、视频、打包下载，简单的来说AList资源站是把个人网盘里的资源以网站模式公开分享。</p>
+<p><a href="https://pan.clun.top/">https://pan.clun.top/</a> 雨呢网盘 视频 动漫 写真<br><a href="https://alist.aqingyuan.repl.co">https://alist.aqingyuan.repl.co</a> 晴园<br><a href="https://al.chirmyram.com">https://al.chirmyram.com</a> 七米蓝<br><a href="https://alist.advanced360.top">https://alist.advanced360.top</a> Banana的资源站<br><a href="https://ruipan.bestruirui.repl.co">https://ruipan.bestruirui.repl.co</a> 小瑞<br><a href="https://pan.arley.cn">https://pan.arley.cn</a> Arley’s Drive<br><a href="https://apps.weixinqqq.com">https://apps.weixinqqq.com</a> 微资源<br>www.kugutsu.ml (NSFW) Puppet Studio<br><a href="https://zi0.cc/">https://zi0.cc/</a> 梓澪の妙妙屋 ASMR 游戏 番剧 插画<br><a href="https://ys.urlsdh.com/go/?url=aHR0cHM6Ly9pbWV4Y2xvdWQudG9wLw%3D%3D">https://imexcloud.top/</a> AList 经典电影中字<br><a href="http://alist.xiaoya.pro/">http://alist.xiaoya.pro/</a> 小雅的AList 大量影视 有点失效<br><a href="https://alist.ygxz.xyz/">https://alist.ygxz.xyz/</a> 小站的AList<br><a href="https://tczhongyi.toc.icu/">https://tczhongyi.toc.icu/</a> AList 影视剧合集 4K原盘<br><a href="https://asca0121.toc.icu/">https://asca0121.toc.icu/</a> 日负斗金 4K影视 动漫 剧集<br><a href="https://alist.ouo3.repl.co/">https://alist.ouo3.repl.co/</a> OUO 大佬们的站 其他的AList站<br><a href="https://dl.6r.pw:6080/">https://dl.6r.pw:6080/</a> AList网盘 电影 壁纸 视频<br><a href="https://alist.ucu520.top/">https://alist.ucu520.top/</a> 开心ucu-AList 漫画 学习 音乐<br><a href="http://81.68.240.111:1688/">http://81.68.240.111:1688/</a> AList看剧学习资源大全<br><a href="https://pan.hxft.xyz/">https://pan.hxft.xyz/</a> 软件 电影<br><a href="http://81.70.1.225:5244/">http://81.70.1.225:5244/</a> 看の电の视 动漫<br><a href="https://pan.arley.cn/">https://pan.arley.cn/</a> Arley’s Drive 图片 电影 游戏<br><a href="https://apps.weixinqqq.com/">https://apps.weixinqqq.com/</a> 资源站.随意盘 教程 正规小视频 音乐<br><a href="https://bdys.top/">https://bdys.top/</a> bdys 电影动漫韩剧日剧等媒体库资源，提供在线播放，个人资源低调观看<br><a href="https://pan.cqtjy.cn/">https://pan.cqtjy.cn/</a> 老谭alist 影视 4K在线观看 办公系统软件电子书资料等<br><a href="https://alist.azad.asia/">https://alist.azad.asia/</a> azad个人云盘 影视4k在线 电影美剧丰富、MV、学习教程等资源<br><a href="https://pan.110014.xyz/">https://pan.110014.xyz/</a> 电喵大战皮卡丘<br><a href="https://alist.prpr.run/">https://alist.prpr.run/</a> pr盘 动漫日番在线看，考研资料，高分电影、漫威等影视作品，独特得是看站长收集了许多国家的影视作品和外语。<br><a href="https://pan.ecve.cn/">https://pan.ecve.cn/</a> ECVE资源小站，全影视资源1-10个文件夹，10有最新的恶鬼看起来，阿里网盘线路4K高清播放，看电影资源多。<br><a href="http://shicheng.wang:555">http://shicheng.wang:555</a> 若水分享、学习资源、我的影视、软件分享，一个看影视片的alist资源站，新片很多。<br><a href="https://alist.ccome.site">https://alist.ccome.site</a> 动漫，影视 音乐、壁纸、AI绘画，杂货铺，仓库 Cosplay。<br><a href="https://www.asmrgay.com/">https://www.asmrgay.com/</a> asmr<br><a href="https://www.aliyundrive.com/s/AjPaykzLJnw">https://www.aliyundrive.com/s/AjPaykzLJnw</a></p>
+]]></content>
+      <categories>
+        <category>内容分享</category>
+        <category>资源</category>
+      </categories>
+      <tags>
+        <tag>alist</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>解决npm install安装太慢</title>
+    <url>/blog/posts/npminstall.html</url>
+    <content><![CDATA[<h2 id="设置-npm-registry"><a href="#设置-npm-registry" class="headerlink" title="设置 npm registry"></a>设置 npm registry</h2><ul>
+<li>本文方法为将npm registry更改为<strong>淘宝镜像</strong>，提升安装速度。</li>
+</ul>
+<h3 id="1-临时使用"><a href="#1-临时使用" class="headerlink" title="1.临时使用"></a>1.临时使用</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm --registry https://registry.npm.taobao.org install express</span><br></pre></td></tr></table></figure>
+<h3 id="2-持久使用"><a href="#2-持久使用" class="headerlink" title="2.持久使用"></a>2.持久使用</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> registry https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+<p>使用<strong>mac</strong>需要权限的话，前面需要加<strong>sudo</strong>，然后输入密码。<br>配置后可通过下面方式来验证是否成功：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm config get registry</span><br></pre></td></tr></table></figure>
+<p><img src="https://pic.imgdb.cn/item/6579c2efc458853aef76618c.webp" alt=""></p>
+<h3 id="3-通过cnpm使用"><a href="#3-通过cnpm使用" class="headerlink" title="3.通过cnpm使用"></a>3.通过cnpm使用</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g cnpm --registry=https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>npm</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>作文实用素材方法整理</title>
+    <url>/blog/posts/113bdaa7.html</url>
+    <content><![CDATA[<p>本页为整理的我自己和找来的素材和页面模板<br>仅限参考</p>
+<h2 id="素材整理"><a href="#素材整理" class="headerlink" title="素材整理"></a>素材整理</h2><p>待补充</p>
+<h2 id="写作技巧"><a href="#写作技巧" class="headerlink" title="写作技巧"></a>写作技巧</h2><h3 id="1-从生活中找例子"><a href="#1-从生活中找例子" class="headerlink" title="1.从生活中找例子"></a>1.从生活中找例子</h3><p>简单来说，想不到素材的时候，从生活中找相关的例子去用，比如：<br><img src="https://s2.loli.net/2023/10/21/HBC5rXm9ENqczlQ.webp" alt=""><br>方法：观点句+生活例子+领域描述，如：<br><img src="https://s2.loli.net/2023/10/21/SDG46o5O1eRhHYL.webp" alt=""></p>
+<h3 id="2-正反面论述"><a href="#2-正反面论述" class="headerlink" title="2.正反面论述"></a>2.正反面论述</h3><p>方法：正面论述+反面论述+观点，如：<br><img src="https://s2.loli.net/2023/10/21/L9ZnVHFcq4Ez2kj.webp" alt=""><br>方法：错误选项+正确选项+观点做法，如：<br><img src="https://s2.loli.net/2023/10/21/ysoliO9k4BNFbTj.webp" alt=""></p>
+<h2 id="开头模板"><a href="#开头模板" class="headerlink" title="开头模板"></a>开头模板</h2><h3 id="1-XXX与XXX合力"><a href="#1-XXX与XXX合力" class="headerlink" title="1.XXX与XXX合力"></a>1.XXX与XXX合力</h3><h4 id="原文："><a href="#原文：" class="headerlink" title="原文："></a>原文：</h4><p><img src="https://s2.loli.net/2023/10/20/oyizuWSjgM4qI39.webp" alt="原文"></p>
+<h4 id="模板："><a href="#模板：" class="headerlink" title="模板："></a>模板：</h4><p><img src="https://s2.loli.net/2023/10/20/9TCzapWNmkAPQsc.webp" alt="模板"></p>
+<h4 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h4><p><img src="https://s2.loli.net/2023/10/20/LMq67ScyVJjUgBx.webp" alt="示例"></p>
+<h2 id="结尾模板"><a href="#结尾模板" class="headerlink" title="结尾模板"></a>结尾模板</h2><p>待补充</p>
+]]></content>
+      <categories>
+        <category>学习</category>
+        <category>语文</category>
+      </categories>
+      <tags>
+        <tag>作文</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>初中化学方程式</title>
+    <url>/blog/posts/22966c79.html</url>
+    <content><![CDATA[<h1 id="九年级上"><a href="#九年级上" class="headerlink" title="九年级上"></a>九年级上</h1><h2 id="走进化学世界"><a href="#走进化学世界" class="headerlink" title="走进化学世界"></a>走进化学世界</h2><p>化学是一门以试验为基础的科学。</p>
+<ul>
+<li><p>蜡烛燃烧: </p>
+<script type="math/tex; mode=display">2C_{18}H_{38} + 55O_2 \xrightarrow{\text{点燃}} 36CO_2 + 38H_2O</script></li>
+<li><p>汞氧化: </p>
+<script type="math/tex; mode=display">2Hg + O_2 \xrightarrow{\Delta} 2HgO</script></li>
+<li><p>红磷燃烧: </p>
+<script type="math/tex; mode=display">4P + 5O_2 \xrightarrow{\text{点燃}} 2P_2O_5</script></li>
+<li><p>硫: </p>
+<script type="math/tex; mode=display">S + O_2 \xrightarrow{\text{点燃}} SO_2</script></li>
+<li><p>木炭: </p>
+<script type="math/tex; mode=display">C + O_2 \xrightarrow{\text{点燃}} CO_2</script></li>
+<li><p>铁丝: </p>
+<script type="math/tex; mode=display">3Fe + 2O_2 \xrightarrow{\text{点燃}} Fe_3O_4</script></li>
+</ul>
+<h2 id="制取氧气"><a href="#制取氧气" class="headerlink" title="制取氧气"></a>制取氧气</h2><ul>
+<li><p>红磷燃烧: </p>
+<script type="math/tex; mode=display">4P + 5O_2 \xrightarrow{\text{点燃}} 2P_2O_5</script></li>
+<li><p>高锰酸钾制氧: </p>
+<script type="math/tex; mode=display">2KMnO_4 \xrightarrow{\Delta} K_2MnO_4 + MnO_2 + O_2 \uparrow</script></li>
+<li><p>过氧化氢制氧: </p>
+<script type="math/tex; mode=display">2H_2O_2 \rightarrow MnO_2 + 2H_2O + O_2 \uparrow</script></li>
+<li><p>氯酸钾制氧: </p>
+<script type="math/tex; mode=display">2KClO_3 \xrightarrow{\Delta} MnO_2 + 2KCl + 3O_2 \uparrow</script></li>
+</ul>
+<h2 id="自然界的水"><a href="#自然界的水" class="headerlink" title="自然界的水"></a>自然界的水</h2><ul>
+<li><p>水的净化</p>
+<ul>
+<li>投药消毒: <script type="math/tex; mode=display">Cl_2 + H_2O \rightarrow HCl + HClO</script></li>
+</ul>
+</li>
+<li><p>水的组成</p>
+<ul>
+<li>电解水: <script type="math/tex; mode=display">2H_2O \xrightarrow{通电} 2H_2 \uparrow + O_2 \uparrow</script></li>
+</ul>
+</li>
+<li><p>化学方程式</p>
+</li>
+<li><p>质量守恒定律</p>
+<ul>
+<li><p>铁和硫酸铜反应: </p>
+<script type="math/tex; mode=display">Fe + CuSO_4 \rightarrow Cu + FeSO_4</script></li>
+<li><p>碳酸钠固体与盐酸: </p>
+<script type="math/tex; mode=display">Na_2CO_3 + HCl \rightarrow NaCl + H_2O + CO_2 \uparrow</script></li>
+<li><p>镁燃烧: </p>
+<script type="math/tex; mode=display">2Mg + O_2 \xrightarrow{\text{点燃}} 2MgO</script></li>
+<li><p>氢气还原氧化铜: </p>
+<script type="math/tex; mode=display">CuO + H_2 \xrightarrow{\Delta} Cu + H_2O</script></li>
+</ul>
+</li>
+<li><p>如何正确书写化学方程式</p>
+<ul>
+<li>硫酸铜与氢氧化钠: <script type="math/tex; mode=display">CuSO_4 + 2NaOH \rightarrow Na_2SO_4 + Cu(OH)_2 \downarrow</script></li>
+</ul>
+</li>
+<li><p>利用化学方程式的简单计算</p>
+<ul>
+<li>煅烧石灰石: <script type="math/tex; mode=display">CaCO_3 \xrightarrow{\text{高温}} CaO + CO_2 \uparrow</script></li>
+</ul>
+</li>
+<li><p>碳和碳的氧化物</p>
+<ul>
+<li>金刚石、石墨和 C60</li>
+<li><p>碳完全燃烧: </p>
+<script type="math/tex; mode=display">C + O_2 \xrightarrow{\text{点燃}} CO_2</script></li>
+<li><p>碳不完全燃烧: </p>
+<script type="math/tex; mode=display">2C + O_2 \xrightarrow{\text{点燃}} 2CO</script></li>
+<li><p>碳还原氧化铜: </p>
+<script type="math/tex; mode=display">2CuO + C \xrightarrow{\text{高温}} 2Cu + CO_2 \uparrow</script></li>
+<li><p>碳还原氧化铁: </p>
+<script type="math/tex; mode=display">2Fe_2O_3 + 3C \xrightarrow{\text{高温}} 4Fe + 3CO_2 \uparrow</script></li>
+<li><p>碳还原二氧化碳: </p>
+<script type="math/tex; mode=display">CO_2 + C \xrightarrow{\text{高温}} 2CO</script></li>
+</ul>
+</li>
+<li><p>二氧化碳制取的研究</p>
+<ul>
+<li>制取二氧化碳: <script type="math/tex; mode=display">CaCO_3 + 2HCl \rightarrow CaCl_2 + H_2O + CO_2 \uparrow</script></li>
+</ul>
+</li>
+<li><p>二氧化碳和一氧化碳</p>
+<ul>
+<li><p>二氧化碳与水: </p>
+<script type="math/tex; mode=display">CO_2 + H_2O \rightarrow H_2CO_3</script></li>
+<li><p>碳酸分解: </p>
+<script type="math/tex; mode=display">H_2CO_3 \rightarrow CO_2 \uparrow + H_2O</script></li>
+<li><p>氢氧化钙(澄清石灰水)检验二氧化碳: </p>
+<script type="math/tex; mode=display">Ca(OH)_2 + CO_2 \rightarrow CaCO_3 \downarrow + H_2O</script></li>
+<li><p>一氧化碳燃烧: </p>
+<script type="math/tex; mode=display">2CO + O_2 \xrightarrow{\text{点燃}} 2CO_2</script></li>
+</ul>
+</li>
+</ul>
+<h2 id="燃料及其利用"><a href="#燃料及其利用" class="headerlink" title="燃料及其利用"></a>燃料及其利用</h2><ul>
+<li><p>燃料的合理利用与开发</p>
+</li>
+<li><p>生石灰与水反应: </p>
+<script type="math/tex; mode=display">CaO + H_2O \rightarrow Ca(OH)_2</script></li>
+<li><p>镁和稀盐酸: </p>
+<script type="math/tex; mode=display">Mg + 2HCl \rightarrow MgCl_2 + H_2 \uparrow</script></li>
+<li><p>甲烷(天然气)燃烧: </p>
+<script type="math/tex; mode=display">CH_4 + 2O_2 \xrightarrow{\text{点燃}} 2H_2O + CO_2</script></li>
+<li><p>乙醇(酒精)燃烧: </p>
+<script type="math/tex; mode=display">C_2H_5OH + 3O_2 \xrightarrow{\text{点燃}} 2CO_2 + 3H_2O</script></li>
+<li><p>锌与稀硫酸制氢: </p>
+<script type="math/tex; mode=display">Zn + H_2SO_4 \rightarrow ZnSO_4 + H_2 \uparrow</script></li>
+</ul>
+<h1 id="九年级下"><a href="#九年级下" class="headerlink" title="九年级下"></a>九年级下</h1><h2 id="酸和碱"><a href="#酸和碱" class="headerlink" title="酸和碱"></a>酸和碱</h2><h3 id="常见的酸和碱"><a href="#常见的酸和碱" class="headerlink" title="常见的酸和碱"></a>常见的酸和碱</h3><h4 id="酸与活泼金属反应"><a href="#酸与活泼金属反应" class="headerlink" title="酸与活泼金属反应"></a>酸与活泼金属反应</h4><ul>
+<li><p>金属与稀盐酸反应</p>
+<ul>
+<li><p>镁: </p>
+<script type="math/tex; mode=display">Mg + 2HCl \rightarrow MgCl_2 + H_2 \uparrow</script></li>
+<li><p>镁: </p>
+<script type="math/tex; mode=display">Zn + 2HCl \rightarrow ZnCl_2 + H_2 \uparrow</script></li>
+<li><p>铁: </p>
+<script type="math/tex; mode=display">Fe + 2HCl \rightarrow FeCl_2 + H_2 \uparrow</script></li>
+<li><p>铝: </p>
+<script type="math/tex; mode=display">2Al + 6HCl \rightarrow 2AlCl_3 + 3H_2 \uparrow</script></li>
+</ul>
+</li>
+</ul>
+<h4 id="酸与金属氧化物反应"><a href="#酸与金属氧化物反应" class="headerlink" title="酸与金属氧化物反应"></a>酸与金属氧化物反应</h4><ul>
+<li><p>铁锈</p>
+<ul>
+<li><p>与稀盐酸反应: </p>
+<script type="math/tex; mode=display">Fe_2O_3 + 6HCl \rightarrow 2FeCl_3 + 3H_2O</script></li>
+<li><p>与稀硫酸反应: </p>
+<script type="math/tex; mode=display">Fe_2O_3 + 3H_2SO_4 \rightarrow Fe_2(SO_4)_3 + 3H_2O</script></li>
+</ul>
+</li>
+<li><p>氧化铜</p>
+<ul>
+<li><p>与稀盐酸反应: </p>
+<script type="math/tex; mode=display">CuO + 2HCl \rightarrow CuCl_2 + H_2O</script></li>
+<li><p>与稀硫酸反应: </p>
+<script type="math/tex; mode=display">CuO + H_2SO_4 = CuSO_4 + H_2O</script></li>
+</ul>
+</li>
+<li><p>氢氧化钙制取</p>
+<script type="math/tex; mode=display">CaO + H_2O \rightarrow Ca(OH)_2</script></li>
+</ul>
+<h3 id="碱与非金属氧化物作用"><a href="#碱与非金属氧化物作用" class="headerlink" title="碱与非金属氧化物作用"></a>碱与非金属氧化物作用</h3><h4 id="与二氧化碳反应"><a href="#与二氧化碳反应" class="headerlink" title="与二氧化碳反应"></a>与二氧化碳反应</h4><ul>
+<li><p>氢氧化钙</p>
+<script type="math/tex; mode=display">Ca(OH)_2 + CO_2 \rightarrow CaCO_3 \downarrow + H_2O</script></li>
+<li><p>氢氧化钠</p>
+<script type="math/tex; mode=display">2NaOH + CO_2 \rightarrow Na_2CO_3 + H_2O</script></li>
+<li><p>氢氧化钾</p>
+<script type="math/tex; mode=display">2KOH + CO_2 \rightarrow K_2CO_3 + H_2O</script></li>
+</ul>
+<h4 id="与二氧化硫反应"><a href="#与二氧化硫反应" class="headerlink" title="与二氧化硫反应"></a>与二氧化硫反应</h4><ul>
+<li><p>氢氧化钙</p>
+<script type="math/tex; mode=display">Ca(OH)_2 + SO_2 \rightarrow CaSO_3 \downarrow + H_2O</script></li>
+<li><p>氢氧化纳</p>
+<script type="math/tex; mode=display">2NaOH + SO_2 \rightarrow Na_2SO_3 + H_2O</script></li>
+</ul>
+<h4 id="与三氧化硫反应"><a href="#与三氧化硫反应" class="headerlink" title="与三氧化硫反应"></a>与三氧化硫反应</h4><ul>
+<li><p>氢氧化钙</p>
+<script type="math/tex; mode=display">Ca(OH)_2 + SO_3 \rightarrow CaSO_4 + H_2O</script></li>
+<li><p>氢氧化纳</p>
+<script type="math/tex; mode=display">2NaOH + SO_3 \rightarrow Na_2SO_4 + H_2O</script></li>
+</ul>
+<h3 id="酸和碱的中和反应"><a href="#酸和碱的中和反应" class="headerlink" title="酸和碱的中和反应"></a>酸和碱的中和反应</h3><h4 id="酸与碱反应"><a href="#酸与碱反应" class="headerlink" title="酸与碱反应"></a>酸与碱反应</h4><ul>
+<li><p>稀盐酸</p>
+<ul>
+<li><p>氢氧化钠</p>
+<script type="math/tex; mode=display">NaOH + HCl \rightarrow NaCl + H_2O</script></li>
+<li><p>氢氧化钙</p>
+<script type="math/tex; mode=display">Ca(OH)_2 + 2HCl \rightarrow CaCl_2 + 2H_2O</script></li>
+<li><p>氢氧化钡</p>
+<script type="math/tex; mode=display">Ba(OH)_2 + 2HCl \rightarrow BaCl_2 + 2H_2O</script></li>
+<li><p>氢氧化铝</p>
+<script type="math/tex; mode=display">Al(OH)_3 + 3HCl \rightarrow AlCl_3 + 3H_2O</script></li>
+</ul>
+</li>
+<li><p>稀硫酸</p>
+<ul>
+<li><p>氢氧化钠</p>
+<script type="math/tex; mode=display">2NaOH + H_2SO_4 \rightarrow Na_2SO_4 + 2H_2O</script></li>
+<li><p>氢氧化钙</p>
+<script type="math/tex; mode=display">Ca(OH)_2 + H_2SO_4 \rightarrow CaSO_4 + 2H_2O</script></li>
+</ul>
+</li>
+</ul>
+<h3 id="碳酸钠制法-侯氏制碱法："><a href="#碳酸钠制法-侯氏制碱法：" class="headerlink" title="碳酸钠制法-侯氏制碱法："></a>碳酸钠制法-侯氏制碱法：</h3><ul>
+<li><script type="math/tex; mode=display">NH_3 + H_2O + CO_2 \rightarrow NH_4HCO_3</script></li>
+<li><script type="math/tex; mode=display">NH_4HCO_3 + NaCl \rightarrow NH_4Cl + NaHCO_3 \downarrow</script></li>
+<li><script type="math/tex; mode=display">2NaHCO_3 \rightarrow Na_2CO_3 + CO_2 \uparrow + H_2O</script></li>
+</ul>
+<h2 id="盐-化肥"><a href="#盐-化肥" class="headerlink" title="盐 化肥"></a>盐 化肥</h2><ul>
+<li>生活中常见的盐</li>
+</ul>
+<h3 id="与盐酸反应"><a href="#与盐酸反应" class="headerlink" title="与盐酸反应"></a>与盐酸反应</h3><ul>
+<li><p><strong>盐酸</strong></p>
+<ul>
+<li><p><strong>碳酸钙反应</strong>:</p>
+<script type="math/tex; mode=display">CaCO_3 + 2HCl \rightarrow CaCl_2 + H_2CO_3</script><script type="math/tex; mode=display">H_2CO_3 \rightarrow CO_2 \uparrow + H_2O</script><script type="math/tex; mode=display">CaCO_3 + 2HCl \rightarrow CaCl_2 + H_2O + CO_2 \uparrow</script></li>
+<li><p><strong>碳酸钠(苏打)反应</strong>:</p>
+<script type="math/tex; mode=display">Na_2CO_3 + 2HCl \rightarrow 2NaCl + CO_2 \uparrow + H_2O</script></li>
+<li><p><strong>碳酸氢钠(小苏打)反应</strong>:</p>
+<script type="math/tex; mode=display">NaHCO_3 + HCl \rightarrow NaCl + CO_2 \uparrow + H_2O</script></li>
+<li><p><strong>碳酸钠与石灰水反应</strong>:</p>
+<script type="math/tex; mode=display">Na_2CO_3 + Ca(OH)_2 \rightarrow CaCO_3 \downarrow + 2NaOH</script></li>
+<li><p><strong>加热碳酸氢钠反应</strong>:</p>
+<script type="math/tex; mode=display">2NaHCO_3 \xrightarrow{\Delta} Na_2CO_3 + H_2O + CO_2 \uparrow</script></li>
+<li><p><strong>碳酸钠与氯化钙反应</strong>:</p>
+<script type="math/tex; mode=display">Na_2CO_3 + CaCl_2 \rightarrow CaCO_3 \downarrow + 2NaCl</script></li>
+<li><p><strong>硫酸铜溶液反应</strong>:</p>
+<ul>
+<li><p><strong>氢氧化钠</strong>:</p>
+<script type="math/tex; mode=display">CuSO_4 + 2NaOH \rightarrow Cu(OH)_2 \downarrow + Na_2SO_4</script></li>
+<li><p><strong>氯化钡</strong>:</p>
+<script type="math/tex; mode=display">CuSO_4 + BaCl_2 \rightarrow BaSO_4 \downarrow + CuCl_2</script></li>
+</ul>
+</li>
+<li><p><strong>氯化钠与硝酸银反应</strong>:</p>
+<script type="math/tex; mode=display">NaCl + AgNO_3 \rightarrow AgCl \downarrow + NaNO_3</script></li>
+<li><p><strong>氯化钡与硫酸钠反应</strong>:</p>
+<script type="math/tex; mode=display">BaCl_2 + Na_2SO_4 \rightarrow BaSO_4 \downarrow + 2NaCl</script></li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>学习</category>
+        <category>化学</category>
+      </categories>
+      <tags>
+        <tag>化学方程式</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>实用软件&amp;网站整理</title>
+    <url>/blog/posts/a5115977.html</url>
+    <content><![CDATA[<h2 id="软件分享"><a href="#软件分享" class="headerlink" title="软件分享"></a>软件分享</h2><p>注：以下大部分内容为免费或破解版本</p>
+<h3 id="Coodesker"><a href="#Coodesker" class="headerlink" title="Coodesker"></a>Coodesker</h3><p>Coodesker：自动分类整理桌面上的快捷方式、目录、图片等文件<br>以前为免费软件，虽然在github上，但是就挂了个仓库<br>现在已经开始收费了，但是我感觉老版本就够用<br><a class="btn-anzhiyu " href="regular::Coodesker最后一个免费版本::https://wwll.lanzout.com/iveV71c8woyh::fa-solid fa-play-circle" title=""></a><br><a class="btn-anzhiyu " href="regular::Coodesker20.0.7激活版本::https://wwll.lanzout.com/iEhYW1cbw46h::fa-solid fa-play-circle" title=""></a><br>激活版下载密码：bpwp</p>
+<h3 id="KMS激活工具"><a href="#KMS激活工具" class="headerlink" title="KMS激活工具"></a>KMS激活工具</h3><p>采用当前最先进的激活技术，几乎涵盖了Windows全版本同Office全版本的激活，支持最新的Win11系统、Win10全版本包括Win10 LTSC的数字权利激活，非常强大，是激活系统首选的一款激活工具。<br><a class="btn-anzhiyu " href="regular::前往下载::https://wwll.lanzout.com/iIXeE1c8wp8h::fa-solid fa-play-circle" title=""></a></p>
+<h3 id="PotPlayer视频播放器"><a href="#PotPlayer视频播放器" class="headerlink" title="PotPlayer视频播放器"></a>PotPlayer视频播放器</h3><p>PotPlayer继承了 KMPlayer 所有的优点，拥有异常强大的内置音视频解码器，可以支持几乎全部音乐、视频文件格式的播放。采用 VC++ 进行了全面重构，并且原生支持64位操作系统，使得 PotPlayer 在 Windows 10 等新系统上，无论性能、兼容性和稳定性上的表现均比 KMP 要好不少；硬件加速、流畅优秀的全高清视<br>频播放效果、强大的选项、滤镜、外挂式管理、DXVA等硬件解码；以及非常丰富且强大的设置选项，被誉为Win平台上最优秀的免费影音全能格式播放器。<br><a class="btn-anzhiyu " href="regular::前往下载::https://wwll.lanzout.com/i53vQ1c8wpgf::fa-solid fa-play-circle" title=""></a><br>密码:a2k0</p>
+<h3 id="Rainmeter雨滴"><a href="#Rainmeter雨滴" class="headerlink" title="Rainmeter雨滴"></a>Rainmeter雨滴</h3><p>雨滴皮肤（Rainmeter皮肤），是一些有特定功能的Windows桌面小工具。一些复杂的皮肤则看起来像是小型应用程序，风格相近的皮肤则可以组成一个套装或者主题。任何一个雨滴皮肤在不同电脑上工作都是不完全相同的，这取决于使用者对它的调整和修饰。<br><a class="btn-anzhiyu " href="regular::前往官网下载::https://www.rainmeter.net/::fa-solid fa-play-circle" title=""></a></p>
+<h3 id="几何画板-已破解"><a href="#几何画板-已破解" class="headerlink" title="几何画板(已破解)"></a>几何画板(已破解)</h3><p>几何画板为从三年级到大学的各个级别的学生提供了一种有形的，可视化的方<br>式来学习数学，从而提高他们的参与度、理解力和成就。<br>几何画板现已停售，这里准备了v5.0.6的破解版本<br><a class="btn-anzhiyu " href="regular::前往下载::https://wwll.lanzout.com/iLwf71c8wqyj::fa-solid fa-play-circle" title=""></a></p>
+<p><a href="https://gofile.cc/lre4/bandizip.exe">https://gofile.cc/lre4/bandizip.exe</a><br><a href="https://gofile.cc/jrY7/coodesker.zip">https://gofile.cc/jrY7/coodesker.zip</a><br><a href="https://gofile.cc/551a/kms.zip">https://gofile.cc/551a/kms.zip</a><br><a href="https://gofile.cc/QrEQ/firpe-v182.exe">https://gofile.cc/QrEQ/firpe-v182.exe</a><br><a href="https://gofile.cc/WW5E/idm.exe">https://gofile.cc/WW5E/idm.exe</a><br><a href="https://gofile.cc/K7Xk/potplayer.exe">https://gofile.cc/K7Xk/potplayer.exe</a><br><a href="https://gofile.cc/1kYp/rustdesk-64.exe">https://gofile.cc/1kYp/rustdesk-64.exe</a><br><a href="https://gofile.cc/zq40/ventoy-1095-windows.zip">https://gofile.cc/zq40/ventoy-1095-windows.zip</a><br><a href="https://gofile.cc/0L0l/.zip">https://gofile.cc/0L0l/.zip</a><br><a href="https://gofile.cc/DJyq/acrobat-pro-dc-pdf.iso">https://gofile.cc/DJyq/acrobat-pro-dc-pdf.iso</a></p>
+]]></content>
+      <categories>
+        <category>内容分享</category>
+        <category>软件</category>
+      </categories>
+      <tags>
+        <tag>软件</tag>
+        <tag>网站</tag>
       </tags>
   </entry>
   <entry>
@@ -1563,6 +1519,25 @@
       </tags>
   </entry>
   <entry>
+    <title>徽州行</title>
+    <url>/blog/posts/596431e6.html</url>
+    <content><![CDATA[<h1 id="活动简介"><a href="#活动简介" class="headerlink" title="活动简介"></a>活动简介</h1><p>一、活动时间 : 2023 年 11 月 11-14 日 (4 天)<br>二、活动地点: 徽州黄山<br>三、活动内容:<br>11 月 11 日乘高铁到黄山北站研学徽州文化博物馆、黄山城市展览馆<br>11 月 12 日参观历史文化遗产影县—宏村、守拙园<br>11 月 13 日黄山“放飞理想”教育活动<br>11 月 14 日参观徽菜博物馆，参观屯溪老街，乘高铁回京</p>
+<h1 id="DAY-1"><a href="#DAY-1" class="headerlink" title="DAY 1"></a>DAY 1</h1><p>惠州城市展馆<br>徽商：徽州最有名的是徽商，从十三四岁开始外出经商，以木头等资源<br>黄山<br>惠州有更多的人文历史，黄山人们希望改回徽州（人文情感丰富）<br>黄山市依托山水天城，大力传承历史文化，坚持以人为本，加强规划管理，保徽建徽改徽，山水融城 水墨徽州<br>歙砚 歙州再到徽州 方腊歙州人 1987改为黄山市<br>建筑集中，徽派建筑形成，马头墙，放众木头多，马头墙用来防止火灾，封锁火势。<br>拐弯抹角，在惠州历史中富有美德。直角，邻里之间方便搬运东西上不让天，下不让地，中间让邻里和气。<br>作退一步想<br>徽商随家人外出，才能得到帮助<br>建筑：墙倒屋不塌， 即使塌了，整体结构也不会被破坏。<br>榫卯<br>基：稳固 础：支撑<br>马头墙：封锁火势，封火墙。南方房子人字形，方便排水，在人字形两边，略高，挡住火势，不至于烧到邻里。<br>明堂天井：一楼不开窗，防火防盗防小偷。在二楼开天井，由于采光和通风（直接）隐喻：<br>牌坊：代表家族的地位（取决于皇上）主任对社会的贡献。玉质 恩荣 圣旨 哧剑（普遍）?徽州牌坊多。大多数牌坊被摧毁，为了建设新思想<br>戏剧造型：京剧（不断融和）前身为徽剧。<br>徽州人才辈出，教育发达，科举发达。詹天佑，第一批公派留学人物。十户之村不废诵读，教育重视程度高。<br>徽州文化：<br>黄山：黄山松精神：…… 云海三四月份徽商依托新安江发展商业（农夫山泉最早水厂在千岛湖水深七十米处）<br>徽商：云纹五注铜器。徽商创造的物质财富和精神财富是惠州社会历史全面高度发展的重要方面。人口暴增，导致资源匮乏，不得不外出。经商人回乡次数少，惠州人结婚早。惠州女人留在家中掌管家事。<br>七山半水半分田，二分道路和庄园。<br>渔梁送别，母亲在岸边挥泪告别。<br>胡裕泰，卖茶。惠州自古以来种茶。<br>徽商普遍出现在江苏，苏州园林的主人大多数为惠州人。建筑有徽州的风格。徽州火腿制作工艺穿到金华 。<br>江春“布衣上交天子”  商人<br>瘦西湖旁用盐打了一座白塔。<br>河坊街：红顶商人胡雪岩，运用政治势力发展商业。<br>房屋摆设<br>胡适陶行知朱熹<br>做人做事懂分寸<br>戚继光由胡宗宪一手提拔<br>祠堂：惩戒不孝子孙</p>
+<h1 id="DAY-2"><a href="#DAY-2" class="headerlink" title="DAY 2"></a>DAY 2</h1><p>宏村<br>南湖书院坐落于村子南边，学校，义务教育，汪姓男孩可免费接受教育<br>村落聚族而居<br>hua桥<br>宏村牛型村：四座桥四条腿 两棵大树两角 村子身体<br>从奇树村搬迁，逃不掉火灾，hkd选中了宏村，落户生根<br>南方的水有回甘，软水<br>两棵大树：红娘，跟喜事有关，抬着花轿桃树走三圈，拉；老人高寿去世，抬着棺椁绕银杏树走，结白果，放入水中变为银色<br>首富房子承志堂，六十万两白银！!木雕石雕砖雕。大门各有一撇一捺，有钱，能挂到官职。一对石户，门当户对。墙体的突出，门千金门楼四两五。文革期间被红卫兵征收。破四旧，打破封建思想。佛堂，家族家庭富贵以后，想让家族绵延更长。几百年人家无非积善，行善积德，第一等好事只是读书，让所有孩子接受到教育，徽商兴建学堂。先生受村民照顾。不开窗，防火防盗防小偷。给管家开一个门，钱进口袋不乱跑。桌子半圆形四条腿，表示男主人不在家，若回来，半圆桌会拼在一起变六条腿，表示夫妻团圆。木雕损坏与文革有关，村民用黄泥封锁木雕，刻上毛主席万岁。栏杆上方形小孔，看帅哥，山清孔。快乐每从辛苦得，便宜多自吃亏来。创业难受成难知难不难，读书好营商好效好便好。福禄寿三星，老年人对钟很忌讳。横梁架上去之后再雕刻。门当，四根木柱，贫民百姓家没有，富人有。汪氏宗祠中有女性画像。弘。<br>汪姓第一人?。汪华徽州汪姓第一人，收复十五州，被供奉。宏村族长，宏村汪姓第一人。胡重，宏村水系由她主持设计修建，巨大贡献，巾帼丈夫。守拙园<br>仁教永垂 一步进房三步上床四步撞墙<br>男子住的比较好，终身平静指经商能够平平安安<br>以帽去人，下雪就是下白银，肥水不流外人田，大石槽镇宅。请先生到家中上课。<br>五柳堂。阁楼建在过道两边。老气横秋雨一鸣天地响。<br>祠堂用来祭祖或操办重要的事情，以仓库为主要使用形式。女子在结婚和去世时才能入堂。看不起我可以，但要进我家门要从商下过。商门有提升家族地位的寓意。<br>文昌宫。北有孔子南有文昌。以文会友，文人聚会。石木砖雕。十里红妆，从小准备嫁妆和棺椁。<br>酒楼。喝酒办宴席之地。鸿案春长。明方清圆。小厅堂大厢房，明。大厅堂小厢房，清。</p>
+<h1 id="DAY-3"><a href="#DAY-3" class="headerlink" title="DAY 3"></a>DAY 3</h1><p>黄山行<br>  “光明顶上彩云飞，忽见仙桃石已归；石去天涯无歇处，仍回松岭伴朝辉。”研学的第三天，我们来到了黄山市市名的来源地—黄山。乘坐缆车登山，我们遇到了一年只有50多天的云海。缆车上升时，向下望去，下方有着各种各样的奇石，翠绿茂密的松树， 有时还能看到险峻的徒步登山通道。<br>[图片 65.jpg]<br>升入云海中时，窗外视野渐渐模糊，隐约看到松树上雪白的雾凇，晶莹剔透。<br>[图片 66.jpg]<br>一段时间后，我们升入云海上方，顿时豁然开朗，云海上方的美丽景色逐渐展现在眼前。蓝天白云，头上的云彩与脚下的云海在远处连为一体，甚是美丽。<br>[图片 67.jpg]</p>
+<p>  爬过好汉坡，经过迎客松，我们的登山之行就此开始。我们翻过了几座山峰，走过了各种各样的阶梯。我们终于登上了一座小山峰。<br>[图片 68.jpg]<br>在这里我们看到了奇形怪状的石头，远处美丽的山脉和湖泊，远远望去，感觉我们的目标光明顶已经唾手可得。<br>[图片 69.jpg]<br>继续跨过一次山峰，我们即将到达光明顶。在这里，我们看到脚下整齐划一的松树，经历过前两天的大雨，松树们都显得格外苍翠挺拔。<br>[图片 70.jpg]<br>继续爬了一个坡后，我们到达了此次黄山之行的最高点—光明顶。光明顶是黄山的主峰之一，位于黄山中部，海拔1860米，为黄山第二高峰，与天都峰、莲花峰并称黄山三大主峰。顶上平坦而高旷，各个高峰尽收眼底。<br>[图片 73.jpg]<br>在这里，我们还见到了光明顶气象站，他的前身便是建于明代的大悲院寺庙，据说周围的地区天气预报都来源于这里。<br>[图片 72.jpg]<br>  在光明顶上进行了放飞理想活动后，我们便开启了下山的行程。下山途中我们见到了《红楼梦》中出现的飞来石。飞来石为自然风化生成，两大岩石之间的接触面很小，似从天外飞来，故名“飞来石”。<br>[图片 74.jpg]<br>  本次爬黄山的研学活动，让我们欣赏到了黄山的美丽景象，也让我们体会到了大自然的奇特，秀美。</p>
+<h1 id="DAY-4"><a href="#DAY-4" class="headerlink" title="DAY 4"></a>DAY 4</h1><p>  屯溪老街<br>  研学最后一天的第一站，我们来到了徽商发源地-屯溪老街。屯溪老街坐落于新安江的渐江段旁边，此地三江汇聚，西水屯局，故得名屯溪。<br>[图片 77.jpg]<br>  屯溪整条街像一条鱼骨头，主巷为最大的主心骨，旁边小巷子就是鱼骨的分支。街旁的店铺也有着一些文化，徽商以前都是是小作坊 ，临街的地方是商铺，后院是制作商品的地方，二楼就是店铺主人休息生活的地方。<br>[图片 78.jpg]<br>  对于毛豆腐，各个地方也有各个地方的特色。宏村的毛豆腐是方块形，方方正正，呈坎村则是长条形。游客来此地旅游，买的最多的就是黄山烧饼。黄山烧饼作为徽商重要的干粮 ，得益于其方便保存的特点。徽商行商的路程很长，所以带很多烧饼便能解决粮食问题。<br>  这里的主要特色还有茶。茶自古以来就是此地的的主要经济收入。在这里，四月份放还能一周的假 用来采茶叶。每次采茶，都需要爬到海拔800以上的山里。祁红巷是之前专门储存祁门红茶的地方，祁门红茶，是世界三大高香名茶之一 ，听导游说英国皇室的下午茶就是祁门红茶。<br>[图片 81.jpg]<br>祁门红茶因为大部分都最为出口商品，为了方便运输，所以制成了碎茶的形式。<br>  在屯溪老街，我们见到了各种各样的安徽特色，也领略到了各种特色商品食品背后的历史背景和文化内涵。</p>
+]]></content>
+      <categories>
+        <category>学习</category>
+        <category>研学</category>
+      </categories>
+      <tags>
+        <tag>徽州</tag>
+        <tag>研学</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>风铃投票制作教程</title>
     <url>/blog/posts/Fengling.html</url>
     <content><![CDATA[<p>此文章为风铃系统制作逻辑问卷的教程</p>
@@ -1578,6 +1553,31 @@
         <tag>投票</tag>
         <tag>风铃系统</tag>
         <tag>教程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>解决Github的访问问题</title>
+    <url>/blog/posts/714d1047.html</url>
+    <content><![CDATA[<p>Github是一个基于Git版本控制系统的代码托管平台。</p>
+<p>Github上有着很多开源的免费的软件及资料，但是因为网络问腿，导致Github的访问速度极其的慢，甚至有的时候上不去<br>下面，我给出了几个方法，能够解决这个问题</p>
+<h2 id="1-Watt-Toolkit"><a href="#1-Watt-Toolkit" class="headerlink" title="1.Watt Toolkit"></a>1.Watt Toolkit</h2><p>「Watt Toolkit」原名Steam++，是一个开源跨平台的多功能 Steam 工具箱。<br><img src="https://s2.loli.net/2023/10/22/oWHj9GgrPe7NVyC.webp" alt=""><br><a class="btn-anzhiyu " href="/blog/center%20large::%E5%89%8D%E5%BE%80Watt%20Toolkit%E5%AE%98%E7%BD%91%E4%B8%8B%E8%BD%BD::https:/steampp.net/::fa-solid%20fa-download" title=""></a><br>进入软件界面后，点击左侧的网络加速选项卡，勾选Github，点击右上角的”一键加速”<br><img src="https://s2.loli.net/2023/10/22/MsDri4PQEy5lFLc.webp" alt=""></p>
+<h2 id="2-更改hosts文件"><a href="#2-更改hosts文件" class="headerlink" title="2.更改hosts文件"></a>2.更改hosts文件</h2><p>通过修改本地 hosts 文件，试图解决：</p>
+<p>GitHub 访问速度慢的问题<br>GitHub 项目中的图片显示不出的问题</p>
+<h3 id="1-下载hosts管理工具SwitchHosts"><a href="#1-下载hosts管理工具SwitchHosts" class="headerlink" title="1.下载hosts管理工具SwitchHosts"></a>1.下载hosts管理工具<strong>SwitchHosts</strong></h3><p><img src="https://s2.loli.net/2023/10/22/LXJjSyzU4cZdrTC.webp" alt=""><br><a class="btn-anzhiyu " href="/blog/center%20large::SwitchHosts%E7%9A%84Github%E4%B8%BB%E9%A1%B5::https:/github.com/oldj/SwitchHosts/tree/v4.1.2::fa-solid%20fa-arrow-right" title=""></a><br>当然，如果上不去Github的话，可以通过下面蓝奏云链接下载最新版本（目前截至v4.1.2）<br><a class="btn-anzhiyu " href="regular::前往蓝奏云分享链接::https://wwll.lanzout.com/b04es5obc::fa-solid fa-download" title=""></a>密码:7s3t</p>
+<h3 id="2-安装配置"><a href="#2-安装配置" class="headerlink" title="2.安装配置"></a>2.安装配置</h3><p>安装完成后，我们打开软件，就可以看到如下界面:<br><img src="https://s2.loli.net/2023/10/22/6n7ipcA5CUdfBLt.webp" alt=""><br>我们点击左侧的加号，进入配置界面<br>Hosts类型：远程<br>Hosts标题：随意<br>URL：<a href="https://raw.hellogithub.com/hosts">https://raw.hellogithub.com/hosts</a><br><div class="note warning flat"><p>请将此链接粘贴到选项框中</p>
+</div><br>自动刷新：建议选择1小时<br><img src="https://s2.loli.net/2023/10/22/CMzHoDT3PhpFQ5i.webp" alt=""><br>填写完成后，点击确定，就配置完成了</p>
+<h3 id="3-问题解决"><a href="#3-问题解决" class="headerlink" title="3.问题解决"></a>3.问题解决</h3><p>点击左侧名称后的按钮，如果你显示的如下界面（提示操作成功）<br><img src="https://s2.loli.net/2023/10/22/V5aJKjuG9QTLfcA.webp" alt=""><br>那么恭喜你，你的配置完成了<br>如果是下面这种：<br><img src="https://s2.loli.net/2023/10/22/qrQyT4w5Ks3j7uB.webp" alt=""><br>请继续往下设置</p>
+<h4 id="3-1-找到hosts文件"><a href="#3-1-找到hosts文件" class="headerlink" title="3.1 找到hosts文件"></a>3.1 找到hosts文件</h4><p>Hosts文件一般都在电脑的”C:\Windows\System32\drivers\etc”文件夹下，我们打开这个文件夹，找到hosts文件<br><img src="https://s2.loli.net/2023/10/22/cmrDo9vPJsafNiw.webp" alt=""></p>
+<h4 id="3-2-修改hosts文件权限"><a href="#3-2-修改hosts文件权限" class="headerlink" title="3.2 修改hosts文件权限"></a>3.2 修改hosts文件权限</h4><p>右键hosts文件，选择<strong>属性</strong>，<br><img src="https://s2.loli.net/2023/10/22/b6qCFxJQwd5Ep9B.webp" alt=""><br>选择<strong>编辑</strong><br><img src="https://s2.loli.net/2023/10/22/Ac3lXS9YWut7wmV.webp" alt=""><br>将<strong>组成用户名</strong>中第一个和最后一个选项（Users）的<strong>修改</strong>和<strong>写入</strong>勾选<br><img src="https://s2.loli.net/2023/10/22/v5fbjVmGrAEkX6M.webp" alt=""></p>
+<h4 id="3-3-验证修改"><a href="#3-3-验证修改" class="headerlink" title="3.3 验证修改"></a>3.3 验证修改</h4><p>点击确定，返回<strong>SwitchHosts</strong>界面，若显示如下界面，那么就修改成功了<br><img src="https://s2.loli.net/2023/10/22/V5aJKjuG9QTLfcA.webp" alt=""></p>
+<h4 id="3-4-清除DNS缓存"><a href="#3-4-清除DNS缓存" class="headerlink" title="3.4 清除DNS缓存"></a>3.4 清除DNS缓存</h4><p>若发现以上设置都没有问题了，但是仍然访问不了Github，那么可以试试清除电脑的DNS缓存<br>这里以Win11举例：<br>鼠标右键点击“开始菜单”或者按“Win+X”弹出窗口，找到“Windows 终端(管理员)”。如下图：<br><img src="https://s2.loli.net/2023/10/22/4eamPvjlhMqI6rn.webp" alt=""><br>在命令窗口输入:<br><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ipconfig /flushdns</span><br></pre></td></tr></table></figure><br>按<strong>Enter（回车键）</strong>运行，看到已成功刷新DNS解析缓存的提示就说明DNS刷新成功了。（注：命令中间空格不可少）如下图：<br><img src="https://s2.loli.net/2023/10/22/Go41KbrZTingAzt.webp" alt=""></p>
+]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>Github</tag>
+        <tag>Windows</tag>
       </tags>
   </entry>
 </search>
