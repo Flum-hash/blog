@@ -424,102 +424,6 @@ Linux内核是免费开源的，任何人都可以下载内核源码并查看且
       </tags>
   </entry>
   <entry>
-    <title>Win11安装杜比全景声方法</title>
-    <url>/blog/posts/3464e4f.html</url>
-    <content><![CDATA[<h1 id="在-windows-11-中安装杜比全景声">在 Windows 11
-中安装杜比全景声</h1>
-<h4 id="一个人可以在剧院享受的氛围-因此在本指南中您将学习-如何在-windows-11-中免费启用或安装杜比全景声">一个人可以在剧院享受的氛围。
-因此，在本指南中，您将学习 <strong>如何在 Windows 11
-中免费启用或安装杜比全景声</strong>.</h4>
-<h4 id="同时-杜比全景声-是目前可用的最具创新性的音响系统之一-微软的-xbox-one-和索尼的-playstation-4-都兼容出色的硬件因此可以轻松地为游戏机使用经过杜比全景声-dolby-atmos-认证的音响系统-不幸的是对于-windows-1011-pc-来说情况并非如此">同时， <strong>杜比全景声</strong> 是目前可用的最具创新性的音响系统之一。
-微软的 Xbox One 和索尼的 PlayStation 4
-都兼容出色的硬件，因此可以轻松地为游戏机使用经过杜比全景声 (Dolby Atmos)
-认证的音响系统。 不幸的是，对于 Windows 10/11 PC
-来说，情况并非如此。</h4>
-<h2 id="杜比音频与杜比全景声有什么区别">杜比音频与杜比全景声：有什么区别？</h2>
-<p>杜比音频是一种 2D
-音频技术，可以提高您正在观看的任何内容的音质，无论是体育赛事、流媒体电影，甚至是
-DVD 或蓝光。</p>
-<p>另一方面，杜比全景声 (Dolby Atmos) 是一种 3D
-沉浸式技术，它允许扬声器或扬声器系统“欺骗”您的大脑，让您相信您被声音“包围”——它有效地为您提供影院体验，仿佛即使您不在，您也会被扬声器包围。</p>
-<p>因此，事不宜迟，以下是在 Windows 11 中安装杜比全景声 (Dolby Atmos)
-的方法：</p>
-<h2 id="步骤-1-下载杜比全景声应用程序">步骤 1.
-下载杜比全景声应用程序</h2>
-<p>前往<a href="https://www.dolby.com/">Dolby官网</a>下载杜比全景声应用程序。</p>
-<h2 id="步骤-2-启用开发者模式">步骤 2. 启用开发者模式</h2>
-<ul>
-<li>按 Windows 键 + I 打开 <strong>设置。</strong></li>
-<li>点击 <strong>隐私及安全</strong> 从左侧窗格中，然后选择 <strong>对于开发人员</strong>.</li>
-</ul>
-<p>对于开发人员</p>
-<ul>
-<li>使能够 <strong>开发商</strong> 模式，然后单击 <strong>是的</strong> 确认。</li>
-</ul>
-<p><img src="https://digitalixy.com/image/1646154525.png" title="dolby-atmos-windows-11 (2)-min"></p>
-<p>启用开发者模式</p>
-<h2 id="步骤-3-禁用驱动程序签名强制">步骤 3. 禁用驱动程序签名强制</h2>
-<p>按住 <strong>转移</strong> 键，然后单击 <strong>重新开始</strong>.</p>
-<p>选择 <strong>疑难解答</strong> &gt; <strong>高级选项</strong> &gt; <strong>启动设置</strong> &gt; <strong>重新开始</strong> &gt;
-最后，按 <strong>F7</strong> 钥匙。</p>
-<p><img src="https://digitalixy.com/image/1646154532.jpg" title="dolby-atmos-windows-11 (2)-min" alt="如何在 2022 年免费在 Windows 11 PC 和笔记本电脑中安装杜比全景声"></p>
-<p>禁用驱动程序签名强制</p>
-<h2 id="步骤-4-更新声音驱动程序">步骤 4. 更新声音驱动程序</h2>
-<p>曾经，您已经从上述链接下载了杜比全景声应用程序，然后将其解压缩。
-导航到 <strong>司机</strong> 文件夹，解压名为 Win11_x64
-文件夹的文件。</p>
-<p><strong>右键点击</strong> 在开始菜单按钮上，然后选择 <strong>装置经理</strong> 或按 <strong>Windows
-键 + X</strong> 然后选择 <strong>装置经理</strong>.</p>
-<p><img src="https://digitalixy.com/image/1646154542.png" title="dolby-atmos-windows-11-2"></p>
-<p>装置经理。</p>
-<p>现在， <strong>双击</strong> 在 <strong>声音、视频和游戏控制器</strong>, <strong>右键点击</strong> 在 <strong>高清音频设备，</strong> 然后选择 <strong>更新驱动程序</strong>.</p>
-<p><img src="https://digitalixy.com/image/1646154548.png" title="dolby-atmos-windows-11-2"></p>
-<p>更新驱动程序</p>
-<p>点击 <strong>浏览我的电脑以获取驱动程序</strong>.</p>
-<p><img src="https://digitalixy.com/image/1646154553.png" title="dolby-atmos-windows-11-2"></p>
-<p>浏览我的电脑以获取驱动程序</p>
-<p>选择 <strong>让我从计算机上的可用驱动程序列表中进行选择</strong>.</p>
-<p><img src="https://digitalixy.com/image/1646154560.png" title="dolby-atmos-windows-11-2"></p>
-<p>让我从计算机上的可用驱动程序列表中进行选择</p>
-<p>选择 <strong>有磁盘</strong> 然后点击 <strong>浏览。</strong></p>
-<p><img src="https://digitalixy.com/image/1646154565.png" title="dolby-atmos-windows-11-2" alt="如何在 2022 年免费在 Windows 11 PC 和笔记本电脑中安装杜比全景声"></p>
-<p>浏览</p>
-<p>转到解压后的杜比全景声文件夹
-&gt; <strong>driver</strong> &gt; 合适的文件版本选择 <strong>hdaudio.inf</strong> 文件，然后单击 <strong>打开。</strong></p>
-<p><img src="https://digitalixy.com/image/1646154570.png" title="dolby-atmos-windows-11 (11)-min" alt="如何在 2022 年免费在 Windows 11 PC 和笔记本电脑中安装杜比全景声"></p>
-<p>选择 <strong>好的</strong>.</p>
-<p><img src="https://digitalixy.com/image/1646154577.png" title="dolby-atmos-windows-11 (12)-min" alt="如何在 2022 年免费在 Windows 11 PC 和笔记本电脑中安装杜比全景声"></p>
-<p>好的</p>
-<p>现在，选择 <strong>杜比全景声</strong> 并点击 <strong>下一个</strong>.
-点击 <strong>是的</strong>.</p>
-<p><img src="https://digitalixy.com/image/1646154584.png" title="dolby-atmos-windows-11-2" alt="如何在 2022 年免费在 Windows 11 PC 和笔记本电脑中安装杜比全景声"></p>
-<p>点击 <strong>无论如何都要安装这个驱动软件，</strong> 如果系统提示您**.**</p>
-<p>安装后，点击 <strong>关闭</strong>.</p>
-<h2 id="第-5-步安装杜比全景声应用程序">第 5
-步。安装杜比全景声应用程序</h2>
-<p>打开 <strong>杜比全景声文件</strong> 您之前提取的然后打开 <strong>应用程序</strong> 文件夹。</p>
-<p><img src="https://digitalixy.com/image/1646154591.png" title="dolby-atmos-windows-11-2" alt="如何在 2022 年免费在 Windows 11 PC 和笔记本电脑中安装杜比全景声"></p>
-<p>应用程序</p>
-<p>双击 <strong>应用程序2021</strong> 文件。</p>
-<p><img src="https://digitalixy.com/image/1646154598.png" title="dolby-atmos-windows-11-2" alt="如何在 2022 年免费在 Windows 11 PC 和笔记本电脑中安装杜比全景声"></p>
-<p>应用程序2021</p>
-<p>点击 <strong>安装</strong> 安装杜比全景声。</p>
-<p><img src="https://digitalixy.com/image/1646154609.png" title="dolby-atmos-windows-11-2" alt="如何在 2022 年免费在 Windows 11 PC 和笔记本电脑中安装杜比全景声"></p>
-<p>安装</p>
-<p>等到安装过程完成。</p>
-<p>最后，杜比全景声 (Dolby Atmos) 已成功安装在您的 Windows 11 PC
-上。</p>
-]]></content>
-      <categories>
-        <category>内容分享</category>
-        <category>音效</category>
-      </categories>
-      <tags>
-        <tag>Windows</tag>
-        <tag>杜比</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Markdown基本语法</title>
     <url>/blog/posts/5d36ff15.html</url>
     <content><![CDATA[<p>本文目的为方便查找 以下内容均取自<a href="https://markdown.com.cn/basic-syntax/">Markdown官网</a></p>
@@ -1439,6 +1343,102 @@ how to learn anything</h2>
       </tags>
   </entry>
   <entry>
+    <title>Win11安装杜比全景声方法</title>
+    <url>/blog/posts/3464e4f.html</url>
+    <content><![CDATA[<h1 id="在-windows-11-中安装杜比全景声">在 Windows 11
+中安装杜比全景声</h1>
+<h4 id="一个人可以在剧院享受的氛围-因此在本指南中您将学习-如何在-windows-11-中免费启用或安装杜比全景声">一个人可以在剧院享受的氛围。
+因此，在本指南中，您将学习 <strong>如何在 Windows 11
+中免费启用或安装杜比全景声</strong>.</h4>
+<h4 id="同时-杜比全景声-是目前可用的最具创新性的音响系统之一-微软的-xbox-one-和索尼的-playstation-4-都兼容出色的硬件因此可以轻松地为游戏机使用经过杜比全景声-dolby-atmos-认证的音响系统-不幸的是对于-windows-1011-pc-来说情况并非如此">同时， <strong>杜比全景声</strong> 是目前可用的最具创新性的音响系统之一。
+微软的 Xbox One 和索尼的 PlayStation 4
+都兼容出色的硬件，因此可以轻松地为游戏机使用经过杜比全景声 (Dolby Atmos)
+认证的音响系统。 不幸的是，对于 Windows 10/11 PC
+来说，情况并非如此。</h4>
+<h2 id="杜比音频与杜比全景声有什么区别">杜比音频与杜比全景声：有什么区别？</h2>
+<p>杜比音频是一种 2D
+音频技术，可以提高您正在观看的任何内容的音质，无论是体育赛事、流媒体电影，甚至是
+DVD 或蓝光。</p>
+<p>另一方面，杜比全景声 (Dolby Atmos) 是一种 3D
+沉浸式技术，它允许扬声器或扬声器系统“欺骗”您的大脑，让您相信您被声音“包围”——它有效地为您提供影院体验，仿佛即使您不在，您也会被扬声器包围。</p>
+<p>因此，事不宜迟，以下是在 Windows 11 中安装杜比全景声 (Dolby Atmos)
+的方法：</p>
+<h2 id="步骤-1-下载杜比全景声应用程序">步骤 1.
+下载杜比全景声应用程序</h2>
+<p>前往<a href="https://www.dolby.com/">Dolby官网</a>下载杜比全景声应用程序。</p>
+<h2 id="步骤-2-启用开发者模式">步骤 2. 启用开发者模式</h2>
+<ul>
+<li>按 Windows 键 + I 打开 <strong>设置。</strong></li>
+<li>点击 <strong>隐私及安全</strong> 从左侧窗格中，然后选择 <strong>对于开发人员</strong>.</li>
+</ul>
+<p>对于开发人员</p>
+<ul>
+<li>使能够 <strong>开发商</strong> 模式，然后单击 <strong>是的</strong> 确认。</li>
+</ul>
+<p><img src="https://digitalixy.com/image/1646154525.png" title="dolby-atmos-windows-11 (2)-min"></p>
+<p>启用开发者模式</p>
+<h2 id="步骤-3-禁用驱动程序签名强制">步骤 3. 禁用驱动程序签名强制</h2>
+<p>按住 <strong>转移</strong> 键，然后单击 <strong>重新开始</strong>.</p>
+<p>选择 <strong>疑难解答</strong> &gt; <strong>高级选项</strong> &gt; <strong>启动设置</strong> &gt; <strong>重新开始</strong> &gt;
+最后，按 <strong>F7</strong> 钥匙。</p>
+<p><img src="https://digitalixy.com/image/1646154532.jpg" title="dolby-atmos-windows-11 (2)-min" alt="如何在 2022 年免费在 Windows 11 PC 和笔记本电脑中安装杜比全景声"></p>
+<p>禁用驱动程序签名强制</p>
+<h2 id="步骤-4-更新声音驱动程序">步骤 4. 更新声音驱动程序</h2>
+<p>曾经，您已经从上述链接下载了杜比全景声应用程序，然后将其解压缩。
+导航到 <strong>司机</strong> 文件夹，解压名为 Win11_x64
+文件夹的文件。</p>
+<p><strong>右键点击</strong> 在开始菜单按钮上，然后选择 <strong>装置经理</strong> 或按 <strong>Windows
+键 + X</strong> 然后选择 <strong>装置经理</strong>.</p>
+<p><img src="https://digitalixy.com/image/1646154542.png" title="dolby-atmos-windows-11-2"></p>
+<p>装置经理。</p>
+<p>现在， <strong>双击</strong> 在 <strong>声音、视频和游戏控制器</strong>, <strong>右键点击</strong> 在 <strong>高清音频设备，</strong> 然后选择 <strong>更新驱动程序</strong>.</p>
+<p><img src="https://digitalixy.com/image/1646154548.png" title="dolby-atmos-windows-11-2"></p>
+<p>更新驱动程序</p>
+<p>点击 <strong>浏览我的电脑以获取驱动程序</strong>.</p>
+<p><img src="https://digitalixy.com/image/1646154553.png" title="dolby-atmos-windows-11-2"></p>
+<p>浏览我的电脑以获取驱动程序</p>
+<p>选择 <strong>让我从计算机上的可用驱动程序列表中进行选择</strong>.</p>
+<p><img src="https://digitalixy.com/image/1646154560.png" title="dolby-atmos-windows-11-2"></p>
+<p>让我从计算机上的可用驱动程序列表中进行选择</p>
+<p>选择 <strong>有磁盘</strong> 然后点击 <strong>浏览。</strong></p>
+<p><img src="https://digitalixy.com/image/1646154565.png" title="dolby-atmos-windows-11-2" alt="如何在 2022 年免费在 Windows 11 PC 和笔记本电脑中安装杜比全景声"></p>
+<p>浏览</p>
+<p>转到解压后的杜比全景声文件夹
+&gt; <strong>driver</strong> &gt; 合适的文件版本选择 <strong>hdaudio.inf</strong> 文件，然后单击 <strong>打开。</strong></p>
+<p><img src="https://digitalixy.com/image/1646154570.png" title="dolby-atmos-windows-11 (11)-min" alt="如何在 2022 年免费在 Windows 11 PC 和笔记本电脑中安装杜比全景声"></p>
+<p>选择 <strong>好的</strong>.</p>
+<p><img src="https://digitalixy.com/image/1646154577.png" title="dolby-atmos-windows-11 (12)-min" alt="如何在 2022 年免费在 Windows 11 PC 和笔记本电脑中安装杜比全景声"></p>
+<p>好的</p>
+<p>现在，选择 <strong>杜比全景声</strong> 并点击 <strong>下一个</strong>.
+点击 <strong>是的</strong>.</p>
+<p><img src="https://digitalixy.com/image/1646154584.png" title="dolby-atmos-windows-11-2" alt="如何在 2022 年免费在 Windows 11 PC 和笔记本电脑中安装杜比全景声"></p>
+<p>点击 <strong>无论如何都要安装这个驱动软件，</strong> 如果系统提示您**.**</p>
+<p>安装后，点击 <strong>关闭</strong>.</p>
+<h2 id="第-5-步安装杜比全景声应用程序">第 5
+步。安装杜比全景声应用程序</h2>
+<p>打开 <strong>杜比全景声文件</strong> 您之前提取的然后打开 <strong>应用程序</strong> 文件夹。</p>
+<p><img src="https://digitalixy.com/image/1646154591.png" title="dolby-atmos-windows-11-2" alt="如何在 2022 年免费在 Windows 11 PC 和笔记本电脑中安装杜比全景声"></p>
+<p>应用程序</p>
+<p>双击 <strong>应用程序2021</strong> 文件。</p>
+<p><img src="https://digitalixy.com/image/1646154598.png" title="dolby-atmos-windows-11-2" alt="如何在 2022 年免费在 Windows 11 PC 和笔记本电脑中安装杜比全景声"></p>
+<p>应用程序2021</p>
+<p>点击 <strong>安装</strong> 安装杜比全景声。</p>
+<p><img src="https://digitalixy.com/image/1646154609.png" title="dolby-atmos-windows-11-2" alt="如何在 2022 年免费在 Windows 11 PC 和笔记本电脑中安装杜比全景声"></p>
+<p>安装</p>
+<p>等到安装过程完成。</p>
+<p>最后，杜比全景声 (Dolby Atmos) 已成功安装在您的 Windows 11 PC
+上。</p>
+]]></content>
+      <categories>
+        <category>内容分享</category>
+        <category>音效</category>
+      </categories>
+      <tags>
+        <tag>Windows</tag>
+        <tag>杜比</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>解决npm install安装太慢</title>
     <url>/blog/posts/npminstall.html</url>
     <content><![CDATA[<h2 id="设置-npm-registry">设置 npm registry</h2>
@@ -1509,6 +1509,95 @@ https://www.aliyundrive.com/s/AjPaykzLJnw</p>
       </categories>
       <tags>
         <tag>alist</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>作文实用素材方法整理</title>
+    <url>/blog/posts/113bdaa7.html</url>
+    <content><![CDATA[<p>本页为整理的我自己和找来的素材和页面模板 仅限参考</p>
+<h2 id="素材整理">素材整理</h2>
+<p>待补充</p>
+<h2 id="写作技巧">写作技巧</h2>
+<h3 id="1从生活中找例子">1.从生活中找例子</h3>
+<p>简单来说，想不到素材的时候，从生活中找相关的例子去用，比如： <img src="https://s2.loli.net/2023/10/21/HBC5rXm9ENqczlQ.webp">
+方法：观点句+生活例子+领域描述，如： <img src="https://s2.loli.net/2023/10/21/SDG46o5O1eRhHYL.webp"></p>
+<h3 id="2正反面论述">2.正反面论述</h3>
+<p>方法：正面论述+反面论述+观点，如： <img src="https://s2.loli.net/2023/10/21/L9ZnVHFcq4Ez2kj.webp">
+方法：错误选项+正确选项+观点做法，如： <img src="https://s2.loli.net/2023/10/21/ysoliO9k4BNFbTj.webp"></p>
+<h2 id="开头模板">开头模板</h2>
+<h3 id="1xxx与xxx合力">1.XXX与XXX合力</h3>
+<h4 id="原文">原文：</h4>
+<p><img src="https://s2.loli.net/2023/10/20/oyizuWSjgM4qI39.webp" alt="原文"></p>
+<h4 id="模板">模板：</h4>
+<p><img src="https://s2.loli.net/2023/10/20/9TCzapWNmkAPQsc.webp" alt="模板"></p>
+<h4 id="示例">示例：</h4>
+<p><img src="https://s2.loli.net/2023/10/20/LMq67ScyVJjUgBx.webp" alt="示例"></p>
+<h2 id="结尾模板">结尾模板</h2>
+<p>待补充</p>
+]]></content>
+      <categories>
+        <category>学习</category>
+        <category>语文</category>
+      </categories>
+      <tags>
+        <tag>作文</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>实用软件&amp;网站整理</title>
+    <url>/blog/posts/a5115977.html</url>
+    <content><![CDATA[<h2 id="软件分享">软件分享</h2>
+<p>注：以下大部分内容为免费或破解版本</p>
+<h3 id="coodesker">Coodesker</h3>
+<p>Coodesker：自动分类整理桌面上的快捷方式、目录、图片等文件
+以前为免费软件，虽然在github上，但是就挂了个仓库
+现在已经开始收费了，但是我感觉老版本就够用</p>
+<a class="btn-anzhiyu " href="regular::Coodesker最后一个免费版本::https://wwll.lanzout.com/iveV71c8woyh::fa-solid fa-play-circle" title=""></a>
+
+<a class="btn-anzhiyu " href="regular::Coodesker20.0.7激活版本::https://wwll.lanzout.com/iEhYW1cbw46h::fa-solid fa-play-circle" title=""></a>
+
+<p>激活版下载密码：bpwp</p>
+<h3 id="kms激活工具">KMS激活工具</h3>
+<p>采用当前最先进的激活技术，几乎涵盖了Windows全版本同Office全版本的激活，支持最新的Win11系统、Win10全版本包括Win10
+LTSC的数字权利激活，非常强大，是激活系统首选的一款激活工具。</p>
+<a class="btn-anzhiyu " href="regular::前往下载::https://wwll.lanzout.com/iIXeE1c8wp8h::fa-solid fa-play-circle" title=""></a>
+
+<h3 id="potplayer视频播放器">PotPlayer视频播放器</h3>
+<p>PotPlayer继承了 KMPlayer
+所有的优点，拥有异常强大的内置音视频解码器，可以支持几乎全部音乐、视频文件格式的播放。采用
+VC++ 进行了全面重构，并且原生支持64位操作系统，使得 PotPlayer 在 Windows
+10 等新系统上，无论性能、兼容性和稳定性上的表现均比 KMP
+要好不少；硬件加速、流畅优秀的全高清视
+频播放效果、强大的选项、滤镜、外挂式管理、DXVA等硬件解码；以及非常丰富且强大的设置选项，被誉为Win平台上最优秀的免费影音全能格式播放器。</p>
+<a class="btn-anzhiyu " href="regular::前往下载::https://wwll.lanzout.com/i53vQ1c8wpgf::fa-solid fa-play-circle" title=""></a>
+
+<p>密码:a2k0</p>
+<h3 id="rainmeter雨滴">Rainmeter雨滴</h3>
+<p>雨滴皮肤（Rainmeter皮肤），是一些有特定功能的Windows桌面小工具。一些复杂的皮肤则看起来像是小型应用程序，风格相近的皮肤则可以组成一个套装或者主题。任何一个雨滴皮肤在不同电脑上工作都是不完全相同的，这取决于使用者对它的调整和修饰。</p>
+<a class="btn-anzhiyu " href="regular::前往官网下载::https://www.rainmeter.net/::fa-solid fa-play-circle" title=""></a>
+
+<h3 id="几何画板已破解">几何画板(已破解)</h3>
+<p>几何画板为从三年级到大学的各个级别的学生提供了一种有形的，可视化的方
+式来学习数学，从而提高他们的参与度、理解力和成就。
+几何画板现已停售，这里准备了v5.0.6的破解版本</p>
+<a class="btn-anzhiyu " href="regular::前往下载::https://wwll.lanzout.com/iLwf71c8wqyj::fa-solid fa-play-circle" title=""></a>
+
+<p>https://gofile.cc/lre4/bandizip.exe
+https://gofile.cc/jrY7/coodesker.zip https://gofile.cc/551a/kms.zip
+https://gofile.cc/QrEQ/firpe-v182.exe https://gofile.cc/WW5E/idm.exe
+https://gofile.cc/K7Xk/potplayer.exe
+https://gofile.cc/1kYp/rustdesk-64.exe
+https://gofile.cc/zq40/ventoy-1095-windows.zip
+https://gofile.cc/0L0l/.zip
+https://gofile.cc/DJyq/acrobat-pro-dc-pdf.iso</p>
+]]></content>
+      <categories>
+        <category>内容分享</category>
+        <category>软件</category>
+      </categories>
+      <tags>
+        <tag>软件</tag>
+        <tag>网站</tag>
       </tags>
   </entry>
   <entry>
@@ -1685,95 +1774,6 @@ https://www.aliyundrive.com/s/AjPaykzLJnw</p>
       </categories>
       <tags>
         <tag>化学方程式</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>作文实用素材方法整理</title>
-    <url>/blog/posts/113bdaa7.html</url>
-    <content><![CDATA[<p>本页为整理的我自己和找来的素材和页面模板 仅限参考</p>
-<h2 id="素材整理">素材整理</h2>
-<p>待补充</p>
-<h2 id="写作技巧">写作技巧</h2>
-<h3 id="1从生活中找例子">1.从生活中找例子</h3>
-<p>简单来说，想不到素材的时候，从生活中找相关的例子去用，比如： <img src="https://s2.loli.net/2023/10/21/HBC5rXm9ENqczlQ.webp">
-方法：观点句+生活例子+领域描述，如： <img src="https://s2.loli.net/2023/10/21/SDG46o5O1eRhHYL.webp"></p>
-<h3 id="2正反面论述">2.正反面论述</h3>
-<p>方法：正面论述+反面论述+观点，如： <img src="https://s2.loli.net/2023/10/21/L9ZnVHFcq4Ez2kj.webp">
-方法：错误选项+正确选项+观点做法，如： <img src="https://s2.loli.net/2023/10/21/ysoliO9k4BNFbTj.webp"></p>
-<h2 id="开头模板">开头模板</h2>
-<h3 id="1xxx与xxx合力">1.XXX与XXX合力</h3>
-<h4 id="原文">原文：</h4>
-<p><img src="https://s2.loli.net/2023/10/20/oyizuWSjgM4qI39.webp" alt="原文"></p>
-<h4 id="模板">模板：</h4>
-<p><img src="https://s2.loli.net/2023/10/20/9TCzapWNmkAPQsc.webp" alt="模板"></p>
-<h4 id="示例">示例：</h4>
-<p><img src="https://s2.loli.net/2023/10/20/LMq67ScyVJjUgBx.webp" alt="示例"></p>
-<h2 id="结尾模板">结尾模板</h2>
-<p>待补充</p>
-]]></content>
-      <categories>
-        <category>学习</category>
-        <category>语文</category>
-      </categories>
-      <tags>
-        <tag>作文</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>实用软件&amp;网站整理</title>
-    <url>/blog/posts/a5115977.html</url>
-    <content><![CDATA[<h2 id="软件分享">软件分享</h2>
-<p>注：以下大部分内容为免费或破解版本</p>
-<h3 id="coodesker">Coodesker</h3>
-<p>Coodesker：自动分类整理桌面上的快捷方式、目录、图片等文件
-以前为免费软件，虽然在github上，但是就挂了个仓库
-现在已经开始收费了，但是我感觉老版本就够用</p>
-<a class="btn-anzhiyu " href="regular::Coodesker最后一个免费版本::https://wwll.lanzout.com/iveV71c8woyh::fa-solid fa-play-circle" title=""></a>
-
-<a class="btn-anzhiyu " href="regular::Coodesker20.0.7激活版本::https://wwll.lanzout.com/iEhYW1cbw46h::fa-solid fa-play-circle" title=""></a>
-
-<p>激活版下载密码：bpwp</p>
-<h3 id="kms激活工具">KMS激活工具</h3>
-<p>采用当前最先进的激活技术，几乎涵盖了Windows全版本同Office全版本的激活，支持最新的Win11系统、Win10全版本包括Win10
-LTSC的数字权利激活，非常强大，是激活系统首选的一款激活工具。</p>
-<a class="btn-anzhiyu " href="regular::前往下载::https://wwll.lanzout.com/iIXeE1c8wp8h::fa-solid fa-play-circle" title=""></a>
-
-<h3 id="potplayer视频播放器">PotPlayer视频播放器</h3>
-<p>PotPlayer继承了 KMPlayer
-所有的优点，拥有异常强大的内置音视频解码器，可以支持几乎全部音乐、视频文件格式的播放。采用
-VC++ 进行了全面重构，并且原生支持64位操作系统，使得 PotPlayer 在 Windows
-10 等新系统上，无论性能、兼容性和稳定性上的表现均比 KMP
-要好不少；硬件加速、流畅优秀的全高清视
-频播放效果、强大的选项、滤镜、外挂式管理、DXVA等硬件解码；以及非常丰富且强大的设置选项，被誉为Win平台上最优秀的免费影音全能格式播放器。</p>
-<a class="btn-anzhiyu " href="regular::前往下载::https://wwll.lanzout.com/i53vQ1c8wpgf::fa-solid fa-play-circle" title=""></a>
-
-<p>密码:a2k0</p>
-<h3 id="rainmeter雨滴">Rainmeter雨滴</h3>
-<p>雨滴皮肤（Rainmeter皮肤），是一些有特定功能的Windows桌面小工具。一些复杂的皮肤则看起来像是小型应用程序，风格相近的皮肤则可以组成一个套装或者主题。任何一个雨滴皮肤在不同电脑上工作都是不完全相同的，这取决于使用者对它的调整和修饰。</p>
-<a class="btn-anzhiyu " href="regular::前往官网下载::https://www.rainmeter.net/::fa-solid fa-play-circle" title=""></a>
-
-<h3 id="几何画板已破解">几何画板(已破解)</h3>
-<p>几何画板为从三年级到大学的各个级别的学生提供了一种有形的，可视化的方
-式来学习数学，从而提高他们的参与度、理解力和成就。
-几何画板现已停售，这里准备了v5.0.6的破解版本</p>
-<a class="btn-anzhiyu " href="regular::前往下载::https://wwll.lanzout.com/iLwf71c8wqyj::fa-solid fa-play-circle" title=""></a>
-
-<p>https://gofile.cc/lre4/bandizip.exe
-https://gofile.cc/jrY7/coodesker.zip https://gofile.cc/551a/kms.zip
-https://gofile.cc/QrEQ/firpe-v182.exe https://gofile.cc/WW5E/idm.exe
-https://gofile.cc/K7Xk/potplayer.exe
-https://gofile.cc/1kYp/rustdesk-64.exe
-https://gofile.cc/zq40/ventoy-1095-windows.zip
-https://gofile.cc/0L0l/.zip
-https://gofile.cc/DJyq/acrobat-pro-dc-pdf.iso</p>
-]]></content>
-      <categories>
-        <category>内容分享</category>
-        <category>软件</category>
-      </categories>
-      <tags>
-        <tag>软件</tag>
-        <tag>网站</tag>
       </tags>
   </entry>
   <entry>
@@ -2021,72 +2021,6 @@ xxx.github.io（xxx 是你 GitHub
       </tags>
   </entry>
   <entry>
-    <title>解决Github的访问问题</title>
-    <url>/blog/posts/714d1047.html</url>
-    <content><![CDATA[<p>Github是一个基于Git版本控制系统的代码托管平台。</p>
-<p>Github上有着很多开源的免费的软件及资料，但是因为网络问腿，导致Github的访问速度极其的慢，甚至有的时候上不去
-下面，我给出了几个方法，能够解决这个问题</p>
-<h2 id="1watt-toolkit">1.Watt Toolkit</h2>
-<p>「Watt Toolkit」原名Steam++，是一个开源跨平台的多功能 Steam 工具箱。
-<img src="https://s2.loli.net/2023/10/22/oWHj9GgrPe7NVyC.webp"></p>
-<a class="btn-anzhiyu " href="/blog/center%20large::%E5%89%8D%E5%BE%80Watt%20Toolkit%E5%AE%98%E7%BD%91%E4%B8%8B%E8%BD%BD::https:/steampp.net/::fa-solid%20fa-download" title=""></a>
-
-<p>进入软件界面后，点击左侧的网络加速选项卡，勾选Github，点击右上角的“一键加速“
-<img src="https://s2.loli.net/2023/10/22/MsDri4PQEy5lFLc.webp"></p>
-<h2 id="2更改hosts文件">2.更改hosts文件</h2>
-<p>通过修改本地 hosts 文件，试图解决：</p>
-<p>GitHub 访问速度慢的问题 GitHub 项目中的图片显示不出的问题</p>
-<h3 id="1下载hosts管理工具switchhosts">1.下载hosts管理工具<strong>SwitchHosts</strong></h3>
-<p><img src="https://s2.loli.net/2023/10/22/LXJjSyzU4cZdrTC.webp"></p>
-<a class="btn-anzhiyu " href="/blog/center%20large::SwitchHosts%E7%9A%84Github%E4%B8%BB%E9%A1%B5::https:/github.com/oldj/SwitchHosts/tree/v4.1.2::fa-solid%20fa-arrow-right" title=""></a>
-
-<p>当然，如果上不去Github的话，可以通过下面蓝奏云链接下载最新版本（目前截至v4.1.2）</p>
-<a class="btn-anzhiyu " href="regular::前往蓝奏云分享链接::https://wwll.lanzout.com/b04es5obc::fa-solid fa-download" title=""></a>密码:7s3t
-
-<h3 id="2安装配置">2.安装配置</h3>
-<p>安装完成后，我们打开软件，就可以看到如下界面: <img src="https://s2.loli.net/2023/10/22/6n7ipcA5CUdfBLt.webp">
-我们点击左侧的加号，进入配置界面 Hosts类型：远程 Hosts标题：随意
-URL：https://raw.hellogithub.com/hosts</p>
-<div class="note warning flat"><p>请将此链接粘贴到选项框中</p>
-</div>
-
-<p>自动刷新：建议选择1小时 <img src="https://s2.loli.net/2023/10/22/CMzHoDT3PhpFQ5i.webp">
-填写完成后，点击确定，就配置完成了</p>
-<h3 id="3问题解决">3.问题解决</h3>
-<p>点击左侧名称后的按钮，如果你显示的如下界面（提示操作成功） <img src="https://s2.loli.net/2023/10/22/V5aJKjuG9QTLfcA.webp">
-那么恭喜你，你的配置完成了 如果是下面这种： <img src="https://s2.loli.net/2023/10/22/qrQyT4w5Ks3j7uB.webp">
-请继续往下设置</p>
-<h4 id="31-找到hosts文件">3.1 找到hosts文件</h4>
-<p>Hosts文件一般都在电脑的“C:\Windows\System32\drivers\etc“文件夹下，我们打开这个文件夹，找到hosts文件
-<img src="https://s2.loli.net/2023/10/22/cmrDo9vPJsafNiw.webp"></p>
-<h4 id="32-修改hosts文件权限">3.2 修改hosts文件权限</h4>
-<p>右键hosts文件，选择<strong>属性</strong>， <img src="https://s2.loli.net/2023/10/22/b6qCFxJQwd5Ep9B.webp">
-选择<strong>编辑</strong> <img src="https://s2.loli.net/2023/10/22/Ac3lXS9YWut7wmV.webp">
-将<strong>组成用户名</strong>中第一个和最后一个选项（Users）的<strong>修改</strong>和<strong>写入</strong>勾选
-<img src="https://s2.loli.net/2023/10/22/v5fbjVmGrAEkX6M.webp"></p>
-<h4 id="33-验证修改">3.3 验证修改</h4>
-<p>点击确定，返回<strong>SwitchHosts</strong>界面，若显示如下界面，那么就修改成功了
-<img src="https://s2.loli.net/2023/10/22/V5aJKjuG9QTLfcA.webp"></p>
-<h4 id="34-清除dns缓存">3.4 清除DNS缓存</h4>
-<p>若发现以上设置都没有问题了，但是仍然访问不了Github，那么可以试试清除电脑的DNS缓存
-这里以Win11举例：
-鼠标右键点击“开始菜单”或者按“Win+X”弹出窗口，找到“Windows
-终端(管理员)”。如下图： <img src="https://s2.loli.net/2023/10/22/4eamPvjlhMqI6rn.webp">
-在命令窗口输入:</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ipconfig /flushdns</span><br></pre></td></tr></table></figure>
-
-<p>按**Enter（回车键）**运行，看到已成功刷新DNS解析缓存的提示就说明DNS刷新成功了。（注：命令中间空格不可少）如下图：
-<img src="https://s2.loli.net/2023/10/22/Go41KbrZTingAzt.webp"></p>
-]]></content>
-      <categories>
-        <category>教程</category>
-      </categories>
-      <tags>
-        <tag>Github</tag>
-        <tag>Windows</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>徽州行</title>
     <url>/blog/posts/596431e6.html</url>
     <content><![CDATA[<h1 id="活动简介">活动简介</h1>
@@ -2224,6 +2158,72 @@ URL：https://raw.hellogithub.com/hosts</p>
         <tag>投票</tag>
         <tag>风铃系统</tag>
         <tag>教程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>解决Github的访问问题</title>
+    <url>/blog/posts/714d1047.html</url>
+    <content><![CDATA[<p>Github是一个基于Git版本控制系统的代码托管平台。</p>
+<p>Github上有着很多开源的免费的软件及资料，但是因为网络问腿，导致Github的访问速度极其的慢，甚至有的时候上不去
+下面，我给出了几个方法，能够解决这个问题</p>
+<h2 id="1watt-toolkit">1.Watt Toolkit</h2>
+<p>「Watt Toolkit」原名Steam++，是一个开源跨平台的多功能 Steam 工具箱。
+<img src="https://s2.loli.net/2023/10/22/oWHj9GgrPe7NVyC.webp"></p>
+<a class="btn-anzhiyu " href="/blog/center%20large::%E5%89%8D%E5%BE%80Watt%20Toolkit%E5%AE%98%E7%BD%91%E4%B8%8B%E8%BD%BD::https:/steampp.net/::fa-solid%20fa-download" title=""></a>
+
+<p>进入软件界面后，点击左侧的网络加速选项卡，勾选Github，点击右上角的“一键加速“
+<img src="https://s2.loli.net/2023/10/22/MsDri4PQEy5lFLc.webp"></p>
+<h2 id="2更改hosts文件">2.更改hosts文件</h2>
+<p>通过修改本地 hosts 文件，试图解决：</p>
+<p>GitHub 访问速度慢的问题 GitHub 项目中的图片显示不出的问题</p>
+<h3 id="1下载hosts管理工具switchhosts">1.下载hosts管理工具<strong>SwitchHosts</strong></h3>
+<p><img src="https://s2.loli.net/2023/10/22/LXJjSyzU4cZdrTC.webp"></p>
+<a class="btn-anzhiyu " href="/blog/center%20large::SwitchHosts%E7%9A%84Github%E4%B8%BB%E9%A1%B5::https:/github.com/oldj/SwitchHosts/tree/v4.1.2::fa-solid%20fa-arrow-right" title=""></a>
+
+<p>当然，如果上不去Github的话，可以通过下面蓝奏云链接下载最新版本（目前截至v4.1.2）</p>
+<a class="btn-anzhiyu " href="regular::前往蓝奏云分享链接::https://wwll.lanzout.com/b04es5obc::fa-solid fa-download" title=""></a>密码:7s3t
+
+<h3 id="2安装配置">2.安装配置</h3>
+<p>安装完成后，我们打开软件，就可以看到如下界面: <img src="https://s2.loli.net/2023/10/22/6n7ipcA5CUdfBLt.webp">
+我们点击左侧的加号，进入配置界面 Hosts类型：远程 Hosts标题：随意
+URL：https://raw.hellogithub.com/hosts</p>
+<div class="note warning flat"><p>请将此链接粘贴到选项框中</p>
+</div>
+
+<p>自动刷新：建议选择1小时 <img src="https://s2.loli.net/2023/10/22/CMzHoDT3PhpFQ5i.webp">
+填写完成后，点击确定，就配置完成了</p>
+<h3 id="3问题解决">3.问题解决</h3>
+<p>点击左侧名称后的按钮，如果你显示的如下界面（提示操作成功） <img src="https://s2.loli.net/2023/10/22/V5aJKjuG9QTLfcA.webp">
+那么恭喜你，你的配置完成了 如果是下面这种： <img src="https://s2.loli.net/2023/10/22/qrQyT4w5Ks3j7uB.webp">
+请继续往下设置</p>
+<h4 id="31-找到hosts文件">3.1 找到hosts文件</h4>
+<p>Hosts文件一般都在电脑的“C:\Windows\System32\drivers\etc“文件夹下，我们打开这个文件夹，找到hosts文件
+<img src="https://s2.loli.net/2023/10/22/cmrDo9vPJsafNiw.webp"></p>
+<h4 id="32-修改hosts文件权限">3.2 修改hosts文件权限</h4>
+<p>右键hosts文件，选择<strong>属性</strong>， <img src="https://s2.loli.net/2023/10/22/b6qCFxJQwd5Ep9B.webp">
+选择<strong>编辑</strong> <img src="https://s2.loli.net/2023/10/22/Ac3lXS9YWut7wmV.webp">
+将<strong>组成用户名</strong>中第一个和最后一个选项（Users）的<strong>修改</strong>和<strong>写入</strong>勾选
+<img src="https://s2.loli.net/2023/10/22/v5fbjVmGrAEkX6M.webp"></p>
+<h4 id="33-验证修改">3.3 验证修改</h4>
+<p>点击确定，返回<strong>SwitchHosts</strong>界面，若显示如下界面，那么就修改成功了
+<img src="https://s2.loli.net/2023/10/22/V5aJKjuG9QTLfcA.webp"></p>
+<h4 id="34-清除dns缓存">3.4 清除DNS缓存</h4>
+<p>若发现以上设置都没有问题了，但是仍然访问不了Github，那么可以试试清除电脑的DNS缓存
+这里以Win11举例：
+鼠标右键点击“开始菜单”或者按“Win+X”弹出窗口，找到“Windows
+终端(管理员)”。如下图： <img src="https://s2.loli.net/2023/10/22/4eamPvjlhMqI6rn.webp">
+在命令窗口输入:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ipconfig /flushdns</span><br></pre></td></tr></table></figure>
+
+<p>按**Enter（回车键）**运行，看到已成功刷新DNS解析缓存的提示就说明DNS刷新成功了。（注：命令中间空格不可少）如下图：
+<img src="https://s2.loli.net/2023/10/22/Go41KbrZTingAzt.webp"></p>
+]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>Github</tag>
+        <tag>Windows</tag>
       </tags>
   </entry>
 </search>
