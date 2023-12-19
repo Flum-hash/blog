@@ -94,6 +94,135 @@ portfolio即为我的项目名。</p>
       </tags>
   </entry>
   <entry>
+    <title>Hexo压缩资源插件</title>
+    <url>/blog/posts/minifier.html</url>
+    <content><![CDATA[<p>文章来自插件hexo-all-minifier<a href="https://www.npmjs.com/package/hexo-all-minifier">官方文档</a></p>
+<h2 id="安装">安装</h2>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">npm install hexo-all-minifier --save</span></span><br></pre></td></tr></table></figure>
+
+<p>对于Mac用户，也许您需要安装更多的东西</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">brew install libtool automake autoconf nasm</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="用法">用法</h2>
+<p>只需将这一行放在 hexo-site 的配置文件中即可启用此插件。</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">all_minifier:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<p>如果您需要进一步控制此插件，请参阅以下选项。</p>
+<h2 id="选项">选项</h2>
+<p>🌟🆕 <strong>！新增功能</strong></p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">js_concator:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">bundle_path:</span> <span class="string">'/js/bundle.js'</span></span><br><span class="line">  <span class="attr">front:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">silent:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>enable</strong> - 启用 Js concator。缺省值为
+.<code>false</code></li>
+<li><strong>bundle_path</strong> -
+捆绑脚本的输出路径。它将被设置为根目录的绝对路径。</li>
+<li><strong>front</strong> - 将捆绑脚本放在标记中所有脚本的前面。默认为
+，这意味着捆绑脚本将放在其他脚本的后面。<code>body``false</code></li>
+<li><strong>silent</strong> - 禁用日志记录优化信息。缺省值为
+.<code>false</code></li>
+</ul>
+<p>concator 会将所有本地脚本连接成一个 bundle 脚本，并将其附加到 html
+标签的末尾。 在未来的版本中将允许更多细节控制。<code>body</code></p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">html_minifier:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">ignore_error:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">silent:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">exclude:</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>enable</strong> - 启用 HTML 压缩器。缺省值为
+.<code>true</code></li>
+<li><strong>ignore_error</strong> - 忽略解析html时发生的错误。</li>
+<li><strong>silent</strong> - 禁用日志记录优化信息。缺省值为
+.<code>false</code></li>
+<li><strong>exclude</strong> - 排除文件。Glob 是支持。</li>
+</ul>
+<hr>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">css_minifier:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">silent:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">exclude:</span> </span><br><span class="line">    <span class="bullet">-</span> <span class="string">'*.min.css'</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>enable</strong> - 启用 CSS 压缩器。缺省值为
+.<code>true</code></li>
+<li><strong>silent</strong> - 禁用日志记录优化信息。缺省值为
+.<code>false</code></li>
+<li><strong>exclude</strong> - 排除文件。Glob 是支持。</li>
+</ul>
+<hr>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">js_minifier:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">mangle:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">silent:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">output:</span></span><br><span class="line">  <span class="attr">compress:</span></span><br><span class="line">  <span class="attr">exclude:</span> </span><br><span class="line">    <span class="bullet">-</span> <span class="string">'*.min.js'</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>enable</strong> - 启用 JS 压缩器。缺省值为
+.<code>true</code></li>
+<li><strong>mangle</strong>：Mangle 文件名</li>
+<li><strong>output</strong>：输出选项。如果它是空的，请将其从 .yml
+文件中删除！否则，它将设置为 ，这与
+不同。<code>null``undefined</code></li>
+<li><strong>compress</strong>：压缩选项。如果它是空的，请将其从 .yml
+文件中删除！否则，它将设置为 ，这与
+不同。<code>null``undefined</code></li>
+<li><strong>silent</strong> - 禁用日志记录优化信息。缺省值为
+.<code>false</code></li>
+<li><strong>exclude</strong>：排除文件。Glob 是支持。</li>
+</ul>
+<hr>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">image_minifier:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">interlaced:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">multipass:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">optimizationLevel:</span> <span class="number">2</span></span><br><span class="line">  <span class="attr">pngquant:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">progressive:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">silent:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>enable</strong> - 启用图像缩小器。缺省值为
+.<code>true</code></li>
+<li><strong>interlaced</strong> - 用于渐进式渲染的隔行扫描 gif.缺省值为
+.<code>false</code></li>
+<li><strong>multipass</strong> - 多次优化 svg，直到完全优化。缺省值为
+.<code>false</code></li>
+<li><strong>optimizationLevel</strong> - 选择介于 0 和 7
+之间的优化级别。缺省值为 .<code>2</code></li>
+<li><strong>pngquant</strong> - 启用 <a href="https://github.com/imagemin/imagemin-pngquant">imagemin-pngquant</a> 插件。缺省值为
+.<code>false</code></li>
+<li><strong>progressive</strong> - 无损转换为渐进式。缺省值为
+.<code>false</code></li>
+<li><strong>silent</strong> - 禁用日志记录优化信息。缺省值为
+.<code>false</code></li>
+<li><strong>exclude</strong> - 排除特定类型的图像文件，输入值可以是 ,, ,
+或 。默认值为 null。不支持 Glob。<code>gif``jpg``png``svg</code></li>
+</ul>
+]]></content>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>插件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo如何隐藏文章</title>
+    <url>/blog/posts/36679002.html</url>
+    <content><![CDATA[<p>本 Hexo
+插件可以在博客中隐藏指定的文章，并使它们仅可通过链接访问。</p>
+<p>当一篇文章被设置为「隐藏」时，它不会出现在任何列表中（包括首页、存档、分类页面、标签页面、Feed、站点地图等），也不会被搜索引擎索引（前提是搜索引擎遵守
+noindex 标签）。</p>
+<p>只有知道文章链接的人才可以访问被隐藏的文章。</p>
+<p>Github地址：<a href="https://github.com/printempw/hexo-hide-posts">https://github.com/printempw/hexo-hide-posts</a></p>
+<h3 id="安装">安装</h3>
+<p>在站点根目录下执行<code>npm install hexo-hide-posts --save</code></p>
+<h3 id="配置">配置</h3>
+<p>在站点目录下的<code>_config.yml</code>中如下配置：</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># hexo-hide-posts</span></span><br><span class="line"><span class="attr">hide_posts:</span></span><br><span class="line">  <span class="comment"># 可以改成其他你喜欢的名字</span></span><br><span class="line">  <span class="attr">filter:</span> <span class="string">hidden</span></span><br><span class="line">  <span class="comment"># 指定你想要传递隐藏文章的位置，比如让所有隐藏文章在存档页面可见</span></span><br><span class="line">  <span class="comment"># 常见的位置有：index, tag, category, archive, sitemap, feed, etc.</span></span><br><span class="line">  <span class="comment"># 留空则默认全部隐藏</span></span><br><span class="line">  <span class="attr">public_generators:</span> []</span><br><span class="line">  <span class="comment"># 为隐藏的文章添加 noindex meta 标签，阻止搜索引擎收录</span></span><br><span class="line">  <span class="attr">noindex:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<p>举个栗子：设置 <code>filter: secret</code> 之后，你就可以在
+front-matter 中使用 <code>secret: true</code> 来隐藏文章了。</p>
+<h3 id="使用">使用</h3>
+<p>在文章的属性中定义 <code>hidden: true</code> 即可隐藏文章。</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 'Hidden Post'</span><br><span class="line">date: '2021/03/05 21:45:14'</span><br><span class="line">hidden: true</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<p>虽然首页上被隐藏了，但你仍然可以通过 <code>https://hexo.test/lorem-ipsum/</code> 链接访问它。</p>
+<p>你可以在命令行运行 <code>hexo hidden:list</code> 来获取当前所有的已隐藏文章列表。</p>
+<p>插件也在 <a href="https://hexo.io/api/locals">Local
+Variables</a> 中添加了 <code>all_posts</code> 和 <code>hidden_posts</code> 变量，供自定义主题使用。</p>
+<p>文章摘自：https://blog.garryde.com/archives/37712.html</p>
+]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo常用指令集</title>
     <url>/blog/posts/869eb1f7.html</url>
     <content><![CDATA[<a class="btn-anzhiyu " href="/blog/center%20large::%E5%89%8D%E5%BE%80HEXO%E5%AE%98%E6%96%B9%E6%8C%87%E4%BB%A4%E6%95%99%E7%A8%8B::https:/hexo.io/zh-cn/docs/commands.html::fa-solid%20fa-play-circle" title=""></a>
@@ -249,135 +378,6 @@ YAML 和 JSON 文件。</p>
       </categories>
       <tags>
         <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo如何隐藏文章</title>
-    <url>/blog/posts/36679002.html</url>
-    <content><![CDATA[<p>本 Hexo
-插件可以在博客中隐藏指定的文章，并使它们仅可通过链接访问。</p>
-<p>当一篇文章被设置为「隐藏」时，它不会出现在任何列表中（包括首页、存档、分类页面、标签页面、Feed、站点地图等），也不会被搜索引擎索引（前提是搜索引擎遵守
-noindex 标签）。</p>
-<p>只有知道文章链接的人才可以访问被隐藏的文章。</p>
-<p>Github地址：<a href="https://github.com/printempw/hexo-hide-posts">https://github.com/printempw/hexo-hide-posts</a></p>
-<h3 id="安装">安装</h3>
-<p>在站点根目录下执行<code>npm install hexo-hide-posts --save</code></p>
-<h3 id="配置">配置</h3>
-<p>在站点目录下的<code>_config.yml</code>中如下配置：</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># hexo-hide-posts</span></span><br><span class="line"><span class="attr">hide_posts:</span></span><br><span class="line">  <span class="comment"># 可以改成其他你喜欢的名字</span></span><br><span class="line">  <span class="attr">filter:</span> <span class="string">hidden</span></span><br><span class="line">  <span class="comment"># 指定你想要传递隐藏文章的位置，比如让所有隐藏文章在存档页面可见</span></span><br><span class="line">  <span class="comment"># 常见的位置有：index, tag, category, archive, sitemap, feed, etc.</span></span><br><span class="line">  <span class="comment"># 留空则默认全部隐藏</span></span><br><span class="line">  <span class="attr">public_generators:</span> []</span><br><span class="line">  <span class="comment"># 为隐藏的文章添加 noindex meta 标签，阻止搜索引擎收录</span></span><br><span class="line">  <span class="attr">noindex:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-
-<p>举个栗子：设置 <code>filter: secret</code> 之后，你就可以在
-front-matter 中使用 <code>secret: true</code> 来隐藏文章了。</p>
-<h3 id="使用">使用</h3>
-<p>在文章的属性中定义 <code>hidden: true</code> 即可隐藏文章。</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 'Hidden Post'</span><br><span class="line">date: '2021/03/05 21:45:14'</span><br><span class="line">hidden: true</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-
-<p>虽然首页上被隐藏了，但你仍然可以通过 <code>https://hexo.test/lorem-ipsum/</code> 链接访问它。</p>
-<p>你可以在命令行运行 <code>hexo hidden:list</code> 来获取当前所有的已隐藏文章列表。</p>
-<p>插件也在 <a href="https://hexo.io/api/locals">Local
-Variables</a> 中添加了 <code>all_posts</code> 和 <code>hidden_posts</code> 变量，供自定义主题使用。</p>
-<p>文章摘自：https://blog.garryde.com/archives/37712.html</p>
-]]></content>
-      <categories>
-        <category>教程</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo压缩资源插件</title>
-    <url>/blog/posts/minifier.html</url>
-    <content><![CDATA[<p>文章来自插件hexo-all-minifier<a href="https://www.npmjs.com/package/hexo-all-minifier">官方文档</a></p>
-<h2 id="安装">安装</h2>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">npm install hexo-all-minifier --save</span></span><br></pre></td></tr></table></figure>
-
-<p>对于Mac用户，也许您需要安装更多的东西</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">brew install libtool automake autoconf nasm</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="用法">用法</h2>
-<p>只需将这一行放在 hexo-site 的配置文件中即可启用此插件。</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">all_minifier:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-
-<p>如果您需要进一步控制此插件，请参阅以下选项。</p>
-<h2 id="选项">选项</h2>
-<p>🌟🆕 <strong>！新增功能</strong></p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">js_concator:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">bundle_path:</span> <span class="string">'/js/bundle.js'</span></span><br><span class="line">  <span class="attr">front:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">silent:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><strong>enable</strong> - 启用 Js concator。缺省值为
-.<code>false</code></li>
-<li><strong>bundle_path</strong> -
-捆绑脚本的输出路径。它将被设置为根目录的绝对路径。</li>
-<li><strong>front</strong> - 将捆绑脚本放在标记中所有脚本的前面。默认为
-，这意味着捆绑脚本将放在其他脚本的后面。<code>body``false</code></li>
-<li><strong>silent</strong> - 禁用日志记录优化信息。缺省值为
-.<code>false</code></li>
-</ul>
-<p>concator 会将所有本地脚本连接成一个 bundle 脚本，并将其附加到 html
-标签的末尾。 在未来的版本中将允许更多细节控制。<code>body</code></p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">html_minifier:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">ignore_error:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">silent:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">exclude:</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><strong>enable</strong> - 启用 HTML 压缩器。缺省值为
-.<code>true</code></li>
-<li><strong>ignore_error</strong> - 忽略解析html时发生的错误。</li>
-<li><strong>silent</strong> - 禁用日志记录优化信息。缺省值为
-.<code>false</code></li>
-<li><strong>exclude</strong> - 排除文件。Glob 是支持。</li>
-</ul>
-<hr>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">css_minifier:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">silent:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">exclude:</span> </span><br><span class="line">    <span class="bullet">-</span> <span class="string">'*.min.css'</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><strong>enable</strong> - 启用 CSS 压缩器。缺省值为
-.<code>true</code></li>
-<li><strong>silent</strong> - 禁用日志记录优化信息。缺省值为
-.<code>false</code></li>
-<li><strong>exclude</strong> - 排除文件。Glob 是支持。</li>
-</ul>
-<hr>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">js_minifier:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">mangle:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">silent:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">output:</span></span><br><span class="line">  <span class="attr">compress:</span></span><br><span class="line">  <span class="attr">exclude:</span> </span><br><span class="line">    <span class="bullet">-</span> <span class="string">'*.min.js'</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><strong>enable</strong> - 启用 JS 压缩器。缺省值为
-.<code>true</code></li>
-<li><strong>mangle</strong>：Mangle 文件名</li>
-<li><strong>output</strong>：输出选项。如果它是空的，请将其从 .yml
-文件中删除！否则，它将设置为 ，这与
-不同。<code>null``undefined</code></li>
-<li><strong>compress</strong>：压缩选项。如果它是空的，请将其从 .yml
-文件中删除！否则，它将设置为 ，这与
-不同。<code>null``undefined</code></li>
-<li><strong>silent</strong> - 禁用日志记录优化信息。缺省值为
-.<code>false</code></li>
-<li><strong>exclude</strong>：排除文件。Glob 是支持。</li>
-</ul>
-<hr>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">image_minifier:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">interlaced:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">multipass:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">optimizationLevel:</span> <span class="number">2</span></span><br><span class="line">  <span class="attr">pngquant:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">progressive:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">silent:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><strong>enable</strong> - 启用图像缩小器。缺省值为
-.<code>true</code></li>
-<li><strong>interlaced</strong> - 用于渐进式渲染的隔行扫描 gif.缺省值为
-.<code>false</code></li>
-<li><strong>multipass</strong> - 多次优化 svg，直到完全优化。缺省值为
-.<code>false</code></li>
-<li><strong>optimizationLevel</strong> - 选择介于 0 和 7
-之间的优化级别。缺省值为 .<code>2</code></li>
-<li><strong>pngquant</strong> - 启用 <a href="https://github.com/imagemin/imagemin-pngquant">imagemin-pngquant</a> 插件。缺省值为
-.<code>false</code></li>
-<li><strong>progressive</strong> - 无损转换为渐进式。缺省值为
-.<code>false</code></li>
-<li><strong>silent</strong> - 禁用日志记录优化信息。缺省值为
-.<code>false</code></li>
-<li><strong>exclude</strong> - 排除特定类型的图像文件，输入值可以是 ,, ,
-或 。默认值为 null。不支持 Glob。<code>gif``jpg``png``svg</code></li>
-</ul>
-]]></content>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>插件</tag>
       </tags>
   </entry>
   <entry>
@@ -1438,6 +1438,53 @@ DVD 或蓝光。</p>
       </tags>
   </entry>
   <entry>
+    <title>alist分享站合集</title>
+    <url>/blog/posts/99c9062b.html</url>
+    <content><![CDATA[<h4 id="alist简介">alist简介</h4>
+<p>alist资源站是一个支持多存储的文件列表程序，AList
+支持多个存储提供商，包括本地存储、阿里云盘、夸克云盘、189云盘、OneDrive、Google
+Drive等，且易于拓展。支持文件在线预览，图片、视频、打包下载，简单的来说AList资源站是把个人网盘里的资源以网站模式公开分享。</p>
+<p>https://pan.clun.top/ 雨呢网盘 视频 动漫 写真
+https://alist.aqingyuan.repl.co 晴园 https://al.chirmyram.com 七米蓝
+https://alist.advanced360.top Banana的资源站
+https://ruipan.bestruirui.repl.co 小瑞 https://pan.arley.cn Arley’s
+Drive https://apps.weixinqqq.com 微资源 www.kugutsu.ml (NSFW) Puppet
+Studio https://zi0.cc/ 梓澪の妙妙屋 ASMR 游戏 番剧 插画 <a href="https://ys.urlsdh.com/go/?url=aHR0cHM6Ly9pbWV4Y2xvdWQudG9wLw%3D%3D">https://imexcloud.top/</a>
+AList 经典电影中字 http://alist.xiaoya.pro/ 小雅的AList 大量影视
+有点失效 https://alist.ygxz.xyz/ 小站的AList
+https://tczhongyi.toc.icu/ AList 影视剧合集 4K原盘
+https://asca0121.toc.icu/ 日负斗金 4K影视 动漫 剧集
+https://alist.ouo3.repl.co/ OUO 大佬们的站 其他的AList站
+https://dl.6r.pw:6080/ AList网盘 电影 壁纸 视频
+https://alist.ucu520.top/ 开心ucu-AList 漫画 学习 音乐
+http://81.68.240.111:1688/ AList看剧学习资源大全
+https://pan.hxft.xyz/ 软件 电影 http://81.70.1.225:5244/ 看の电の视 动漫
+https://pan.arley.cn/ Arley’s Drive 图片 电影 游戏
+https://apps.weixinqqq.com/ 资源站.随意盘 教程 正规小视频 音乐
+https://bdys.top/ bdys
+电影动漫韩剧日剧等媒体库资源，提供在线播放，个人资源低调观看
+https://pan.cqtjy.cn/ 老谭alist 影视 4K在线观看 办公系统软件电子书资料等
+https://alist.azad.asia/ azad个人云盘 影视4k在线
+电影美剧丰富、MV、学习教程等资源 https://pan.110014.xyz/ 电喵大战皮卡丘
+https://alist.prpr.run/ pr盘
+动漫日番在线看，考研资料，高分电影、漫威等影视作品，独特得是看站长收集了许多国家的影视作品和外语。
+https://pan.ecve.cn/
+ECVE资源小站，全影视资源1-10个文件夹，10有最新的恶鬼看起来，阿里网盘线路4K高清播放，看电影资源多。
+http://shicheng.wang:555
+若水分享、学习资源、我的影视、软件分享，一个看影视片的alist资源站，新片很多。
+https://alist.ccome.site 动漫，影视 音乐、壁纸、AI绘画，杂货铺，仓库
+Cosplay。 https://www.asmrgay.com/ asmr
+https://www.aliyundrive.com/s/AjPaykzLJnw</p>
+]]></content>
+      <categories>
+        <category>内容分享</category>
+        <category>资源</category>
+      </categories>
+      <tags>
+        <tag>alist</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>解决npm install安装太慢</title>
     <url>/blog/posts/npminstall.html</url>
     <content><![CDATA[<h2 id="设置-npm-registry">设置 npm registry</h2>
@@ -1461,6 +1508,38 @@ registry更改为<strong>淘宝镜像</strong>，提升安装速度。</li>
 ]]></content>
       <tags>
         <tag>npm</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>作文实用素材方法整理</title>
+    <url>/blog/posts/113bdaa7.html</url>
+    <content><![CDATA[<p>本页为整理的我自己和找来的素材和页面模板 仅限参考</p>
+<h2 id="素材整理">素材整理</h2>
+<p>待补充</p>
+<h2 id="写作技巧">写作技巧</h2>
+<h3 id="1从生活中找例子">1.从生活中找例子</h3>
+<p>简单来说，想不到素材的时候，从生活中找相关的例子去用，比如： <img src="https://s2.loli.net/2023/10/21/HBC5rXm9ENqczlQ.webp">
+方法：观点句+生活例子+领域描述，如： <img src="https://s2.loli.net/2023/10/21/SDG46o5O1eRhHYL.webp"></p>
+<h3 id="2正反面论述">2.正反面论述</h3>
+<p>方法：正面论述+反面论述+观点，如： <img src="https://s2.loli.net/2023/10/21/L9ZnVHFcq4Ez2kj.webp">
+方法：错误选项+正确选项+观点做法，如： <img src="https://s2.loli.net/2023/10/21/ysoliO9k4BNFbTj.webp"></p>
+<h2 id="开头模板">开头模板</h2>
+<h3 id="1xxx与xxx合力">1.XXX与XXX合力</h3>
+<h4 id="原文">原文：</h4>
+<p><img src="https://s2.loli.net/2023/10/20/oyizuWSjgM4qI39.webp" alt="原文"></p>
+<h4 id="模板">模板：</h4>
+<p><img src="https://s2.loli.net/2023/10/20/9TCzapWNmkAPQsc.webp" alt="模板"></p>
+<h4 id="示例">示例：</h4>
+<p><img src="https://s2.loli.net/2023/10/20/LMq67ScyVJjUgBx.webp" alt="示例"></p>
+<h2 id="结尾模板">结尾模板</h2>
+<p>待补充</p>
+]]></content>
+      <categories>
+        <category>学习</category>
+        <category>语文</category>
+      </categories>
+      <tags>
+        <tag>作文</tag>
       </tags>
   </entry>
   <entry>
@@ -1640,82 +1719,60 @@ registry更改为<strong>淘宝镜像</strong>，提升安装速度。</li>
       </tags>
   </entry>
   <entry>
-    <title>作文实用素材方法整理</title>
-    <url>/blog/posts/113bdaa7.html</url>
-    <content><![CDATA[<p>本页为整理的我自己和找来的素材和页面模板 仅限参考</p>
-<h2 id="素材整理">素材整理</h2>
-<p>待补充</p>
-<h2 id="写作技巧">写作技巧</h2>
-<h3 id="1从生活中找例子">1.从生活中找例子</h3>
-<p>简单来说，想不到素材的时候，从生活中找相关的例子去用，比如： <img src="https://s2.loli.net/2023/10/21/HBC5rXm9ENqczlQ.webp">
-方法：观点句+生活例子+领域描述，如： <img src="https://s2.loli.net/2023/10/21/SDG46o5O1eRhHYL.webp"></p>
-<h3 id="2正反面论述">2.正反面论述</h3>
-<p>方法：正面论述+反面论述+观点，如： <img src="https://s2.loli.net/2023/10/21/L9ZnVHFcq4Ez2kj.webp">
-方法：错误选项+正确选项+观点做法，如： <img src="https://s2.loli.net/2023/10/21/ysoliO9k4BNFbTj.webp"></p>
-<h2 id="开头模板">开头模板</h2>
-<h3 id="1xxx与xxx合力">1.XXX与XXX合力</h3>
-<h4 id="原文">原文：</h4>
-<p><img src="https://s2.loli.net/2023/10/20/oyizuWSjgM4qI39.webp" alt="原文"></p>
-<h4 id="模板">模板：</h4>
-<p><img src="https://s2.loli.net/2023/10/20/9TCzapWNmkAPQsc.webp" alt="模板"></p>
-<h4 id="示例">示例：</h4>
-<p><img src="https://s2.loli.net/2023/10/20/LMq67ScyVJjUgBx.webp" alt="示例"></p>
-<h2 id="结尾模板">结尾模板</h2>
-<p>待补充</p>
-]]></content>
-      <categories>
-        <category>学习</category>
-        <category>语文</category>
-      </categories>
-      <tags>
-        <tag>作文</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>alist分享站合集</title>
-    <url>/blog/posts/99c9062b.html</url>
-    <content><![CDATA[<h4 id="alist简介">alist简介</h4>
-<p>alist资源站是一个支持多存储的文件列表程序，AList
-支持多个存储提供商，包括本地存储、阿里云盘、夸克云盘、189云盘、OneDrive、Google
-Drive等，且易于拓展。支持文件在线预览，图片、视频、打包下载，简单的来说AList资源站是把个人网盘里的资源以网站模式公开分享。</p>
-<p>https://pan.clun.top/ 雨呢网盘 视频 动漫 写真
-https://alist.aqingyuan.repl.co 晴园 https://al.chirmyram.com 七米蓝
-https://alist.advanced360.top Banana的资源站
-https://ruipan.bestruirui.repl.co 小瑞 https://pan.arley.cn Arley’s
-Drive https://apps.weixinqqq.com 微资源 www.kugutsu.ml (NSFW) Puppet
-Studio https://zi0.cc/ 梓澪の妙妙屋 ASMR 游戏 番剧 插画 <a href="https://ys.urlsdh.com/go/?url=aHR0cHM6Ly9pbWV4Y2xvdWQudG9wLw%3D%3D">https://imexcloud.top/</a>
-AList 经典电影中字 http://alist.xiaoya.pro/ 小雅的AList 大量影视
-有点失效 https://alist.ygxz.xyz/ 小站的AList
-https://tczhongyi.toc.icu/ AList 影视剧合集 4K原盘
-https://asca0121.toc.icu/ 日负斗金 4K影视 动漫 剧集
-https://alist.ouo3.repl.co/ OUO 大佬们的站 其他的AList站
-https://dl.6r.pw:6080/ AList网盘 电影 壁纸 视频
-https://alist.ucu520.top/ 开心ucu-AList 漫画 学习 音乐
-http://81.68.240.111:1688/ AList看剧学习资源大全
-https://pan.hxft.xyz/ 软件 电影 http://81.70.1.225:5244/ 看の电の视 动漫
-https://pan.arley.cn/ Arley’s Drive 图片 电影 游戏
-https://apps.weixinqqq.com/ 资源站.随意盘 教程 正规小视频 音乐
-https://bdys.top/ bdys
-电影动漫韩剧日剧等媒体库资源，提供在线播放，个人资源低调观看
-https://pan.cqtjy.cn/ 老谭alist 影视 4K在线观看 办公系统软件电子书资料等
-https://alist.azad.asia/ azad个人云盘 影视4k在线
-电影美剧丰富、MV、学习教程等资源 https://pan.110014.xyz/ 电喵大战皮卡丘
-https://alist.prpr.run/ pr盘
-动漫日番在线看，考研资料，高分电影、漫威等影视作品，独特得是看站长收集了许多国家的影视作品和外语。
-https://pan.ecve.cn/
-ECVE资源小站，全影视资源1-10个文件夹，10有最新的恶鬼看起来，阿里网盘线路4K高清播放，看电影资源多。
-http://shicheng.wang:555
-若水分享、学习资源、我的影视、软件分享，一个看影视片的alist资源站，新片很多。
-https://alist.ccome.site 动漫，影视 音乐、壁纸、AI绘画，杂货铺，仓库
-Cosplay。 https://www.asmrgay.com/ asmr
-https://www.aliyundrive.com/s/AjPaykzLJnw</p>
+    <title>实用软件&amp;网站整理</title>
+    <url>/blog/posts/a5115977.html</url>
+    <content><![CDATA[<h2 id="软件分享">软件分享</h2>
+<p>注：以下大部分内容为免费或破解版本</p>
+<h3 id="coodesker">Coodesker</h3>
+<p>Coodesker：自动分类整理桌面上的快捷方式、目录、图片等文件
+以前为免费软件，虽然在github上，但是就挂了个仓库
+现在已经开始收费了，但是我感觉老版本就够用</p>
+<a class="btn-anzhiyu " href="regular::Coodesker最后一个免费版本::https://wwll.lanzout.com/iveV71c8woyh::fa-solid fa-play-circle" title=""></a>
+
+<a class="btn-anzhiyu " href="regular::Coodesker20.0.7激活版本::https://wwll.lanzout.com/iEhYW1cbw46h::fa-solid fa-play-circle" title=""></a>
+
+<p>激活版下载密码：bpwp</p>
+<h3 id="kms激活工具">KMS激活工具</h3>
+<p>采用当前最先进的激活技术，几乎涵盖了Windows全版本同Office全版本的激活，支持最新的Win11系统、Win10全版本包括Win10
+LTSC的数字权利激活，非常强大，是激活系统首选的一款激活工具。</p>
+<a class="btn-anzhiyu " href="regular::前往下载::https://wwll.lanzout.com/iIXeE1c8wp8h::fa-solid fa-play-circle" title=""></a>
+
+<h3 id="potplayer视频播放器">PotPlayer视频播放器</h3>
+<p>PotPlayer继承了 KMPlayer
+所有的优点，拥有异常强大的内置音视频解码器，可以支持几乎全部音乐、视频文件格式的播放。采用
+VC++ 进行了全面重构，并且原生支持64位操作系统，使得 PotPlayer 在 Windows
+10 等新系统上，无论性能、兼容性和稳定性上的表现均比 KMP
+要好不少；硬件加速、流畅优秀的全高清视
+频播放效果、强大的选项、滤镜、外挂式管理、DXVA等硬件解码；以及非常丰富且强大的设置选项，被誉为Win平台上最优秀的免费影音全能格式播放器。</p>
+<a class="btn-anzhiyu " href="regular::前往下载::https://wwll.lanzout.com/i53vQ1c8wpgf::fa-solid fa-play-circle" title=""></a>
+
+<p>密码:a2k0</p>
+<h3 id="rainmeter雨滴">Rainmeter雨滴</h3>
+<p>雨滴皮肤（Rainmeter皮肤），是一些有特定功能的Windows桌面小工具。一些复杂的皮肤则看起来像是小型应用程序，风格相近的皮肤则可以组成一个套装或者主题。任何一个雨滴皮肤在不同电脑上工作都是不完全相同的，这取决于使用者对它的调整和修饰。</p>
+<a class="btn-anzhiyu " href="regular::前往官网下载::https://www.rainmeter.net/::fa-solid fa-play-circle" title=""></a>
+
+<h3 id="几何画板已破解">几何画板(已破解)</h3>
+<p>几何画板为从三年级到大学的各个级别的学生提供了一种有形的，可视化的方
+式来学习数学，从而提高他们的参与度、理解力和成就。
+几何画板现已停售，这里准备了v5.0.6的破解版本</p>
+<a class="btn-anzhiyu " href="regular::前往下载::https://wwll.lanzout.com/iLwf71c8wqyj::fa-solid fa-play-circle" title=""></a>
+
+<p>https://gofile.cc/lre4/bandizip.exe
+https://gofile.cc/jrY7/coodesker.zip https://gofile.cc/551a/kms.zip
+https://gofile.cc/QrEQ/firpe-v182.exe https://gofile.cc/WW5E/idm.exe
+https://gofile.cc/K7Xk/potplayer.exe
+https://gofile.cc/1kYp/rustdesk-64.exe
+https://gofile.cc/zq40/ventoy-1095-windows.zip
+https://gofile.cc/0L0l/.zip
+https://gofile.cc/DJyq/acrobat-pro-dc-pdf.iso</p>
 ]]></content>
       <categories>
         <category>内容分享</category>
-        <category>资源</category>
+        <category>软件</category>
       </categories>
       <tags>
-        <tag>alist</tag>
+        <tag>软件</tag>
+        <tag>网站</tag>
       </tags>
   </entry>
   <entry>
@@ -1963,63 +2020,6 @@ xxx.github.io（xxx 是你 GitHub
       </tags>
   </entry>
   <entry>
-    <title>实用软件&amp;网站整理</title>
-    <url>/blog/posts/a5115977.html</url>
-    <content><![CDATA[<h2 id="软件分享">软件分享</h2>
-<p>注：以下大部分内容为免费或破解版本</p>
-<h3 id="coodesker">Coodesker</h3>
-<p>Coodesker：自动分类整理桌面上的快捷方式、目录、图片等文件
-以前为免费软件，虽然在github上，但是就挂了个仓库
-现在已经开始收费了，但是我感觉老版本就够用</p>
-<a class="btn-anzhiyu " href="regular::Coodesker最后一个免费版本::https://wwll.lanzout.com/iveV71c8woyh::fa-solid fa-play-circle" title=""></a>
-
-<a class="btn-anzhiyu " href="regular::Coodesker20.0.7激活版本::https://wwll.lanzout.com/iEhYW1cbw46h::fa-solid fa-play-circle" title=""></a>
-
-<p>激活版下载密码：bpwp</p>
-<h3 id="kms激活工具">KMS激活工具</h3>
-<p>采用当前最先进的激活技术，几乎涵盖了Windows全版本同Office全版本的激活，支持最新的Win11系统、Win10全版本包括Win10
-LTSC的数字权利激活，非常强大，是激活系统首选的一款激活工具。</p>
-<a class="btn-anzhiyu " href="regular::前往下载::https://wwll.lanzout.com/iIXeE1c8wp8h::fa-solid fa-play-circle" title=""></a>
-
-<h3 id="potplayer视频播放器">PotPlayer视频播放器</h3>
-<p>PotPlayer继承了 KMPlayer
-所有的优点，拥有异常强大的内置音视频解码器，可以支持几乎全部音乐、视频文件格式的播放。采用
-VC++ 进行了全面重构，并且原生支持64位操作系统，使得 PotPlayer 在 Windows
-10 等新系统上，无论性能、兼容性和稳定性上的表现均比 KMP
-要好不少；硬件加速、流畅优秀的全高清视
-频播放效果、强大的选项、滤镜、外挂式管理、DXVA等硬件解码；以及非常丰富且强大的设置选项，被誉为Win平台上最优秀的免费影音全能格式播放器。</p>
-<a class="btn-anzhiyu " href="regular::前往下载::https://wwll.lanzout.com/i53vQ1c8wpgf::fa-solid fa-play-circle" title=""></a>
-
-<p>密码:a2k0</p>
-<h3 id="rainmeter雨滴">Rainmeter雨滴</h3>
-<p>雨滴皮肤（Rainmeter皮肤），是一些有特定功能的Windows桌面小工具。一些复杂的皮肤则看起来像是小型应用程序，风格相近的皮肤则可以组成一个套装或者主题。任何一个雨滴皮肤在不同电脑上工作都是不完全相同的，这取决于使用者对它的调整和修饰。</p>
-<a class="btn-anzhiyu " href="regular::前往官网下载::https://www.rainmeter.net/::fa-solid fa-play-circle" title=""></a>
-
-<h3 id="几何画板已破解">几何画板(已破解)</h3>
-<p>几何画板为从三年级到大学的各个级别的学生提供了一种有形的，可视化的方
-式来学习数学，从而提高他们的参与度、理解力和成就。
-几何画板现已停售，这里准备了v5.0.6的破解版本</p>
-<a class="btn-anzhiyu " href="regular::前往下载::https://wwll.lanzout.com/iLwf71c8wqyj::fa-solid fa-play-circle" title=""></a>
-
-<p>https://gofile.cc/lre4/bandizip.exe
-https://gofile.cc/jrY7/coodesker.zip https://gofile.cc/551a/kms.zip
-https://gofile.cc/QrEQ/firpe-v182.exe https://gofile.cc/WW5E/idm.exe
-https://gofile.cc/K7Xk/potplayer.exe
-https://gofile.cc/1kYp/rustdesk-64.exe
-https://gofile.cc/zq40/ventoy-1095-windows.zip
-https://gofile.cc/0L0l/.zip
-https://gofile.cc/DJyq/acrobat-pro-dc-pdf.iso</p>
-]]></content>
-      <categories>
-        <category>内容分享</category>
-        <category>软件</category>
-      </categories>
-      <tags>
-        <tag>软件</tag>
-        <tag>网站</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>徽州行</title>
     <url>/blog/posts/596431e6.html</url>
     <content><![CDATA[<h1 id="活动简介">活动简介</h1>
@@ -2113,53 +2113,6 @@ https://gofile.cc/DJyq/acrobat-pro-dc-pdf.iso</p>
       </tags>
   </entry>
   <entry>
-    <title>风铃投票制作教程</title>
-    <url>/blog/posts/Fengling.html</url>
-    <content><![CDATA[<p>此文章为风铃系统制作逻辑问卷的教程</p>
-<p>本次研学展示完活动成果后需要进行投票选出3个大家喜欢的小组，
-由此制作了此问卷，因为3班也要用，就写个文章吧，微信一条条发也怪麻烦的（这个好像也挺麻烦）</p>
-<p>需求一：3个类型，分别最佳创意小组，最专业小组，最受欢迎小组
-需求二：一个人可以每项推荐一组，3项都要选，但是不能都选同一组（原话）
-需求三：每个人只能完成一次（可选）</p>
-<h1 id="一系统选取">一、系统选取</h1>
-<p>本来想用问卷星制作的，但是找了半天没有找到符合<strong>需求2</strong>中<strong>不能复选</strong>的题目逻辑
-于是便找了半天，找到了一个支持此逻辑的问卷平台：<strong>风铃系统</strong></p>
-<a class="btn-anzhiyu " href="/blog/center%20large::%E7%82%B9%E5%87%BB%E5%89%8D%E5%BE%80%E9%A3%8E%E9%93%83%E7%B3%BB%E7%BB%9F::https:/www.powercx.com/::fa-solid%20fa-arrow-right" title=""></a>
-
-<p>进入官网后，点击 <strong>登录/注册</strong> 登陆账号 <img src="https://pic.imgdb.cn/item/656b12e5c458853aef83edf2.webp">
-登陆完成后，点击<strong>我的问卷</strong> <img src="https://pic.imgdb.cn/item/656b12e5c458853aef83eed5.webp">
-进入界面后，点击<strong>创建项目</strong> -&gt;
-<strong>空白创建</strong> <img src="https://pic.imgdb.cn/item/656bdb39c458853aef3cfc7d.webp"> <img src="https://pic.imgdb.cn/item/656b12e5c458853aef83efc6.webp">
-填写问卷信息，选择<strong>经典模式</strong>，问卷就创建完成了</p>
-<h1 id="二问卷制作">二、问卷制作</h1>
-<h1 id="1创建题目">1.创建题目</h1>
-<p>点击<strong>添加问题</strong>，选择<strong>单选</strong> <img src="https://pic.imgdb.cn/item/656b184ac458853aef9db6e4.webp">
-点击题目下方的<strong>批量编辑</strong>，导入选项（小组的名称及姓名）
-<img src="https://pic.imgdb.cn/item/656b184ac458853aef9db5e6.webp"></p>
-<h1 id="2创建逻辑">2.创建逻辑</h1>
-<p>新建<strong>第二题</strong>，删除其自带的选项，并点击右侧底部的<strong>选项带入</strong>
-<img src="https://pic.imgdb.cn/item/656b184ac458853aef9db4d3.webp">
-按照如图所示填写逻辑 <img src="https://pic.imgdb.cn/item/656b184ac458853aef9db43b.webp">
-点击确定，第二题的选项就导入成功了，第三题也是按照同样的方法，导入<strong>第二题的<em>未选中项</em></strong>
-即可</p>
-<h1 id="三问卷发布设置可选">三、问卷发布设置（可选）</h1>
-<h2 id="设置作答限制">设置作答限制</h2>
-<p><strong>需求3</strong>我采用了控制IP和设备作答频次限制的形式，这种方法并不能绝对的保证每个人只能做一次，但是可以大大减小刷题的概率
-点击上方<strong>设置</strong>，选择<strong>作答设置</strong>，勾选<strong>设备作答频次限制</strong>和<strong>IP作答频次限制</strong>
-<img src="https://pic.imgdb.cn/item/656b1bfbc458853aefb00040.webp"></p>
-<h1 id="四发布及查看统计信息">四、发布及查看统计信息</h1>
-<p>点击上方的<strong>发布</strong>，选择<strong>发布问卷</strong>，在<strong>设置</strong>里找到<strong>发布链接</strong>，即可分享作答了
-统计信息点击<strong>报表</strong>即可显示 <img src="https://pic.imgdb.cn/item/656b1bfbc458853aefb000d8.webp">
-如果想要把作答数据由高到低进行显示，按照如下图所示步骤执行即可（懒得打字了）
-<img src="https://pic.imgdb.cn/item/656b1bfcc458853aefb001b9.webp"></p>
-]]></content>
-      <tags>
-        <tag>投票</tag>
-        <tag>风铃系统</tag>
-        <tag>教程</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>解决Github的访问问题</title>
     <url>/blog/posts/714d1047.html</url>
     <content><![CDATA[<p>Github是一个基于Git版本控制系统的代码托管平台。</p>
@@ -2223,6 +2176,53 @@ URL：https://raw.hellogithub.com/hosts</p>
       <tags>
         <tag>Github</tag>
         <tag>Windows</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>风铃投票制作教程</title>
+    <url>/blog/posts/Fengling.html</url>
+    <content><![CDATA[<p>此文章为风铃系统制作逻辑问卷的教程</p>
+<p>本次研学展示完活动成果后需要进行投票选出3个大家喜欢的小组，
+由此制作了此问卷，因为3班也要用，就写个文章吧，微信一条条发也怪麻烦的（这个好像也挺麻烦）</p>
+<p>需求一：3个类型，分别最佳创意小组，最专业小组，最受欢迎小组
+需求二：一个人可以每项推荐一组，3项都要选，但是不能都选同一组（原话）
+需求三：每个人只能完成一次（可选）</p>
+<h1 id="一系统选取">一、系统选取</h1>
+<p>本来想用问卷星制作的，但是找了半天没有找到符合<strong>需求2</strong>中<strong>不能复选</strong>的题目逻辑
+于是便找了半天，找到了一个支持此逻辑的问卷平台：<strong>风铃系统</strong></p>
+<a class="btn-anzhiyu " href="/blog/center%20large::%E7%82%B9%E5%87%BB%E5%89%8D%E5%BE%80%E9%A3%8E%E9%93%83%E7%B3%BB%E7%BB%9F::https:/www.powercx.com/::fa-solid%20fa-arrow-right" title=""></a>
+
+<p>进入官网后，点击 <strong>登录/注册</strong> 登陆账号 <img src="https://pic.imgdb.cn/item/656b12e5c458853aef83edf2.webp">
+登陆完成后，点击<strong>我的问卷</strong> <img src="https://pic.imgdb.cn/item/656b12e5c458853aef83eed5.webp">
+进入界面后，点击<strong>创建项目</strong> -&gt;
+<strong>空白创建</strong> <img src="https://pic.imgdb.cn/item/656bdb39c458853aef3cfc7d.webp"> <img src="https://pic.imgdb.cn/item/656b12e5c458853aef83efc6.webp">
+填写问卷信息，选择<strong>经典模式</strong>，问卷就创建完成了</p>
+<h1 id="二问卷制作">二、问卷制作</h1>
+<h1 id="1创建题目">1.创建题目</h1>
+<p>点击<strong>添加问题</strong>，选择<strong>单选</strong> <img src="https://pic.imgdb.cn/item/656b184ac458853aef9db6e4.webp">
+点击题目下方的<strong>批量编辑</strong>，导入选项（小组的名称及姓名）
+<img src="https://pic.imgdb.cn/item/656b184ac458853aef9db5e6.webp"></p>
+<h1 id="2创建逻辑">2.创建逻辑</h1>
+<p>新建<strong>第二题</strong>，删除其自带的选项，并点击右侧底部的<strong>选项带入</strong>
+<img src="https://pic.imgdb.cn/item/656b184ac458853aef9db4d3.webp">
+按照如图所示填写逻辑 <img src="https://pic.imgdb.cn/item/656b184ac458853aef9db43b.webp">
+点击确定，第二题的选项就导入成功了，第三题也是按照同样的方法，导入<strong>第二题的<em>未选中项</em></strong>
+即可</p>
+<h1 id="三问卷发布设置可选">三、问卷发布设置（可选）</h1>
+<h2 id="设置作答限制">设置作答限制</h2>
+<p><strong>需求3</strong>我采用了控制IP和设备作答频次限制的形式，这种方法并不能绝对的保证每个人只能做一次，但是可以大大减小刷题的概率
+点击上方<strong>设置</strong>，选择<strong>作答设置</strong>，勾选<strong>设备作答频次限制</strong>和<strong>IP作答频次限制</strong>
+<img src="https://pic.imgdb.cn/item/656b1bfbc458853aefb00040.webp"></p>
+<h1 id="四发布及查看统计信息">四、发布及查看统计信息</h1>
+<p>点击上方的<strong>发布</strong>，选择<strong>发布问卷</strong>，在<strong>设置</strong>里找到<strong>发布链接</strong>，即可分享作答了
+统计信息点击<strong>报表</strong>即可显示 <img src="https://pic.imgdb.cn/item/656b1bfbc458853aefb000d8.webp">
+如果想要把作答数据由高到低进行显示，按照如下图所示步骤执行即可（懒得打字了）
+<img src="https://pic.imgdb.cn/item/656b1bfcc458853aefb001b9.webp"></p>
+]]></content>
+      <tags>
+        <tag>投票</tag>
+        <tag>风铃系统</tag>
+        <tag>教程</tag>
       </tags>
   </entry>
 </search>
