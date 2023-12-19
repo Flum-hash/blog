@@ -445,6 +445,102 @@ how to learn anything</h2>
       </tags>
   </entry>
   <entry>
+    <title>Win11安装杜比全景声方法</title>
+    <url>/blog/posts/3464e4f.html</url>
+    <content><![CDATA[<h1 id="在-windows-11-中安装杜比全景声">在 Windows 11
+中安装杜比全景声</h1>
+<h4 id="一个人可以在剧院享受的氛围-因此在本指南中您将学习-如何在-windows-11-中免费启用或安装杜比全景声">一个人可以在剧院享受的氛围。
+因此，在本指南中，您将学习 <strong>如何在 Windows 11
+中免费启用或安装杜比全景声</strong>.</h4>
+<h4 id="同时-杜比全景声-是目前可用的最具创新性的音响系统之一-微软的-xbox-one-和索尼的-playstation-4-都兼容出色的硬件因此可以轻松地为游戏机使用经过杜比全景声-dolby-atmos-认证的音响系统-不幸的是对于-windows-1011-pc-来说情况并非如此">同时， <strong>杜比全景声</strong> 是目前可用的最具创新性的音响系统之一。
+微软的 Xbox One 和索尼的 PlayStation 4
+都兼容出色的硬件，因此可以轻松地为游戏机使用经过杜比全景声 (Dolby Atmos)
+认证的音响系统。 不幸的是，对于 Windows 10/11 PC
+来说，情况并非如此。</h4>
+<h2 id="杜比音频与杜比全景声有什么区别">杜比音频与杜比全景声：有什么区别？</h2>
+<p>杜比音频是一种 2D
+音频技术，可以提高您正在观看的任何内容的音质，无论是体育赛事、流媒体电影，甚至是
+DVD 或蓝光。</p>
+<p>另一方面，杜比全景声 (Dolby Atmos) 是一种 3D
+沉浸式技术，它允许扬声器或扬声器系统“欺骗”您的大脑，让您相信您被声音“包围”——它有效地为您提供影院体验，仿佛即使您不在，您也会被扬声器包围。</p>
+<p>因此，事不宜迟，以下是在 Windows 11 中安装杜比全景声 (Dolby Atmos)
+的方法：</p>
+<h2 id="步骤-1-下载杜比全景声应用程序">步骤 1.
+下载杜比全景声应用程序</h2>
+<p>前往<a href="https://www.dolby.com/">Dolby官网</a>下载杜比全景声应用程序。</p>
+<h2 id="步骤-2-启用开发者模式">步骤 2. 启用开发者模式</h2>
+<ul>
+<li>按 Windows 键 + I 打开 <strong>设置。</strong></li>
+<li>点击 <strong>隐私及安全</strong> 从左侧窗格中，然后选择 <strong>对于开发人员</strong>.</li>
+</ul>
+<p>对于开发人员</p>
+<ul>
+<li>使能够 <strong>开发商</strong> 模式，然后单击 <strong>是的</strong> 确认。</li>
+</ul>
+<p><img src="https://digitalixy.com/image/1646154525.png" title="dolby-atmos-windows-11 (2)-min"></p>
+<p>启用开发者模式</p>
+<h2 id="步骤-3-禁用驱动程序签名强制">步骤 3. 禁用驱动程序签名强制</h2>
+<p>按住 <strong>转移</strong> 键，然后单击 <strong>重新开始</strong>.</p>
+<p>选择 <strong>疑难解答</strong> &gt; <strong>高级选项</strong> &gt; <strong>启动设置</strong> &gt; <strong>重新开始</strong> &gt;
+最后，按 <strong>F7</strong> 钥匙。</p>
+<p><img src="https://digitalixy.com/image/1646154532.jpg" title="dolby-atmos-windows-11 (2)-min" alt="如何在 2022 年免费在 Windows 11 PC 和笔记本电脑中安装杜比全景声"></p>
+<p>禁用驱动程序签名强制</p>
+<h2 id="步骤-4-更新声音驱动程序">步骤 4. 更新声音驱动程序</h2>
+<p>曾经，您已经从上述链接下载了杜比全景声应用程序，然后将其解压缩。
+导航到 <strong>司机</strong> 文件夹，解压名为 Win11_x64
+文件夹的文件。</p>
+<p><strong>右键点击</strong> 在开始菜单按钮上，然后选择 <strong>装置经理</strong> 或按 <strong>Windows
+键 + X</strong> 然后选择 <strong>装置经理</strong>.</p>
+<p><img src="https://digitalixy.com/image/1646154542.png" title="dolby-atmos-windows-11-2"></p>
+<p>装置经理。</p>
+<p>现在， <strong>双击</strong> 在 <strong>声音、视频和游戏控制器</strong>, <strong>右键点击</strong> 在 <strong>高清音频设备，</strong> 然后选择 <strong>更新驱动程序</strong>.</p>
+<p><img src="https://digitalixy.com/image/1646154548.png" title="dolby-atmos-windows-11-2"></p>
+<p>更新驱动程序</p>
+<p>点击 <strong>浏览我的电脑以获取驱动程序</strong>.</p>
+<p><img src="https://digitalixy.com/image/1646154553.png" title="dolby-atmos-windows-11-2"></p>
+<p>浏览我的电脑以获取驱动程序</p>
+<p>选择 <strong>让我从计算机上的可用驱动程序列表中进行选择</strong>.</p>
+<p><img src="https://digitalixy.com/image/1646154560.png" title="dolby-atmos-windows-11-2"></p>
+<p>让我从计算机上的可用驱动程序列表中进行选择</p>
+<p>选择 <strong>有磁盘</strong> 然后点击 <strong>浏览。</strong></p>
+<p><img src="https://digitalixy.com/image/1646154565.png" title="dolby-atmos-windows-11-2" alt="如何在 2022 年免费在 Windows 11 PC 和笔记本电脑中安装杜比全景声"></p>
+<p>浏览</p>
+<p>转到解压后的杜比全景声文件夹
+&gt; <strong>driver</strong> &gt; 合适的文件版本选择 <strong>hdaudio.inf</strong> 文件，然后单击 <strong>打开。</strong></p>
+<p><img src="https://digitalixy.com/image/1646154570.png" title="dolby-atmos-windows-11 (11)-min" alt="如何在 2022 年免费在 Windows 11 PC 和笔记本电脑中安装杜比全景声"></p>
+<p>选择 <strong>好的</strong>.</p>
+<p><img src="https://digitalixy.com/image/1646154577.png" title="dolby-atmos-windows-11 (12)-min" alt="如何在 2022 年免费在 Windows 11 PC 和笔记本电脑中安装杜比全景声"></p>
+<p>好的</p>
+<p>现在，选择 <strong>杜比全景声</strong> 并点击 <strong>下一个</strong>.
+点击 <strong>是的</strong>.</p>
+<p><img src="https://digitalixy.com/image/1646154584.png" title="dolby-atmos-windows-11-2" alt="如何在 2022 年免费在 Windows 11 PC 和笔记本电脑中安装杜比全景声"></p>
+<p>点击 <strong>无论如何都要安装这个驱动软件，</strong> 如果系统提示您**.**</p>
+<p>安装后，点击 <strong>关闭</strong>.</p>
+<h2 id="第-5-步安装杜比全景声应用程序">第 5
+步。安装杜比全景声应用程序</h2>
+<p>打开 <strong>杜比全景声文件</strong> 您之前提取的然后打开 <strong>应用程序</strong> 文件夹。</p>
+<p><img src="https://digitalixy.com/image/1646154591.png" title="dolby-atmos-windows-11-2" alt="如何在 2022 年免费在 Windows 11 PC 和笔记本电脑中安装杜比全景声"></p>
+<p>应用程序</p>
+<p>双击 <strong>应用程序2021</strong> 文件。</p>
+<p><img src="https://digitalixy.com/image/1646154598.png" title="dolby-atmos-windows-11-2" alt="如何在 2022 年免费在 Windows 11 PC 和笔记本电脑中安装杜比全景声"></p>
+<p>应用程序2021</p>
+<p>点击 <strong>安装</strong> 安装杜比全景声。</p>
+<p><img src="https://digitalixy.com/image/1646154609.png" title="dolby-atmos-windows-11-2" alt="如何在 2022 年免费在 Windows 11 PC 和笔记本电脑中安装杜比全景声"></p>
+<p>安装</p>
+<p>等到安装过程完成。</p>
+<p>最后，杜比全景声 (Dolby Atmos) 已成功安装在您的 Windows 11 PC
+上。</p>
+]]></content>
+      <categories>
+        <category>内容分享</category>
+        <category>音效</category>
+      </categories>
+      <tags>
+        <tag>Windows</tag>
+        <tag>杜比</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Markdown基本语法</title>
     <url>/blog/posts/5d36ff15.html</url>
     <content><![CDATA[<p>本文目的为方便查找 以下内容均取自<a href="https://markdown.com.cn/basic-syntax/">Markdown官网</a></p>
@@ -1343,102 +1439,6 @@ HTML 实体。）</p>
       </tags>
   </entry>
   <entry>
-    <title>Win11安装杜比全景声方法</title>
-    <url>/blog/posts/3464e4f.html</url>
-    <content><![CDATA[<h1 id="在-windows-11-中安装杜比全景声">在 Windows 11
-中安装杜比全景声</h1>
-<h4 id="一个人可以在剧院享受的氛围-因此在本指南中您将学习-如何在-windows-11-中免费启用或安装杜比全景声">一个人可以在剧院享受的氛围。
-因此，在本指南中，您将学习 <strong>如何在 Windows 11
-中免费启用或安装杜比全景声</strong>.</h4>
-<h4 id="同时-杜比全景声-是目前可用的最具创新性的音响系统之一-微软的-xbox-one-和索尼的-playstation-4-都兼容出色的硬件因此可以轻松地为游戏机使用经过杜比全景声-dolby-atmos-认证的音响系统-不幸的是对于-windows-1011-pc-来说情况并非如此">同时， <strong>杜比全景声</strong> 是目前可用的最具创新性的音响系统之一。
-微软的 Xbox One 和索尼的 PlayStation 4
-都兼容出色的硬件，因此可以轻松地为游戏机使用经过杜比全景声 (Dolby Atmos)
-认证的音响系统。 不幸的是，对于 Windows 10/11 PC
-来说，情况并非如此。</h4>
-<h2 id="杜比音频与杜比全景声有什么区别">杜比音频与杜比全景声：有什么区别？</h2>
-<p>杜比音频是一种 2D
-音频技术，可以提高您正在观看的任何内容的音质，无论是体育赛事、流媒体电影，甚至是
-DVD 或蓝光。</p>
-<p>另一方面，杜比全景声 (Dolby Atmos) 是一种 3D
-沉浸式技术，它允许扬声器或扬声器系统“欺骗”您的大脑，让您相信您被声音“包围”——它有效地为您提供影院体验，仿佛即使您不在，您也会被扬声器包围。</p>
-<p>因此，事不宜迟，以下是在 Windows 11 中安装杜比全景声 (Dolby Atmos)
-的方法：</p>
-<h2 id="步骤-1-下载杜比全景声应用程序">步骤 1.
-下载杜比全景声应用程序</h2>
-<p>前往<a href="https://www.dolby.com/">Dolby官网</a>下载杜比全景声应用程序。</p>
-<h2 id="步骤-2-启用开发者模式">步骤 2. 启用开发者模式</h2>
-<ul>
-<li>按 Windows 键 + I 打开 <strong>设置。</strong></li>
-<li>点击 <strong>隐私及安全</strong> 从左侧窗格中，然后选择 <strong>对于开发人员</strong>.</li>
-</ul>
-<p>对于开发人员</p>
-<ul>
-<li>使能够 <strong>开发商</strong> 模式，然后单击 <strong>是的</strong> 确认。</li>
-</ul>
-<p><img src="https://digitalixy.com/image/1646154525.png" title="dolby-atmos-windows-11 (2)-min"></p>
-<p>启用开发者模式</p>
-<h2 id="步骤-3-禁用驱动程序签名强制">步骤 3. 禁用驱动程序签名强制</h2>
-<p>按住 <strong>转移</strong> 键，然后单击 <strong>重新开始</strong>.</p>
-<p>选择 <strong>疑难解答</strong> &gt; <strong>高级选项</strong> &gt; <strong>启动设置</strong> &gt; <strong>重新开始</strong> &gt;
-最后，按 <strong>F7</strong> 钥匙。</p>
-<p><img src="https://digitalixy.com/image/1646154532.jpg" title="dolby-atmos-windows-11 (2)-min" alt="如何在 2022 年免费在 Windows 11 PC 和笔记本电脑中安装杜比全景声"></p>
-<p>禁用驱动程序签名强制</p>
-<h2 id="步骤-4-更新声音驱动程序">步骤 4. 更新声音驱动程序</h2>
-<p>曾经，您已经从上述链接下载了杜比全景声应用程序，然后将其解压缩。
-导航到 <strong>司机</strong> 文件夹，解压名为 Win11_x64
-文件夹的文件。</p>
-<p><strong>右键点击</strong> 在开始菜单按钮上，然后选择 <strong>装置经理</strong> 或按 <strong>Windows
-键 + X</strong> 然后选择 <strong>装置经理</strong>.</p>
-<p><img src="https://digitalixy.com/image/1646154542.png" title="dolby-atmos-windows-11-2"></p>
-<p>装置经理。</p>
-<p>现在， <strong>双击</strong> 在 <strong>声音、视频和游戏控制器</strong>, <strong>右键点击</strong> 在 <strong>高清音频设备，</strong> 然后选择 <strong>更新驱动程序</strong>.</p>
-<p><img src="https://digitalixy.com/image/1646154548.png" title="dolby-atmos-windows-11-2"></p>
-<p>更新驱动程序</p>
-<p>点击 <strong>浏览我的电脑以获取驱动程序</strong>.</p>
-<p><img src="https://digitalixy.com/image/1646154553.png" title="dolby-atmos-windows-11-2"></p>
-<p>浏览我的电脑以获取驱动程序</p>
-<p>选择 <strong>让我从计算机上的可用驱动程序列表中进行选择</strong>.</p>
-<p><img src="https://digitalixy.com/image/1646154560.png" title="dolby-atmos-windows-11-2"></p>
-<p>让我从计算机上的可用驱动程序列表中进行选择</p>
-<p>选择 <strong>有磁盘</strong> 然后点击 <strong>浏览。</strong></p>
-<p><img src="https://digitalixy.com/image/1646154565.png" title="dolby-atmos-windows-11-2" alt="如何在 2022 年免费在 Windows 11 PC 和笔记本电脑中安装杜比全景声"></p>
-<p>浏览</p>
-<p>转到解压后的杜比全景声文件夹
-&gt; <strong>driver</strong> &gt; 合适的文件版本选择 <strong>hdaudio.inf</strong> 文件，然后单击 <strong>打开。</strong></p>
-<p><img src="https://digitalixy.com/image/1646154570.png" title="dolby-atmos-windows-11 (11)-min" alt="如何在 2022 年免费在 Windows 11 PC 和笔记本电脑中安装杜比全景声"></p>
-<p>选择 <strong>好的</strong>.</p>
-<p><img src="https://digitalixy.com/image/1646154577.png" title="dolby-atmos-windows-11 (12)-min" alt="如何在 2022 年免费在 Windows 11 PC 和笔记本电脑中安装杜比全景声"></p>
-<p>好的</p>
-<p>现在，选择 <strong>杜比全景声</strong> 并点击 <strong>下一个</strong>.
-点击 <strong>是的</strong>.</p>
-<p><img src="https://digitalixy.com/image/1646154584.png" title="dolby-atmos-windows-11-2" alt="如何在 2022 年免费在 Windows 11 PC 和笔记本电脑中安装杜比全景声"></p>
-<p>点击 <strong>无论如何都要安装这个驱动软件，</strong> 如果系统提示您**.**</p>
-<p>安装后，点击 <strong>关闭</strong>.</p>
-<h2 id="第-5-步安装杜比全景声应用程序">第 5
-步。安装杜比全景声应用程序</h2>
-<p>打开 <strong>杜比全景声文件</strong> 您之前提取的然后打开 <strong>应用程序</strong> 文件夹。</p>
-<p><img src="https://digitalixy.com/image/1646154591.png" title="dolby-atmos-windows-11-2" alt="如何在 2022 年免费在 Windows 11 PC 和笔记本电脑中安装杜比全景声"></p>
-<p>应用程序</p>
-<p>双击 <strong>应用程序2021</strong> 文件。</p>
-<p><img src="https://digitalixy.com/image/1646154598.png" title="dolby-atmos-windows-11-2" alt="如何在 2022 年免费在 Windows 11 PC 和笔记本电脑中安装杜比全景声"></p>
-<p>应用程序2021</p>
-<p>点击 <strong>安装</strong> 安装杜比全景声。</p>
-<p><img src="https://digitalixy.com/image/1646154609.png" title="dolby-atmos-windows-11-2" alt="如何在 2022 年免费在 Windows 11 PC 和笔记本电脑中安装杜比全景声"></p>
-<p>安装</p>
-<p>等到安装过程完成。</p>
-<p>最后，杜比全景声 (Dolby Atmos) 已成功安装在您的 Windows 11 PC
-上。</p>
-]]></content>
-      <categories>
-        <category>内容分享</category>
-        <category>音效</category>
-      </categories>
-      <tags>
-        <tag>Windows</tag>
-        <tag>杜比</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>alist分享站合集</title>
     <url>/blog/posts/99c9062b.html</url>
     <content><![CDATA[<h4 id="alist简介">alist简介</h4>
@@ -1541,63 +1541,6 @@ registry更改为<strong>淘宝镜像</strong>，提升安装速度。</li>
       </categories>
       <tags>
         <tag>作文</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>实用软件&amp;网站整理</title>
-    <url>/blog/posts/a5115977.html</url>
-    <content><![CDATA[<h2 id="软件分享">软件分享</h2>
-<p>注：以下大部分内容为免费或破解版本</p>
-<h3 id="coodesker">Coodesker</h3>
-<p>Coodesker：自动分类整理桌面上的快捷方式、目录、图片等文件
-以前为免费软件，虽然在github上，但是就挂了个仓库
-现在已经开始收费了，但是我感觉老版本就够用</p>
-<a class="btn-anzhiyu " href="regular::Coodesker最后一个免费版本::https://wwll.lanzout.com/iveV71c8woyh::fa-solid fa-play-circle" title=""></a>
-
-<a class="btn-anzhiyu " href="regular::Coodesker20.0.7激活版本::https://wwll.lanzout.com/iEhYW1cbw46h::fa-solid fa-play-circle" title=""></a>
-
-<p>激活版下载密码：bpwp</p>
-<h3 id="kms激活工具">KMS激活工具</h3>
-<p>采用当前最先进的激活技术，几乎涵盖了Windows全版本同Office全版本的激活，支持最新的Win11系统、Win10全版本包括Win10
-LTSC的数字权利激活，非常强大，是激活系统首选的一款激活工具。</p>
-<a class="btn-anzhiyu " href="regular::前往下载::https://wwll.lanzout.com/iIXeE1c8wp8h::fa-solid fa-play-circle" title=""></a>
-
-<h3 id="potplayer视频播放器">PotPlayer视频播放器</h3>
-<p>PotPlayer继承了 KMPlayer
-所有的优点，拥有异常强大的内置音视频解码器，可以支持几乎全部音乐、视频文件格式的播放。采用
-VC++ 进行了全面重构，并且原生支持64位操作系统，使得 PotPlayer 在 Windows
-10 等新系统上，无论性能、兼容性和稳定性上的表现均比 KMP
-要好不少；硬件加速、流畅优秀的全高清视
-频播放效果、强大的选项、滤镜、外挂式管理、DXVA等硬件解码；以及非常丰富且强大的设置选项，被誉为Win平台上最优秀的免费影音全能格式播放器。</p>
-<a class="btn-anzhiyu " href="regular::前往下载::https://wwll.lanzout.com/i53vQ1c8wpgf::fa-solid fa-play-circle" title=""></a>
-
-<p>密码:a2k0</p>
-<h3 id="rainmeter雨滴">Rainmeter雨滴</h3>
-<p>雨滴皮肤（Rainmeter皮肤），是一些有特定功能的Windows桌面小工具。一些复杂的皮肤则看起来像是小型应用程序，风格相近的皮肤则可以组成一个套装或者主题。任何一个雨滴皮肤在不同电脑上工作都是不完全相同的，这取决于使用者对它的调整和修饰。</p>
-<a class="btn-anzhiyu " href="regular::前往官网下载::https://www.rainmeter.net/::fa-solid fa-play-circle" title=""></a>
-
-<h3 id="几何画板已破解">几何画板(已破解)</h3>
-<p>几何画板为从三年级到大学的各个级别的学生提供了一种有形的，可视化的方
-式来学习数学，从而提高他们的参与度、理解力和成就。
-几何画板现已停售，这里准备了v5.0.6的破解版本</p>
-<a class="btn-anzhiyu " href="regular::前往下载::https://wwll.lanzout.com/iLwf71c8wqyj::fa-solid fa-play-circle" title=""></a>
-
-<p>https://gofile.cc/lre4/bandizip.exe
-https://gofile.cc/jrY7/coodesker.zip https://gofile.cc/551a/kms.zip
-https://gofile.cc/QrEQ/firpe-v182.exe https://gofile.cc/WW5E/idm.exe
-https://gofile.cc/K7Xk/potplayer.exe
-https://gofile.cc/1kYp/rustdesk-64.exe
-https://gofile.cc/zq40/ventoy-1095-windows.zip
-https://gofile.cc/0L0l/.zip
-https://gofile.cc/DJyq/acrobat-pro-dc-pdf.iso</p>
-]]></content>
-      <categories>
-        <category>内容分享</category>
-        <category>软件</category>
-      </categories>
-      <tags>
-        <tag>软件</tag>
-        <tag>网站</tag>
       </tags>
   </entry>
   <entry>
@@ -1774,6 +1717,156 @@ https://gofile.cc/DJyq/acrobat-pro-dc-pdf.iso</p>
       </categories>
       <tags>
         <tag>化学方程式</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>实用软件&amp;网站整理</title>
+    <url>/blog/posts/a5115977.html</url>
+    <content><![CDATA[<h2 id="软件分享">软件分享</h2>
+<p>注：以下大部分内容为免费或破解版本</p>
+<h3 id="coodesker">Coodesker</h3>
+<p>Coodesker：自动分类整理桌面上的快捷方式、目录、图片等文件
+以前为免费软件，虽然在github上，但是就挂了个仓库
+现在已经开始收费了，但是我感觉老版本就够用</p>
+<a class="btn-anzhiyu " href="regular::Coodesker最后一个免费版本::https://wwll.lanzout.com/iveV71c8woyh::fa-solid fa-play-circle" title=""></a>
+
+<a class="btn-anzhiyu " href="regular::Coodesker20.0.7激活版本::https://wwll.lanzout.com/iEhYW1cbw46h::fa-solid fa-play-circle" title=""></a>
+
+<p>激活版下载密码：bpwp</p>
+<h3 id="kms激活工具">KMS激活工具</h3>
+<p>采用当前最先进的激活技术，几乎涵盖了Windows全版本同Office全版本的激活，支持最新的Win11系统、Win10全版本包括Win10
+LTSC的数字权利激活，非常强大，是激活系统首选的一款激活工具。</p>
+<a class="btn-anzhiyu " href="regular::前往下载::https://wwll.lanzout.com/iIXeE1c8wp8h::fa-solid fa-play-circle" title=""></a>
+
+<h3 id="potplayer视频播放器">PotPlayer视频播放器</h3>
+<p>PotPlayer继承了 KMPlayer
+所有的优点，拥有异常强大的内置音视频解码器，可以支持几乎全部音乐、视频文件格式的播放。采用
+VC++ 进行了全面重构，并且原生支持64位操作系统，使得 PotPlayer 在 Windows
+10 等新系统上，无论性能、兼容性和稳定性上的表现均比 KMP
+要好不少；硬件加速、流畅优秀的全高清视
+频播放效果、强大的选项、滤镜、外挂式管理、DXVA等硬件解码；以及非常丰富且强大的设置选项，被誉为Win平台上最优秀的免费影音全能格式播放器。</p>
+<a class="btn-anzhiyu " href="regular::前往下载::https://wwll.lanzout.com/i53vQ1c8wpgf::fa-solid fa-play-circle" title=""></a>
+
+<p>密码:a2k0</p>
+<h3 id="rainmeter雨滴">Rainmeter雨滴</h3>
+<p>雨滴皮肤（Rainmeter皮肤），是一些有特定功能的Windows桌面小工具。一些复杂的皮肤则看起来像是小型应用程序，风格相近的皮肤则可以组成一个套装或者主题。任何一个雨滴皮肤在不同电脑上工作都是不完全相同的，这取决于使用者对它的调整和修饰。</p>
+<a class="btn-anzhiyu " href="regular::前往官网下载::https://www.rainmeter.net/::fa-solid fa-play-circle" title=""></a>
+
+<h3 id="几何画板已破解">几何画板(已破解)</h3>
+<p>几何画板为从三年级到大学的各个级别的学生提供了一种有形的，可视化的方
+式来学习数学，从而提高他们的参与度、理解力和成就。
+几何画板现已停售，这里准备了v5.0.6的破解版本</p>
+<a class="btn-anzhiyu " href="regular::前往下载::https://wwll.lanzout.com/iLwf71c8wqyj::fa-solid fa-play-circle" title=""></a>
+
+<p>https://gofile.cc/lre4/bandizip.exe
+https://gofile.cc/jrY7/coodesker.zip https://gofile.cc/551a/kms.zip
+https://gofile.cc/QrEQ/firpe-v182.exe https://gofile.cc/WW5E/idm.exe
+https://gofile.cc/K7Xk/potplayer.exe
+https://gofile.cc/1kYp/rustdesk-64.exe
+https://gofile.cc/zq40/ventoy-1095-windows.zip
+https://gofile.cc/0L0l/.zip
+https://gofile.cc/DJyq/acrobat-pro-dc-pdf.iso</p>
+]]></content>
+      <categories>
+        <category>内容分享</category>
+        <category>软件</category>
+      </categories>
+      <tags>
+        <tag>软件</tag>
+        <tag>网站</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>徽州行</title>
+    <url>/blog/posts/596431e6.html</url>
+    <content><![CDATA[<h1 id="活动简介">活动简介</h1>
+<p>一、活动时间 : 2023 年 11 月 11-14 日 (4 天) 二、活动地点: 徽州黄山
+三、活动内容: 11 月 11
+日乘高铁到黄山北站研学徽州文化博物馆、黄山城市展览馆 11 月 12
+日参观历史文化遗产影县–宏村、守拙园 11 月 13 日黄山“放飞理想”教育活动 11
+月 14 日参观徽菜博物馆，参观屯溪老街，乘高铁回京</p>
+<h1 id="day-1">DAY 1</h1>
+<p>惠州城市展馆
+徽商：徽州最有名的是徽商，从十三四岁开始外出经商，以木头等资源 黄山
+惠州有更多的人文历史，黄山人们希望改回徽州（人文情感丰富）
+黄山市依托山水天城，大力传承历史文化，坚持以人为本，加强规划管理，保徽建徽改徽，山水融城
+水墨徽州 歙砚 歙州再到徽州 方腊歙州人 1987改为黄山市
+建筑集中，徽派建筑形成，马头墙，放众木头多，马头墙用来防止火灾，封锁火势。
+拐弯抹角，在惠州历史中富有美德。直角，邻里之间方便搬运东西上不让天，下不让地，中间让邻里和气。
+作退一步想 徽商随家人外出，才能得到帮助 建筑：墙倒屋不塌，
+即使塌了，整体结构也不会被破坏。 榫卯 基：稳固 础：支撑
+马头墙：封锁火势，封火墙。南方房子人字形，方便排水，在人字形两边，略高，挡住火势，不至于烧到邻里。
+明堂天井：一楼不开窗，防火防盗防小偷。在二楼开天井，由于采光和通风（直接）隐喻：
+牌坊：代表家族的地位（取决于皇上）主任对社会的贡献。玉质 恩荣 圣旨
+哧剑（普遍）?徽州牌坊多。大多数牌坊被摧毁，为了建设新思想
+戏剧造型：京剧（不断融和）前身为徽剧。
+徽州人才辈出，教育发达，科举发达。詹天佑，第一批公派留学人物。十户之村不废诵读，教育重视程度高。
+徽州文化： 黄山：黄山松精神：……
+云海三四月份徽商依托新安江发展商业（农夫山泉最早水厂在千岛湖水深七十米处）
+徽商：云纹五注铜器。徽商创造的物质财富和精神财富是惠州社会历史全面高度发展的重要方面。人口暴增，导致资源匮乏，不得不外出。经商人回乡次数少，惠州人结婚早。惠州女人留在家中掌管家事。
+七山半水半分田，二分道路和庄园。 渔梁送别，母亲在岸边挥泪告别。
+胡裕泰，卖茶。惠州自古以来种茶。
+徽商普遍出现在江苏，苏州园林的主人大多数为惠州人。建筑有徽州的风格。徽州火腿制作工艺穿到金华
+。 江春“布衣上交天子” 商人 瘦西湖旁用盐打了一座白塔。
+河坊街：红顶商人胡雪岩，运用政治势力发展商业。 房屋摆设 胡适陶行知朱熹
+做人做事懂分寸 戚继光由胡宗宪一手提拔 祠堂：惩戒不孝子孙</p>
+<h1 id="day-2">DAY 2</h1>
+<p>宏村 南湖书院坐落于村子南边，学校，义务教育，汪姓男孩可免费接受教育
+村落聚族而居 hua桥 宏村牛型村：四座桥四条腿 两棵大树两角 村子身体
+从奇树村搬迁，逃不掉火灾，hkd选中了宏村，落户生根 南方的水有回甘，软水
+两棵大树：红娘，跟喜事有关，抬着花轿桃树走三圈，拉；老人高寿去世，抬着棺椁绕银杏树走，结白果，放入水中变为银色
+首富房子承志堂，六十万两白银！!木雕石雕砖雕。大门各有一撇一捺，有钱，能挂到官职。一对石户，门当户对。墙体的突出，门千金门楼四两五。文革期间被红卫兵征收。破四旧，打破封建思想。佛堂，家族家庭富贵以后，想让家族绵延更长。几百年人家无非积善，行善积德，第一等好事只是读书，让所有孩子接受到教育，徽商兴建学堂。先生受村民照顾。不开窗，防火防盗防小偷。给管家开一个门，钱进口袋不乱跑。桌子半圆形四条腿，表示男主人不在家，若回来，半圆桌会拼在一起变六条腿，表示夫妻团圆。木雕损坏与文革有关，村民用黄泥封锁木雕，刻上毛主席万岁。栏杆上方形小孔，看帅哥，山清孔。快乐每从辛苦得，便宜多自吃亏来。创业难受成难知难不难，读书好营商好效好便好。福禄寿三星，老年人对钟很忌讳。横梁架上去之后再雕刻。门当，四根木柱，贫民百姓家没有，富人有。汪氏宗祠中有女性画像。弘。
+汪姓第一人?。汪华徽州汪姓第一人，收复十五州，被供奉。宏村族长，宏村汪姓第一人。胡重，宏村水系由她主持设计修建，巨大贡献，巾帼丈夫。守拙园
+仁教永垂 一步进房三步上床四步撞墙
+男子住的比较好，终身平静指经商能够平平安安
+以帽去人，下雪就是下白银，肥水不流外人田，大石槽镇宅。请先生到家中上课。
+五柳堂。阁楼建在过道两边。老气横秋雨一鸣天地响。
+祠堂用来祭祖或操办重要的事情，以仓库为主要使用形式。女子在结婚和去世时才能入堂。看不起我可以，但要进我家门要从商下过。商门有提升家族地位的寓意。
+文昌宫。北有孔子南有文昌。以文会友，文人聚会。石木砖雕。十里红妆，从小准备嫁妆和棺椁。
+酒楼。喝酒办宴席之地。鸿案春长。明方清圆。小厅堂大厢房，明。大厅堂小厢房，清。</p>
+<h1 id="day-3">DAY 3</h1>
+<p>黄山行
+“光明顶上彩云飞，忽见仙桃石已归；石去天涯无歇处，仍回松岭伴朝辉。”研学的第三天，我们来到了黄山市市名的来源地–黄山。乘坐缆车登山，我们遇到了一年只有50多天的云海。缆车上升时，向下望去，下方有着各种各样的奇石，翠绿茂密的松树，
+有时还能看到险峻的徒步登山通道。 [图片 65.jpg]
+升入云海中时，窗外视野渐渐模糊，隐约看到松树上雪白的雾凇，晶莹剔透。
+[图片 66.jpg]
+一段时间后，我们升入云海上方，顿时豁然开朗，云海上方的美丽景色逐渐展现在眼前。蓝天白云，头上的云彩与脚下的云海在远处连为一体，甚是美丽。
+[图片 67.jpg]</p>
+<p>爬过好汉坡，经过迎客松，我们的登山之行就此开始。我们翻过了几座山峰，走过了各种各样的阶梯。我们终于登上了一座小山峰。
+[图片 68.jpg]
+在这里我们看到了奇形怪状的石头，远处美丽的山脉和湖泊，远远望去，感觉我们的目标光明顶已经唾手可得。
+[图片 69.jpg]
+继续跨过一次山峰，我们即将到达光明顶。在这里，我们看到脚下整齐划一的松树，经历过前两天的大雨，松树们都显得格外苍翠挺拔。
+[图片 70.jpg]
+继续爬了一个坡后，我们到达了此次黄山之行的最高点–光明顶。光明顶是黄山的主峰之一，位于黄山中部，海拔1860米，为黄山第二高峰，与天都峰、莲花峰并称黄山三大主峰。顶上平坦而高旷，各个高峰尽收眼底。
+[图片 73.jpg]
+在这里，我们还见到了光明顶气象站，他的前身便是建于明代的大悲院寺庙，据说周围的地区天气预报都来源于这里。
+[图片 72.jpg]
+在光明顶上进行了放飞理想活动后，我们便开启了下山的行程。下山途中我们见到了《红楼梦》中出现的飞来石。飞来石为自然风化生成，两大岩石之间的接触面很小，似从天外飞来，故名“飞来石”。
+[图片 74.jpg]
+本次爬黄山的研学活动，让我们欣赏到了黄山的美丽景象，也让我们体会到了大自然的奇特，秀美。</p>
+<h1 id="day-4">DAY 4</h1>
+<p>屯溪老街
+研学最后一天的第一站，我们来到了徽商发源地-屯溪老街。屯溪老街坐落于新安江的渐江段旁边，此地三江汇聚，西水屯局，故得名屯溪。
+[图片 77.jpg]
+屯溪整条街像一条鱼骨头，主巷为最大的主心骨，旁边小巷子就是鱼骨的分支。街旁的店铺也有着一些文化，徽商以前都是是小作坊
+，临街的地方是商铺，后院是制作商品的地方，二楼就是店铺主人休息生活的地方。
+[图片 78.jpg]
+对于毛豆腐，各个地方也有各个地方的特色。宏村的毛豆腐是方块形，方方正正，呈坎村则是长条形。游客来此地旅游，买的最多的就是黄山烧饼。黄山烧饼作为徽商重要的干粮
+，得益于其方便保存的特点。徽商行商的路程很长，所以带很多烧饼便能解决粮食问题。
+这里的主要特色还有茶。茶自古以来就是此地的的主要经济收入。在这里，四月份放还能一周的假
+用来采茶叶。每次采茶，都需要爬到海拔800以上的山里。祁红巷是之前专门储存祁门红茶的地方，祁门红茶，是世界三大高香名茶之一
+，听导游说英国皇室的下午茶就是祁门红茶。 [图片 81.jpg]
+祁门红茶因为大部分都最为出口商品，为了方便运输，所以制成了碎茶的形式。
+在屯溪老街，我们见到了各种各样的安徽特色，也领略到了各种特色商品食品背后的历史背景和文化内涵。</p>
+]]></content>
+      <categories>
+        <category>学习</category>
+        <category>研学</category>
+      </categories>
+      <tags>
+        <tag>徽州</tag>
+        <tag>研学</tag>
       </tags>
   </entry>
   <entry>
@@ -2018,99 +2111,6 @@ xxx.github.io（xxx 是你 GitHub
         <tag>Github</tag>
         <tag>Hexo</tag>
         <tag>博客</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>徽州行</title>
-    <url>/blog/posts/596431e6.html</url>
-    <content><![CDATA[<h1 id="活动简介">活动简介</h1>
-<p>一、活动时间 : 2023 年 11 月 11-14 日 (4 天) 二、活动地点: 徽州黄山
-三、活动内容: 11 月 11
-日乘高铁到黄山北站研学徽州文化博物馆、黄山城市展览馆 11 月 12
-日参观历史文化遗产影县–宏村、守拙园 11 月 13 日黄山“放飞理想”教育活动 11
-月 14 日参观徽菜博物馆，参观屯溪老街，乘高铁回京</p>
-<h1 id="day-1">DAY 1</h1>
-<p>惠州城市展馆
-徽商：徽州最有名的是徽商，从十三四岁开始外出经商，以木头等资源 黄山
-惠州有更多的人文历史，黄山人们希望改回徽州（人文情感丰富）
-黄山市依托山水天城，大力传承历史文化，坚持以人为本，加强规划管理，保徽建徽改徽，山水融城
-水墨徽州 歙砚 歙州再到徽州 方腊歙州人 1987改为黄山市
-建筑集中，徽派建筑形成，马头墙，放众木头多，马头墙用来防止火灾，封锁火势。
-拐弯抹角，在惠州历史中富有美德。直角，邻里之间方便搬运东西上不让天，下不让地，中间让邻里和气。
-作退一步想 徽商随家人外出，才能得到帮助 建筑：墙倒屋不塌，
-即使塌了，整体结构也不会被破坏。 榫卯 基：稳固 础：支撑
-马头墙：封锁火势，封火墙。南方房子人字形，方便排水，在人字形两边，略高，挡住火势，不至于烧到邻里。
-明堂天井：一楼不开窗，防火防盗防小偷。在二楼开天井，由于采光和通风（直接）隐喻：
-牌坊：代表家族的地位（取决于皇上）主任对社会的贡献。玉质 恩荣 圣旨
-哧剑（普遍）?徽州牌坊多。大多数牌坊被摧毁，为了建设新思想
-戏剧造型：京剧（不断融和）前身为徽剧。
-徽州人才辈出，教育发达，科举发达。詹天佑，第一批公派留学人物。十户之村不废诵读，教育重视程度高。
-徽州文化： 黄山：黄山松精神：……
-云海三四月份徽商依托新安江发展商业（农夫山泉最早水厂在千岛湖水深七十米处）
-徽商：云纹五注铜器。徽商创造的物质财富和精神财富是惠州社会历史全面高度发展的重要方面。人口暴增，导致资源匮乏，不得不外出。经商人回乡次数少，惠州人结婚早。惠州女人留在家中掌管家事。
-七山半水半分田，二分道路和庄园。 渔梁送别，母亲在岸边挥泪告别。
-胡裕泰，卖茶。惠州自古以来种茶。
-徽商普遍出现在江苏，苏州园林的主人大多数为惠州人。建筑有徽州的风格。徽州火腿制作工艺穿到金华
-。 江春“布衣上交天子” 商人 瘦西湖旁用盐打了一座白塔。
-河坊街：红顶商人胡雪岩，运用政治势力发展商业。 房屋摆设 胡适陶行知朱熹
-做人做事懂分寸 戚继光由胡宗宪一手提拔 祠堂：惩戒不孝子孙</p>
-<h1 id="day-2">DAY 2</h1>
-<p>宏村 南湖书院坐落于村子南边，学校，义务教育，汪姓男孩可免费接受教育
-村落聚族而居 hua桥 宏村牛型村：四座桥四条腿 两棵大树两角 村子身体
-从奇树村搬迁，逃不掉火灾，hkd选中了宏村，落户生根 南方的水有回甘，软水
-两棵大树：红娘，跟喜事有关，抬着花轿桃树走三圈，拉；老人高寿去世，抬着棺椁绕银杏树走，结白果，放入水中变为银色
-首富房子承志堂，六十万两白银！!木雕石雕砖雕。大门各有一撇一捺，有钱，能挂到官职。一对石户，门当户对。墙体的突出，门千金门楼四两五。文革期间被红卫兵征收。破四旧，打破封建思想。佛堂，家族家庭富贵以后，想让家族绵延更长。几百年人家无非积善，行善积德，第一等好事只是读书，让所有孩子接受到教育，徽商兴建学堂。先生受村民照顾。不开窗，防火防盗防小偷。给管家开一个门，钱进口袋不乱跑。桌子半圆形四条腿，表示男主人不在家，若回来，半圆桌会拼在一起变六条腿，表示夫妻团圆。木雕损坏与文革有关，村民用黄泥封锁木雕，刻上毛主席万岁。栏杆上方形小孔，看帅哥，山清孔。快乐每从辛苦得，便宜多自吃亏来。创业难受成难知难不难，读书好营商好效好便好。福禄寿三星，老年人对钟很忌讳。横梁架上去之后再雕刻。门当，四根木柱，贫民百姓家没有，富人有。汪氏宗祠中有女性画像。弘。
-汪姓第一人?。汪华徽州汪姓第一人，收复十五州，被供奉。宏村族长，宏村汪姓第一人。胡重，宏村水系由她主持设计修建，巨大贡献，巾帼丈夫。守拙园
-仁教永垂 一步进房三步上床四步撞墙
-男子住的比较好，终身平静指经商能够平平安安
-以帽去人，下雪就是下白银，肥水不流外人田，大石槽镇宅。请先生到家中上课。
-五柳堂。阁楼建在过道两边。老气横秋雨一鸣天地响。
-祠堂用来祭祖或操办重要的事情，以仓库为主要使用形式。女子在结婚和去世时才能入堂。看不起我可以，但要进我家门要从商下过。商门有提升家族地位的寓意。
-文昌宫。北有孔子南有文昌。以文会友，文人聚会。石木砖雕。十里红妆，从小准备嫁妆和棺椁。
-酒楼。喝酒办宴席之地。鸿案春长。明方清圆。小厅堂大厢房，明。大厅堂小厢房，清。</p>
-<h1 id="day-3">DAY 3</h1>
-<p>黄山行
-“光明顶上彩云飞，忽见仙桃石已归；石去天涯无歇处，仍回松岭伴朝辉。”研学的第三天，我们来到了黄山市市名的来源地–黄山。乘坐缆车登山，我们遇到了一年只有50多天的云海。缆车上升时，向下望去，下方有着各种各样的奇石，翠绿茂密的松树，
-有时还能看到险峻的徒步登山通道。 [图片 65.jpg]
-升入云海中时，窗外视野渐渐模糊，隐约看到松树上雪白的雾凇，晶莹剔透。
-[图片 66.jpg]
-一段时间后，我们升入云海上方，顿时豁然开朗，云海上方的美丽景色逐渐展现在眼前。蓝天白云，头上的云彩与脚下的云海在远处连为一体，甚是美丽。
-[图片 67.jpg]</p>
-<p>爬过好汉坡，经过迎客松，我们的登山之行就此开始。我们翻过了几座山峰，走过了各种各样的阶梯。我们终于登上了一座小山峰。
-[图片 68.jpg]
-在这里我们看到了奇形怪状的石头，远处美丽的山脉和湖泊，远远望去，感觉我们的目标光明顶已经唾手可得。
-[图片 69.jpg]
-继续跨过一次山峰，我们即将到达光明顶。在这里，我们看到脚下整齐划一的松树，经历过前两天的大雨，松树们都显得格外苍翠挺拔。
-[图片 70.jpg]
-继续爬了一个坡后，我们到达了此次黄山之行的最高点–光明顶。光明顶是黄山的主峰之一，位于黄山中部，海拔1860米，为黄山第二高峰，与天都峰、莲花峰并称黄山三大主峰。顶上平坦而高旷，各个高峰尽收眼底。
-[图片 73.jpg]
-在这里，我们还见到了光明顶气象站，他的前身便是建于明代的大悲院寺庙，据说周围的地区天气预报都来源于这里。
-[图片 72.jpg]
-在光明顶上进行了放飞理想活动后，我们便开启了下山的行程。下山途中我们见到了《红楼梦》中出现的飞来石。飞来石为自然风化生成，两大岩石之间的接触面很小，似从天外飞来，故名“飞来石”。
-[图片 74.jpg]
-本次爬黄山的研学活动，让我们欣赏到了黄山的美丽景象，也让我们体会到了大自然的奇特，秀美。</p>
-<h1 id="day-4">DAY 4</h1>
-<p>屯溪老街
-研学最后一天的第一站，我们来到了徽商发源地-屯溪老街。屯溪老街坐落于新安江的渐江段旁边，此地三江汇聚，西水屯局，故得名屯溪。
-[图片 77.jpg]
-屯溪整条街像一条鱼骨头，主巷为最大的主心骨，旁边小巷子就是鱼骨的分支。街旁的店铺也有着一些文化，徽商以前都是是小作坊
-，临街的地方是商铺，后院是制作商品的地方，二楼就是店铺主人休息生活的地方。
-[图片 78.jpg]
-对于毛豆腐，各个地方也有各个地方的特色。宏村的毛豆腐是方块形，方方正正，呈坎村则是长条形。游客来此地旅游，买的最多的就是黄山烧饼。黄山烧饼作为徽商重要的干粮
-，得益于其方便保存的特点。徽商行商的路程很长，所以带很多烧饼便能解决粮食问题。
-这里的主要特色还有茶。茶自古以来就是此地的的主要经济收入。在这里，四月份放还能一周的假
-用来采茶叶。每次采茶，都需要爬到海拔800以上的山里。祁红巷是之前专门储存祁门红茶的地方，祁门红茶，是世界三大高香名茶之一
-，听导游说英国皇室的下午茶就是祁门红茶。 [图片 81.jpg]
-祁门红茶因为大部分都最为出口商品，为了方便运输，所以制成了碎茶的形式。
-在屯溪老街，我们见到了各种各样的安徽特色，也领略到了各种特色商品食品背后的历史背景和文化内涵。</p>
-]]></content>
-      <categories>
-        <category>学习</category>
-        <category>研学</category>
-      </categories>
-      <tags>
-        <tag>徽州</tag>
-        <tag>研学</tag>
       </tags>
   </entry>
   <entry>
