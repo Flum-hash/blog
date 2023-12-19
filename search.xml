@@ -53,7 +53,8 @@
 <li><strong>front</strong> - 将捆绑脚本放在标记中所有脚本的前面。默认为 ，这意味着捆绑脚本将放在其他脚本的后面。<code>body``false</code></li>
 <li><strong>silent</strong> - 禁用日志记录优化信息。缺省值为 .<code>false</code></li>
 </ul>
-<h3 id="concator-会将所有本地脚本连接成一个-bundle-脚本，并将其附加到-html-标签的末尾。-在未来的版本中将允许更多细节控制。body"><a href="#concator-会将所有本地脚本连接成一个-bundle-脚本，并将其附加到-html-标签的末尾。-在未来的版本中将允许更多细节控制。body" class="headerlink" title="concator 会将所有本地脚本连接成一个 bundle 脚本，并将其附加到 html 标签的末尾。 在未来的版本中将允许更多细节控制。body"></a><a href="https://www.npmjs.com/package/hexo-all-minifier#the-concator-will-concat-all-local-scripts-into-one-bundle-script-and-attach-it-to-the-end-of-htmls-body-tagmore-detail-control-will-be-allowed-in-the-future-version"></a>concator 会将所有本地脚本连接成一个 bundle 脚本，并将其附加到 html 标签的末尾。 在未来的版本中将允许更多细节控制。<code>body</code></h3><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">html_minifier:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">ignore_error:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">silent:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">exclude:</span></span><br></pre></td></tr></table></figure>
+<p>concator 会将所有本地脚本连接成一个 bundle 脚本，并将其附加到 html 标签的末尾。 在未来的版本中将允许更多细节控制。<code>body</code></p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">html_minifier:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">ignore_error:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">silent:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">exclude:</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li><strong>enable</strong> - 启用 HTML 压缩器。缺省值为 .<code>true</code></li>
 <li><strong>ignore_error</strong> - 忽略解析html时发生的错误。</li>
@@ -121,24 +122,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Linux入门-初识Linux</title>
-    <url>/blog/posts/7dfef69c.html</url>
-    <content><![CDATA[<p>最近我打算学习一下Linux<br>以本文记录一下我的学习过程</p>
-<h1 id="一、关于Linux"><a href="#一、关于Linux" class="headerlink" title="一、关于Linux"></a>一、关于Linux</h1><h2 id="Linux的诞生"><a href="#Linux的诞生" class="headerlink" title="Linux的诞生"></a>Linux的诞生</h2><p>Linux创始人: 林纳斯 托瓦兹<br>Linux 诞生于1991年，作者上大学期间<br>因为创始人在上大学期间经常需要浏览新闻和处理邮件，发现现有的操作系统不好用, 于是他决心自己写一个保护模式下的操作系统，这就是Linux的原型， 当时他21岁，后来经过全世界网友的支持, 现在能够兼容多种硬件，成为最为流行的服务器操作系统之一。<br><img src="https://pic.imgdb.cn/item/65634875c458853aef5abdbb.webp" alt=""> <img src="https://pic.imgdb.cn/item/65634875c458853aef5abe42.webp" alt=""></p>
-<h2 id="Linux内核"><a href="#Linux内核" class="headerlink" title="Linux内核"></a>Linux内核</h2><p>Linux系统的组成如下：<br><strong>Linux系统内核</strong>、<strong>系统级应用程序</strong>两部分组成。<br>内核提供系统最核心的功能，如：调度CPU、调度内存、调度文件系统、调度网络通讯、调度IO等。<br>系统级应用程序，可以理解为出厂自带程序，可供用户快速上手操作系统，如：文件管理器、任务管理器、图片查看、音乐播放等。</p>
-<p>比如，播放音乐，无论用户使用自带音乐播放器或是自行安装的第三方播放器均是由播放器程序，调用内核提供的相关功能，由内核调度CPU解码、音响发声等。<br><img src="https://pic.imgdb.cn/item/65634875c458853aef5abeb4.webp" alt=""> <img src="https://pic.imgdb.cn/item/65634875c458853aef5abf1c.webp" alt=""><br>可以看出，内核是Linux操作系统最核心的所在，系统级应用程序只是锦上添花。<br>Linux内核是免费开源的，任何人都可以下载内核源码并查看且修改。<br>可以通过：<a href="https://www.kernel.org">https://www.kernel.org</a>   去下载Linux内核</p>
-<p>内核是免费、开源的，这也就代表了：<br>任何人都可以获得并修改内核，并且自行集成系统级程序<br>提供了内核+系统级程序的完整封装，称之为Linux发行版<br><img src="https://pic.imgdb.cn/item/65634875c458853aef5abf5e.webp" alt=""> <img src="https://pic.imgdb.cn/item/656348afc458853aef5be85b.webp" alt=""></p>
-<h1 id="二、安装Linux"><a href="#二、安装Linux" class="headerlink" title="二、安装Linux"></a>二、安装Linux</h1><p>在这里我用了虚拟机的方法安装Linux CentOS系统<br><div class="note warning flat"><p>Linux不同发行版中的基础命令100%是相同的，只有个别软件细节不同</p>
-</div><br>我个人认为Hyper-V虚拟机比VMware要稍微流畅一些<br>所以我在这里选用Hyper-V安装CentOS<br>如果你不是Windows11，那就只能用别的啦，比如VMware</p>
-<h2 id="1-下载CentOS镜像"><a href="#1-下载CentOS镜像" class="headerlink" title="1.下载CentOS镜像"></a>1.下载CentOS镜像</h2>]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hexo常用指令集</title>
     <url>/blog/posts/869eb1f7.html</url>
     <content><![CDATA[<a class="btn-anzhiyu " href="/blog/center%20large::%E5%89%8D%E5%BE%80HEXO%E5%AE%98%E6%96%B9%E6%8C%87%E4%BB%A4%E6%95%99%E7%A8%8B::https:/hexo.io/zh-cn/docs/commands.html::fa-solid%20fa-play-circle" title=""></a>
@@ -200,17 +183,21 @@
       </tags>
   </entry>
   <entry>
-    <title>TED视频分享</title>
-    <url>/blog/posts/df7635ee.html</url>
-    <content><![CDATA[<p>本页将分享一些TED的听力视频<br>将提供视频文件和中英字幕文件<br>下载后放置同一文件夹内<br>并使用相同名称即可</p>
-<h2 id="The-first-20-hours-—-how-to-learn-anything"><a href="#The-first-20-hours-—-how-to-learn-anything" class="headerlink" title="The first 20 hours — how to learn anything"></a>The first 20 hours — how to learn anything</h2><p><img src="https://pic.imgdb.cn/item/6541053fc458853aef4b2d0f.webp" alt=""><br>原视频链接：<a href="https://www.youtube.com/watch?v=5MgBikgcWnY&amp;t=10s">前往YouTube</a><br>官网文章链接：<a href="https://ideas.ted.com/dont-have-10000-hours-to-learn-something-new-thats-fine-all-you-need-is-20-hours/">前往TED官网</a><br>官网文章转载：<a href="https://flumbrix1145.github.io/blog/2023/10/31/Don%E2%80%99t-have-10-000-hours-to-learn-something-new-That%E2%80%99s-fine-%E2%80%94-all-you-need-is-20-hours/">点击前往</a><br><a class="btn-anzhiyu " href="regular::下载视频文件::https://gofile.cc/deLy/the-first-20-hours-how-to-learn-anything-josh-kaufman-tedxcsu.mp4::fa-solid fa-download" title=""></a><a class="btn-anzhiyu " href="regular::下载字幕文件::https://gofile.cc/prDW/the-first-20-hours-how-to-learn-anything-josh-kaufman-tedxcsu.srt::fa-solid fa-download" title=""></a></p>
-]]></content>
+    <title>Linux入门-初识Linux</title>
+    <url>/blog/posts/7dfef69c.html</url>
+    <content><![CDATA[<p>最近我打算学习一下Linux<br>以本文记录一下我的学习过程</p>
+<h1 id="一、关于Linux"><a href="#一、关于Linux" class="headerlink" title="一、关于Linux"></a>一、关于Linux</h1><h2 id="Linux的诞生"><a href="#Linux的诞生" class="headerlink" title="Linux的诞生"></a>Linux的诞生</h2><p>Linux创始人: 林纳斯 托瓦兹<br>Linux 诞生于1991年，作者上大学期间<br>因为创始人在上大学期间经常需要浏览新闻和处理邮件，发现现有的操作系统不好用, 于是他决心自己写一个保护模式下的操作系统，这就是Linux的原型， 当时他21岁，后来经过全世界网友的支持, 现在能够兼容多种硬件，成为最为流行的服务器操作系统之一。<br><img src="https://pic.imgdb.cn/item/65634875c458853aef5abdbb.webp" alt=""> <img src="https://pic.imgdb.cn/item/65634875c458853aef5abe42.webp" alt=""></p>
+<h2 id="Linux内核"><a href="#Linux内核" class="headerlink" title="Linux内核"></a>Linux内核</h2><p>Linux系统的组成如下：<br><strong>Linux系统内核</strong>、<strong>系统级应用程序</strong>两部分组成。<br>内核提供系统最核心的功能，如：调度CPU、调度内存、调度文件系统、调度网络通讯、调度IO等。<br>系统级应用程序，可以理解为出厂自带程序，可供用户快速上手操作系统，如：文件管理器、任务管理器、图片查看、音乐播放等。</p>
+<p>比如，播放音乐，无论用户使用自带音乐播放器或是自行安装的第三方播放器均是由播放器程序，调用内核提供的相关功能，由内核调度CPU解码、音响发声等。<br><img src="https://pic.imgdb.cn/item/65634875c458853aef5abeb4.webp" alt=""> <img src="https://pic.imgdb.cn/item/65634875c458853aef5abf1c.webp" alt=""><br>可以看出，内核是Linux操作系统最核心的所在，系统级应用程序只是锦上添花。<br>Linux内核是免费开源的，任何人都可以下载内核源码并查看且修改。<br>可以通过：<a href="https://www.kernel.org">https://www.kernel.org</a>   去下载Linux内核</p>
+<p>内核是免费、开源的，这也就代表了：<br>任何人都可以获得并修改内核，并且自行集成系统级程序<br>提供了内核+系统级程序的完整封装，称之为Linux发行版<br><img src="https://pic.imgdb.cn/item/65634875c458853aef5abf5e.webp" alt=""> <img src="https://pic.imgdb.cn/item/656348afc458853aef5be85b.webp" alt=""></p>
+<h1 id="二、安装Linux"><a href="#二、安装Linux" class="headerlink" title="二、安装Linux"></a>二、安装Linux</h1><p>在这里我用了虚拟机的方法安装Linux CentOS系统<br><div class="note warning flat"><p>Linux不同发行版中的基础命令100%是相同的，只有个别软件细节不同</p>
+</div><br>我个人认为Hyper-V虚拟机比VMware要稍微流畅一些<br>所以我在这里选用Hyper-V安装CentOS<br>如果你不是Windows11，那就只能用别的啦，比如VMware</p>
+<h2 id="1-下载CentOS镜像"><a href="#1-下载CentOS镜像" class="headerlink" title="1.下载CentOS镜像"></a>1.下载CentOS镜像</h2>]]></content>
       <categories>
-        <category>学习</category>
-        <category>英语</category>
+        <category>Linux</category>
       </categories>
       <tags>
-        <tag>TED</tag>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -1005,6 +992,20 @@
       </categories>
       <tags>
         <tag>Markdown</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>TED视频分享</title>
+    <url>/blog/posts/df7635ee.html</url>
+    <content><![CDATA[<p>本页将分享一些TED的听力视频<br>将提供视频文件和中英字幕文件<br>下载后放置同一文件夹内<br>并使用相同名称即可</p>
+<h2 id="The-first-20-hours-—-how-to-learn-anything"><a href="#The-first-20-hours-—-how-to-learn-anything" class="headerlink" title="The first 20 hours — how to learn anything"></a>The first 20 hours — how to learn anything</h2><p><img src="https://pic.imgdb.cn/item/6541053fc458853aef4b2d0f.webp" alt=""><br>原视频链接：<a href="https://www.youtube.com/watch?v=5MgBikgcWnY&amp;t=10s">前往YouTube</a><br>官网文章链接：<a href="https://ideas.ted.com/dont-have-10000-hours-to-learn-something-new-thats-fine-all-you-need-is-20-hours/">前往TED官网</a><br>官网文章转载：<a href="https://flumbrix1145.github.io/blog/2023/10/31/Don%E2%80%99t-have-10-000-hours-to-learn-something-new-That%E2%80%99s-fine-%E2%80%94-all-you-need-is-20-hours/">点击前往</a><br><a class="btn-anzhiyu " href="regular::下载视频文件::https://gofile.cc/deLy/the-first-20-hours-how-to-learn-anything-josh-kaufman-tedxcsu.mp4::fa-solid fa-download" title=""></a><a class="btn-anzhiyu " href="regular::下载字幕文件::https://gofile.cc/prDW/the-first-20-hours-how-to-learn-anything-josh-kaufman-tedxcsu.srt::fa-solid fa-download" title=""></a></p>
+]]></content>
+      <categories>
+        <category>学习</category>
+        <category>英语</category>
+      </categories>
+      <tags>
+        <tag>TED</tag>
       </tags>
   </entry>
   <entry>
