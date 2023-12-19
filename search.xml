@@ -94,40 +94,6 @@ portfolio即为我的项目名。</p>
       </tags>
   </entry>
   <entry>
-    <title>Hexo如何隐藏文章</title>
-    <url>/blog/posts/36679002.html</url>
-    <content><![CDATA[<p>本 Hexo
-插件可以在博客中隐藏指定的文章，并使它们仅可通过链接访问。</p>
-<p>当一篇文章被设置为「隐藏」时，它不会出现在任何列表中（包括首页、存档、分类页面、标签页面、Feed、站点地图等），也不会被搜索引擎索引（前提是搜索引擎遵守
-noindex 标签）。</p>
-<p>只有知道文章链接的人才可以访问被隐藏的文章。</p>
-<p>Github地址：<a href="https://github.com/printempw/hexo-hide-posts">https://github.com/printempw/hexo-hide-posts</a></p>
-<h3 id="安装">安装</h3>
-<p>在站点根目录下执行<code>npm install hexo-hide-posts --save</code></p>
-<h3 id="配置">配置</h3>
-<p>在站点目录下的<code>_config.yml</code>中如下配置：</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># hexo-hide-posts</span></span><br><span class="line"><span class="attr">hide_posts:</span></span><br><span class="line">  <span class="comment"># 可以改成其他你喜欢的名字</span></span><br><span class="line">  <span class="attr">filter:</span> <span class="string">hidden</span></span><br><span class="line">  <span class="comment"># 指定你想要传递隐藏文章的位置，比如让所有隐藏文章在存档页面可见</span></span><br><span class="line">  <span class="comment"># 常见的位置有：index, tag, category, archive, sitemap, feed, etc.</span></span><br><span class="line">  <span class="comment"># 留空则默认全部隐藏</span></span><br><span class="line">  <span class="attr">public_generators:</span> []</span><br><span class="line">  <span class="comment"># 为隐藏的文章添加 noindex meta 标签，阻止搜索引擎收录</span></span><br><span class="line">  <span class="attr">noindex:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-
-<p>举个栗子：设置 <code>filter: secret</code> 之后，你就可以在
-front-matter 中使用 <code>secret: true</code> 来隐藏文章了。</p>
-<h3 id="使用">使用</h3>
-<p>在文章的属性中定义 <code>hidden: true</code> 即可隐藏文章。</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 'Hidden Post'</span><br><span class="line">date: '2021/03/05 21:45:14'</span><br><span class="line">hidden: true</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-
-<p>虽然首页上被隐藏了，但你仍然可以通过 <code>https://hexo.test/lorem-ipsum/</code> 链接访问它。</p>
-<p>你可以在命令行运行 <code>hexo hidden:list</code> 来获取当前所有的已隐藏文章列表。</p>
-<p>插件也在 <a href="https://hexo.io/api/locals">Local
-Variables</a> 中添加了 <code>all_posts</code> 和 <code>hidden_posts</code> 变量，供自定义主题使用。</p>
-<p>文章摘自：https://blog.garryde.com/archives/37712.html</p>
-]]></content>
-      <categories>
-        <category>教程</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hexo常用指令集</title>
     <url>/blog/posts/869eb1f7.html</url>
     <content><![CDATA[<a class="btn-anzhiyu " href="/blog/center%20large::%E5%89%8D%E5%BE%80HEXO%E5%AE%98%E6%96%B9%E6%8C%87%E4%BB%A4%E6%95%99%E7%A8%8B::https:/hexo.io/zh-cn/docs/commands.html::fa-solid%20fa-play-circle" title=""></a>
@@ -286,6 +252,40 @@ YAML 和 JSON 文件。</p>
       </tags>
   </entry>
   <entry>
+    <title>Hexo如何隐藏文章</title>
+    <url>/blog/posts/36679002.html</url>
+    <content><![CDATA[<p>本 Hexo
+插件可以在博客中隐藏指定的文章，并使它们仅可通过链接访问。</p>
+<p>当一篇文章被设置为「隐藏」时，它不会出现在任何列表中（包括首页、存档、分类页面、标签页面、Feed、站点地图等），也不会被搜索引擎索引（前提是搜索引擎遵守
+noindex 标签）。</p>
+<p>只有知道文章链接的人才可以访问被隐藏的文章。</p>
+<p>Github地址：<a href="https://github.com/printempw/hexo-hide-posts">https://github.com/printempw/hexo-hide-posts</a></p>
+<h3 id="安装">安装</h3>
+<p>在站点根目录下执行<code>npm install hexo-hide-posts --save</code></p>
+<h3 id="配置">配置</h3>
+<p>在站点目录下的<code>_config.yml</code>中如下配置：</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># hexo-hide-posts</span></span><br><span class="line"><span class="attr">hide_posts:</span></span><br><span class="line">  <span class="comment"># 可以改成其他你喜欢的名字</span></span><br><span class="line">  <span class="attr">filter:</span> <span class="string">hidden</span></span><br><span class="line">  <span class="comment"># 指定你想要传递隐藏文章的位置，比如让所有隐藏文章在存档页面可见</span></span><br><span class="line">  <span class="comment"># 常见的位置有：index, tag, category, archive, sitemap, feed, etc.</span></span><br><span class="line">  <span class="comment"># 留空则默认全部隐藏</span></span><br><span class="line">  <span class="attr">public_generators:</span> []</span><br><span class="line">  <span class="comment"># 为隐藏的文章添加 noindex meta 标签，阻止搜索引擎收录</span></span><br><span class="line">  <span class="attr">noindex:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<p>举个栗子：设置 <code>filter: secret</code> 之后，你就可以在
+front-matter 中使用 <code>secret: true</code> 来隐藏文章了。</p>
+<h3 id="使用">使用</h3>
+<p>在文章的属性中定义 <code>hidden: true</code> 即可隐藏文章。</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 'Hidden Post'</span><br><span class="line">date: '2021/03/05 21:45:14'</span><br><span class="line">hidden: true</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<p>虽然首页上被隐藏了，但你仍然可以通过 <code>https://hexo.test/lorem-ipsum/</code> 链接访问它。</p>
+<p>你可以在命令行运行 <code>hexo hidden:list</code> 来获取当前所有的已隐藏文章列表。</p>
+<p>插件也在 <a href="https://hexo.io/api/locals">Local
+Variables</a> 中添加了 <code>all_posts</code> 和 <code>hidden_posts</code> 变量，供自定义主题使用。</p>
+<p>文章摘自：https://blog.garryde.com/archives/37712.html</p>
+]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo压缩资源插件</title>
     <url>/blog/posts/minifier.html</url>
     <content><![CDATA[<p>文章来自插件hexo-all-minifier<a href="https://www.npmjs.com/package/hexo-all-minifier">官方文档</a></p>
@@ -420,27 +420,6 @@ Linux内核是免费开源的，任何人都可以下载内核源码并查看且
       </categories>
       <tags>
         <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>TED视频分享</title>
-    <url>/blog/posts/df7635ee.html</url>
-    <content><![CDATA[<p>本页将分享一些TED的听力视频 将提供视频文件和中英字幕文件
-下载后放置同一文件夹内 并使用相同名称即可</p>
-<h2 id="the-first-20-hours--how-to-learn-anything">The first 20 hours –
-how to learn anything</h2>
-<p><img src="https://pic.imgdb.cn/item/6541053fc458853aef4b2d0f.webp">
-原视频链接：<a href="https://www.youtube.com/watch?v=5MgBikgcWnY&amp;t=10s">前往YouTube</a>
-官网文章链接：<a href="https://ideas.ted.com/dont-have-10000-hours-to-learn-something-new-thats-fine-all-you-need-is-20-hours/">前往TED官网</a>
-官网文章转载：<a href="https://flumbrix1145.github.io/blog/2023/10/31/Don%E2%80%99t-have-10-000-hours-to-learn-something-new-That%E2%80%99s-fine-%E2%80%94-all-you-need-is-20-hours/">点击前往</a></p>
-<a class="btn-anzhiyu " href="regular::下载视频文件::https://gofile.cc/deLy/the-first-20-hours-how-to-learn-anything-josh-kaufman-tedxcsu.mp4::fa-solid fa-download" title=""></a><a class="btn-anzhiyu " href="regular::下载字幕文件::https://gofile.cc/prDW/the-first-20-hours-how-to-learn-anything-josh-kaufman-tedxcsu.srt::fa-solid fa-download" title=""></a>
-]]></content>
-      <categories>
-        <category>学习</category>
-        <category>英语</category>
-      </categories>
-      <tags>
-        <tag>TED</tag>
       </tags>
   </entry>
   <entry>
@@ -1342,6 +1321,27 @@ HTML 实体。）</p>
       </tags>
   </entry>
   <entry>
+    <title>TED视频分享</title>
+    <url>/blog/posts/df7635ee.html</url>
+    <content><![CDATA[<p>本页将分享一些TED的听力视频 将提供视频文件和中英字幕文件
+下载后放置同一文件夹内 并使用相同名称即可</p>
+<h2 id="the-first-20-hours--how-to-learn-anything">The first 20 hours –
+how to learn anything</h2>
+<p><img src="https://pic.imgdb.cn/item/6541053fc458853aef4b2d0f.webp">
+原视频链接：<a href="https://www.youtube.com/watch?v=5MgBikgcWnY&amp;t=10s">前往YouTube</a>
+官网文章链接：<a href="https://ideas.ted.com/dont-have-10000-hours-to-learn-something-new-thats-fine-all-you-need-is-20-hours/">前往TED官网</a>
+官网文章转载：<a href="https://flumbrix1145.github.io/blog/2023/10/31/Don%E2%80%99t-have-10-000-hours-to-learn-something-new-That%E2%80%99s-fine-%E2%80%94-all-you-need-is-20-hours/">点击前往</a></p>
+<a class="btn-anzhiyu " href="regular::下载视频文件::https://gofile.cc/deLy/the-first-20-hours-how-to-learn-anything-josh-kaufman-tedxcsu.mp4::fa-solid fa-download" title=""></a><a class="btn-anzhiyu " href="regular::下载字幕文件::https://gofile.cc/prDW/the-first-20-hours-how-to-learn-anything-josh-kaufman-tedxcsu.srt::fa-solid fa-download" title=""></a>
+]]></content>
+      <categories>
+        <category>学习</category>
+        <category>英语</category>
+      </categories>
+      <tags>
+        <tag>TED</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Win11安装杜比全景声方法</title>
     <url>/blog/posts/dloby.html</url>
     <content><![CDATA[<h1 id="在-windows-11-中安装杜比全景声">在 Windows 11
@@ -1438,53 +1438,6 @@ DVD 或蓝光。</p>
       </tags>
   </entry>
   <entry>
-    <title>alist分享站合集</title>
-    <url>/blog/posts/99c9062b.html</url>
-    <content><![CDATA[<h4 id="alist简介">alist简介</h4>
-<p>alist资源站是一个支持多存储的文件列表程序，AList
-支持多个存储提供商，包括本地存储、阿里云盘、夸克云盘、189云盘、OneDrive、Google
-Drive等，且易于拓展。支持文件在线预览，图片、视频、打包下载，简单的来说AList资源站是把个人网盘里的资源以网站模式公开分享。</p>
-<p>https://pan.clun.top/ 雨呢网盘 视频 动漫 写真
-https://alist.aqingyuan.repl.co 晴园 https://al.chirmyram.com 七米蓝
-https://alist.advanced360.top Banana的资源站
-https://ruipan.bestruirui.repl.co 小瑞 https://pan.arley.cn Arley’s
-Drive https://apps.weixinqqq.com 微资源 www.kugutsu.ml (NSFW) Puppet
-Studio https://zi0.cc/ 梓澪の妙妙屋 ASMR 游戏 番剧 插画 <a href="https://ys.urlsdh.com/go/?url=aHR0cHM6Ly9pbWV4Y2xvdWQudG9wLw%3D%3D">https://imexcloud.top/</a>
-AList 经典电影中字 http://alist.xiaoya.pro/ 小雅的AList 大量影视
-有点失效 https://alist.ygxz.xyz/ 小站的AList
-https://tczhongyi.toc.icu/ AList 影视剧合集 4K原盘
-https://asca0121.toc.icu/ 日负斗金 4K影视 动漫 剧集
-https://alist.ouo3.repl.co/ OUO 大佬们的站 其他的AList站
-https://dl.6r.pw:6080/ AList网盘 电影 壁纸 视频
-https://alist.ucu520.top/ 开心ucu-AList 漫画 学习 音乐
-http://81.68.240.111:1688/ AList看剧学习资源大全
-https://pan.hxft.xyz/ 软件 电影 http://81.70.1.225:5244/ 看の电の视 动漫
-https://pan.arley.cn/ Arley’s Drive 图片 电影 游戏
-https://apps.weixinqqq.com/ 资源站.随意盘 教程 正规小视频 音乐
-https://bdys.top/ bdys
-电影动漫韩剧日剧等媒体库资源，提供在线播放，个人资源低调观看
-https://pan.cqtjy.cn/ 老谭alist 影视 4K在线观看 办公系统软件电子书资料等
-https://alist.azad.asia/ azad个人云盘 影视4k在线
-电影美剧丰富、MV、学习教程等资源 https://pan.110014.xyz/ 电喵大战皮卡丘
-https://alist.prpr.run/ pr盘
-动漫日番在线看，考研资料，高分电影、漫威等影视作品，独特得是看站长收集了许多国家的影视作品和外语。
-https://pan.ecve.cn/
-ECVE资源小站，全影视资源1-10个文件夹，10有最新的恶鬼看起来，阿里网盘线路4K高清播放，看电影资源多。
-http://shicheng.wang:555
-若水分享、学习资源、我的影视、软件分享，一个看影视片的alist资源站，新片很多。
-https://alist.ccome.site 动漫，影视 音乐、壁纸、AI绘画，杂货铺，仓库
-Cosplay。 https://www.asmrgay.com/ asmr
-https://www.aliyundrive.com/s/AjPaykzLJnw</p>
-]]></content>
-      <categories>
-        <category>内容分享</category>
-        <category>资源</category>
-      </categories>
-      <tags>
-        <tag>alist</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>解决npm install安装太慢</title>
     <url>/blog/posts/npminstall.html</url>
     <content><![CDATA[<h2 id="设置-npm-registry">设置 npm registry</h2>
@@ -1508,38 +1461,6 @@ registry更改为<strong>淘宝镜像</strong>，提升安装速度。</li>
 ]]></content>
       <tags>
         <tag>npm</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>作文实用素材方法整理</title>
-    <url>/blog/posts/113bdaa7.html</url>
-    <content><![CDATA[<p>本页为整理的我自己和找来的素材和页面模板 仅限参考</p>
-<h2 id="素材整理">素材整理</h2>
-<p>待补充</p>
-<h2 id="写作技巧">写作技巧</h2>
-<h3 id="1从生活中找例子">1.从生活中找例子</h3>
-<p>简单来说，想不到素材的时候，从生活中找相关的例子去用，比如： <img src="https://s2.loli.net/2023/10/21/HBC5rXm9ENqczlQ.webp">
-方法：观点句+生活例子+领域描述，如： <img src="https://s2.loli.net/2023/10/21/SDG46o5O1eRhHYL.webp"></p>
-<h3 id="2正反面论述">2.正反面论述</h3>
-<p>方法：正面论述+反面论述+观点，如： <img src="https://s2.loli.net/2023/10/21/L9ZnVHFcq4Ez2kj.webp">
-方法：错误选项+正确选项+观点做法，如： <img src="https://s2.loli.net/2023/10/21/ysoliO9k4BNFbTj.webp"></p>
-<h2 id="开头模板">开头模板</h2>
-<h3 id="1xxx与xxx合力">1.XXX与XXX合力</h3>
-<h4 id="原文">原文：</h4>
-<p><img src="https://s2.loli.net/2023/10/20/oyizuWSjgM4qI39.webp" alt="原文"></p>
-<h4 id="模板">模板：</h4>
-<p><img src="https://s2.loli.net/2023/10/20/9TCzapWNmkAPQsc.webp" alt="模板"></p>
-<h4 id="示例">示例：</h4>
-<p><img src="https://s2.loli.net/2023/10/20/LMq67ScyVJjUgBx.webp" alt="示例"></p>
-<h2 id="结尾模板">结尾模板</h2>
-<p>待补充</p>
-]]></content>
-      <categories>
-        <category>学习</category>
-        <category>语文</category>
-      </categories>
-      <tags>
-        <tag>作文</tag>
       </tags>
   </entry>
   <entry>
@@ -1719,153 +1640,82 @@ registry更改为<strong>淘宝镜像</strong>，提升安装速度。</li>
       </tags>
   </entry>
   <entry>
-    <title>实用软件&amp;网站整理</title>
-    <url>/blog/posts/a5115977.html</url>
-    <content><![CDATA[<h2 id="软件分享">软件分享</h2>
-<p>注：以下大部分内容为免费或破解版本</p>
-<h3 id="coodesker">Coodesker</h3>
-<p>Coodesker：自动分类整理桌面上的快捷方式、目录、图片等文件
-以前为免费软件，虽然在github上，但是就挂了个仓库
-现在已经开始收费了，但是我感觉老版本就够用</p>
-<a class="btn-anzhiyu " href="regular::Coodesker最后一个免费版本::https://wwll.lanzout.com/iveV71c8woyh::fa-solid fa-play-circle" title=""></a>
-
-<a class="btn-anzhiyu " href="regular::Coodesker20.0.7激活版本::https://wwll.lanzout.com/iEhYW1cbw46h::fa-solid fa-play-circle" title=""></a>
-
-<p>激活版下载密码：bpwp</p>
-<h3 id="kms激活工具">KMS激活工具</h3>
-<p>采用当前最先进的激活技术，几乎涵盖了Windows全版本同Office全版本的激活，支持最新的Win11系统、Win10全版本包括Win10
-LTSC的数字权利激活，非常强大，是激活系统首选的一款激活工具。</p>
-<a class="btn-anzhiyu " href="regular::前往下载::https://wwll.lanzout.com/iIXeE1c8wp8h::fa-solid fa-play-circle" title=""></a>
-
-<h3 id="potplayer视频播放器">PotPlayer视频播放器</h3>
-<p>PotPlayer继承了 KMPlayer
-所有的优点，拥有异常强大的内置音视频解码器，可以支持几乎全部音乐、视频文件格式的播放。采用
-VC++ 进行了全面重构，并且原生支持64位操作系统，使得 PotPlayer 在 Windows
-10 等新系统上，无论性能、兼容性和稳定性上的表现均比 KMP
-要好不少；硬件加速、流畅优秀的全高清视
-频播放效果、强大的选项、滤镜、外挂式管理、DXVA等硬件解码；以及非常丰富且强大的设置选项，被誉为Win平台上最优秀的免费影音全能格式播放器。</p>
-<a class="btn-anzhiyu " href="regular::前往下载::https://wwll.lanzout.com/i53vQ1c8wpgf::fa-solid fa-play-circle" title=""></a>
-
-<p>密码:a2k0</p>
-<h3 id="rainmeter雨滴">Rainmeter雨滴</h3>
-<p>雨滴皮肤（Rainmeter皮肤），是一些有特定功能的Windows桌面小工具。一些复杂的皮肤则看起来像是小型应用程序，风格相近的皮肤则可以组成一个套装或者主题。任何一个雨滴皮肤在不同电脑上工作都是不完全相同的，这取决于使用者对它的调整和修饰。</p>
-<a class="btn-anzhiyu " href="regular::前往官网下载::https://www.rainmeter.net/::fa-solid fa-play-circle" title=""></a>
-
-<h3 id="几何画板已破解">几何画板(已破解)</h3>
-<p>几何画板为从三年级到大学的各个级别的学生提供了一种有形的，可视化的方
-式来学习数学，从而提高他们的参与度、理解力和成就。
-几何画板现已停售，这里准备了v5.0.6的破解版本</p>
-<a class="btn-anzhiyu " href="regular::前往下载::https://wwll.lanzout.com/iLwf71c8wqyj::fa-solid fa-play-circle" title=""></a>
-
-<p>https://gofile.cc/lre4/bandizip.exe
-https://gofile.cc/jrY7/coodesker.zip https://gofile.cc/551a/kms.zip
-https://gofile.cc/QrEQ/firpe-v182.exe https://gofile.cc/WW5E/idm.exe
-https://gofile.cc/K7Xk/potplayer.exe
-https://gofile.cc/1kYp/rustdesk-64.exe
-https://gofile.cc/zq40/ventoy-1095-windows.zip
-https://gofile.cc/0L0l/.zip
-https://gofile.cc/DJyq/acrobat-pro-dc-pdf.iso</p>
-]]></content>
-      <categories>
-        <category>内容分享</category>
-        <category>软件</category>
-      </categories>
-      <tags>
-        <tag>软件</tag>
-        <tag>网站</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>徽州行</title>
-    <url>/blog/posts/596431e6.html</url>
-    <content><![CDATA[<h1 id="活动简介">活动简介</h1>
-<p>一、活动时间 : 2023 年 11 月 11-14 日 (4 天) 二、活动地点: 徽州黄山
-三、活动内容: 11 月 11
-日乘高铁到黄山北站研学徽州文化博物馆、黄山城市展览馆 11 月 12
-日参观历史文化遗产影县–宏村、守拙园 11 月 13 日黄山“放飞理想”教育活动 11
-月 14 日参观徽菜博物馆，参观屯溪老街，乘高铁回京</p>
-<h1 id="day-1">DAY 1</h1>
-<p>惠州城市展馆
-徽商：徽州最有名的是徽商，从十三四岁开始外出经商，以木头等资源 黄山
-惠州有更多的人文历史，黄山人们希望改回徽州（人文情感丰富）
-黄山市依托山水天城，大力传承历史文化，坚持以人为本，加强规划管理，保徽建徽改徽，山水融城
-水墨徽州 歙砚 歙州再到徽州 方腊歙州人 1987改为黄山市
-建筑集中，徽派建筑形成，马头墙，放众木头多，马头墙用来防止火灾，封锁火势。
-拐弯抹角，在惠州历史中富有美德。直角，邻里之间方便搬运东西上不让天，下不让地，中间让邻里和气。
-作退一步想 徽商随家人外出，才能得到帮助 建筑：墙倒屋不塌，
-即使塌了，整体结构也不会被破坏。 榫卯 基：稳固 础：支撑
-马头墙：封锁火势，封火墙。南方房子人字形，方便排水，在人字形两边，略高，挡住火势，不至于烧到邻里。
-明堂天井：一楼不开窗，防火防盗防小偷。在二楼开天井，由于采光和通风（直接）隐喻：
-牌坊：代表家族的地位（取决于皇上）主任对社会的贡献。玉质 恩荣 圣旨
-哧剑（普遍）?徽州牌坊多。大多数牌坊被摧毁，为了建设新思想
-戏剧造型：京剧（不断融和）前身为徽剧。
-徽州人才辈出，教育发达，科举发达。詹天佑，第一批公派留学人物。十户之村不废诵读，教育重视程度高。
-徽州文化： 黄山：黄山松精神：……
-云海三四月份徽商依托新安江发展商业（农夫山泉最早水厂在千岛湖水深七十米处）
-徽商：云纹五注铜器。徽商创造的物质财富和精神财富是惠州社会历史全面高度发展的重要方面。人口暴增，导致资源匮乏，不得不外出。经商人回乡次数少，惠州人结婚早。惠州女人留在家中掌管家事。
-七山半水半分田，二分道路和庄园。 渔梁送别，母亲在岸边挥泪告别。
-胡裕泰，卖茶。惠州自古以来种茶。
-徽商普遍出现在江苏，苏州园林的主人大多数为惠州人。建筑有徽州的风格。徽州火腿制作工艺穿到金华
-。 江春“布衣上交天子” 商人 瘦西湖旁用盐打了一座白塔。
-河坊街：红顶商人胡雪岩，运用政治势力发展商业。 房屋摆设 胡适陶行知朱熹
-做人做事懂分寸 戚继光由胡宗宪一手提拔 祠堂：惩戒不孝子孙</p>
-<h1 id="day-2">DAY 2</h1>
-<p>宏村 南湖书院坐落于村子南边，学校，义务教育，汪姓男孩可免费接受教育
-村落聚族而居 hua桥 宏村牛型村：四座桥四条腿 两棵大树两角 村子身体
-从奇树村搬迁，逃不掉火灾，hkd选中了宏村，落户生根 南方的水有回甘，软水
-两棵大树：红娘，跟喜事有关，抬着花轿桃树走三圈，拉；老人高寿去世，抬着棺椁绕银杏树走，结白果，放入水中变为银色
-首富房子承志堂，六十万两白银！!木雕石雕砖雕。大门各有一撇一捺，有钱，能挂到官职。一对石户，门当户对。墙体的突出，门千金门楼四两五。文革期间被红卫兵征收。破四旧，打破封建思想。佛堂，家族家庭富贵以后，想让家族绵延更长。几百年人家无非积善，行善积德，第一等好事只是读书，让所有孩子接受到教育，徽商兴建学堂。先生受村民照顾。不开窗，防火防盗防小偷。给管家开一个门，钱进口袋不乱跑。桌子半圆形四条腿，表示男主人不在家，若回来，半圆桌会拼在一起变六条腿，表示夫妻团圆。木雕损坏与文革有关，村民用黄泥封锁木雕，刻上毛主席万岁。栏杆上方形小孔，看帅哥，山清孔。快乐每从辛苦得，便宜多自吃亏来。创业难受成难知难不难，读书好营商好效好便好。福禄寿三星，老年人对钟很忌讳。横梁架上去之后再雕刻。门当，四根木柱，贫民百姓家没有，富人有。汪氏宗祠中有女性画像。弘。
-汪姓第一人?。汪华徽州汪姓第一人，收复十五州，被供奉。宏村族长，宏村汪姓第一人。胡重，宏村水系由她主持设计修建，巨大贡献，巾帼丈夫。守拙园
-仁教永垂 一步进房三步上床四步撞墙
-男子住的比较好，终身平静指经商能够平平安安
-以帽去人，下雪就是下白银，肥水不流外人田，大石槽镇宅。请先生到家中上课。
-五柳堂。阁楼建在过道两边。老气横秋雨一鸣天地响。
-祠堂用来祭祖或操办重要的事情，以仓库为主要使用形式。女子在结婚和去世时才能入堂。看不起我可以，但要进我家门要从商下过。商门有提升家族地位的寓意。
-文昌宫。北有孔子南有文昌。以文会友，文人聚会。石木砖雕。十里红妆，从小准备嫁妆和棺椁。
-酒楼。喝酒办宴席之地。鸿案春长。明方清圆。小厅堂大厢房，明。大厅堂小厢房，清。</p>
-<h1 id="day-3">DAY 3</h1>
-<p>黄山行
-“光明顶上彩云飞，忽见仙桃石已归；石去天涯无歇处，仍回松岭伴朝辉。”研学的第三天，我们来到了黄山市市名的来源地–黄山。乘坐缆车登山，我们遇到了一年只有50多天的云海。缆车上升时，向下望去，下方有着各种各样的奇石，翠绿茂密的松树，
-有时还能看到险峻的徒步登山通道。 [图片 65.jpg]
-升入云海中时，窗外视野渐渐模糊，隐约看到松树上雪白的雾凇，晶莹剔透。
-[图片 66.jpg]
-一段时间后，我们升入云海上方，顿时豁然开朗，云海上方的美丽景色逐渐展现在眼前。蓝天白云，头上的云彩与脚下的云海在远处连为一体，甚是美丽。
-[图片 67.jpg]</p>
-<p>爬过好汉坡，经过迎客松，我们的登山之行就此开始。我们翻过了几座山峰，走过了各种各样的阶梯。我们终于登上了一座小山峰。
-[图片 68.jpg]
-在这里我们看到了奇形怪状的石头，远处美丽的山脉和湖泊，远远望去，感觉我们的目标光明顶已经唾手可得。
-[图片 69.jpg]
-继续跨过一次山峰，我们即将到达光明顶。在这里，我们看到脚下整齐划一的松树，经历过前两天的大雨，松树们都显得格外苍翠挺拔。
-[图片 70.jpg]
-继续爬了一个坡后，我们到达了此次黄山之行的最高点–光明顶。光明顶是黄山的主峰之一，位于黄山中部，海拔1860米，为黄山第二高峰，与天都峰、莲花峰并称黄山三大主峰。顶上平坦而高旷，各个高峰尽收眼底。
-[图片 73.jpg]
-在这里，我们还见到了光明顶气象站，他的前身便是建于明代的大悲院寺庙，据说周围的地区天气预报都来源于这里。
-[图片 72.jpg]
-在光明顶上进行了放飞理想活动后，我们便开启了下山的行程。下山途中我们见到了《红楼梦》中出现的飞来石。飞来石为自然风化生成，两大岩石之间的接触面很小，似从天外飞来，故名“飞来石”。
-[图片 74.jpg]
-本次爬黄山的研学活动，让我们欣赏到了黄山的美丽景象，也让我们体会到了大自然的奇特，秀美。</p>
-<h1 id="day-4">DAY 4</h1>
-<p>屯溪老街
-研学最后一天的第一站，我们来到了徽商发源地-屯溪老街。屯溪老街坐落于新安江的渐江段旁边，此地三江汇聚，西水屯局，故得名屯溪。
-[图片 77.jpg]
-屯溪整条街像一条鱼骨头，主巷为最大的主心骨，旁边小巷子就是鱼骨的分支。街旁的店铺也有着一些文化，徽商以前都是是小作坊
-，临街的地方是商铺，后院是制作商品的地方，二楼就是店铺主人休息生活的地方。
-[图片 78.jpg]
-对于毛豆腐，各个地方也有各个地方的特色。宏村的毛豆腐是方块形，方方正正，呈坎村则是长条形。游客来此地旅游，买的最多的就是黄山烧饼。黄山烧饼作为徽商重要的干粮
-，得益于其方便保存的特点。徽商行商的路程很长，所以带很多烧饼便能解决粮食问题。
-这里的主要特色还有茶。茶自古以来就是此地的的主要经济收入。在这里，四月份放还能一周的假
-用来采茶叶。每次采茶，都需要爬到海拔800以上的山里。祁红巷是之前专门储存祁门红茶的地方，祁门红茶，是世界三大高香名茶之一
-，听导游说英国皇室的下午茶就是祁门红茶。 [图片 81.jpg]
-祁门红茶因为大部分都最为出口商品，为了方便运输，所以制成了碎茶的形式。
-在屯溪老街，我们见到了各种各样的安徽特色，也领略到了各种特色商品食品背后的历史背景和文化内涵。</p>
+    <title>作文实用素材方法整理</title>
+    <url>/blog/posts/113bdaa7.html</url>
+    <content><![CDATA[<p>本页为整理的我自己和找来的素材和页面模板 仅限参考</p>
+<h2 id="素材整理">素材整理</h2>
+<p>待补充</p>
+<h2 id="写作技巧">写作技巧</h2>
+<h3 id="1从生活中找例子">1.从生活中找例子</h3>
+<p>简单来说，想不到素材的时候，从生活中找相关的例子去用，比如： <img src="https://s2.loli.net/2023/10/21/HBC5rXm9ENqczlQ.webp">
+方法：观点句+生活例子+领域描述，如： <img src="https://s2.loli.net/2023/10/21/SDG46o5O1eRhHYL.webp"></p>
+<h3 id="2正反面论述">2.正反面论述</h3>
+<p>方法：正面论述+反面论述+观点，如： <img src="https://s2.loli.net/2023/10/21/L9ZnVHFcq4Ez2kj.webp">
+方法：错误选项+正确选项+观点做法，如： <img src="https://s2.loli.net/2023/10/21/ysoliO9k4BNFbTj.webp"></p>
+<h2 id="开头模板">开头模板</h2>
+<h3 id="1xxx与xxx合力">1.XXX与XXX合力</h3>
+<h4 id="原文">原文：</h4>
+<p><img src="https://s2.loli.net/2023/10/20/oyizuWSjgM4qI39.webp" alt="原文"></p>
+<h4 id="模板">模板：</h4>
+<p><img src="https://s2.loli.net/2023/10/20/9TCzapWNmkAPQsc.webp" alt="模板"></p>
+<h4 id="示例">示例：</h4>
+<p><img src="https://s2.loli.net/2023/10/20/LMq67ScyVJjUgBx.webp" alt="示例"></p>
+<h2 id="结尾模板">结尾模板</h2>
+<p>待补充</p>
 ]]></content>
       <categories>
         <category>学习</category>
-        <category>研学</category>
+        <category>语文</category>
       </categories>
       <tags>
-        <tag>徽州</tag>
-        <tag>研学</tag>
+        <tag>作文</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>alist分享站合集</title>
+    <url>/blog/posts/99c9062b.html</url>
+    <content><![CDATA[<h4 id="alist简介">alist简介</h4>
+<p>alist资源站是一个支持多存储的文件列表程序，AList
+支持多个存储提供商，包括本地存储、阿里云盘、夸克云盘、189云盘、OneDrive、Google
+Drive等，且易于拓展。支持文件在线预览，图片、视频、打包下载，简单的来说AList资源站是把个人网盘里的资源以网站模式公开分享。</p>
+<p>https://pan.clun.top/ 雨呢网盘 视频 动漫 写真
+https://alist.aqingyuan.repl.co 晴园 https://al.chirmyram.com 七米蓝
+https://alist.advanced360.top Banana的资源站
+https://ruipan.bestruirui.repl.co 小瑞 https://pan.arley.cn Arley’s
+Drive https://apps.weixinqqq.com 微资源 www.kugutsu.ml (NSFW) Puppet
+Studio https://zi0.cc/ 梓澪の妙妙屋 ASMR 游戏 番剧 插画 <a href="https://ys.urlsdh.com/go/?url=aHR0cHM6Ly9pbWV4Y2xvdWQudG9wLw%3D%3D">https://imexcloud.top/</a>
+AList 经典电影中字 http://alist.xiaoya.pro/ 小雅的AList 大量影视
+有点失效 https://alist.ygxz.xyz/ 小站的AList
+https://tczhongyi.toc.icu/ AList 影视剧合集 4K原盘
+https://asca0121.toc.icu/ 日负斗金 4K影视 动漫 剧集
+https://alist.ouo3.repl.co/ OUO 大佬们的站 其他的AList站
+https://dl.6r.pw:6080/ AList网盘 电影 壁纸 视频
+https://alist.ucu520.top/ 开心ucu-AList 漫画 学习 音乐
+http://81.68.240.111:1688/ AList看剧学习资源大全
+https://pan.hxft.xyz/ 软件 电影 http://81.70.1.225:5244/ 看の电の视 动漫
+https://pan.arley.cn/ Arley’s Drive 图片 电影 游戏
+https://apps.weixinqqq.com/ 资源站.随意盘 教程 正规小视频 音乐
+https://bdys.top/ bdys
+电影动漫韩剧日剧等媒体库资源，提供在线播放，个人资源低调观看
+https://pan.cqtjy.cn/ 老谭alist 影视 4K在线观看 办公系统软件电子书资料等
+https://alist.azad.asia/ azad个人云盘 影视4k在线
+电影美剧丰富、MV、学习教程等资源 https://pan.110014.xyz/ 电喵大战皮卡丘
+https://alist.prpr.run/ pr盘
+动漫日番在线看，考研资料，高分电影、漫威等影视作品，独特得是看站长收集了许多国家的影视作品和外语。
+https://pan.ecve.cn/
+ECVE资源小站，全影视资源1-10个文件夹，10有最新的恶鬼看起来，阿里网盘线路4K高清播放，看电影资源多。
+http://shicheng.wang:555
+若水分享、学习资源、我的影视、软件分享，一个看影视片的alist资源站，新片很多。
+https://alist.ccome.site 动漫，影视 音乐、壁纸、AI绘画，杂货铺，仓库
+Cosplay。 https://www.asmrgay.com/ asmr
+https://www.aliyundrive.com/s/AjPaykzLJnw</p>
+]]></content>
+      <categories>
+        <category>内容分享</category>
+        <category>资源</category>
+      </categories>
+      <tags>
+        <tag>alist</tag>
       </tags>
   </entry>
   <entry>
@@ -2113,6 +1963,203 @@ xxx.github.io（xxx 是你 GitHub
       </tags>
   </entry>
   <entry>
+    <title>实用软件&amp;网站整理</title>
+    <url>/blog/posts/a5115977.html</url>
+    <content><![CDATA[<h2 id="软件分享">软件分享</h2>
+<p>注：以下大部分内容为免费或破解版本</p>
+<h3 id="coodesker">Coodesker</h3>
+<p>Coodesker：自动分类整理桌面上的快捷方式、目录、图片等文件
+以前为免费软件，虽然在github上，但是就挂了个仓库
+现在已经开始收费了，但是我感觉老版本就够用</p>
+<a class="btn-anzhiyu " href="regular::Coodesker最后一个免费版本::https://wwll.lanzout.com/iveV71c8woyh::fa-solid fa-play-circle" title=""></a>
+
+<a class="btn-anzhiyu " href="regular::Coodesker20.0.7激活版本::https://wwll.lanzout.com/iEhYW1cbw46h::fa-solid fa-play-circle" title=""></a>
+
+<p>激活版下载密码：bpwp</p>
+<h3 id="kms激活工具">KMS激活工具</h3>
+<p>采用当前最先进的激活技术，几乎涵盖了Windows全版本同Office全版本的激活，支持最新的Win11系统、Win10全版本包括Win10
+LTSC的数字权利激活，非常强大，是激活系统首选的一款激活工具。</p>
+<a class="btn-anzhiyu " href="regular::前往下载::https://wwll.lanzout.com/iIXeE1c8wp8h::fa-solid fa-play-circle" title=""></a>
+
+<h3 id="potplayer视频播放器">PotPlayer视频播放器</h3>
+<p>PotPlayer继承了 KMPlayer
+所有的优点，拥有异常强大的内置音视频解码器，可以支持几乎全部音乐、视频文件格式的播放。采用
+VC++ 进行了全面重构，并且原生支持64位操作系统，使得 PotPlayer 在 Windows
+10 等新系统上，无论性能、兼容性和稳定性上的表现均比 KMP
+要好不少；硬件加速、流畅优秀的全高清视
+频播放效果、强大的选项、滤镜、外挂式管理、DXVA等硬件解码；以及非常丰富且强大的设置选项，被誉为Win平台上最优秀的免费影音全能格式播放器。</p>
+<a class="btn-anzhiyu " href="regular::前往下载::https://wwll.lanzout.com/i53vQ1c8wpgf::fa-solid fa-play-circle" title=""></a>
+
+<p>密码:a2k0</p>
+<h3 id="rainmeter雨滴">Rainmeter雨滴</h3>
+<p>雨滴皮肤（Rainmeter皮肤），是一些有特定功能的Windows桌面小工具。一些复杂的皮肤则看起来像是小型应用程序，风格相近的皮肤则可以组成一个套装或者主题。任何一个雨滴皮肤在不同电脑上工作都是不完全相同的，这取决于使用者对它的调整和修饰。</p>
+<a class="btn-anzhiyu " href="regular::前往官网下载::https://www.rainmeter.net/::fa-solid fa-play-circle" title=""></a>
+
+<h3 id="几何画板已破解">几何画板(已破解)</h3>
+<p>几何画板为从三年级到大学的各个级别的学生提供了一种有形的，可视化的方
+式来学习数学，从而提高他们的参与度、理解力和成就。
+几何画板现已停售，这里准备了v5.0.6的破解版本</p>
+<a class="btn-anzhiyu " href="regular::前往下载::https://wwll.lanzout.com/iLwf71c8wqyj::fa-solid fa-play-circle" title=""></a>
+
+<p>https://gofile.cc/lre4/bandizip.exe
+https://gofile.cc/jrY7/coodesker.zip https://gofile.cc/551a/kms.zip
+https://gofile.cc/QrEQ/firpe-v182.exe https://gofile.cc/WW5E/idm.exe
+https://gofile.cc/K7Xk/potplayer.exe
+https://gofile.cc/1kYp/rustdesk-64.exe
+https://gofile.cc/zq40/ventoy-1095-windows.zip
+https://gofile.cc/0L0l/.zip
+https://gofile.cc/DJyq/acrobat-pro-dc-pdf.iso</p>
+]]></content>
+      <categories>
+        <category>内容分享</category>
+        <category>软件</category>
+      </categories>
+      <tags>
+        <tag>软件</tag>
+        <tag>网站</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>徽州行</title>
+    <url>/blog/posts/596431e6.html</url>
+    <content><![CDATA[<h1 id="活动简介">活动简介</h1>
+<p>一、活动时间 : 2023 年 11 月 11-14 日 (4 天) 二、活动地点: 徽州黄山
+三、活动内容: 11 月 11
+日乘高铁到黄山北站研学徽州文化博物馆、黄山城市展览馆 11 月 12
+日参观历史文化遗产影县–宏村、守拙园 11 月 13 日黄山“放飞理想”教育活动 11
+月 14 日参观徽菜博物馆，参观屯溪老街，乘高铁回京</p>
+<h1 id="day-1">DAY 1</h1>
+<p>惠州城市展馆
+徽商：徽州最有名的是徽商，从十三四岁开始外出经商，以木头等资源 黄山
+惠州有更多的人文历史，黄山人们希望改回徽州（人文情感丰富）
+黄山市依托山水天城，大力传承历史文化，坚持以人为本，加强规划管理，保徽建徽改徽，山水融城
+水墨徽州 歙砚 歙州再到徽州 方腊歙州人 1987改为黄山市
+建筑集中，徽派建筑形成，马头墙，放众木头多，马头墙用来防止火灾，封锁火势。
+拐弯抹角，在惠州历史中富有美德。直角，邻里之间方便搬运东西上不让天，下不让地，中间让邻里和气。
+作退一步想 徽商随家人外出，才能得到帮助 建筑：墙倒屋不塌，
+即使塌了，整体结构也不会被破坏。 榫卯 基：稳固 础：支撑
+马头墙：封锁火势，封火墙。南方房子人字形，方便排水，在人字形两边，略高，挡住火势，不至于烧到邻里。
+明堂天井：一楼不开窗，防火防盗防小偷。在二楼开天井，由于采光和通风（直接）隐喻：
+牌坊：代表家族的地位（取决于皇上）主任对社会的贡献。玉质 恩荣 圣旨
+哧剑（普遍）?徽州牌坊多。大多数牌坊被摧毁，为了建设新思想
+戏剧造型：京剧（不断融和）前身为徽剧。
+徽州人才辈出，教育发达，科举发达。詹天佑，第一批公派留学人物。十户之村不废诵读，教育重视程度高。
+徽州文化： 黄山：黄山松精神：……
+云海三四月份徽商依托新安江发展商业（农夫山泉最早水厂在千岛湖水深七十米处）
+徽商：云纹五注铜器。徽商创造的物质财富和精神财富是惠州社会历史全面高度发展的重要方面。人口暴增，导致资源匮乏，不得不外出。经商人回乡次数少，惠州人结婚早。惠州女人留在家中掌管家事。
+七山半水半分田，二分道路和庄园。 渔梁送别，母亲在岸边挥泪告别。
+胡裕泰，卖茶。惠州自古以来种茶。
+徽商普遍出现在江苏，苏州园林的主人大多数为惠州人。建筑有徽州的风格。徽州火腿制作工艺穿到金华
+。 江春“布衣上交天子” 商人 瘦西湖旁用盐打了一座白塔。
+河坊街：红顶商人胡雪岩，运用政治势力发展商业。 房屋摆设 胡适陶行知朱熹
+做人做事懂分寸 戚继光由胡宗宪一手提拔 祠堂：惩戒不孝子孙</p>
+<h1 id="day-2">DAY 2</h1>
+<p>宏村 南湖书院坐落于村子南边，学校，义务教育，汪姓男孩可免费接受教育
+村落聚族而居 hua桥 宏村牛型村：四座桥四条腿 两棵大树两角 村子身体
+从奇树村搬迁，逃不掉火灾，hkd选中了宏村，落户生根 南方的水有回甘，软水
+两棵大树：红娘，跟喜事有关，抬着花轿桃树走三圈，拉；老人高寿去世，抬着棺椁绕银杏树走，结白果，放入水中变为银色
+首富房子承志堂，六十万两白银！!木雕石雕砖雕。大门各有一撇一捺，有钱，能挂到官职。一对石户，门当户对。墙体的突出，门千金门楼四两五。文革期间被红卫兵征收。破四旧，打破封建思想。佛堂，家族家庭富贵以后，想让家族绵延更长。几百年人家无非积善，行善积德，第一等好事只是读书，让所有孩子接受到教育，徽商兴建学堂。先生受村民照顾。不开窗，防火防盗防小偷。给管家开一个门，钱进口袋不乱跑。桌子半圆形四条腿，表示男主人不在家，若回来，半圆桌会拼在一起变六条腿，表示夫妻团圆。木雕损坏与文革有关，村民用黄泥封锁木雕，刻上毛主席万岁。栏杆上方形小孔，看帅哥，山清孔。快乐每从辛苦得，便宜多自吃亏来。创业难受成难知难不难，读书好营商好效好便好。福禄寿三星，老年人对钟很忌讳。横梁架上去之后再雕刻。门当，四根木柱，贫民百姓家没有，富人有。汪氏宗祠中有女性画像。弘。
+汪姓第一人?。汪华徽州汪姓第一人，收复十五州，被供奉。宏村族长，宏村汪姓第一人。胡重，宏村水系由她主持设计修建，巨大贡献，巾帼丈夫。守拙园
+仁教永垂 一步进房三步上床四步撞墙
+男子住的比较好，终身平静指经商能够平平安安
+以帽去人，下雪就是下白银，肥水不流外人田，大石槽镇宅。请先生到家中上课。
+五柳堂。阁楼建在过道两边。老气横秋雨一鸣天地响。
+祠堂用来祭祖或操办重要的事情，以仓库为主要使用形式。女子在结婚和去世时才能入堂。看不起我可以，但要进我家门要从商下过。商门有提升家族地位的寓意。
+文昌宫。北有孔子南有文昌。以文会友，文人聚会。石木砖雕。十里红妆，从小准备嫁妆和棺椁。
+酒楼。喝酒办宴席之地。鸿案春长。明方清圆。小厅堂大厢房，明。大厅堂小厢房，清。</p>
+<h1 id="day-3">DAY 3</h1>
+<p>黄山行
+“光明顶上彩云飞，忽见仙桃石已归；石去天涯无歇处，仍回松岭伴朝辉。”研学的第三天，我们来到了黄山市市名的来源地–黄山。乘坐缆车登山，我们遇到了一年只有50多天的云海。缆车上升时，向下望去，下方有着各种各样的奇石，翠绿茂密的松树，
+有时还能看到险峻的徒步登山通道。 [图片 65.jpg]
+升入云海中时，窗外视野渐渐模糊，隐约看到松树上雪白的雾凇，晶莹剔透。
+[图片 66.jpg]
+一段时间后，我们升入云海上方，顿时豁然开朗，云海上方的美丽景色逐渐展现在眼前。蓝天白云，头上的云彩与脚下的云海在远处连为一体，甚是美丽。
+[图片 67.jpg]</p>
+<p>爬过好汉坡，经过迎客松，我们的登山之行就此开始。我们翻过了几座山峰，走过了各种各样的阶梯。我们终于登上了一座小山峰。
+[图片 68.jpg]
+在这里我们看到了奇形怪状的石头，远处美丽的山脉和湖泊，远远望去，感觉我们的目标光明顶已经唾手可得。
+[图片 69.jpg]
+继续跨过一次山峰，我们即将到达光明顶。在这里，我们看到脚下整齐划一的松树，经历过前两天的大雨，松树们都显得格外苍翠挺拔。
+[图片 70.jpg]
+继续爬了一个坡后，我们到达了此次黄山之行的最高点–光明顶。光明顶是黄山的主峰之一，位于黄山中部，海拔1860米，为黄山第二高峰，与天都峰、莲花峰并称黄山三大主峰。顶上平坦而高旷，各个高峰尽收眼底。
+[图片 73.jpg]
+在这里，我们还见到了光明顶气象站，他的前身便是建于明代的大悲院寺庙，据说周围的地区天气预报都来源于这里。
+[图片 72.jpg]
+在光明顶上进行了放飞理想活动后，我们便开启了下山的行程。下山途中我们见到了《红楼梦》中出现的飞来石。飞来石为自然风化生成，两大岩石之间的接触面很小，似从天外飞来，故名“飞来石”。
+[图片 74.jpg]
+本次爬黄山的研学活动，让我们欣赏到了黄山的美丽景象，也让我们体会到了大自然的奇特，秀美。</p>
+<h1 id="day-4">DAY 4</h1>
+<p>屯溪老街
+研学最后一天的第一站，我们来到了徽商发源地-屯溪老街。屯溪老街坐落于新安江的渐江段旁边，此地三江汇聚，西水屯局，故得名屯溪。
+[图片 77.jpg]
+屯溪整条街像一条鱼骨头，主巷为最大的主心骨，旁边小巷子就是鱼骨的分支。街旁的店铺也有着一些文化，徽商以前都是是小作坊
+，临街的地方是商铺，后院是制作商品的地方，二楼就是店铺主人休息生活的地方。
+[图片 78.jpg]
+对于毛豆腐，各个地方也有各个地方的特色。宏村的毛豆腐是方块形，方方正正，呈坎村则是长条形。游客来此地旅游，买的最多的就是黄山烧饼。黄山烧饼作为徽商重要的干粮
+，得益于其方便保存的特点。徽商行商的路程很长，所以带很多烧饼便能解决粮食问题。
+这里的主要特色还有茶。茶自古以来就是此地的的主要经济收入。在这里，四月份放还能一周的假
+用来采茶叶。每次采茶，都需要爬到海拔800以上的山里。祁红巷是之前专门储存祁门红茶的地方，祁门红茶，是世界三大高香名茶之一
+，听导游说英国皇室的下午茶就是祁门红茶。 [图片 81.jpg]
+祁门红茶因为大部分都最为出口商品，为了方便运输，所以制成了碎茶的形式。
+在屯溪老街，我们见到了各种各样的安徽特色，也领略到了各种特色商品食品背后的历史背景和文化内涵。</p>
+]]></content>
+      <categories>
+        <category>学习</category>
+        <category>研学</category>
+      </categories>
+      <tags>
+        <tag>徽州</tag>
+        <tag>研学</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>风铃投票制作教程</title>
+    <url>/blog/posts/Fengling.html</url>
+    <content><![CDATA[<p>此文章为风铃系统制作逻辑问卷的教程</p>
+<p>本次研学展示完活动成果后需要进行投票选出3个大家喜欢的小组，
+由此制作了此问卷，因为3班也要用，就写个文章吧，微信一条条发也怪麻烦的（这个好像也挺麻烦）</p>
+<p>需求一：3个类型，分别最佳创意小组，最专业小组，最受欢迎小组
+需求二：一个人可以每项推荐一组，3项都要选，但是不能都选同一组（原话）
+需求三：每个人只能完成一次（可选）</p>
+<h1 id="一系统选取">一、系统选取</h1>
+<p>本来想用问卷星制作的，但是找了半天没有找到符合<strong>需求2</strong>中<strong>不能复选</strong>的题目逻辑
+于是便找了半天，找到了一个支持此逻辑的问卷平台：<strong>风铃系统</strong></p>
+<a class="btn-anzhiyu " href="/blog/center%20large::%E7%82%B9%E5%87%BB%E5%89%8D%E5%BE%80%E9%A3%8E%E9%93%83%E7%B3%BB%E7%BB%9F::https:/www.powercx.com/::fa-solid%20fa-arrow-right" title=""></a>
+
+<p>进入官网后，点击 <strong>登录/注册</strong> 登陆账号 <img src="https://pic.imgdb.cn/item/656b12e5c458853aef83edf2.webp">
+登陆完成后，点击<strong>我的问卷</strong> <img src="https://pic.imgdb.cn/item/656b12e5c458853aef83eed5.webp">
+进入界面后，点击<strong>创建项目</strong> -&gt;
+<strong>空白创建</strong> <img src="https://pic.imgdb.cn/item/656bdb39c458853aef3cfc7d.webp"> <img src="https://pic.imgdb.cn/item/656b12e5c458853aef83efc6.webp">
+填写问卷信息，选择<strong>经典模式</strong>，问卷就创建完成了</p>
+<h1 id="二问卷制作">二、问卷制作</h1>
+<h1 id="1创建题目">1.创建题目</h1>
+<p>点击<strong>添加问题</strong>，选择<strong>单选</strong> <img src="https://pic.imgdb.cn/item/656b184ac458853aef9db6e4.webp">
+点击题目下方的<strong>批量编辑</strong>，导入选项（小组的名称及姓名）
+<img src="https://pic.imgdb.cn/item/656b184ac458853aef9db5e6.webp"></p>
+<h1 id="2创建逻辑">2.创建逻辑</h1>
+<p>新建<strong>第二题</strong>，删除其自带的选项，并点击右侧底部的<strong>选项带入</strong>
+<img src="https://pic.imgdb.cn/item/656b184ac458853aef9db4d3.webp">
+按照如图所示填写逻辑 <img src="https://pic.imgdb.cn/item/656b184ac458853aef9db43b.webp">
+点击确定，第二题的选项就导入成功了，第三题也是按照同样的方法，导入<strong>第二题的<em>未选中项</em></strong>
+即可</p>
+<h1 id="三问卷发布设置可选">三、问卷发布设置（可选）</h1>
+<h2 id="设置作答限制">设置作答限制</h2>
+<p><strong>需求3</strong>我采用了控制IP和设备作答频次限制的形式，这种方法并不能绝对的保证每个人只能做一次，但是可以大大减小刷题的概率
+点击上方<strong>设置</strong>，选择<strong>作答设置</strong>，勾选<strong>设备作答频次限制</strong>和<strong>IP作答频次限制</strong>
+<img src="https://pic.imgdb.cn/item/656b1bfbc458853aefb00040.webp"></p>
+<h1 id="四发布及查看统计信息">四、发布及查看统计信息</h1>
+<p>点击上方的<strong>发布</strong>，选择<strong>发布问卷</strong>，在<strong>设置</strong>里找到<strong>发布链接</strong>，即可分享作答了
+统计信息点击<strong>报表</strong>即可显示 <img src="https://pic.imgdb.cn/item/656b1bfbc458853aefb000d8.webp">
+如果想要把作答数据由高到低进行显示，按照如下图所示步骤执行即可（懒得打字了）
+<img src="https://pic.imgdb.cn/item/656b1bfcc458853aefb001b9.webp"></p>
+]]></content>
+      <tags>
+        <tag>投票</tag>
+        <tag>风铃系统</tag>
+        <tag>教程</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>解决Github的访问问题</title>
     <url>/blog/posts/714d1047.html</url>
     <content><![CDATA[<p>Github是一个基于Git版本控制系统的代码托管平台。</p>
@@ -2176,53 +2223,6 @@ URL：https://raw.hellogithub.com/hosts</p>
       <tags>
         <tag>Github</tag>
         <tag>Windows</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>风铃投票制作教程</title>
-    <url>/blog/posts/Fengling.html</url>
-    <content><![CDATA[<p>此文章为风铃系统制作逻辑问卷的教程</p>
-<p>本次研学展示完活动成果后需要进行投票选出3个大家喜欢的小组，
-由此制作了此问卷，因为3班也要用，就写个文章吧，微信一条条发也怪麻烦的（这个好像也挺麻烦）</p>
-<p>需求一：3个类型，分别最佳创意小组，最专业小组，最受欢迎小组
-需求二：一个人可以每项推荐一组，3项都要选，但是不能都选同一组（原话）
-需求三：每个人只能完成一次（可选）</p>
-<h1 id="一系统选取">一、系统选取</h1>
-<p>本来想用问卷星制作的，但是找了半天没有找到符合<strong>需求2</strong>中<strong>不能复选</strong>的题目逻辑
-于是便找了半天，找到了一个支持此逻辑的问卷平台：<strong>风铃系统</strong></p>
-<a class="btn-anzhiyu " href="/blog/center%20large::%E7%82%B9%E5%87%BB%E5%89%8D%E5%BE%80%E9%A3%8E%E9%93%83%E7%B3%BB%E7%BB%9F::https:/www.powercx.com/::fa-solid%20fa-arrow-right" title=""></a>
-
-<p>进入官网后，点击 <strong>登录/注册</strong> 登陆账号 <img src="https://pic.imgdb.cn/item/656b12e5c458853aef83edf2.webp">
-登陆完成后，点击<strong>我的问卷</strong> <img src="https://pic.imgdb.cn/item/656b12e5c458853aef83eed5.webp">
-进入界面后，点击<strong>创建项目</strong> -&gt;
-<strong>空白创建</strong> <img src="https://pic.imgdb.cn/item/656bdb39c458853aef3cfc7d.webp"> <img src="https://pic.imgdb.cn/item/656b12e5c458853aef83efc6.webp">
-填写问卷信息，选择<strong>经典模式</strong>，问卷就创建完成了</p>
-<h1 id="二问卷制作">二、问卷制作</h1>
-<h1 id="1创建题目">1.创建题目</h1>
-<p>点击<strong>添加问题</strong>，选择<strong>单选</strong> <img src="https://pic.imgdb.cn/item/656b184ac458853aef9db6e4.webp">
-点击题目下方的<strong>批量编辑</strong>，导入选项（小组的名称及姓名）
-<img src="https://pic.imgdb.cn/item/656b184ac458853aef9db5e6.webp"></p>
-<h1 id="2创建逻辑">2.创建逻辑</h1>
-<p>新建<strong>第二题</strong>，删除其自带的选项，并点击右侧底部的<strong>选项带入</strong>
-<img src="https://pic.imgdb.cn/item/656b184ac458853aef9db4d3.webp">
-按照如图所示填写逻辑 <img src="https://pic.imgdb.cn/item/656b184ac458853aef9db43b.webp">
-点击确定，第二题的选项就导入成功了，第三题也是按照同样的方法，导入<strong>第二题的<em>未选中项</em></strong>
-即可</p>
-<h1 id="三问卷发布设置可选">三、问卷发布设置（可选）</h1>
-<h2 id="设置作答限制">设置作答限制</h2>
-<p><strong>需求3</strong>我采用了控制IP和设备作答频次限制的形式，这种方法并不能绝对的保证每个人只能做一次，但是可以大大减小刷题的概率
-点击上方<strong>设置</strong>，选择<strong>作答设置</strong>，勾选<strong>设备作答频次限制</strong>和<strong>IP作答频次限制</strong>
-<img src="https://pic.imgdb.cn/item/656b1bfbc458853aefb00040.webp"></p>
-<h1 id="四发布及查看统计信息">四、发布及查看统计信息</h1>
-<p>点击上方的<strong>发布</strong>，选择<strong>发布问卷</strong>，在<strong>设置</strong>里找到<strong>发布链接</strong>，即可分享作答了
-统计信息点击<strong>报表</strong>即可显示 <img src="https://pic.imgdb.cn/item/656b1bfbc458853aefb000d8.webp">
-如果想要把作答数据由高到低进行显示，按照如下图所示步骤执行即可（懒得打字了）
-<img src="https://pic.imgdb.cn/item/656b1bfcc458853aefb001b9.webp"></p>
-]]></content>
-      <tags>
-        <tag>投票</tag>
-        <tag>风铃系统</tag>
-        <tag>教程</tag>
       </tags>
   </entry>
 </search>
