@@ -223,48 +223,6 @@ Variables</a> 中添加了 <code>all_posts</code> 和 <code>hidden_posts</co
       </tags>
   </entry>
   <entry>
-    <title>Linux入门-初识Linux</title>
-    <url>/blog/posts/7dfef69c.html</url>
-    <content><![CDATA[<p>最近我打算学习一下Linux 以本文记录一下我的学习过程</p>
-<h1 id="一关于linux">一、关于Linux</h1>
-<h2 id="linux的诞生">Linux的诞生</h2>
-<p>Linux创始人: 林纳斯 托瓦兹 Linux 诞生于1991年，作者上大学期间
-因为创始人在上大学期间经常需要浏览新闻和处理邮件，发现现有的操作系统不好用,
-于是他决心自己写一个保护模式下的操作系统，这就是Linux的原型，
-当时他21岁，后来经过全世界网友的支持,
-现在能够兼容多种硬件，成为最为流行的服务器操作系统之一。 <img src="https://pic.imgdb.cn/item/65634875c458853aef5abdbb.webp"> <img src="https://pic.imgdb.cn/item/65634875c458853aef5abe42.webp"></p>
-<h2 id="linux内核">Linux内核</h2>
-<p>Linux系统的组成如下：
-<strong>Linux系统内核</strong>、<strong>系统级应用程序</strong>两部分组成。
-内核提供系统最核心的功能，如：调度CPU、调度内存、调度文件系统、调度网络通讯、调度IO等。
-系统级应用程序，可以理解为出厂自带程序，可供用户快速上手操作系统，如：文件管理器、任务管理器、图片查看、音乐播放等。</p>
-<p>比如，播放音乐，无论用户使用自带音乐播放器或是自行安装的第三方播放器均是由播放器程序，调用内核提供的相关功能，由内核调度CPU解码、音响发声等。
-<img src="https://pic.imgdb.cn/item/65634875c458853aef5abeb4.webp">
-<img src="https://pic.imgdb.cn/item/65634875c458853aef5abf1c.webp">
-可以看出，内核是Linux操作系统最核心的所在，系统级应用程序只是锦上添花。
-Linux内核是免费开源的，任何人都可以下载内核源码并查看且修改。
-可以通过：https://www.kernel.org 去下载Linux内核</p>
-<p>内核是免费、开源的，这也就代表了：
-任何人都可以获得并修改内核，并且自行集成系统级程序
-提供了内核+系统级程序的完整封装，称之为Linux发行版 <img src="https://pic.imgdb.cn/item/65634875c458853aef5abf5e.webp"> <img src="https://pic.imgdb.cn/item/656348afc458853aef5be85b.webp"></p>
-<h1 id="二安装linux">二、安装Linux</h1>
-<p>在这里我用了虚拟机的方法安装Linux CentOS系统</p>
-<div class="note warning flat"><p>Linux不同发行版中的基础命令100%是相同的，只有个别软件细节不同</p>
-</div>
-
-<p>我个人认为Hyper-V虚拟机比VMware要稍微流畅一些
-所以我在这里选用Hyper-V安装CentOS
-如果你不是Windows11，那就只能用别的啦，比如VMware</p>
-<h2 id="1下载centos镜像">1.下载CentOS镜像</h2>
-]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hexo常用指令集</title>
     <url>/blog/posts/869eb1f7.html</url>
     <content><![CDATA[<a class="btn-anzhiyu " href="/blog/center%20large::%E5%89%8D%E5%BE%80HEXO%E5%AE%98%E6%96%B9%E6%8C%87%E4%BB%A4%E6%95%99%E7%A8%8B::https:/hexo.io/zh-cn/docs/commands.html::fa-solid%20fa-play-circle" title=""></a>
@@ -420,6 +378,48 @@ YAML 和 JSON 文件。</p>
       </categories>
       <tags>
         <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux入门-初识Linux</title>
+    <url>/blog/posts/7dfef69c.html</url>
+    <content><![CDATA[<p>最近我打算学习一下Linux 以本文记录一下我的学习过程</p>
+<h1 id="一关于linux">一、关于Linux</h1>
+<h2 id="linux的诞生">Linux的诞生</h2>
+<p>Linux创始人: 林纳斯 托瓦兹 Linux 诞生于1991年，作者上大学期间
+因为创始人在上大学期间经常需要浏览新闻和处理邮件，发现现有的操作系统不好用,
+于是他决心自己写一个保护模式下的操作系统，这就是Linux的原型，
+当时他21岁，后来经过全世界网友的支持,
+现在能够兼容多种硬件，成为最为流行的服务器操作系统之一。 <img src="https://pic.imgdb.cn/item/65634875c458853aef5abdbb.webp"> <img src="https://pic.imgdb.cn/item/65634875c458853aef5abe42.webp"></p>
+<h2 id="linux内核">Linux内核</h2>
+<p>Linux系统的组成如下：
+<strong>Linux系统内核</strong>、<strong>系统级应用程序</strong>两部分组成。
+内核提供系统最核心的功能，如：调度CPU、调度内存、调度文件系统、调度网络通讯、调度IO等。
+系统级应用程序，可以理解为出厂自带程序，可供用户快速上手操作系统，如：文件管理器、任务管理器、图片查看、音乐播放等。</p>
+<p>比如，播放音乐，无论用户使用自带音乐播放器或是自行安装的第三方播放器均是由播放器程序，调用内核提供的相关功能，由内核调度CPU解码、音响发声等。
+<img src="https://pic.imgdb.cn/item/65634875c458853aef5abeb4.webp">
+<img src="https://pic.imgdb.cn/item/65634875c458853aef5abf1c.webp">
+可以看出，内核是Linux操作系统最核心的所在，系统级应用程序只是锦上添花。
+Linux内核是免费开源的，任何人都可以下载内核源码并查看且修改。
+可以通过：https://www.kernel.org 去下载Linux内核</p>
+<p>内核是免费、开源的，这也就代表了：
+任何人都可以获得并修改内核，并且自行集成系统级程序
+提供了内核+系统级程序的完整封装，称之为Linux发行版 <img src="https://pic.imgdb.cn/item/65634875c458853aef5abf5e.webp"> <img src="https://pic.imgdb.cn/item/656348afc458853aef5be85b.webp"></p>
+<h1 id="二安装linux">二、安装Linux</h1>
+<p>在这里我用了虚拟机的方法安装Linux CentOS系统</p>
+<div class="note warning flat"><p>Linux不同发行版中的基础命令100%是相同的，只有个别软件细节不同</p>
+</div>
+
+<p>我个人认为Hyper-V虚拟机比VMware要稍微流畅一些
+所以我在这里选用Hyper-V安装CentOS
+如果你不是Windows11，那就只能用别的啦，比如VMware</p>
+<h2 id="1下载centos镜像">1.下载CentOS镜像</h2>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -1485,6 +1485,32 @@ https://www.aliyundrive.com/s/AjPaykzLJnw</p>
       </tags>
   </entry>
   <entry>
+    <title>解决npm install安装太慢</title>
+    <url>/blog/posts/npminstall.html</url>
+    <content><![CDATA[<h2 id="设置-npm-registry">设置 npm registry</h2>
+<ul>
+<li>本文方法为将npm
+registry更改为<strong>淘宝镜像</strong>，提升安装速度。</li>
+</ul>
+<h3 id="1临时使用">1.临时使用</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm --registry https://registry.npm.taobao.org install express</span><br></pre></td></tr></table></figure>
+
+<h3 id="2持久使用">2.持久使用</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> registry https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+
+<p>使用<strong>mac</strong>需要权限的话，前面需要加<strong>sudo</strong>，然后输入密码。<br>
+配置后可通过下面方式来验证是否成功：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm config get registry</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://pic.imgdb.cn/item/6579c2efc458853aef76618c.webp"></p>
+<h3 id="3通过cnpm使用">3.通过cnpm使用</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g cnpm --registry=https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>npm</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>作文实用素材方法整理</title>
     <url>/blog/posts/113bdaa7.html</url>
     <content><![CDATA[<p>本页为整理的我自己和找来的素材和页面模板 仅限参考</p>
@@ -1747,98 +1773,6 @@ https://gofile.cc/DJyq/acrobat-pro-dc-pdf.iso</p>
       <tags>
         <tag>软件</tag>
         <tag>网站</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>解决npm install安装太慢</title>
-    <url>/blog/posts/npminstall.html</url>
-    <content><![CDATA[<h2 id="设置-npm-registry">设置 npm registry</h2>
-<ul>
-<li>本文方法为将npm
-registry更改为<strong>淘宝镜像</strong>，提升安装速度。</li>
-</ul>
-<h3 id="1临时使用">1.临时使用</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm --registry https://registry.npm.taobao.org install express</span><br></pre></td></tr></table></figure>
-
-<h3 id="2持久使用">2.持久使用</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> registry https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
-
-<p>使用<strong>mac</strong>需要权限的话，前面需要加<strong>sudo</strong>，然后输入密码。<br>
-配置后可通过下面方式来验证是否成功：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm config get registry</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://pic.imgdb.cn/item/6579c2efc458853aef76618c.webp"></p>
-<h3 id="3通过cnpm使用">3.通过cnpm使用</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g cnpm --registry=https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>npm</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>解决Github的访问问题</title>
-    <url>/blog/posts/714d1047.html</url>
-    <content><![CDATA[<p>Github是一个基于Git版本控制系统的代码托管平台。</p>
-<p>Github上有着很多开源的免费的软件及资料，但是因为网络问腿，导致Github的访问速度极其的慢，甚至有的时候上不去
-下面，我给出了几个方法，能够解决这个问题</p>
-<h2 id="1watt-toolkit">1.Watt Toolkit</h2>
-<p>「Watt Toolkit」原名Steam++，是一个开源跨平台的多功能 Steam 工具箱。
-<img src="https://s2.loli.net/2023/10/22/oWHj9GgrPe7NVyC.webp"></p>
-<a class="btn-anzhiyu " href="/blog/center%20large::%E5%89%8D%E5%BE%80Watt%20Toolkit%E5%AE%98%E7%BD%91%E4%B8%8B%E8%BD%BD::https:/steampp.net/::fa-solid%20fa-download" title=""></a>
-
-<p>进入软件界面后，点击左侧的网络加速选项卡，勾选Github，点击右上角的“一键加速“
-<img src="https://s2.loli.net/2023/10/22/MsDri4PQEy5lFLc.webp"></p>
-<h2 id="2更改hosts文件">2.更改hosts文件</h2>
-<p>通过修改本地 hosts 文件，试图解决：</p>
-<p>GitHub 访问速度慢的问题 GitHub 项目中的图片显示不出的问题</p>
-<h3 id="1下载hosts管理工具switchhosts">1.下载hosts管理工具<strong>SwitchHosts</strong></h3>
-<p><img src="https://s2.loli.net/2023/10/22/LXJjSyzU4cZdrTC.webp"></p>
-<a class="btn-anzhiyu " href="/blog/center%20large::SwitchHosts%E7%9A%84Github%E4%B8%BB%E9%A1%B5::https:/github.com/oldj/SwitchHosts/tree/v4.1.2::fa-solid%20fa-arrow-right" title=""></a>
-
-<p>当然，如果上不去Github的话，可以通过下面蓝奏云链接下载最新版本（目前截至v4.1.2）</p>
-<a class="btn-anzhiyu " href="regular::前往蓝奏云分享链接::https://wwll.lanzout.com/b04es5obc::fa-solid fa-download" title=""></a>密码:7s3t
-
-<h3 id="2安装配置">2.安装配置</h3>
-<p>安装完成后，我们打开软件，就可以看到如下界面: <img src="https://s2.loli.net/2023/10/22/6n7ipcA5CUdfBLt.webp">
-我们点击左侧的加号，进入配置界面 Hosts类型：远程 Hosts标题：随意
-URL：https://raw.hellogithub.com/hosts</p>
-<div class="note warning flat"><p>请将此链接粘贴到选项框中</p>
-</div>
-
-<p>自动刷新：建议选择1小时 <img src="https://s2.loli.net/2023/10/22/CMzHoDT3PhpFQ5i.webp">
-填写完成后，点击确定，就配置完成了</p>
-<h3 id="3问题解决">3.问题解决</h3>
-<p>点击左侧名称后的按钮，如果你显示的如下界面（提示操作成功） <img src="https://s2.loli.net/2023/10/22/V5aJKjuG9QTLfcA.webp">
-那么恭喜你，你的配置完成了 如果是下面这种： <img src="https://s2.loli.net/2023/10/22/qrQyT4w5Ks3j7uB.webp">
-请继续往下设置</p>
-<h4 id="31-找到hosts文件">3.1 找到hosts文件</h4>
-<p>Hosts文件一般都在电脑的“C:\Windows\System32\drivers\etc“文件夹下，我们打开这个文件夹，找到hosts文件
-<img src="https://s2.loli.net/2023/10/22/cmrDo9vPJsafNiw.webp"></p>
-<h4 id="32-修改hosts文件权限">3.2 修改hosts文件权限</h4>
-<p>右键hosts文件，选择<strong>属性</strong>， <img src="https://s2.loli.net/2023/10/22/b6qCFxJQwd5Ep9B.webp">
-选择<strong>编辑</strong> <img src="https://s2.loli.net/2023/10/22/Ac3lXS9YWut7wmV.webp">
-将<strong>组成用户名</strong>中第一个和最后一个选项（Users）的<strong>修改</strong>和<strong>写入</strong>勾选
-<img src="https://s2.loli.net/2023/10/22/v5fbjVmGrAEkX6M.webp"></p>
-<h4 id="33-验证修改">3.3 验证修改</h4>
-<p>点击确定，返回<strong>SwitchHosts</strong>界面，若显示如下界面，那么就修改成功了
-<img src="https://s2.loli.net/2023/10/22/V5aJKjuG9QTLfcA.webp"></p>
-<h4 id="34-清除dns缓存">3.4 清除DNS缓存</h4>
-<p>若发现以上设置都没有问题了，但是仍然访问不了Github，那么可以试试清除电脑的DNS缓存
-这里以Win11举例：
-鼠标右键点击“开始菜单”或者按“Win+X”弹出窗口，找到“Windows
-终端(管理员)”。如下图： <img src="https://s2.loli.net/2023/10/22/4eamPvjlhMqI6rn.webp">
-在命令窗口输入:</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ipconfig /flushdns</span><br></pre></td></tr></table></figure>
-
-<p>按**Enter（回车键）**运行，看到已成功刷新DNS解析缓存的提示就说明DNS刷新成功了。（注：命令中间空格不可少）如下图：
-<img src="https://s2.loli.net/2023/10/22/Go41KbrZTingAzt.webp"></p>
-]]></content>
-      <categories>
-        <category>教程</category>
-      </categories>
-      <tags>
-        <tag>Github</tag>
-        <tag>Windows</tag>
       </tags>
   </entry>
   <entry>
@@ -2223,6 +2157,72 @@ xxx.github.io（xxx 是你 GitHub
         <tag>Github</tag>
         <tag>Hexo</tag>
         <tag>博客</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>解决Github的访问问题</title>
+    <url>/blog/posts/714d1047.html</url>
+    <content><![CDATA[<p>Github是一个基于Git版本控制系统的代码托管平台。</p>
+<p>Github上有着很多开源的免费的软件及资料，但是因为网络问腿，导致Github的访问速度极其的慢，甚至有的时候上不去
+下面，我给出了几个方法，能够解决这个问题</p>
+<h2 id="1watt-toolkit">1.Watt Toolkit</h2>
+<p>「Watt Toolkit」原名Steam++，是一个开源跨平台的多功能 Steam 工具箱。
+<img src="https://s2.loli.net/2023/10/22/oWHj9GgrPe7NVyC.webp"></p>
+<a class="btn-anzhiyu " href="/blog/center%20large::%E5%89%8D%E5%BE%80Watt%20Toolkit%E5%AE%98%E7%BD%91%E4%B8%8B%E8%BD%BD::https:/steampp.net/::fa-solid%20fa-download" title=""></a>
+
+<p>进入软件界面后，点击左侧的网络加速选项卡，勾选Github，点击右上角的“一键加速“
+<img src="https://s2.loli.net/2023/10/22/MsDri4PQEy5lFLc.webp"></p>
+<h2 id="2更改hosts文件">2.更改hosts文件</h2>
+<p>通过修改本地 hosts 文件，试图解决：</p>
+<p>GitHub 访问速度慢的问题 GitHub 项目中的图片显示不出的问题</p>
+<h3 id="1下载hosts管理工具switchhosts">1.下载hosts管理工具<strong>SwitchHosts</strong></h3>
+<p><img src="https://s2.loli.net/2023/10/22/LXJjSyzU4cZdrTC.webp"></p>
+<a class="btn-anzhiyu " href="/blog/center%20large::SwitchHosts%E7%9A%84Github%E4%B8%BB%E9%A1%B5::https:/github.com/oldj/SwitchHosts/tree/v4.1.2::fa-solid%20fa-arrow-right" title=""></a>
+
+<p>当然，如果上不去Github的话，可以通过下面蓝奏云链接下载最新版本（目前截至v4.1.2）</p>
+<a class="btn-anzhiyu " href="regular::前往蓝奏云分享链接::https://wwll.lanzout.com/b04es5obc::fa-solid fa-download" title=""></a>密码:7s3t
+
+<h3 id="2安装配置">2.安装配置</h3>
+<p>安装完成后，我们打开软件，就可以看到如下界面: <img src="https://s2.loli.net/2023/10/22/6n7ipcA5CUdfBLt.webp">
+我们点击左侧的加号，进入配置界面 Hosts类型：远程 Hosts标题：随意
+URL：https://raw.hellogithub.com/hosts</p>
+<div class="note warning flat"><p>请将此链接粘贴到选项框中</p>
+</div>
+
+<p>自动刷新：建议选择1小时 <img src="https://s2.loli.net/2023/10/22/CMzHoDT3PhpFQ5i.webp">
+填写完成后，点击确定，就配置完成了</p>
+<h3 id="3问题解决">3.问题解决</h3>
+<p>点击左侧名称后的按钮，如果你显示的如下界面（提示操作成功） <img src="https://s2.loli.net/2023/10/22/V5aJKjuG9QTLfcA.webp">
+那么恭喜你，你的配置完成了 如果是下面这种： <img src="https://s2.loli.net/2023/10/22/qrQyT4w5Ks3j7uB.webp">
+请继续往下设置</p>
+<h4 id="31-找到hosts文件">3.1 找到hosts文件</h4>
+<p>Hosts文件一般都在电脑的“C:\Windows\System32\drivers\etc“文件夹下，我们打开这个文件夹，找到hosts文件
+<img src="https://s2.loli.net/2023/10/22/cmrDo9vPJsafNiw.webp"></p>
+<h4 id="32-修改hosts文件权限">3.2 修改hosts文件权限</h4>
+<p>右键hosts文件，选择<strong>属性</strong>， <img src="https://s2.loli.net/2023/10/22/b6qCFxJQwd5Ep9B.webp">
+选择<strong>编辑</strong> <img src="https://s2.loli.net/2023/10/22/Ac3lXS9YWut7wmV.webp">
+将<strong>组成用户名</strong>中第一个和最后一个选项（Users）的<strong>修改</strong>和<strong>写入</strong>勾选
+<img src="https://s2.loli.net/2023/10/22/v5fbjVmGrAEkX6M.webp"></p>
+<h4 id="33-验证修改">3.3 验证修改</h4>
+<p>点击确定，返回<strong>SwitchHosts</strong>界面，若显示如下界面，那么就修改成功了
+<img src="https://s2.loli.net/2023/10/22/V5aJKjuG9QTLfcA.webp"></p>
+<h4 id="34-清除dns缓存">3.4 清除DNS缓存</h4>
+<p>若发现以上设置都没有问题了，但是仍然访问不了Github，那么可以试试清除电脑的DNS缓存
+这里以Win11举例：
+鼠标右键点击“开始菜单”或者按“Win+X”弹出窗口，找到“Windows
+终端(管理员)”。如下图： <img src="https://s2.loli.net/2023/10/22/4eamPvjlhMqI6rn.webp">
+在命令窗口输入:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ipconfig /flushdns</span><br></pre></td></tr></table></figure>
+
+<p>按**Enter（回车键）**运行，看到已成功刷新DNS解析缓存的提示就说明DNS刷新成功了。（注：命令中间空格不可少）如下图：
+<img src="https://s2.loli.net/2023/10/22/Go41KbrZTingAzt.webp"></p>
+]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>Github</tag>
+        <tag>Windows</tag>
       </tags>
   </entry>
 </search>
