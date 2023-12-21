@@ -94,40 +94,6 @@ portfolio即为我的项目名。</p>
       </tags>
   </entry>
   <entry>
-    <title>Hexo如何隐藏文章</title>
-    <url>/blog/posts/hexoycwz.html</url>
-    <content><![CDATA[<p>本 Hexo
-插件可以在博客中隐藏指定的文章，并使它们仅可通过链接访问。</p>
-<p>当一篇文章被设置为「隐藏」时，它不会出现在任何列表中（包括首页、存档、分类页面、标签页面、Feed、站点地图等），也不会被搜索引擎索引（前提是搜索引擎遵守
-noindex 标签）。</p>
-<p>只有知道文章链接的人才可以访问被隐藏的文章。</p>
-<p>Github地址：<a href="https://github.com/printempw/hexo-hide-posts">https://github.com/printempw/hexo-hide-posts</a></p>
-<h3 id="安装">安装</h3>
-<p>在站点根目录下执行<code>npm install hexo-hide-posts --save</code></p>
-<h3 id="配置">配置</h3>
-<p>在站点目录下的<code>_config.yml</code>中如下配置：</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># hexo-hide-posts</span></span><br><span class="line"><span class="attr">hide_posts:</span></span><br><span class="line">  <span class="comment"># 可以改成其他你喜欢的名字</span></span><br><span class="line">  <span class="attr">filter:</span> <span class="string">hidden</span></span><br><span class="line">  <span class="comment"># 指定你想要传递隐藏文章的位置，比如让所有隐藏文章在存档页面可见</span></span><br><span class="line">  <span class="comment"># 常见的位置有：index, tag, category, archive, sitemap, feed, etc.</span></span><br><span class="line">  <span class="comment"># 留空则默认全部隐藏</span></span><br><span class="line">  <span class="attr">public_generators:</span> []</span><br><span class="line">  <span class="comment"># 为隐藏的文章添加 noindex meta 标签，阻止搜索引擎收录</span></span><br><span class="line">  <span class="attr">noindex:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-
-<p>举个栗子：设置 <code>filter: secret</code> 之后，你就可以在
-front-matter 中使用 <code>secret: true</code> 来隐藏文章了。</p>
-<h3 id="使用">使用</h3>
-<p>在文章的属性中定义 <code>hidden: true</code> 即可隐藏文章。</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 'Hidden Post'</span><br><span class="line">date: '2021/03/05 21:45:14'</span><br><span class="line">hidden: true</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-
-<p>虽然首页上被隐藏了，但你仍然可以通过 <code>https://hexo.test/lorem-ipsum/</code> 链接访问它。</p>
-<p>你可以在命令行运行 <code>hexo hidden:list</code> 来获取当前所有的已隐藏文章列表。</p>
-<p>插件也在 <a href="https://hexo.io/api/locals">Local
-Variables</a> 中添加了 <code>all_posts</code> 和 <code>hidden_posts</code> 变量，供自定义主题使用。</p>
-<p>文章摘自：https://blog.garryde.com/archives/37712.html</p>
-]]></content>
-      <categories>
-        <category>教程</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hexo压缩资源插件</title>
     <url>/blog/posts/minifier.html</url>
     <content><![CDATA[<p>文章来自插件hexo-all-minifier<a href="https://www.npmjs.com/package/hexo-all-minifier">官方文档</a></p>
@@ -223,69 +189,6 @@ Variables</a> 中添加了 <code>all_posts</code> 和 <code>hidden_posts</co
       <tags>
         <tag>Hexo</tag>
         <tag>插件</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Linux入门-初识Linux</title>
-    <url>/blog/posts/linuxrm.html</url>
-    <content><![CDATA[<p>最近我打算学习一下Linux 以本文记录一下我的学习过程</p>
-<h1 id="一关于linux">一、关于Linux</h1>
-<h2 id="linux的诞生">Linux的诞生</h2>
-<p>Linux创始人: 林纳斯 托瓦兹 Linux 诞生于1991年，作者上大学期间
-因为创始人在上大学期间经常需要浏览新闻和处理邮件，发现现有的操作系统不好用,
-于是他决心自己写一个保护模式下的操作系统，这就是Linux的原型，
-当时他21岁，后来经过全世界网友的支持,
-现在能够兼容多种硬件，成为最为流行的服务器操作系统之一。 <img src="https://pic.imgdb.cn/item/65634875c458853aef5abdbb.webp"> <img src="https://pic.imgdb.cn/item/65634875c458853aef5abe42.webp"></p>
-<h2 id="linux内核">Linux内核</h2>
-<p>Linux系统的组成如下：
-<strong>Linux系统内核</strong>、<strong>系统级应用程序</strong>两部分组成。
-内核提供系统最核心的功能，如：调度CPU、调度内存、调度文件系统、调度网络通讯、调度IO等。
-系统级应用程序，可以理解为出厂自带程序，可供用户快速上手操作系统，如：文件管理器、任务管理器、图片查看、音乐播放等。</p>
-<p>比如，播放音乐，无论用户使用自带音乐播放器或是自行安装的第三方播放器均是由播放器程序，调用内核提供的相关功能，由内核调度CPU解码、音响发声等。
-<img src="https://pic.imgdb.cn/item/65634875c458853aef5abeb4.webp">
-<img src="https://pic.imgdb.cn/item/65634875c458853aef5abf1c.webp">
-可以看出，内核是Linux操作系统最核心的所在，系统级应用程序只是锦上添花。
-Linux内核是免费开源的，任何人都可以下载内核源码并查看且修改。
-可以通过：https://www.kernel.org 去下载Linux内核</p>
-<p>内核是免费、开源的，这也就代表了：
-任何人都可以获得并修改内核，并且自行集成系统级程序
-提供了内核+系统级程序的完整封装，称之为Linux发行版 <img src="https://pic.imgdb.cn/item/65634875c458853aef5abf5e.webp"> <img src="https://pic.imgdb.cn/item/656348afc458853aef5be85b.webp"></p>
-<h1 id="二安装linux">二、安装Linux</h1>
-<p>在这里我用了虚拟机的方法安装Linux CentOS系统</p>
-<div class="note warning flat"><p>Linux不同发行版中的基础命令100%是相同的，只有个别软件细节不同</p>
-</div>
-
-<p>我个人认为Hyper-V虚拟机比VMware要稍微流畅一些
-所以我在这里选用Hyper-V安装CentOS
-如果你不是Windows11，那就只能用别的啦，比如VMware</p>
-<h2 id="1下载centos镜像">1.下载CentOS镜像</h2>
-]]></content>
-      <categories>
-        <category>记录</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>TED视频分享</title>
-    <url>/blog/posts/TED1.html</url>
-    <content><![CDATA[<p>本页将分享一些TED的听力视频 将提供视频文件和中英字幕文件
-下载后放置同一文件夹内 并使用相同名称即可</p>
-<h2 id="the-first-20-hours--how-to-learn-anything">The first 20 hours –
-how to learn anything</h2>
-<p><img src="https://pic.imgdb.cn/item/6541053fc458853aef4b2d0f.webp">
-原视频链接：<a href="https://www.youtube.com/watch?v=5MgBikgcWnY&amp;t=10s">前往YouTube</a>
-官网文章链接：<a href="https://ideas.ted.com/dont-have-10000-hours-to-learn-something-new-thats-fine-all-you-need-is-20-hours/">前往TED官网</a>
-官网文章转载：<a href="https://flumbrix1145.github.io/blog/2023/10/31/Don%E2%80%99t-have-10-000-hours-to-learn-something-new-That%E2%80%99s-fine-%E2%80%94-all-you-need-is-20-hours/">点击前往</a></p>
-<a class="btn-anzhiyu " href="regular::下载视频文件::https://gofile.cc/deLy/the-first-20-hours-how-to-learn-anything-josh-kaufman-tedxcsu.mp4::fa-solid fa-download" title=""></a><a class="btn-anzhiyu " href="regular::下载字幕文件::https://gofile.cc/prDW/the-first-20-hours-how-to-learn-anything-josh-kaufman-tedxcsu.srt::fa-solid fa-download" title=""></a>
-]]></content>
-      <categories>
-        <category>学习</category>
-        <category>英语</category>
-      </categories>
-      <tags>
-        <tag>TED</tag>
       </tags>
   </entry>
   <entry>
@@ -444,6 +347,103 @@ YAML 和 JSON 文件。</p>
       </categories>
       <tags>
         <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo如何隐藏文章</title>
+    <url>/blog/posts/hexoycwz.html</url>
+    <content><![CDATA[<p>本 Hexo
+插件可以在博客中隐藏指定的文章，并使它们仅可通过链接访问。</p>
+<p>当一篇文章被设置为「隐藏」时，它不会出现在任何列表中（包括首页、存档、分类页面、标签页面、Feed、站点地图等），也不会被搜索引擎索引（前提是搜索引擎遵守
+noindex 标签）。</p>
+<p>只有知道文章链接的人才可以访问被隐藏的文章。</p>
+<p>Github地址：<a href="https://github.com/printempw/hexo-hide-posts">https://github.com/printempw/hexo-hide-posts</a></p>
+<h3 id="安装">安装</h3>
+<p>在站点根目录下执行<code>npm install hexo-hide-posts --save</code></p>
+<h3 id="配置">配置</h3>
+<p>在站点目录下的<code>_config.yml</code>中如下配置：</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># hexo-hide-posts</span></span><br><span class="line"><span class="attr">hide_posts:</span></span><br><span class="line">  <span class="comment"># 可以改成其他你喜欢的名字</span></span><br><span class="line">  <span class="attr">filter:</span> <span class="string">hidden</span></span><br><span class="line">  <span class="comment"># 指定你想要传递隐藏文章的位置，比如让所有隐藏文章在存档页面可见</span></span><br><span class="line">  <span class="comment"># 常见的位置有：index, tag, category, archive, sitemap, feed, etc.</span></span><br><span class="line">  <span class="comment"># 留空则默认全部隐藏</span></span><br><span class="line">  <span class="attr">public_generators:</span> []</span><br><span class="line">  <span class="comment"># 为隐藏的文章添加 noindex meta 标签，阻止搜索引擎收录</span></span><br><span class="line">  <span class="attr">noindex:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<p>举个栗子：设置 <code>filter: secret</code> 之后，你就可以在
+front-matter 中使用 <code>secret: true</code> 来隐藏文章了。</p>
+<h3 id="使用">使用</h3>
+<p>在文章的属性中定义 <code>hidden: true</code> 即可隐藏文章。</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 'Hidden Post'</span><br><span class="line">date: '2021/03/05 21:45:14'</span><br><span class="line">hidden: true</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<p>虽然首页上被隐藏了，但你仍然可以通过 <code>https://hexo.test/lorem-ipsum/</code> 链接访问它。</p>
+<p>你可以在命令行运行 <code>hexo hidden:list</code> 来获取当前所有的已隐藏文章列表。</p>
+<p>插件也在 <a href="https://hexo.io/api/locals">Local
+Variables</a> 中添加了 <code>all_posts</code> 和 <code>hidden_posts</code> 变量，供自定义主题使用。</p>
+<p>文章摘自：https://blog.garryde.com/archives/37712.html</p>
+]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux入门-初识Linux</title>
+    <url>/blog/posts/linuxrm.html</url>
+    <content><![CDATA[<p>最近我打算学习一下Linux 以本文记录一下我的学习过程</p>
+<h1 id="一关于linux">一、关于Linux</h1>
+<h2 id="linux的诞生">Linux的诞生</h2>
+<p>Linux创始人: 林纳斯 托瓦兹 Linux 诞生于1991年，作者上大学期间
+因为创始人在上大学期间经常需要浏览新闻和处理邮件，发现现有的操作系统不好用,
+于是他决心自己写一个保护模式下的操作系统，这就是Linux的原型，
+当时他21岁，后来经过全世界网友的支持,
+现在能够兼容多种硬件，成为最为流行的服务器操作系统之一。 <img src="https://pic.imgdb.cn/item/65634875c458853aef5abdbb.webp"> <img src="https://pic.imgdb.cn/item/65634875c458853aef5abe42.webp"></p>
+<h2 id="linux内核">Linux内核</h2>
+<p>Linux系统的组成如下：
+<strong>Linux系统内核</strong>、<strong>系统级应用程序</strong>两部分组成。
+内核提供系统最核心的功能，如：调度CPU、调度内存、调度文件系统、调度网络通讯、调度IO等。
+系统级应用程序，可以理解为出厂自带程序，可供用户快速上手操作系统，如：文件管理器、任务管理器、图片查看、音乐播放等。</p>
+<p>比如，播放音乐，无论用户使用自带音乐播放器或是自行安装的第三方播放器均是由播放器程序，调用内核提供的相关功能，由内核调度CPU解码、音响发声等。
+<img src="https://pic.imgdb.cn/item/65634875c458853aef5abeb4.webp">
+<img src="https://pic.imgdb.cn/item/65634875c458853aef5abf1c.webp">
+可以看出，内核是Linux操作系统最核心的所在，系统级应用程序只是锦上添花。
+Linux内核是免费开源的，任何人都可以下载内核源码并查看且修改。
+可以通过：https://www.kernel.org 去下载Linux内核</p>
+<p>内核是免费、开源的，这也就代表了：
+任何人都可以获得并修改内核，并且自行集成系统级程序
+提供了内核+系统级程序的完整封装，称之为Linux发行版 <img src="https://pic.imgdb.cn/item/65634875c458853aef5abf5e.webp"> <img src="https://pic.imgdb.cn/item/656348afc458853aef5be85b.webp"></p>
+<h1 id="二安装linux">二、安装Linux</h1>
+<p>在这里我用了虚拟机的方法安装Linux CentOS系统</p>
+<div class="note warning flat"><p>Linux不同发行版中的基础命令100%是相同的，只有个别软件细节不同</p>
+</div>
+
+<p>我个人认为Hyper-V虚拟机比VMware要稍微流畅一些
+所以我在这里选用Hyper-V安装CentOS
+如果你不是Windows11，那就只能用别的啦，比如VMware</p>
+<h2 id="1下载centos镜像">1.下载CentOS镜像</h2>
+]]></content>
+      <categories>
+        <category>记录</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>TED视频分享</title>
+    <url>/blog/posts/TED1.html</url>
+    <content><![CDATA[<p>本页将分享一些TED的听力视频 将提供视频文件和中英字幕文件
+下载后放置同一文件夹内 并使用相同名称即可</p>
+<h2 id="the-first-20-hours--how-to-learn-anything">The first 20 hours –
+how to learn anything</h2>
+<p><img src="https://pic.imgdb.cn/item/6541053fc458853aef4b2d0f.webp">
+原视频链接：<a href="https://www.youtube.com/watch?v=5MgBikgcWnY&amp;t=10s">前往YouTube</a>
+官网文章链接：<a href="https://ideas.ted.com/dont-have-10000-hours-to-learn-something-new-thats-fine-all-you-need-is-20-hours/">前往TED官网</a>
+官网文章转载：<a href="https://flumbrix1145.github.io/blog/2023/10/31/Don%E2%80%99t-have-10-000-hours-to-learn-something-new-That%E2%80%99s-fine-%E2%80%94-all-you-need-is-20-hours/">点击前往</a></p>
+<a class="btn-anzhiyu " href="regular::下载视频文件::https://gofile.cc/deLy/the-first-20-hours-how-to-learn-anything-josh-kaufman-tedxcsu.mp4::fa-solid fa-download" title=""></a><a class="btn-anzhiyu " href="regular::下载字幕文件::https://gofile.cc/prDW/the-first-20-hours-how-to-learn-anything-josh-kaufman-tedxcsu.srt::fa-solid fa-download" title=""></a>
+]]></content>
+      <categories>
+        <category>学习</category>
+        <category>英语</category>
+      </categories>
+      <tags>
+        <tag>TED</tag>
       </tags>
   </entry>
   <entry>
@@ -1497,22 +1497,25 @@ registry更改为<strong>淘宝镜像</strong>，提升安装速度。</li>
     <content><![CDATA[<h1 id="安装插件--写入配置">安装插件 &amp; 写入配置</h1>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-algoliasearch --save</span><br></pre></td></tr></table></figure>
 
-<p>打开博客根目录的**_config.yml**,粘贴以下内容</p>
+<p>打开博客根目录的<code>_config.yml</code>,粘贴以下内容</p>
 <figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">algolia:</span></span><br><span class="line">  <span class="attr">appId:</span> <span class="string">"your applicationID"</span></span><br><span class="line">  <span class="attr">apiKey:</span> <span class="string">"your Search-Only API Key"</span></span><br><span class="line">  <span class="attr">adminApiKey:</span> <span class="string">"your Admin API Key"</span></span><br><span class="line">  <span class="attr">chunkSize:</span> <span class="number">5000</span></span><br><span class="line">  <span class="attr">indexName:</span> <span class="string">"your indexName"</span></span><br><span class="line">  <span class="attr">fields:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">content:strip:truncate,0,500</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">excerpt:strip</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">gallery</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">permalink</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">photos</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">slug</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">tags</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">title</span></span><br></pre></td></tr></table></figure>
 
 <h1 id="获取key">获取Key</h1>
 <p>打开<a href="https://www.algolia.com">Algolia官网</a>，注册账号
-进入主界面后，点击<u>Indices</u>，新建<strong>Index</strong> <img src="https://pic.imgdb.cn/item/65844ab7c458853aef1b5e34.webp">
+进入主界面后，点击<u>Indices</u>，新建<code>Index</code> <img src="https://pic.imgdb.cn/item/65844ab7c458853aef1b5e34.webp">
 名称随便填 <img src="https://pic.imgdb.cn/item/65844ab7c458853aef1b5f33.webp">
-点击左下角<u>设置</u>，查看<strong>Application
-ID</strong>、<strong>Search-Only API Key</strong>和<strong>Admin API
-Key</strong> <img src="https://pic.imgdb.cn/item/65844ab7c458853aef1b5ffe.webp">
-返回**_config.yml**,填入你自己的数据，运行</p>
+点击左下角<u>设置</u>，查看<code>Application ID</code>、<code>Search-Only API Key</code>和**Admin
+API
+Key<code> ![](https://pic.imgdb.cn/item/65844ab7c458853aef1b5ffe.webp) 返回</code>_config.yml`,填入你自己的数据，运行</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo algolia</span><br></pre></td></tr></table></figure>
 
 <p><img src="https://pic.imgdb.cn/item/65844ab7c458853aef1b602f.webp">
-出现以下提示，就是成功了 <img src="https://pic.imgdb.cn/item/65844ab7c458853aef1b6063.webp">
-最后hexo三件套长传就完成了</p>
+出现以下提示，就是成功了 <img src="https://pic.imgdb.cn/item/65844ab7c458853aef1b6063.webp"></p>
+<h1 id="修改主题配置文件">修改主题配置文件</h1>
+<p>打开<code>_config.anzhiyu.yml</code>,将algolia搜索设为允许</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Algolia search</span></span><br><span class="line"><span class="attr">algolia_search:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">hits:</span></span><br><span class="line">    <span class="attr">per_page:</span> <span class="number">6</span></span><br><span class="line">  <span class="attr">tags:</span></span><br><span class="line">     <span class="bullet">-</span> <span class="string">Github</span></span><br><span class="line">     <span class="bullet">-</span> <span class="string">Hexo</span></span><br></pre></td></tr></table></figure>
+
+<p>最后hexo三件套长传就完成了</p>
 ]]></content>
       <categories>
         <category>教程</category>
