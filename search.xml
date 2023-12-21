@@ -1,99 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Github文件上传(Git)</title>
-    <url>/blog/posts/githubsc.html</url>
-    <content><![CDATA[<h2 id="1创建-github-代码仓库">1.创建 GitHub 代码仓库</h2>
-<p>首先在 GitHub 上创建自己的仓库，进入 GitHub
-官网并登陆，点击 <strong>New repository</strong> 如下图 <img src="https://s2.loli.net/2023/10/27/Zvkpj2in6XJCBUO.webp"></p>
-<p>然后输入自己的仓库名称及仓库说明，输入完毕后点击 <strong>Create repository</strong>
-<img src="https://s2.loli.net/2023/10/27/fGE1h8xjNSAu3Hl.webp"></p>
-<blockquote>
-<ul>
-<li>Repository name: 仓库名称</li>
-<li>Description(可选): 仓库描述介绍</li>
-<li>Public, Private : 仓库权限（公开共享，私有或指定合作者）</li>
-<li>Initialize this repository with a README: 添加一个README.md</li>
-<li>gitignore: 不需要进行版本管理的仓库类型，对应生成文件.gitignore</li>
-<li>license: 证书类型，对应生成文件LICENSE</li>
-</ul>
-</blockquote>
-<p>如下图所示，建立好了一个代码仓库，可将项目的文件、文件夹通过
-Git 上传至此 <img src="https://s2.loli.net/2023/10/27/SRiryGc2Y7sLbMu.webp"></p>
-<h2 id="2获取-git">2.获取 Git</h2>
-<p>在Git官网下载最新版本的Git软件安装到本地：</p>
-<a class="btn-anzhiyu " href="regular::Giit下载::https://www.git-scm.com/download/::fa-solid fa-play-circle" title=""></a>
-
-<h2 id="3上传本地项目文件到-github-新建仓库">3.上传本地项目文件到 GitHub
-新建仓库</h2>
-<p>点击<strong>Clone or
-dowload</strong>会出现一个地址，copy这个地址备用。</p>
-<p><img src="https://s2.loli.net/2023/10/27/V4Qw6HXv3hIepft.webp"></p>
-<p>接下来回到本地操作，首先右键你的项目，如果你之前安装git成功的话，右键会出现两个新选项，分别为
-<strong>Git Gui Here , Git Bash Here</strong> ,这里我们选择 <strong>Git
-Bash Here</strong> ，进入如下界面，personal
-portfolio即为我的项目名。</p>
-<p><img src="https://s2.loli.net/2023/10/29/Mt5aewXp68vsnAi.webp"></p>
-<p>接下来输入如下命令（关键步骤），把github上面的仓库克隆到本地</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> 仓库地址</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://s2.loli.net/2023/10/29/npKIQE9TmoRZ2Sz.webp"></p>
-<p>执行完成后，本地项目文件夹中<strong>会多出一个和github上面的仓库名相同的文件夹</strong>，我们把本地项目文件夹下的所有文件（除了新多出的那个文件夹）都复制到那个新多出的文件夹下</p>
-<p>输入命令,进入本地仓库文件夹</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> 仓库名称</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://s2.loli.net/2023/10/29/8AcyDvYIH4lnVsG.webp">
-<strong>9.接下来依次输入以下代码即可完成其他剩余操作：</strong></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git add .</span><br></pre></td></tr></table></figure>
-
-<p>格式：<strong>add + 空格 + 英文句号</strong>
-,后面的“<strong>.</strong>“是把该文件夹下面的文件都添加进来）</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git commit -m <span class="string">"first"</span></span><br></pre></td></tr></table></figure>
-
-<p><img src="https://s2.loli.net/2023/10/29/3m1saHzLRrpudQS.webp">
-<strong>提交信息</strong>  （<em>“提交信息”是自定义的，如“first”</em>）</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git pull origin master</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://s2.loli.net/2023/10/29/cXJQ6KGAL5HR2xe.webp">
-<em>先使用pull，进行合并然后再进行push，即先使用pull将远程文件同步下来。</em></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://s2.loli.net/2023/10/29/kAbHtxioMcQlNf7.webp">
-<em>此操作目的是把本地仓库push到github上面</em>
-<strong>完成以上步骤后，查看代码仓库会发现项目已经上传成功</strong> <img src="https://s2.loli.net/2023/10/29/7SX6aRs1dULWMHV.webp"></p>
-<h2 id="4使用git更新github仓库文件">4.使用Git更新GitHub仓库文件</h2>
-<p>如果想更新整体文件夹，使用</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git add .</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
-
-<p>即可</p>
-<h2 id="5使用git删除github仓库文件夹">5.使用Git删除Github仓库文件夹</h2>
-<p><strong>拉取远程的Repo到本地</strong>(如果已在本地，可以略过)</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> 仓库地址</span><br></pre></td></tr></table></figure>
-
-<p><strong>在本地删除文件</strong></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">rm</span> 我的文件</span><br></pre></td></tr></table></figure>
-
-<p><strong>在本地仓库删除文件夹</strong></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">rm</span> -r 我的文件夹/</span><br></pre></td></tr></table></figure>
-
-<p>此处<font color="#00b0f0">-r</font>表示递归所有子目录，如果你要删除的是空文件夹，则不需要带上<font color="#00b0f0">-r</font>
-<strong>提交代码</strong></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git commit -m <span class="string">"我的修改"</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>推送到Github仓库</strong></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git push --mirror master</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>教程</category>
-      </categories>
-      <tags>
-        <tag>Github</tag>
-        <tag>Git</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hexo压缩资源插件</title>
     <url>/blog/posts/minifier.html</url>
     <content><![CDATA[<p>文章来自插件hexo-all-minifier<a href="https://www.npmjs.com/package/hexo-all-minifier">官方文档</a></p>
@@ -189,6 +96,99 @@ portfolio即为我的项目名。</p>
       <tags>
         <tag>Hexo</tag>
         <tag>插件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Github文件上传(Git)</title>
+    <url>/blog/posts/githubsc.html</url>
+    <content><![CDATA[<h2 id="1创建-github-代码仓库">1.创建 GitHub 代码仓库</h2>
+<p>首先在 GitHub 上创建自己的仓库，进入 GitHub
+官网并登陆，点击 <strong>New repository</strong> 如下图 <img src="https://s2.loli.net/2023/10/27/Zvkpj2in6XJCBUO.webp"></p>
+<p>然后输入自己的仓库名称及仓库说明，输入完毕后点击 <strong>Create repository</strong>
+<img src="https://s2.loli.net/2023/10/27/fGE1h8xjNSAu3Hl.webp"></p>
+<blockquote>
+<ul>
+<li>Repository name: 仓库名称</li>
+<li>Description(可选): 仓库描述介绍</li>
+<li>Public, Private : 仓库权限（公开共享，私有或指定合作者）</li>
+<li>Initialize this repository with a README: 添加一个README.md</li>
+<li>gitignore: 不需要进行版本管理的仓库类型，对应生成文件.gitignore</li>
+<li>license: 证书类型，对应生成文件LICENSE</li>
+</ul>
+</blockquote>
+<p>如下图所示，建立好了一个代码仓库，可将项目的文件、文件夹通过
+Git 上传至此 <img src="https://s2.loli.net/2023/10/27/SRiryGc2Y7sLbMu.webp"></p>
+<h2 id="2获取-git">2.获取 Git</h2>
+<p>在Git官网下载最新版本的Git软件安装到本地：</p>
+<a class="btn-anzhiyu " href="regular::Giit下载::https://www.git-scm.com/download/::fa-solid fa-play-circle" title=""></a>
+
+<h2 id="3上传本地项目文件到-github-新建仓库">3.上传本地项目文件到 GitHub
+新建仓库</h2>
+<p>点击<strong>Clone or
+dowload</strong>会出现一个地址，copy这个地址备用。</p>
+<p><img src="https://s2.loli.net/2023/10/27/V4Qw6HXv3hIepft.webp"></p>
+<p>接下来回到本地操作，首先右键你的项目，如果你之前安装git成功的话，右键会出现两个新选项，分别为
+<strong>Git Gui Here , Git Bash Here</strong> ,这里我们选择 <strong>Git
+Bash Here</strong> ，进入如下界面，personal
+portfolio即为我的项目名。</p>
+<p><img src="https://s2.loli.net/2023/10/29/Mt5aewXp68vsnAi.webp"></p>
+<p>接下来输入如下命令（关键步骤），把github上面的仓库克隆到本地</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> 仓库地址</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://s2.loli.net/2023/10/29/npKIQE9TmoRZ2Sz.webp"></p>
+<p>执行完成后，本地项目文件夹中<strong>会多出一个和github上面的仓库名相同的文件夹</strong>，我们把本地项目文件夹下的所有文件（除了新多出的那个文件夹）都复制到那个新多出的文件夹下</p>
+<p>输入命令,进入本地仓库文件夹</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> 仓库名称</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://s2.loli.net/2023/10/29/8AcyDvYIH4lnVsG.webp">
+<strong>9.接下来依次输入以下代码即可完成其他剩余操作：</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git add .</span><br></pre></td></tr></table></figure>
+
+<p>格式：<strong>add + 空格 + 英文句号</strong>
+,后面的“<strong>.</strong>“是把该文件夹下面的文件都添加进来）</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git commit -m <span class="string">"first"</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://s2.loli.net/2023/10/29/3m1saHzLRrpudQS.webp">
+<strong>提交信息</strong>  （<em>“提交信息”是自定义的，如“first”</em>）</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git pull origin master</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://s2.loli.net/2023/10/29/cXJQ6KGAL5HR2xe.webp">
+<em>先使用pull，进行合并然后再进行push，即先使用pull将远程文件同步下来。</em></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://s2.loli.net/2023/10/29/kAbHtxioMcQlNf7.webp">
+<em>此操作目的是把本地仓库push到github上面</em>
+<strong>完成以上步骤后，查看代码仓库会发现项目已经上传成功</strong> <img src="https://s2.loli.net/2023/10/29/7SX6aRs1dULWMHV.webp"></p>
+<h2 id="4使用git更新github仓库文件">4.使用Git更新GitHub仓库文件</h2>
+<p>如果想更新整体文件夹，使用</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git add .</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
+
+<p>即可</p>
+<h2 id="5使用git删除github仓库文件夹">5.使用Git删除Github仓库文件夹</h2>
+<p><strong>拉取远程的Repo到本地</strong>(如果已在本地，可以略过)</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> 仓库地址</span><br></pre></td></tr></table></figure>
+
+<p><strong>在本地删除文件</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">rm</span> 我的文件</span><br></pre></td></tr></table></figure>
+
+<p><strong>在本地仓库删除文件夹</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">rm</span> -r 我的文件夹/</span><br></pre></td></tr></table></figure>
+
+<p>此处<font color="#00b0f0">-r</font>表示递归所有子目录，如果你要删除的是空文件夹，则不需要带上<font color="#00b0f0">-r</font>
+<strong>提交代码</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git commit -m <span class="string">"我的修改"</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>推送到Github仓库</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git push --mirror master</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>Github</tag>
+        <tag>Git</tag>
       </tags>
   </entry>
   <entry>
@@ -381,6 +381,48 @@ YAML 和 JSON 文件。</p>
       </categories>
       <tags>
         <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux入门-初识Linux</title>
+    <url>/blog/posts/linuxrm.html</url>
+    <content><![CDATA[<p>最近我打算学习一下Linux 以本文记录一下我的学习过程</p>
+<h1 id="一关于linux">一、关于Linux</h1>
+<h2 id="linux的诞生">Linux的诞生</h2>
+<p>Linux创始人: 林纳斯 托瓦兹 Linux 诞生于1991年，作者上大学期间
+因为创始人在上大学期间经常需要浏览新闻和处理邮件，发现现有的操作系统不好用,
+于是他决心自己写一个保护模式下的操作系统，这就是Linux的原型，
+当时他21岁，后来经过全世界网友的支持,
+现在能够兼容多种硬件，成为最为流行的服务器操作系统之一。 <img src="https://pic.imgdb.cn/item/65634875c458853aef5abdbb.webp"> <img src="https://pic.imgdb.cn/item/65634875c458853aef5abe42.webp"></p>
+<h2 id="linux内核">Linux内核</h2>
+<p>Linux系统的组成如下：
+<strong>Linux系统内核</strong>、<strong>系统级应用程序</strong>两部分组成。
+内核提供系统最核心的功能，如：调度CPU、调度内存、调度文件系统、调度网络通讯、调度IO等。
+系统级应用程序，可以理解为出厂自带程序，可供用户快速上手操作系统，如：文件管理器、任务管理器、图片查看、音乐播放等。</p>
+<p>比如，播放音乐，无论用户使用自带音乐播放器或是自行安装的第三方播放器均是由播放器程序，调用内核提供的相关功能，由内核调度CPU解码、音响发声等。
+<img src="https://pic.imgdb.cn/item/65634875c458853aef5abeb4.webp">
+<img src="https://pic.imgdb.cn/item/65634875c458853aef5abf1c.webp">
+可以看出，内核是Linux操作系统最核心的所在，系统级应用程序只是锦上添花。
+Linux内核是免费开源的，任何人都可以下载内核源码并查看且修改。
+可以通过：https://www.kernel.org 去下载Linux内核</p>
+<p>内核是免费、开源的，这也就代表了：
+任何人都可以获得并修改内核，并且自行集成系统级程序
+提供了内核+系统级程序的完整封装，称之为Linux发行版 <img src="https://pic.imgdb.cn/item/65634875c458853aef5abf5e.webp"> <img src="https://pic.imgdb.cn/item/656348afc458853aef5be85b.webp"></p>
+<h1 id="二安装linux">二、安装Linux</h1>
+<p>在这里我用了虚拟机的方法安装Linux CentOS系统</p>
+<div class="note warning flat"><p>Linux不同发行版中的基础命令100%是相同的，只有个别软件细节不同</p>
+</div>
+
+<p>我个人认为Hyper-V虚拟机比VMware要稍微流畅一些
+所以我在这里选用Hyper-V安装CentOS
+如果你不是Windows11，那就只能用别的啦，比如VMware</p>
+<h2 id="1下载centos镜像">1.下载CentOS镜像</h2>
+]]></content>
+      <categories>
+        <category>记录</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -1283,6 +1325,49 @@ HTML 实体。）</p>
       </tags>
   </entry>
   <entry>
+    <title>alist分享站合集</title>
+    <url>/blog/posts/alist.html</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="e05549df2db6f70cee2593aa154e3af6285f20e66c9830b6c64be5b2f8a34547">01079e04cb506c854a329d33ee789b0bc61f2bce16c53d5fbd79ea03009524ed18e4b635dae6709b6be8427a40aeab0aa4583f955ef77e9c24482f3bde710dda3e697867b3e9e51b507b8580e1981f7ac770533ecff62db0c29f8ed157fef3ad0c2b75924501a5d218ba92c68c2bf9d0b11fc26c329f8f8fb7c165e5ca43051a69d35757e33eeccc6a7bfef89a4276fbc06de2653fbd1ccc933f2bc0d8403a6690dc565c7bed4248fae1e145b5e3009bb58c30d14b42c621cc7e4b8c972b0cda7978edf09f1826bb0404c527c9e72c8484f91f5dab0665eeb96945551ce10cba5cc011ec7ce35887bf5baa061bb90331b8ad7da5f41acf2a43b46fad925799bb0f75b0ac31b29e3b83d11b137e43f41ad6cf07ed015c56d080c9f722c9cf5e228104e6114df34bd9faa78366658ebba63821ecabb9dc16c2c9b214cfdf7339e0359d4ea34aa6e834eac6697cca9d4ac095f4b389c310c30ad70038d5070d574f55e26db075e858b5dec8e41035c73000bf723eef0ddcf1fe51ab2c51121d118a931fd51c94c6b2862427c3bfdc993cdeeeb2f3306a3fc16edc1adcfecc0b54fc72cace46d6b41df46fdf6dc3a23cd503b2789c5f4d1a49d2157af8b199af592a519b4abd897284023f84725a2ecc7abc565178c1a1255bc82eb815df040838af1cd1f049dbc82e513020d274005f5e5df52fe46cf3bd156d40377e57990eae19b0e384b4f5d1dcab23413fc4f0cf87209d667053c47817811cf82ea4d5019db2ec47227cc8ceda28552483d793203de7c76038ecd040aa4d414b4ee3bea54828b77656e994fc41c4c6de68b05bcde63d9b6bc26893d2df4aef59637b602b9002cadbc1a95fb617b0b922fb6bdce8d502f89bf5170603bdf073565ad7eb2fe2feef66c96836efdbea25d16c4aba51fc22f670fd1104f33490f9c46b6a747945d45c13d59b43a994e536202b8bf6b023ffa815895e1dd3b0a48febafe96b46187bc764b08f65ec4ff3b88877064f4f1c2ecf8f24ce9b8adb64d3b14230b55fea49d4dda3c1f7f55e90929147a4590dc859371142d89363a142a73e04c184b0d94a6675f42cedab83b396c7701ba343c6f7291a79c3072abd7414098803ab449056ee4f704b200a6c999170bfeb6a4784fc3dab9285ee930743609173e66dbf8430ccc195f28cb23db0e8356bc90730f4c32e437b1f00bedc71d3eb7b8ab144bc35a0a8bcc2c40af61ac52d62bd1ede855fb166a9a0b280414d7add4d7e531faa76e4cfa896cdc82212a8caaa214262b21dbb8fccc227cf2fdb3abfd6cac2be02f0bdc1223f3ed9a7f29d79dc0d69480151377d8b222fd8bf8319a253205e13b76f5830d21acab8139f5678b218cd4daef8e1d10fa252f62da3a24da0be03b7965b2d7d52134fbb5fcd9283d41aae752ca35e648b5ec2099cf5115d27450534ca214b3e0c38ac8d2b9017bc1303bd34af8fe3ddef71fc3c3e5996fce68a8621d1e1bcd7c8d06fa96332900318cba48c83e1cc67a08ec04761349f8c125da4f9a5af927df92bba7735cb8eec0dd89ea041ad1ffa6b9a72dfbb9ad7e0cd25ccfe86b2c03b5fb7bfd60f191d1f8d82e91a17c7e996ea1a208f93fce2be31d97f2d22e815b60694b79f91d6feb3c45cff978f2ba13cb71fe644709cb6a2f3439bae81e7396edfa940cb1a4df2c229e7f4a4960db2a8ac041baae954bf3baffd41dab6b186380084a4d863bc07e3eb8c193b5f092ec51c30b55123f2aa32f83391b9a3e0d41e28b5b5f1a4abd86e7b2f5bce0ff0bce9a220b522e6c190491d8a7b3494e3235bcd0f2d2509a5448dc466b0390faa2d0935fdc9217ee656082e3041ca5efe95f7c3df8ddc6651d63b7b752694860c4a7ff180be934ac44d89e365ddf555e8028aaabdffa807a1f934de5143fff71351d9f0bf00289935babae58b0f798003cc2e61042f24c8bd10c0994e98bcef407cf5653df4c05bfbdc490a27fcb8d7e57f9d0f4f3bdc0c0f4e442f261876197d75b63e58cb6ec209e17476fe2751564de865201c5a604a4f68961204e614e3535399ab769b782739ab96815301494919ae75f8871f2afeffaa7a2b8aa6079bf183ae88cba11a1b349080f9bebf154c68346002e1cd5c37ebe7edff5c31824721653e5a3c263b244ccc44ef0449950c0fc4548e8eeb0ba578a4b4bc74090606e7c08afa3bd3518b88fe1dc59c9a366335bb0e6847d215849db50a0dec8f7635ba9c7f5b158468bcf347e720252fcaa56667597f3d5bb87512fbef65838be5ba8be8a419c568eed4b3fff642e1970eda73375b8cb88da2aad74f25875f24c293b6ecba7d526bf126fe69c1a874877f011ebe550ae9fc268194ae4264a9e20d826e4bf3a94e38846dfe5db64b53bedaf40fdca09664d0bb430f2faa9ae7e0fedb908c74b3f44524b03f8c551ebec36de0971186d683104510b10cc37fc45ed3a835592ca2d74df76c7ef913fc0808d82771d855a036971543f1b04739ead12d09251752326e780854b1e1dff297d440b8fe02d7085ff2acf40cdc27fcb56ae4a40ac2bc6cc804a6fdc89932c240a7d74a7abcef83227eec2a57da614137c22b91a0ac875899764d9d90b0b358092e2b8ca81620a25f9db62eccb1bac8f29dfbd8c862a160a34fac7fb81aa17a8fd1dec6777b2c90c13a5d1423c497dc0a6dacf908cc1a0be8ef82d90eccab74f63bf4763560bcc45cddb30c6cd9becd17f5343d44dad860c9a740c7ecbc74592002c0df122e7728ac1628281a7b47f937ff892b50f1d006e3ff11a47e82e6dc438630ea8dc48200062539dfb1cc11191b0ad2eeef8db29275cc7836aadfbf0c470ff2d464da3fa16f22e6da3cf0d363d6b52b6c6f7735995c139075a4b5588725c87f6275c73a96be030b128a7c8a6fb823e2c94d0bff5fe9f187fcd728b5a425c02c77d6aab4eb9cce64dfb3bff354e12b641c28cdcb5d19569a15f00246d59b0cc55310f1e832d491c12c93d3d8d0e2ec03534f995209bdb556a1923cd0dc458ffcf2d1235acd6cd98a1ccee21e4dcc3de7f9d8ba446bde14e028da882cea01af707cb029bebc840b119537f12211b265648a8aa141b7dc44409cfff603141aa7de46ec583c507d46502359ccb139f0b7491e4d3e50c50af118166f5bc0ec0a8faae3e1c141eb5820ba1d5a4166ec81c466ce09af664969b10d4fb36278f856a8f20d54bf6389aea23b5833f078f32a9520a15f533afd7c981bba3d65bdd974b8a07b5adf2bf3c9fecb6c866863c1d2976a523ff8803b32ce3fe1e2f53023a14a4e86dc5309835e7bcfc2f961b874957a0790acfd40c4e5d7b3d780001e6ce81cdf662cc2bf81dd0abf87240bde71dfecaa22fc581bf46bdf131cdf37882b6e622fd00f4cecf22fdd543d655164ed22f45f19819a7ef5e4e3bfd54fc62c7c9af7673a8d526f1cb66ca2b65b55534c28aef89f76e89137f7cea453df7b056bf76793364cd340fa50c7cd3ec812409e7d46b88f0c3edfdcbbb08724cd6331f6f6589b7ecc31fe67391c4a404109ec3c4044a2029c748aaa179c574e2240537f4532f28ab148b287e9e623721649b5b42a973b5a3d03020fd5b0ec677ccb46d603d5bdd5c88f4a718bc65552e9ac56806aa6cf89a7050e8cd22fa4dbaa4dcdf77175e2b728c8c4645c66864576af01a3675b4bab37bf8f85408a8ee4c0e869a97c303c149a57638af05f7aacaea6a80eba828e9c821781eb24f61e2b99353e057720784ab9aaee2aa4e45d0cd5402ee90b532d7f58b6e90dfa0f86ba0adeb6b3de7ec964ce911ec03945eb2a2b1101524c92e224b84e80c206778cc321c01c7833b31ce5a6</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Hey, password is required here.</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/blog/lib/hbe.js"></script><link href="/blog/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+      <categories>
+        <category>内容分享</category>
+      </categories>
+      <tags>
+        <tag>alist</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>TED视频分享</title>
+    <url>/blog/posts/TED1.html</url>
+    <content><![CDATA[<p>本页将分享一些TED的听力视频 将提供视频文件和中英字幕文件
+下载后放置同一文件夹内 并使用相同名称即可</p>
+<h2 id="the-first-20-hours--how-to-learn-anything">The first 20 hours –
+how to learn anything</h2>
+<p><img src="https://pic.imgdb.cn/item/6541053fc458853aef4b2d0f.webp">
+原视频链接：<a href="https://www.youtube.com/watch?v=5MgBikgcWnY&amp;t=10s">前往YouTube</a>
+官网文章链接：<a href="https://ideas.ted.com/dont-have-10000-hours-to-learn-something-new-thats-fine-all-you-need-is-20-hours/">前往TED官网</a>
+官网文章转载：<a href="https://flumbrix1145.github.io/blog/2023/10/31/Don%E2%80%99t-have-10-000-hours-to-learn-something-new-That%E2%80%99s-fine-%E2%80%94-all-you-need-is-20-hours/">点击前往</a></p>
+<a class="btn-anzhiyu " href="regular::下载视频文件::https://gofile.cc/deLy/the-first-20-hours-how-to-learn-anything-josh-kaufman-tedxcsu.mp4::fa-solid fa-download" title=""></a><a class="btn-anzhiyu " href="regular::下载字幕文件::https://gofile.cc/prDW/the-first-20-hours-how-to-learn-anything-josh-kaufman-tedxcsu.srt::fa-solid fa-download" title=""></a>
+]]></content>
+      <categories>
+        <category>学习</category>
+        <category>英语</category>
+      </categories>
+      <tags>
+        <tag>TED</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Win11安装杜比全景声方法</title>
     <url>/blog/posts/dloby.html</url>
     <content><![CDATA[<h1 id="在-windows-11-中安装杜比全景声">在 Windows 11
@@ -1378,28 +1463,6 @@ DVD 或蓝光。</p>
       </tags>
   </entry>
   <entry>
-    <title>alist分享站合集</title>
-    <url>/blog/posts/alist.html</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="e05549df2db6f70cee2593aa154e3af6285f20e66c9830b6c64be5b2f8a34547">01079e04cb506c854a329d33ee789b0bc61f2bce16c53d5fbd79ea03009524ed18e4b635dae6709b6be8427a40aeab0aa4583f955ef77e9c24482f3bde710dda3e697867b3e9e51b507b8580e1981f7ac770533ecff62db0c29f8ed157fef3ad0c2b75924501a5d218ba92c68c2bf9d0b11fc26c329f8f8fb7c165e5ca43051a69d35757e33eeccc6a7bfef89a4276fbc06de2653fbd1ccc933f2bc0d8403a6690dc565c7bed4248fae1e145b5e3009bb58c30d14b42c621cc7e4b8c972b0cda7978edf09f1826bb0404c527c9e72c8484f91f5dab0665eeb96945551ce10cba5cc011ec7ce35887bf5baa061bb90331b8ad7da5f41acf2a43b46fad925799bb0f75b0ac31b29e3b83d11b137e43f41ad6cf07ed015c56d080c9f722c9cf5e228104e6114df34bd9faa78366658ebba63821ecabb9dc16c2c9b214cfdf7339e0359d4ea34aa6e834eac6697cca9d4ac095f4b389c310c30ad70038d5070d574f55e26db075e858b5dec8e41035c73000bf723eef0ddcf1fe51ab2c51121d118a931fd51c94c6b2862427c3bfdc993cdeeeb2f3306a3fc16edc1adcfecc0b54fc72cace46d6b41df46fdf6dc3a23cd503b2789c5f4d1a49d2157af8b199af592a519b4abd897284023f84725a2ecc7abc565178c1a1255bc82eb815df040838af1cd1f049dbc82e513020d274005f5e5df52fe46cf3bd156d40377e57990eae19b0e384b4f5d1dcab23413fc4f0cf87209d667053c47817811cf82ea4d5019db2ec47227cc8ceda28552483d793203de7c76038ecd040aa4d414b4ee3bea54828b77656e994fc41c4c6de68b05bcde63d9b6bc26893d2df4aef59637b602b9002cadbc1a95fb617b0b922fb6bdce8d502f89bf5170603bdf073565ad7eb2fe2feef66c96836efdbea25d16c4aba51fc22f670fd1104f33490f9c46b6a747945d45c13d59b43a994e536202b8bf6b023ffa815895e1dd3b0a48febafe96b46187bc764b08f65ec4ff3b88877064f4f1c2ecf8f24ce9b8adb64d3b14230b55fea49d4dda3c1f7f55e90929147a4590dc859371142d89363a142a73e04c184b0d94a6675f42cedab83b396c7701ba343c6f7291a79c3072abd7414098803ab449056ee4f704b200a6c999170bfeb6a4784fc3dab9285ee930743609173e66dbf8430ccc195f28cb23db0e8356bc90730f4c32e437b1f00bedc71d3eb7b8ab144bc35a0a8bcc2c40af61ac52d62bd1ede855fb166a9a0b280414d7add4d7e531faa76e4cfa896cdc82212a8caaa214262b21dbb8fccc227cf2fdb3abfd6cac2be02f0bdc1223f3ed9a7f29d79dc0d69480151377d8b222fd8bf8319a253205e13b76f5830d21acab8139f5678b218cd4daef8e1d10fa252f62da3a24da0be03b7965b2d7d52134fbb5fcd9283d41aae752ca35e648b5ec2099cf5115d27450534ca214b3e0c38ac8d2b9017bc1303bd34af8fe3ddef71fc3c3e5996fce68a8621d1e1bcd7c8d06fa96332900318cba48c83e1cc67a08ec04761349f8c125da4f9a5af927df92bba7735cb8eec0dd89ea041ad1ffa6b9a72dfbb9ad7e0cd25ccfe86b2c03b5fb7bfd60f191d1f8d82e91a17c7e996ea1a208f93fce2be31d97f2d22e815b60694b79f91d6feb3c45cff978f2ba13cb71fe644709cb6a2f3439bae81e7396edfa940cb1a4df2c229e7f4a4960db2a8ac041baae954bf3baffd41dab6b186380084a4d863bc07e3eb8c193b5f092ec51c30b55123f2aa32f83391b9a3e0d41e28b5b5f1a4abd86e7b2f5bce0ff0bce9a220b522e6c190491d8a7b3494e3235bcd0f2d2509a5448dc466b0390faa2d0935fdc9217ee656082e3041ca5efe95f7c3df8ddc6651d63b7b752694860c4a7ff180be934ac44d89e365ddf555e8028aaabdffa807a1f934de5143fff71351d9f0bf00289935babae58b0f798003cc2e61042f24c8bd10c0994e98bcef407cf5653df4c05bfbdc490a27fcb8d7e57f9d0f4f3bdc0c0f4e442f261876197d75b63e58cb6ec209e17476fe2751564de865201c5a604a4f68961204e614e3535399ab769b782739ab96815301494919ae75f8871f2afeffaa7a2b8aa6079bf183ae88cba11a1b349080f9bebf154c68346002e1cd5c37ebe7edff5c31824721653e5a3c263b244ccc44ef0449950c0fc4548e8eeb0ba578a4b4bc74090606e7c08afa3bd3518b88fe1dc59c9a366335bb0e6847d215849db50a0dec8f7635ba9c7f5b158468bcf347e720252fcaa56667597f3d5bb87512fbef65838be5ba8be8a419c568eed4b3fff642e1970eda73375b8cb88da2aad74f25875f24c293b6ecba7d526bf126fe69c1a874877f011ebe550ae9fc268194ae4264a9e20d826e4bf3a94e38846dfe5db64b53bedaf40fdca09664d0bb430f2faa9ae7e0fedb908c74b3f44524b03f8c551ebec36de0971186d683104510b10cc37fc45ed3a835592ca2d74df76c7ef913fc0808d82771d855a036971543f1b04739ead12d09251752326e780854b1e1dff297d440b8fe02d7085ff2acf40cdc27fcb56ae4a40ac2bc6cc804a6fdc89932c240a7d74a7abcef83227eec2a57da614137c22b91a0ac875899764d9d90b0b358092e2b8ca81620a25f9db62eccb1bac8f29dfbd8c862a160a34fac7fb81aa17a8fd1dec6777b2c90c13a5d1423c497dc0a6dacf908cc1a0be8ef82d90eccab74f63bf4763560bcc45cddb30c6cd9becd17f5343d44dad860c9a740c7ecbc74592002c0df122e7728ac1628281a7b47f937ff892b50f1d006e3ff11a47e82e6dc438630ea8dc48200062539dfb1cc11191b0ad2eeef8db29275cc7836aadfbf0c470ff2d464da3fa16f22e6da3cf0d363d6b52b6c6f7735995c139075a4b5588725c87f6275c73a96be030b128a7c8a6fb823e2c94d0bff5fe9f187fcd728b5a425c02c77d6aab4eb9cce64dfb3bff354e12b641c28cdcb5d19569a15f00246d59b0cc55310f1e832d491c12c93d3d8d0e2ec03534f995209bdb556a1923cd0dc458ffcf2d1235acd6cd98a1ccee21e4dcc3de7f9d8ba446bde14e028da882cea01af707cb029bebc840b119537f12211b265648a8aa141b7dc44409cfff603141aa7de46ec583c507d46502359ccb139f0b7491e4d3e50c50af118166f5bc0ec0a8faae3e1c141eb5820ba1d5a4166ec81c466ce09af664969b10d4fb36278f856a8f20d54bf6389aea23b5833f078f32a9520a15f533afd7c981bba3d65bdd974b8a07b5adf2bf3c9fecb6c866863c1d2976a523ff8803b32ce3fe1e2f53023a14a4e86dc5309835e7bcfc2f961b874957a0790acfd40c4e5d7b3d780001e6ce81cdf662cc2bf81dd0abf87240bde71dfecaa22fc581bf46bdf131cdf37882b6e622fd00f4cecf22fdd543d655164ed22f45f19819a7ef5e4e3bfd54fc62c7c9af7673a8d526f1cb66ca2b65b55534c28aef89f76e89137f7cea453df7b056bf76793364cd340fa50c7cd3ec812409e7d46b88f0c3edfdcbbb08724cd6331f6f6589b7ecc31fe67391c4a404109ec3c4044a2029c748aaa179c574e2240537f4532f28ab148b287e9e623721649b5b42a973b5a3d03020fd5b0ec677ccb46d603d5bdd5c88f4a718bc65552e9ac56806aa6cf89a7050e8cd22fa4dbaa4dcdf77175e2b728c8c4645c66864576af01a3675b4bab37bf8f85408a8ee4c0e869a97c303c149a57638af05f7aacaea6a80eba828e9c821781eb24f61e2b99353e057720784ab9aaee2aa4e45d0cd5402ee90b532d7f58b6e90dfa0f86ba0adeb6b3de7ec964ce911ec03945eb2a2b1101524c92e224b84e80c206778cc321c01c7833b31ce5a6</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Hey, password is required here.</span>
-      </label>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/blog/lib/hbe.js"></script><link href="/blog/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-      <categories>
-        <category>内容分享</category>
-      </categories>
-      <tags>
-        <tag>alist</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>解决npm install安装太慢</title>
     <url>/blog/posts/npminstall.html</url>
     <content><![CDATA[<h2 id="设置-npm-registry">设置 npm registry</h2>
@@ -1426,63 +1489,6 @@ registry更改为<strong>淘宝镜像</strong>，提升安装速度。</li>
       </categories>
       <tags>
         <tag>npm</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>实用软件&amp;网站整理</title>
-    <url>/blog/posts/ruanjian.html</url>
-    <content><![CDATA[<h2 id="软件分享">软件分享</h2>
-<p>注：以下大部分内容为免费或破解版本</p>
-<h3 id="coodesker">Coodesker</h3>
-<p>Coodesker：自动分类整理桌面上的快捷方式、目录、图片等文件
-以前为免费软件，虽然在github上，但是就挂了个仓库
-现在已经开始收费了，但是我感觉老版本就够用</p>
-<a class="btn-anzhiyu " href="regular::Coodesker最后一个免费版本::https://wwll.lanzout.com/iveV71c8woyh::fa-solid fa-play-circle" title=""></a>
-
-<a class="btn-anzhiyu " href="regular::Coodesker20.0.7激活版本::https://wwll.lanzout.com/iEhYW1cbw46h::fa-solid fa-play-circle" title=""></a>
-
-<p>激活版下载密码：bpwp</p>
-<h3 id="kms激活工具">KMS激活工具</h3>
-<p>采用当前最先进的激活技术，几乎涵盖了Windows全版本同Office全版本的激活，支持最新的Win11系统、Win10全版本包括Win10
-LTSC的数字权利激活，非常强大，是激活系统首选的一款激活工具。</p>
-<a class="btn-anzhiyu " href="regular::前往下载::https://wwll.lanzout.com/iIXeE1c8wp8h::fa-solid fa-play-circle" title=""></a>
-
-<h3 id="potplayer视频播放器">PotPlayer视频播放器</h3>
-<p>PotPlayer继承了 KMPlayer
-所有的优点，拥有异常强大的内置音视频解码器，可以支持几乎全部音乐、视频文件格式的播放。采用
-VC++ 进行了全面重构，并且原生支持64位操作系统，使得 PotPlayer 在 Windows
-10 等新系统上，无论性能、兼容性和稳定性上的表现均比 KMP
-要好不少；硬件加速、流畅优秀的全高清视
-频播放效果、强大的选项、滤镜、外挂式管理、DXVA等硬件解码；以及非常丰富且强大的设置选项，被誉为Win平台上最优秀的免费影音全能格式播放器。</p>
-<a class="btn-anzhiyu " href="regular::前往下载::https://wwll.lanzout.com/i53vQ1c8wpgf::fa-solid fa-play-circle" title=""></a>
-
-<p>密码:a2k0</p>
-<h3 id="rainmeter雨滴">Rainmeter雨滴</h3>
-<p>雨滴皮肤（Rainmeter皮肤），是一些有特定功能的Windows桌面小工具。一些复杂的皮肤则看起来像是小型应用程序，风格相近的皮肤则可以组成一个套装或者主题。任何一个雨滴皮肤在不同电脑上工作都是不完全相同的，这取决于使用者对它的调整和修饰。</p>
-<a class="btn-anzhiyu " href="regular::前往官网下载::https://www.rainmeter.net/::fa-solid fa-play-circle" title=""></a>
-
-<h3 id="几何画板已破解">几何画板(已破解)</h3>
-<p>几何画板为从三年级到大学的各个级别的学生提供了一种有形的，可视化的方
-式来学习数学，从而提高他们的参与度、理解力和成就。
-几何画板现已停售，这里准备了v5.0.6的破解版本</p>
-<a class="btn-anzhiyu " href="regular::前往下载::https://wwll.lanzout.com/iLwf71c8wqyj::fa-solid fa-play-circle" title=""></a>
-
-<p>https://gofile.cc/lre4/bandizip.exe
-https://gofile.cc/jrY7/coodesker.zip https://gofile.cc/551a/kms.zip
-https://gofile.cc/QrEQ/firpe-v182.exe https://gofile.cc/WW5E/idm.exe
-https://gofile.cc/K7Xk/potplayer.exe
-https://gofile.cc/1kYp/rustdesk-64.exe
-https://gofile.cc/zq40/ventoy-1095-windows.zip
-https://gofile.cc/0L0l/.zip
-https://gofile.cc/DJyq/acrobat-pro-dc-pdf.iso</p>
-]]></content>
-      <categories>
-        <category>内容分享</category>
-        <category>软件</category>
-      </categories>
-      <tags>
-        <tag>软件</tag>
-        <tag>网站</tag>
       </tags>
   </entry>
   <entry>
@@ -1662,6 +1668,149 @@ https://gofile.cc/DJyq/acrobat-pro-dc-pdf.iso</p>
       </tags>
   </entry>
   <entry>
+    <title>实用软件&amp;网站整理</title>
+    <url>/blog/posts/ruanjian.html</url>
+    <content><![CDATA[<h2 id="软件分享">软件分享</h2>
+<p>注：以下大部分内容为免费或破解版本</p>
+<h3 id="coodesker">Coodesker</h3>
+<p>Coodesker：自动分类整理桌面上的快捷方式、目录、图片等文件
+以前为免费软件，虽然在github上，但是就挂了个仓库
+现在已经开始收费了，但是我感觉老版本就够用</p>
+<a class="btn-anzhiyu " href="regular::Coodesker最后一个免费版本::https://wwll.lanzout.com/iveV71c8woyh::fa-solid fa-play-circle" title=""></a>
+
+<a class="btn-anzhiyu " href="regular::Coodesker20.0.7激活版本::https://wwll.lanzout.com/iEhYW1cbw46h::fa-solid fa-play-circle" title=""></a>
+
+<p>激活版下载密码：bpwp</p>
+<h3 id="kms激活工具">KMS激活工具</h3>
+<p>采用当前最先进的激活技术，几乎涵盖了Windows全版本同Office全版本的激活，支持最新的Win11系统、Win10全版本包括Win10
+LTSC的数字权利激活，非常强大，是激活系统首选的一款激活工具。</p>
+<a class="btn-anzhiyu " href="regular::前往下载::https://wwll.lanzout.com/iIXeE1c8wp8h::fa-solid fa-play-circle" title=""></a>
+
+<h3 id="potplayer视频播放器">PotPlayer视频播放器</h3>
+<p>PotPlayer继承了 KMPlayer
+所有的优点，拥有异常强大的内置音视频解码器，可以支持几乎全部音乐、视频文件格式的播放。采用
+VC++ 进行了全面重构，并且原生支持64位操作系统，使得 PotPlayer 在 Windows
+10 等新系统上，无论性能、兼容性和稳定性上的表现均比 KMP
+要好不少；硬件加速、流畅优秀的全高清视
+频播放效果、强大的选项、滤镜、外挂式管理、DXVA等硬件解码；以及非常丰富且强大的设置选项，被誉为Win平台上最优秀的免费影音全能格式播放器。</p>
+<a class="btn-anzhiyu " href="regular::前往下载::https://wwll.lanzout.com/i53vQ1c8wpgf::fa-solid fa-play-circle" title=""></a>
+
+<p>密码:a2k0</p>
+<h3 id="rainmeter雨滴">Rainmeter雨滴</h3>
+<p>雨滴皮肤（Rainmeter皮肤），是一些有特定功能的Windows桌面小工具。一些复杂的皮肤则看起来像是小型应用程序，风格相近的皮肤则可以组成一个套装或者主题。任何一个雨滴皮肤在不同电脑上工作都是不完全相同的，这取决于使用者对它的调整和修饰。</p>
+<a class="btn-anzhiyu " href="regular::前往官网下载::https://www.rainmeter.net/::fa-solid fa-play-circle" title=""></a>
+
+<h3 id="几何画板已破解">几何画板(已破解)</h3>
+<p>几何画板为从三年级到大学的各个级别的学生提供了一种有形的，可视化的方
+式来学习数学，从而提高他们的参与度、理解力和成就。
+几何画板现已停售，这里准备了v5.0.6的破解版本</p>
+<a class="btn-anzhiyu " href="regular::前往下载::https://wwll.lanzout.com/iLwf71c8wqyj::fa-solid fa-play-circle" title=""></a>
+
+<p>https://gofile.cc/lre4/bandizip.exe
+https://gofile.cc/jrY7/coodesker.zip https://gofile.cc/551a/kms.zip
+https://gofile.cc/QrEQ/firpe-v182.exe https://gofile.cc/WW5E/idm.exe
+https://gofile.cc/K7Xk/potplayer.exe
+https://gofile.cc/1kYp/rustdesk-64.exe
+https://gofile.cc/zq40/ventoy-1095-windows.zip
+https://gofile.cc/0L0l/.zip
+https://gofile.cc/DJyq/acrobat-pro-dc-pdf.iso</p>
+]]></content>
+      <categories>
+        <category>内容分享</category>
+        <category>软件</category>
+      </categories>
+      <tags>
+        <tag>软件</tag>
+        <tag>网站</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>建站过程</title>
+    <url>/blog/posts/jianzhan.html</url>
+    <content><![CDATA[<details class="folding-tag"><summary> 旧博客搭建过程 </summary>
+              <div class="content">
+              <details class="folding-tag"><summary> 提示 </summary>              <div class="content">              <p>本文并非专业教程，请谨慎参考！</p>              </div>            </details><h2 id="1-博客本地部署">1. 博客本地部署</h2><h3 id="11-安装-git">1.1. 安装 git</h3><p><a href="http://git-scm.com/download">Git 客户端</a>:<br>作用：把本地的 hexo 内容提交到 github</p><p>安装过程无脑下一步，出现下面的选项就是安装成功。</p><p><img src="https://s2.loli.net/2023/10/07/BchFwr3daYJO5ps.png"></p><h3 id="12-nodejs-环境安装">1.2. Node.js 环境安装</h3><p>Hexo 是基于 node.js 编写的，所以需要安装一下 nodeJs 和里面的 npm工具。</p><p>Windows：官网下载安装即可</p><p>Linux:</p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Debian/Ubuntu等系统</span></span><br><span class="line">yum install nodejs</span><br><span class="line">yum install npm<span class="comment"># Centos/RedHat等系统apt-get install nodejs</span></span><br><span class="line">apt-get install npm</span><br></pre></td></tr></table></figure><p>Mac OS:</p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">brew install npm</span><br></pre></td></tr></table></figure><p>安装完成后打开 cmd，输入</p><figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">node -v</span><br></pre></td></tr></table></figure><p>如果出现版本号代表安装成功</p><h3 id="13-安装-hexo">1.3. 安装 hexo</h3><p>安装之前在电脑一个位置新建一个文件夹，进入文件夹右键点击 git bashhere,</p><p>打开 hexo 官网复制下面的命令</p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br><span class="line">hexo init blog</span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line">npm install</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure><h3 id="14-博客的目录结构">1.4. 博客的目录结构</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml # 博客网站生成时需要用到的插件的配置文件</span><br><span class="line">├── db.json # 网站数据</span><br><span class="line">├── node_modules # 类库</span><br><span class="line">├── package-lock.json # 该博客网站生成需要的依赖项</span><br><span class="line">├── package.json # 博客网站生成需要的全局依赖项，执行npm install指令可以安装这些依赖项</span><br><span class="line">├── public # 博客网站的静态文件，会把该文件夹发布到远程服务器</span><br><span class="line">├── scaffolds # 新建一篇文章时的front-matter用到的模板，front-matter是后面静态文件生成时，文章显示参数的设置，包括文章标题，新建日期，标签等</span><br><span class="line">├── source # 里面存放着博客编写的文章</span><br><span class="line">└── themes # 博客用到的主题资源库</span><br></pre></td></tr></table></figure><h3 id="15-博客内容更新">1.5. 博客内容更新</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new [post] new_paper <span class="comment"># 创建一篇新的文章，会在/source/_posts中生成new_paper.md</span></span><br><span class="line"></span><br><span class="line">hexo new page new page <span class="comment"># 生成一个新的页面，会在/source中生成new_page文件夹，又来存放该页面的文章</span></span><br><span class="line">hexo new new_page new_paper <span class="comment"># 在新的页面中生成一篇新的文章</span></span><br><span class="line"></span><br><span class="line">hexo new draft new_draft <span class="comment"># 生成一篇草稿，这个仅自己可见，不会出现在正式网站上</span></span><br><span class="line">hexo publish draft new_draft <span class="comment"># 将草稿发布到post页面</span></span><br><span class="line"></span><br><span class="line">hexo clean <span class="comment"># 清除以往生成的博客网站数据，非必须</span></span><br><span class="line">hexo g <span class="comment"># 生成网站</span></span><br><span class="line">hexo s <span class="comment"># 启动本地服务器，默认地址 http://localhost:4000</span></span><br></pre></td></tr></table></figure><p>浏览器中输入 <code>http://localhost:4000</code> 即可访问刚刚建好的博客，当然，现在这个博客是破破烂烂的，还需要下面进行添砖加瓦。</p><div class="note info flat"><p>提示：在Bash窗口中Ctrl+鼠标单击该网站即可前往</p></div><h3 id="16-博客主题选择">1.6. 博客主题选择</h3><p>默认的模板是 <code>landscape</code>，看起来 low low的，有必要自定义一个定制化的主题。官方的主题库中有不少精美的模板，可以根据喜好挑选一个。</p><h2 id="2-主题安装">2. 主题安装</h2><h3 id="21-主题安装建议参考主题自带的安装教程">2.1.主题安装（建议参考主题自带的安装教程）</h3><h4 id="可以采用两种方式进行安装">可以采用两种方式进行安装</h4><div class="note warning flat"><p>注：以下方式可能并不适用于所有主题</p></div><h5 id="1npm示例">1.npm（示例）</h5><figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">npm install hexo-theme-redefine@latest</span><br></pre></td></tr></table></figure><h5 id="2git-bash示例">2.git bash（示例）</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> git@github.com:blinkfox/hexo-theme-matery.git themes/matery </span><br><span class="line"><span class="comment"># 找到主题的项目地址，把主题拉到本地的themes文件夹下</span></span><br></pre></td></tr></table></figure><h4 id="211-切换主题">2.1.1. 切换主题</h4><p>修改 Hexo根目录下的 <code>_config.yml</code> 的 <code>theme</code> 的值：<code>theme: 你的主题名称</code></p><h5 id="2111-_configyml-文件的其它修改建议">2.1.1.1. _config.yml文件的其它修改建议:</h5><ul><li>请修改 <code>_config.yml</code> 的 <code>url</code> 的值为你的网站主 <code>URL</code>（如：<code>http://xxx.github.io</code>）。</li><li>建议修改两个 <code>per_page</code> 的分页条数值为 <code>6</code> 的倍数，如：<code>12</code>、<code>18</code> 等，这样文章列表在各个屏幕下都能较好的显示。</li><li>如果你是中文用户，则建议修改 <code>language</code> 的值为 <code>zh-CN</code>。</li></ul><h3 id="22-主题目录的文件结构">2.2. 主题目录的文件结构</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">themes</span><br><span class="line">└── matery</span><br><span class="line">    ├── LICENSE</span><br><span class="line">    ├── README.md</span><br><span class="line">    ├── README_CN.md</span><br><span class="line">    ├── _config.yml # 主题的配置文件</span><br><span class="line">    ├── languages # 默认是英文显示，若要其他语言显示，则需要在此添加对应语言的翻译规则，需要修改语言时，修改 /_config.yml 中的 “language:” 这一项</span><br><span class="line">    ├── layout # 页面js文件</span><br><span class="line">    └── source # 图片等资源存放目录，这个目录对应为生成的静态网站的root路径</span><br></pre></td></tr></table></figure><p>在主题文件的根目录下，也是有一份 <code>_config.yml</code> 文件，博客根目录下的 <code>_config.yml</code> 是全局配置，优先级较高，主题的配置文件是全局配置的补充。</p><h3 id="23-主题项配置">2.3. 主题项配置</h3><p>菜单栏中已有默认的页面有 <code>Index</code>, <code>Tags</code>, <code>Categories</code>, <code>Archives</code>, <code>About</code>, <code>Contact</code>, <code>Friends</code>，但这些页面都是还没有被初始化的，需要手动初始化，当然你也可以自定义自己的页面</p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new page <span class="string">"categories"</span></span><br><span class="line">hexo new page <span class="string">"tags"</span></span><br><span class="line">hexo new page <span class="string">"about"</span></span><br><span class="line">hexo new page <span class="string">"contact"</span></span><br><span class="line">hexo new page <span class="string">"friends"</span></span><br><span class="line">hexo new page 404</span><br></pre></td></tr></table></figure><h3 id="24-图片上传">2.4. 图片上传</h3><h4 id="转换图片格式">转换图片格式</h4><ul><li><p>使用 <a href="https://convertio.co/">Convertio</a> 将 jpg/png格式的图片转换成 webp 格式。</p></li><li><p>另：也可以使用 <code>ffmpeg</code> 完成格式转换：</p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ffmpeg -i input.jpg output.webp</span><br></pre></td></tr></table></figure></li><li><p>转换格式的目的在于压缩图片大小，加快网站加载速度。</p></li></ul><h4 id="上传图片至图床">上传图片至图床</h4><ul><li>我使用的是 <a href="https://sm.ms/">sm.ms</a> 图床。</li><li>图片上传完成后需修改主题配置文件，将背景图片链接由本地路径改为图床提供的外链。</li></ul><div class="note info flat"><p>标签页图标和头像同理。</p></div><h2 id="3-博客插件安装">3. 博客插件安装</h2><p>原生态的 hexo功能比较少，需要安装一些插件才能更好地运行。安装插件的指令为</p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install plugins-name --save</span><br></pre></td></tr></table></figure><p>其中 <code>--save</code> 会把依赖项添加进 <code>package.json</code> 文件中，新安装的插件源文件在 <code>/node_modules/plugins-name</code>，插件安装其实就是下载了一套模板，这些模板大多是一些js文件。其运行机制就是在生成网站的静态文件时，会根据 <code>/_config.yml</code> 中设置的参数，生成对应的js 文件，在指定的位置插入或替换这些 js 文件。</p><p>当你觉得这个插件满足不了你的功能时，可以直接到该插件的资源目录中修改其模板。</p><p>这里有一个官方的插件库，下面介绍几个比较有用的插件。其实有不少插件已经默认在选择的主题中安装了，譬如下面的valine 的评论插件，已经有的插件就不用重复安装了。</p><h3 id="31-静态文件部署到远端-git-服务器">3.1. 静态文件部署到远端 Git服务器</h3><p><code>deployer-git</code> 可以在你使用 <code>hexo d</code> 指令时，自动把静态文件部署到Git服务器上。一般来说，只要你想要把你的博客发布到外网中，这个插件是必备，当然你也可以手动 <code>git push</code> 部署</p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure><p>然后在 <code>_config.yml</code> 文件中修改</p><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">git@github.com:/YourgithubName/YourgithubName.io.git,master</span></span><br><span class="line">    <span class="comment"># 当有多个服务源时以下设置# github: git@github.com:/YourgithubName/YourgithubName.io.git,master# gitee: git@gitee.com:/YourgithubName/YourgithubName.git,master</span></span><br></pre></td></tr></table></figure><h3 id="32-站点地图生成">3.2. 站点地图生成</h3><p>SEO 策略时需要用到的插件，生成网站的站点地图（sitemap），可以通过sitemap 推送推送网站链接到搜索引擎中</p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-sitemap --save</span><br><span class="line">npm install hexo-generator-baidu-sitemap --save</span><br></pre></td></tr></table></figure><p>然后在 <code>_config.yml</code> 文件中添加</p><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">sitemap:path:</span> <span class="string">sitemap.xml</span></span><br><span class="line"><span class="attr">baidusitemap:path:</span> <span class="string">baidusitemap.xml</span></span><br></pre></td></tr></table></figure><p>然后就会生成 <code>sitemap.xml</code> 和 <code>baidusitemap.xml</code> 这两个站点地图。</p><h3 id="33-非中文链接生成">3.3. 非中文链接生成</h3><p>当我们使用中文生成文章的时候，例如 <code>hexo new 测试</code>，生成 <code>测试.md</code> 文件，<code>hexo d</code> 命令后，生成 <code>测试.html</code> 文件，对应的访问地址就是 <code>http://xxxx/.../测试.html</code>，这显然对搜索引擎不友好，这需要把中文地址自动转为数字或英文地址，当然这篇博文提到的方法可以参考一下。</p><p>这里也可以安装abbrlink插件来自动生成非中文链接</p><p><strong>bash</strong></p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-abbrlink --save</span><br></pre></td></tr></table></figure><p>然后在 <code>_config.yml</code> 文件中添加</p><p><strong>yaml</strong></p><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">abbrlink:alg:</span> <span class="string">crc16</span>   <span class="comment"># 算法：crc16(default) and crc32rep: hex     # 进制：dec(default) and hex: dec #输出进制：十进制和十六进制，默认为10进制。丨dec为十进制，hex为十六进制# permalink配置修改改为下面这个permalink: posts/:abbrlink.html</span></span><br></pre></td></tr></table></figure><h3 id="34-外部链接跳转">3.4. 外部链接跳转</h3><p>hexo-external-link是一个跳转外链相关插件。自动为所有 html文件中外链的 a 标签生成对应的属性。 比如设置 <code>target=’_blank’, rel=’external nofollow noopener noreferrer’</code> 告诉搜索引擎这是外部链接,不要将该链接计入权重。同时自动生成外链跳转页面,默认在根目录下 go.html;</p><p><strong>bash</strong></p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-external-link --save</span><br></pre></td></tr></table></figure><p>然后在 <code>_config.yml</code> 文件中添加</p><p><strong>yaml</strong></p><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">hexo_external_link:enable:</span> <span class="string">&lt;strong&gt;true&lt;/strong&gt;enable_base64_encode:</span> <span class="string">&lt;strong&gt;true&lt;/strong&gt;url_param_name:</span> <span class="string">'u'</span><span class="attr">html_file_name:</span> <span class="string">'go.html'</span><span class="attr">target_blank:</span> <span class="string">&lt;strong&gt;true&lt;/strong&gt;link_rel:</span> <span class="string">'external nofollow noopener noreferrer'</span><span class="attr">domain:</span> <span class="string">'your_domain'</span> <span class="comment"># 如果开启了防盗链safety_chain: &lt;strong&gt;true&lt;/strong&gt;</span></span><br></pre></td></tr></table></figure><h3 id="35-文章搜索">3.5. 文章搜索</h3><p>generator-search插件可以提供博客的内容搜索</p><p><strong>bash</strong></p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-search --save</span><br></pre></td></tr></table></figure><p>然后在 <code>_config.yml</code> 文件中添加</p><p><strong>bash</strong></p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br></pre></td></tr></table></figure><h3 id="36-字数统计">3.6. 字数统计</h3><p>wordcount插件可以统计文章中的字符，根据字数估算阅读时间。</p><p><strong>bash</strong></p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-wordcount --save</span><br></pre></td></tr></table></figure><p>然后在 <code>_config.yml</code> 文件中添加</p><p><strong>yaml</strong></p><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">post_wordcount:item_text:</span> <span class="string">&lt;strong&gt;true&lt;/strong&gt;</span>               <span class="comment"># 是否显示“字数统计”及“阅读分钟”的文字wordcount: &lt;strong&gt;true&lt;/strong&gt;               # 是否显示字数统计min2read: &lt;strong&gt;true&lt;/strong&gt;                # 是否显示估算阅读分钟totalcount: &lt;strong&gt;true&lt;/strong&gt;          # 是否在网站底部显示所有文章字数之和separated_meta: &lt;strong&gt;true&lt;/strong&gt;</span></span><br></pre></td></tr></table></figure><h2 id="4-博客发布">4. 博客发布</h2><p>现在都还只是本地部署，要想通过外网访问，就得部署到远程的服务器上。</p><h3 id="41-git-环境配置">4.1. Git 环境配置</h3><p>Git是一个分布式版本控制系统，一般来说，本地仓库为客户端，远端仓库为服务端。</p><p>GitHub、gitee 等都是一些服务端 Git 代码托管平台。下面以 GitHub为例，其他 gitee 等平台操作是差不多的，具体操作可以自行百度。</p><p>gitee 不能使用自定义域名(我不用的理由)，github百度爬虫不能爬取（但可以主动提交站点链接）</p><h4 id="411-注册账号">4.1.1. 注册账号</h4><p>GitHub 官网按照指引创建一个账号。</p><h4 id="412-创建-ssh-key">4.1.2. 创建 ssh key</h4><p>由于你的本地 Git 仓库和 GitHub 仓库之间的传输是通过 SSH加密的，可以通过密码的形式确认身份。如果不想每次连接时都要输入密码，可以通过公私钥鉴权的方式确认身份。</p><p>所以首先通过下面指令在本地创建一个 ssh key</p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">"your_email_address"</span></span><br></pre></td></tr></table></figure><p>然后一直回车即可。</p><p>指令操作成功后，会在用户文件夹（类 Unix操作系统为 <code>~</code>，Windows操作系统为 <code>%HOMEPATH%</code>）下生成 <code>.ssh</code> 文件夹，其文件结构如下：</p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.ssh</span><br><span class="line">├── config # 本地ssh的配置信息</span><br><span class="line">├── id_rsa # 私钥文件</span><br><span class="line">├── id_rsa.pub # 公钥存储文件，一行代表一个公钥</span><br><span class="line">└── known_hosts # 已经识别过的主机地址名单，名单中的主机会跳过警告部分</span><br></pre></td></tr></table></figure><blockquote><p>Windows 中系统路径含义系统路径（不区分大小写）对应的绝对路径：</p><ul><li>当前系统盘符：<code>C:</code>、<code>%systemdrive%</code>、<code>%HOMEDRIVE%</code></li><li>当前系统目录： <code>C:\WINDOWS</code> 、<code>%systemroot%</code>、<code>%Windir%</code></li><li>当前用户文件夹：<code>C:\Administrator</code>、<code>%UserProfile%</code>、<code>%HOMEPATH%</code></li><li>所有用户文件夹：<code>C:\ProgramData</code>、<code>%AllUsersProfile%</code></li><li>临时文件夹 1：<code>C:\WINDOWS\Temp</code>、<code>%temp%</code></li><li>临时文件夹 2：<code>%SystemRoot%\TEMP</code></li><li>程序文件夹：<code>C:\Program Files</code>、<code>%ProgramFiles%</code></li><li>程序快速启动设置文件夹：<code>C:\Administrator\AppData\Roaming</code>、<code>%AppData%</code></li></ul></blockquote><h4 id="413-在-github-中添加我们的公钥">4.1.3. 在 GitHub中添加我们的公钥</h4><p>打开 GitHub -&gt; Account -&gt; Settings -&gt; SSH and GPG keys -&gt;New SSH key -&gt; Key输入框中输入 <code>id_rsa.pub</code> 中的公钥，如果有多行，取一行就可以-&gt; Add SSH key -&gt; 添加成功</p><h4 id="414-验证鉴权结果">4.1.4. 验证鉴权结果</h4><p>本地输入以下指令</p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure><p>如果出现 <code>Hi xxx! You've successfully authenticated, but GitHub does not provide shell access.</code>，说明本地Git 仓库和 GitHub 仓库已经成功通信</p><h4 id="415-个人用户设置">4.1.5. 个人用户设置</h4><p>这一步是必要的，否则后面无法创建 GitHub page</p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global user.name <span class="string">"account"</span> <span class="comment"># 用户名称</span></span><br><span class="line">git config --global user.email <span class="string">"your_email_address"</span> <span class="comment"># 电子信息</span></span><br><span class="line">git config --<span class="built_in">local</span> -e <span class="comment"># 直接编辑配置文件</span></span><br></pre></td></tr></table></figure><h3 id="42-部署到远端服务器">4.2. 部署到远端服务器</h3><p>下面还是以 GitHub 为例。</p><p>打开你的 GitHub，新建一个仓库，Repository name 命名为xxx.github.io（xxx 是你 GitHub账号，以免给自己后面添麻烦，一定要以这种格式命名，否则建好的博客根目录是 <a href="https://xxx.github.io/yyy">https://xxx.github.io/yyy</a>，博客的排版会乱掉或者直接就是404 了）。</p><p>这里一定要选 Public 自己的仓库，不然无法使用 github page</p><p>创建后，点击仓库的 setting—-pages,在 Build and deployment 中 Source选择 deploy from a branch ,branch 中选择 main root，这时候会发现提示需要在仓库中写一些东西才行。在 bash 中写入：</p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">"# ronghao"</span> &gt;&gt; README.md</span><br><span class="line">git init</span><br><span class="line">git add README.md</span><br><span class="line">git commit -m <span class="string">"first commit"</span></span><br><span class="line">git branch -M main</span><br><span class="line">git remote add origin git@github.com:ronghao233/ronghao.git</span><br><span class="line">git push -u origin main</span><br></pre></td></tr></table></figure><p>这时在打开看见仓库里面有东西了，GitHub Pages 创建成功</p><p>你可以在新建仓库的 setting 的 GitHub Pages一栏中看到 <code>Your site is published at https://xxx.github.io/</code> 信息时，说明你的博客主页已经成功开通了。</p><p><img src="https://www.xrh.asia/static1/boxcnK9lPujGIh6JbafQ48Qsjhf.png"></p><p>接下来就是 <code>hexo g -d</code>（前提是 Git环境和 <code>hexo-deployer-git</code> 插件已经配置好）把你的博客更新上传。</p><p>最后，浏览器中输入 <code>https://xxx.github.io</code> 即可访问你的博客了。</p>
+              </div>
+            </details>
+]]></content>
+      <categories>
+        <category>记录</category>
+        <category>代码</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>Github</tag>
+        <tag>博客</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>解决Github的访问问题</title>
+    <url>/blog/posts/githubfangwen.html</url>
+    <content><![CDATA[<p>Github是一个基于Git版本控制系统的代码托管平台。</p>
+<p>Github上有着很多开源的免费的软件及资料，但是因为网络问腿，导致Github的访问速度极其的慢，甚至有的时候上不去
+下面，我给出了几个方法，能够解决这个问题</p>
+<h2 id="1watt-toolkit">1.Watt Toolkit</h2>
+<p>「Watt Toolkit」原名Steam++，是一个开源跨平台的多功能 Steam 工具箱。
+<img src="https://s2.loli.net/2023/10/22/oWHj9GgrPe7NVyC.webp"></p>
+<a class="btn-anzhiyu " href="/blog/center%20large::%E5%89%8D%E5%BE%80Watt%20Toolkit%E5%AE%98%E7%BD%91%E4%B8%8B%E8%BD%BD::https:/steampp.net/::fa-solid%20fa-download" title=""></a>
+
+<p>进入软件界面后，点击左侧的网络加速选项卡，勾选Github，点击右上角的“一键加速“
+<img src="https://s2.loli.net/2023/10/22/MsDri4PQEy5lFLc.webp"></p>
+<h2 id="2更改hosts文件">2.更改hosts文件</h2>
+<p>通过修改本地 hosts 文件，试图解决：</p>
+<p>GitHub 访问速度慢的问题 GitHub 项目中的图片显示不出的问题</p>
+<h3 id="1下载hosts管理工具switchhosts">1.下载hosts管理工具<strong>SwitchHosts</strong></h3>
+<p><img src="https://s2.loli.net/2023/10/22/LXJjSyzU4cZdrTC.webp"></p>
+<a class="btn-anzhiyu " href="/blog/center%20large::SwitchHosts%E7%9A%84Github%E4%B8%BB%E9%A1%B5::https:/github.com/oldj/SwitchHosts/tree/v4.1.2::fa-solid%20fa-arrow-right" title=""></a>
+
+<p>当然，如果上不去Github的话，可以通过下面蓝奏云链接下载最新版本（目前截至v4.1.2）</p>
+<a class="btn-anzhiyu " href="regular::前往蓝奏云分享链接::https://wwll.lanzout.com/b04es5obc::fa-solid fa-download" title=""></a>密码:7s3t
+
+<h3 id="2安装配置">2.安装配置</h3>
+<p>安装完成后，我们打开软件，就可以看到如下界面: <img src="https://s2.loli.net/2023/10/22/6n7ipcA5CUdfBLt.webp">
+我们点击左侧的加号，进入配置界面 Hosts类型：远程 Hosts标题：随意
+URL：https://raw.hellogithub.com/hosts</p>
+<div class="note warning flat"><p>请将此链接粘贴到选项框中</p>
+</div>
+
+<p>自动刷新：建议选择1小时 <img src="https://s2.loli.net/2023/10/22/CMzHoDT3PhpFQ5i.webp">
+填写完成后，点击确定，就配置完成了</p>
+<h3 id="3问题解决">3.问题解决</h3>
+<p>点击左侧名称后的按钮，如果你显示的如下界面（提示操作成功） <img src="https://s2.loli.net/2023/10/22/V5aJKjuG9QTLfcA.webp">
+那么恭喜你，你的配置完成了 如果是下面这种： <img src="https://s2.loli.net/2023/10/22/qrQyT4w5Ks3j7uB.webp">
+请继续往下设置</p>
+<h4 id="31-找到hosts文件">3.1 找到hosts文件</h4>
+<p>Hosts文件一般都在电脑的“C:\Windows\System32\drivers\etc“文件夹下，我们打开这个文件夹，找到hosts文件
+<img src="https://s2.loli.net/2023/10/22/cmrDo9vPJsafNiw.webp"></p>
+<h4 id="32-修改hosts文件权限">3.2 修改hosts文件权限</h4>
+<p>右键hosts文件，选择<strong>属性</strong>， <img src="https://s2.loli.net/2023/10/22/b6qCFxJQwd5Ep9B.webp">
+选择<strong>编辑</strong> <img src="https://s2.loli.net/2023/10/22/Ac3lXS9YWut7wmV.webp">
+将<strong>组成用户名</strong>中第一个和最后一个选项（Users）的<strong>修改</strong>和<strong>写入</strong>勾选
+<img src="https://s2.loli.net/2023/10/22/v5fbjVmGrAEkX6M.webp"></p>
+<h4 id="33-验证修改">3.3 验证修改</h4>
+<p>点击确定，返回<strong>SwitchHosts</strong>界面，若显示如下界面，那么就修改成功了
+<img src="https://s2.loli.net/2023/10/22/V5aJKjuG9QTLfcA.webp"></p>
+<h4 id="34-清除dns缓存">3.4 清除DNS缓存</h4>
+<p>若发现以上设置都没有问题了，但是仍然访问不了Github，那么可以试试清除电脑的DNS缓存
+这里以Win11举例：
+鼠标右键点击“开始菜单”或者按“Win+X”弹出窗口，找到“Windows
+终端(管理员)”。如下图： <img src="https://s2.loli.net/2023/10/22/4eamPvjlhMqI6rn.webp">
+在命令窗口输入:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ipconfig /flushdns</span><br></pre></td></tr></table></figure>
+
+<p>按**Enter（回车键）**运行，看到已成功刷新DNS解析缓存的提示就说明DNS刷新成功了。（注：命令中间空格不可少）如下图：
+<img src="https://s2.loli.net/2023/10/22/Go41KbrZTingAzt.webp"></p>
+]]></content>
+      <categories>
+        <category>教程</category>
+        <category>代码</category>
+      </categories>
+      <tags>
+        <tag>Github</tag>
+        <tag>Windows</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>徽州行</title>
     <url>/blog/posts/huizhou.html</url>
     <content><![CDATA[<h1 id="活动简介">活动简介</h1>
@@ -1752,73 +1901,6 @@ https://gofile.cc/DJyq/acrobat-pro-dc-pdf.iso</p>
       <tags>
         <tag>徽州</tag>
         <tag>研学</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>解决Github的访问问题</title>
-    <url>/blog/posts/githubfangwen.html</url>
-    <content><![CDATA[<p>Github是一个基于Git版本控制系统的代码托管平台。</p>
-<p>Github上有着很多开源的免费的软件及资料，但是因为网络问腿，导致Github的访问速度极其的慢，甚至有的时候上不去
-下面，我给出了几个方法，能够解决这个问题</p>
-<h2 id="1watt-toolkit">1.Watt Toolkit</h2>
-<p>「Watt Toolkit」原名Steam++，是一个开源跨平台的多功能 Steam 工具箱。
-<img src="https://s2.loli.net/2023/10/22/oWHj9GgrPe7NVyC.webp"></p>
-<a class="btn-anzhiyu " href="/blog/center%20large::%E5%89%8D%E5%BE%80Watt%20Toolkit%E5%AE%98%E7%BD%91%E4%B8%8B%E8%BD%BD::https:/steampp.net/::fa-solid%20fa-download" title=""></a>
-
-<p>进入软件界面后，点击左侧的网络加速选项卡，勾选Github，点击右上角的“一键加速“
-<img src="https://s2.loli.net/2023/10/22/MsDri4PQEy5lFLc.webp"></p>
-<h2 id="2更改hosts文件">2.更改hosts文件</h2>
-<p>通过修改本地 hosts 文件，试图解决：</p>
-<p>GitHub 访问速度慢的问题 GitHub 项目中的图片显示不出的问题</p>
-<h3 id="1下载hosts管理工具switchhosts">1.下载hosts管理工具<strong>SwitchHosts</strong></h3>
-<p><img src="https://s2.loli.net/2023/10/22/LXJjSyzU4cZdrTC.webp"></p>
-<a class="btn-anzhiyu " href="/blog/center%20large::SwitchHosts%E7%9A%84Github%E4%B8%BB%E9%A1%B5::https:/github.com/oldj/SwitchHosts/tree/v4.1.2::fa-solid%20fa-arrow-right" title=""></a>
-
-<p>当然，如果上不去Github的话，可以通过下面蓝奏云链接下载最新版本（目前截至v4.1.2）</p>
-<a class="btn-anzhiyu " href="regular::前往蓝奏云分享链接::https://wwll.lanzout.com/b04es5obc::fa-solid fa-download" title=""></a>密码:7s3t
-
-<h3 id="2安装配置">2.安装配置</h3>
-<p>安装完成后，我们打开软件，就可以看到如下界面: <img src="https://s2.loli.net/2023/10/22/6n7ipcA5CUdfBLt.webp">
-我们点击左侧的加号，进入配置界面 Hosts类型：远程 Hosts标题：随意
-URL：https://raw.hellogithub.com/hosts</p>
-<div class="note warning flat"><p>请将此链接粘贴到选项框中</p>
-</div>
-
-<p>自动刷新：建议选择1小时 <img src="https://s2.loli.net/2023/10/22/CMzHoDT3PhpFQ5i.webp">
-填写完成后，点击确定，就配置完成了</p>
-<h3 id="3问题解决">3.问题解决</h3>
-<p>点击左侧名称后的按钮，如果你显示的如下界面（提示操作成功） <img src="https://s2.loli.net/2023/10/22/V5aJKjuG9QTLfcA.webp">
-那么恭喜你，你的配置完成了 如果是下面这种： <img src="https://s2.loli.net/2023/10/22/qrQyT4w5Ks3j7uB.webp">
-请继续往下设置</p>
-<h4 id="31-找到hosts文件">3.1 找到hosts文件</h4>
-<p>Hosts文件一般都在电脑的“C:\Windows\System32\drivers\etc“文件夹下，我们打开这个文件夹，找到hosts文件
-<img src="https://s2.loli.net/2023/10/22/cmrDo9vPJsafNiw.webp"></p>
-<h4 id="32-修改hosts文件权限">3.2 修改hosts文件权限</h4>
-<p>右键hosts文件，选择<strong>属性</strong>， <img src="https://s2.loli.net/2023/10/22/b6qCFxJQwd5Ep9B.webp">
-选择<strong>编辑</strong> <img src="https://s2.loli.net/2023/10/22/Ac3lXS9YWut7wmV.webp">
-将<strong>组成用户名</strong>中第一个和最后一个选项（Users）的<strong>修改</strong>和<strong>写入</strong>勾选
-<img src="https://s2.loli.net/2023/10/22/v5fbjVmGrAEkX6M.webp"></p>
-<h4 id="33-验证修改">3.3 验证修改</h4>
-<p>点击确定，返回<strong>SwitchHosts</strong>界面，若显示如下界面，那么就修改成功了
-<img src="https://s2.loli.net/2023/10/22/V5aJKjuG9QTLfcA.webp"></p>
-<h4 id="34-清除dns缓存">3.4 清除DNS缓存</h4>
-<p>若发现以上设置都没有问题了，但是仍然访问不了Github，那么可以试试清除电脑的DNS缓存
-这里以Win11举例：
-鼠标右键点击“开始菜单”或者按“Win+X”弹出窗口，找到“Windows
-终端(管理员)”。如下图： <img src="https://s2.loli.net/2023/10/22/4eamPvjlhMqI6rn.webp">
-在命令窗口输入:</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ipconfig /flushdns</span><br></pre></td></tr></table></figure>
-
-<p>按**Enter（回车键）**运行，看到已成功刷新DNS解析缓存的提示就说明DNS刷新成功了。（注：命令中间空格不可少）如下图：
-<img src="https://s2.loli.net/2023/10/22/Go41KbrZTingAzt.webp"></p>
-]]></content>
-      <categories>
-        <category>教程</category>
-        <category>代码</category>
-      </categories>
-      <tags>
-        <tag>Github</tag>
-        <tag>Windows</tag>
       </tags>
   </entry>
   <entry>
