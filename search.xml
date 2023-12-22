@@ -384,48 +384,6 @@ YAML 和 JSON 文件。</p>
       </tags>
   </entry>
   <entry>
-    <title>Linux入门-初识Linux</title>
-    <url>/blog/posts/linuxrm.html</url>
-    <content><![CDATA[<p>最近我打算学习一下Linux 以本文记录一下我的学习过程</p>
-<h1 id="一关于linux">一、关于Linux</h1>
-<h2 id="linux的诞生">Linux的诞生</h2>
-<p>Linux创始人: 林纳斯 托瓦兹 Linux 诞生于1991年，作者上大学期间
-因为创始人在上大学期间经常需要浏览新闻和处理邮件，发现现有的操作系统不好用,
-于是他决心自己写一个保护模式下的操作系统，这就是Linux的原型，
-当时他21岁，后来经过全世界网友的支持,
-现在能够兼容多种硬件，成为最为流行的服务器操作系统之一。 <img src="https://pic.imgdb.cn/item/65634875c458853aef5abdbb.webp"> <img src="https://pic.imgdb.cn/item/65634875c458853aef5abe42.webp"></p>
-<h2 id="linux内核">Linux内核</h2>
-<p>Linux系统的组成如下：
-<strong>Linux系统内核</strong>、<strong>系统级应用程序</strong>两部分组成。
-内核提供系统最核心的功能，如：调度CPU、调度内存、调度文件系统、调度网络通讯、调度IO等。
-系统级应用程序，可以理解为出厂自带程序，可供用户快速上手操作系统，如：文件管理器、任务管理器、图片查看、音乐播放等。</p>
-<p>比如，播放音乐，无论用户使用自带音乐播放器或是自行安装的第三方播放器均是由播放器程序，调用内核提供的相关功能，由内核调度CPU解码、音响发声等。
-<img src="https://pic.imgdb.cn/item/65634875c458853aef5abeb4.webp">
-<img src="https://pic.imgdb.cn/item/65634875c458853aef5abf1c.webp">
-可以看出，内核是Linux操作系统最核心的所在，系统级应用程序只是锦上添花。
-Linux内核是免费开源的，任何人都可以下载内核源码并查看且修改。
-可以通过：https://www.kernel.org 去下载Linux内核</p>
-<p>内核是免费、开源的，这也就代表了：
-任何人都可以获得并修改内核，并且自行集成系统级程序
-提供了内核+系统级程序的完整封装，称之为Linux发行版 <img src="https://pic.imgdb.cn/item/65634875c458853aef5abf5e.webp"> <img src="https://pic.imgdb.cn/item/656348afc458853aef5be85b.webp"></p>
-<h1 id="二安装linux">二、安装Linux</h1>
-<p>在这里我用了虚拟机的方法安装Linux CentOS系统</p>
-<div class="note warning flat"><p>Linux不同发行版中的基础命令100%是相同的，只有个别软件细节不同</p>
-</div>
-
-<p>我个人认为Hyper-V虚拟机比VMware要稍微流畅一些
-所以我在这里选用Hyper-V安装CentOS
-如果你不是Windows11，那就只能用别的啦，比如VMware</p>
-<h2 id="1下载centos镜像">1.下载CentOS镜像</h2>
-]]></content>
-      <categories>
-        <category>记录</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Markdown基本语法</title>
     <url>/blog/posts/mdyf.html</url>
     <content><![CDATA[<p>本文目的为方便查找 以下内容均取自<a href="https://markdown.com.cn/basic-syntax/">Markdown官网</a></p>
@@ -1325,24 +1283,45 @@ HTML 实体。）</p>
       </tags>
   </entry>
   <entry>
-    <title>TED视频分享</title>
-    <url>/blog/posts/TED1.html</url>
-    <content><![CDATA[<p>本页将分享一些TED的听力视频 将提供视频文件和中英字幕文件
-下载后放置同一文件夹内 并使用相同名称即可</p>
-<h2 id="the-first-20-hours--how-to-learn-anything">The first 20 hours –
-how to learn anything</h2>
-<p><img src="https://pic.imgdb.cn/item/6541053fc458853aef4b2d0f.webp">
-原视频链接：<a href="https://www.youtube.com/watch?v=5MgBikgcWnY&amp;t=10s">前往YouTube</a>
-官网文章链接：<a href="https://ideas.ted.com/dont-have-10000-hours-to-learn-something-new-thats-fine-all-you-need-is-20-hours/">前往TED官网</a>
-官网文章转载：<a href="https://flumbrix1145.github.io/blog/2023/10/31/Don%E2%80%99t-have-10-000-hours-to-learn-something-new-That%E2%80%99s-fine-%E2%80%94-all-you-need-is-20-hours/">点击前往</a></p>
-<a class="btn-anzhiyu " href="regular::下载视频文件::https://gofile.cc/deLy/the-first-20-hours-how-to-learn-anything-josh-kaufman-tedxcsu.mp4::fa-solid fa-download" title=""></a><a class="btn-anzhiyu " href="regular::下载字幕文件::https://gofile.cc/prDW/the-first-20-hours-how-to-learn-anything-josh-kaufman-tedxcsu.srt::fa-solid fa-download" title=""></a>
+    <title>Linux入门-初识Linux</title>
+    <url>/blog/posts/linuxrm.html</url>
+    <content><![CDATA[<p>最近我打算学习一下Linux 以本文记录一下我的学习过程</p>
+<h1 id="一关于linux">一、关于Linux</h1>
+<h2 id="linux的诞生">Linux的诞生</h2>
+<p>Linux创始人: 林纳斯 托瓦兹 Linux 诞生于1991年，作者上大学期间
+因为创始人在上大学期间经常需要浏览新闻和处理邮件，发现现有的操作系统不好用,
+于是他决心自己写一个保护模式下的操作系统，这就是Linux的原型，
+当时他21岁，后来经过全世界网友的支持,
+现在能够兼容多种硬件，成为最为流行的服务器操作系统之一。 <img src="https://pic.imgdb.cn/item/65634875c458853aef5abdbb.webp"> <img src="https://pic.imgdb.cn/item/65634875c458853aef5abe42.webp"></p>
+<h2 id="linux内核">Linux内核</h2>
+<p>Linux系统的组成如下：
+<strong>Linux系统内核</strong>、<strong>系统级应用程序</strong>两部分组成。
+内核提供系统最核心的功能，如：调度CPU、调度内存、调度文件系统、调度网络通讯、调度IO等。
+系统级应用程序，可以理解为出厂自带程序，可供用户快速上手操作系统，如：文件管理器、任务管理器、图片查看、音乐播放等。</p>
+<p>比如，播放音乐，无论用户使用自带音乐播放器或是自行安装的第三方播放器均是由播放器程序，调用内核提供的相关功能，由内核调度CPU解码、音响发声等。
+<img src="https://pic.imgdb.cn/item/65634875c458853aef5abeb4.webp">
+<img src="https://pic.imgdb.cn/item/65634875c458853aef5abf1c.webp">
+可以看出，内核是Linux操作系统最核心的所在，系统级应用程序只是锦上添花。
+Linux内核是免费开源的，任何人都可以下载内核源码并查看且修改。
+可以通过：https://www.kernel.org 去下载Linux内核</p>
+<p>内核是免费、开源的，这也就代表了：
+任何人都可以获得并修改内核，并且自行集成系统级程序
+提供了内核+系统级程序的完整封装，称之为Linux发行版 <img src="https://pic.imgdb.cn/item/65634875c458853aef5abf5e.webp"> <img src="https://pic.imgdb.cn/item/656348afc458853aef5be85b.webp"></p>
+<h1 id="二安装linux">二、安装Linux</h1>
+<p>在这里我用了虚拟机的方法安装Linux CentOS系统</p>
+<div class="note warning flat"><p>Linux不同发行版中的基础命令100%是相同的，只有个别软件细节不同</p>
+</div>
+
+<p>我个人认为Hyper-V虚拟机比VMware要稍微流畅一些
+所以我在这里选用Hyper-V安装CentOS
+如果你不是Windows11，那就只能用别的啦，比如VMware</p>
+<h2 id="1下载centos镜像">1.下载CentOS镜像</h2>
 ]]></content>
       <categories>
-        <category>学习</category>
-        <category>英语</category>
+        <category>记录</category>
       </categories>
       <tags>
-        <tag>TED</tag>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -1441,6 +1420,27 @@ DVD 或蓝光。</p>
       </tags>
   </entry>
   <entry>
+    <title>TED视频分享</title>
+    <url>/blog/posts/TED1.html</url>
+    <content><![CDATA[<p>本页将分享一些TED的听力视频 将提供视频文件和中英字幕文件
+下载后放置同一文件夹内 并使用相同名称即可</p>
+<h2 id="the-first-20-hours--how-to-learn-anything">The first 20 hours –
+how to learn anything</h2>
+<p><img src="https://pic.imgdb.cn/item/6541053fc458853aef4b2d0f.webp">
+原视频链接：<a href="https://www.youtube.com/watch?v=5MgBikgcWnY&amp;t=10s">前往YouTube</a>
+官网文章链接：<a href="https://ideas.ted.com/dont-have-10000-hours-to-learn-something-new-thats-fine-all-you-need-is-20-hours/">前往TED官网</a>
+官网文章转载：<a href="https://flumbrix1145.github.io/blog/2023/10/31/Don%E2%80%99t-have-10-000-hours-to-learn-something-new-That%E2%80%99s-fine-%E2%80%94-all-you-need-is-20-hours/">点击前往</a></p>
+<a class="btn-anzhiyu " href="regular::下载视频文件::https://gofile.cc/deLy/the-first-20-hours-how-to-learn-anything-josh-kaufman-tedxcsu.mp4::fa-solid fa-download" title=""></a><a class="btn-anzhiyu " href="regular::下载字幕文件::https://gofile.cc/prDW/the-first-20-hours-how-to-learn-anything-josh-kaufman-tedxcsu.srt::fa-solid fa-download" title=""></a>
+]]></content>
+      <categories>
+        <category>学习</category>
+        <category>英语</category>
+      </categories>
+      <tags>
+        <tag>TED</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>alist分享站合集</title>
     <url>/blog/posts/alist.html</url>
     <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
@@ -1460,41 +1460,6 @@ DVD 或蓝光。</p>
       </categories>
       <tags>
         <tag>alist</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>为你的博客添加搜索功能</title>
-    <url>/blog/posts/algoliasearch.html</url>
-    <content><![CDATA[<h1 id="安装插件--写入配置">安装插件 &amp; 写入配置</h1>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-algoliasearch --save</span><br></pre></td></tr></table></figure>
-
-<p>打开博客根目录的<code>_config.yml</code>,粘贴以下内容</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">algolia:</span></span><br><span class="line">  <span class="attr">appId:</span> <span class="string">"your applicationID"</span></span><br><span class="line">  <span class="attr">apiKey:</span> <span class="string">"your Search-Only API Key"</span></span><br><span class="line">  <span class="attr">adminApiKey:</span> <span class="string">"your Admin API Key"</span></span><br><span class="line">  <span class="attr">chunkSize:</span> <span class="number">5000</span></span><br><span class="line">  <span class="attr">indexName:</span> <span class="string">"your indexName"</span></span><br><span class="line">  <span class="attr">fields:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">content:strip:truncate,0,500</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">excerpt:strip</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">gallery</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">permalink</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">photos</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">slug</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">tags</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">title</span></span><br></pre></td></tr></table></figure>
-
-<h1 id="获取key">获取Key</h1>
-<p>打开<a href="https://www.algolia.com">Algolia官网</a>，注册账号
-进入主界面后，点击<u>Indices</u>，新建<code>Index</code> <img src="https://pic.imgdb.cn/item/65844ab7c458853aef1b5e34.webp">
-名称随便填 <img src="https://pic.imgdb.cn/item/65844ab7c458853aef1b5f33.webp">
-点击左下角<u>设置</u>，查看<code>Application ID</code>、<code>Search-Only API Key</code>和**Admin
-API
-Key<code> ![](https://pic.imgdb.cn/item/65844ab7c458853aef1b5ffe.webp) 返回</code>_config.yml`,填入你自己的数据，运行</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo algolia</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://pic.imgdb.cn/item/65844ab7c458853aef1b602f.webp">
-出现以下提示，就是成功了 <img src="https://pic.imgdb.cn/item/65844ab7c458853aef1b6063.webp"></p>
-<h1 id="修改主题配置文件">修改主题配置文件</h1>
-<p>打开<code>_config.anzhiyu.yml</code>,将algolia搜索设为允许</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Algolia search</span></span><br><span class="line"><span class="attr">algolia_search:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">hits:</span></span><br><span class="line">    <span class="attr">per_page:</span> <span class="number">6</span></span><br><span class="line">  <span class="attr">tags:</span></span><br><span class="line">     <span class="bullet">-</span> <span class="string">Github</span></span><br><span class="line">     <span class="bullet">-</span> <span class="string">Hexo</span></span><br></pre></td></tr></table></figure>
-
-<p>最后hexo三件套长传就完成了</p>
-]]></content>
-      <categories>
-        <category>教程</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>插件</tag>
-        <tag>搜索</tag>
       </tags>
   </entry>
   <entry>
@@ -1524,6 +1489,41 @@ registry更改为<strong>淘宝镜像</strong>，提升安装速度。</li>
       </categories>
       <tags>
         <tag>npm</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>为你的博客添加搜索功能</title>
+    <url>/blog/posts/algoliasearch.html</url>
+    <content><![CDATA[<h1 id="安装插件--写入配置">安装插件 &amp; 写入配置</h1>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-algoliasearch --save</span><br></pre></td></tr></table></figure>
+
+<p>打开博客根目录的<code>_config.yml</code>,粘贴以下内容</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">algolia:</span></span><br><span class="line">  <span class="attr">appId:</span> <span class="string">"your applicationID"</span></span><br><span class="line">  <span class="attr">apiKey:</span> <span class="string">"your Search-Only API Key"</span></span><br><span class="line">  <span class="attr">adminApiKey:</span> <span class="string">"your Admin API Key"</span></span><br><span class="line">  <span class="attr">chunkSize:</span> <span class="number">5000</span></span><br><span class="line">  <span class="attr">indexName:</span> <span class="string">"your indexName"</span></span><br><span class="line">  <span class="attr">fields:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">content:strip:truncate,0,500</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">excerpt:strip</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">gallery</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">permalink</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">photos</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">slug</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">tags</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">title</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="获取key">获取Key</h1>
+<p>打开<a href="https://www.algolia.com">Algolia官网</a>，注册账号
+进入主界面后，点击<u>Indices</u>，新建<code>Index</code> <img src="https://pic.imgdb.cn/item/65844ab7c458853aef1b5e34.webp">
+名称随便填 <img src="https://pic.imgdb.cn/item/65844ab7c458853aef1b5f33.webp">
+点击左下角<u>设置</u>，查看<code>Application ID</code>、<code>Search-Only API Key</code>和<code>Admin API Key</code>
+<img src="https://pic.imgdb.cn/item/65844ab7c458853aef1b5ffe.webp">
+返回<code>_config.yml</code>,填入你自己的数据，运行</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo algolia</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://pic.imgdb.cn/item/65844ab7c458853aef1b602f.webp">
+出现以下提示，就是成功了 <img src="https://pic.imgdb.cn/item/65844ab7c458853aef1b6063.webp"></p>
+<h1 id="修改主题配置文件">修改主题配置文件</h1>
+<p>打开<code>_config.anzhiyu.yml</code>,将algolia搜索设为允许</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Algolia search</span></span><br><span class="line"><span class="attr">algolia_search:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">hits:</span></span><br><span class="line">    <span class="attr">per_page:</span> <span class="number">6</span></span><br><span class="line">  <span class="attr">tags:</span></span><br><span class="line">     <span class="bullet">-</span> <span class="string">Github</span></span><br><span class="line">     <span class="bullet">-</span> <span class="string">Hexo</span></span><br></pre></td></tr></table></figure>
+
+<p>最后hexo三件套长传就完成了</p>
+]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>插件</tag>
+        <tag>搜索</tag>
       </tags>
   </entry>
   <entry>
@@ -1757,6 +1757,99 @@ https://gofile.cc/DJyq/acrobat-pro-dc-pdf.iso</p>
       <tags>
         <tag>软件</tag>
         <tag>网站</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>徽州行</title>
+    <url>/blog/posts/huizhou.html</url>
+    <content><![CDATA[<h1 id="活动简介">活动简介</h1>
+<p>一、活动时间 : 2023 年 11 月 11-14 日 (4 天) 二、活动地点: 徽州黄山
+三、活动内容: 11 月 11
+日乘高铁到黄山北站研学徽州文化博物馆、黄山城市展览馆 11 月 12
+日参观历史文化遗产影县–宏村、守拙园 11 月 13 日黄山“放飞理想”教育活动 11
+月 14 日参观徽菜博物馆，参观屯溪老街，乘高铁回京</p>
+<h1 id="day-1">DAY 1</h1>
+<p>惠州城市展馆
+徽商：徽州最有名的是徽商，从十三四岁开始外出经商，以木头等资源 黄山
+惠州有更多的人文历史，黄山人们希望改回徽州（人文情感丰富）
+黄山市依托山水天城，大力传承历史文化，坚持以人为本，加强规划管理，保徽建徽改徽，山水融城
+水墨徽州 歙砚 歙州再到徽州 方腊歙州人 1987改为黄山市
+建筑集中，徽派建筑形成，马头墙，放众木头多，马头墙用来防止火灾，封锁火势。
+拐弯抹角，在惠州历史中富有美德。直角，邻里之间方便搬运东西上不让天，下不让地，中间让邻里和气。
+作退一步想 徽商随家人外出，才能得到帮助 建筑：墙倒屋不塌，
+即使塌了，整体结构也不会被破坏。 榫卯 基：稳固 础：支撑
+马头墙：封锁火势，封火墙。南方房子人字形，方便排水，在人字形两边，略高，挡住火势，不至于烧到邻里。
+明堂天井：一楼不开窗，防火防盗防小偷。在二楼开天井，由于采光和通风（直接）隐喻：
+牌坊：代表家族的地位（取决于皇上）主任对社会的贡献。玉质 恩荣 圣旨
+哧剑（普遍）?徽州牌坊多。大多数牌坊被摧毁，为了建设新思想
+戏剧造型：京剧（不断融和）前身为徽剧。
+徽州人才辈出，教育发达，科举发达。詹天佑，第一批公派留学人物。十户之村不废诵读，教育重视程度高。
+徽州文化： 黄山：黄山松精神：……
+云海三四月份徽商依托新安江发展商业（农夫山泉最早水厂在千岛湖水深七十米处）
+徽商：云纹五注铜器。徽商创造的物质财富和精神财富是惠州社会历史全面高度发展的重要方面。人口暴增，导致资源匮乏，不得不外出。经商人回乡次数少，惠州人结婚早。惠州女人留在家中掌管家事。
+七山半水半分田，二分道路和庄园。 渔梁送别，母亲在岸边挥泪告别。
+胡裕泰，卖茶。惠州自古以来种茶。
+徽商普遍出现在江苏，苏州园林的主人大多数为惠州人。建筑有徽州的风格。徽州火腿制作工艺穿到金华
+。 江春“布衣上交天子” 商人 瘦西湖旁用盐打了一座白塔。
+河坊街：红顶商人胡雪岩，运用政治势力发展商业。 房屋摆设 胡适陶行知朱熹
+做人做事懂分寸 戚继光由胡宗宪一手提拔 祠堂：惩戒不孝子孙</p>
+<h1 id="day-2">DAY 2</h1>
+<p>宏村 南湖书院坐落于村子南边，学校，义务教育，汪姓男孩可免费接受教育
+村落聚族而居 hua桥 宏村牛型村：四座桥四条腿 两棵大树两角 村子身体
+从奇树村搬迁，逃不掉火灾，hkd选中了宏村，落户生根 南方的水有回甘，软水
+两棵大树：红娘，跟喜事有关，抬着花轿桃树走三圈，拉；老人高寿去世，抬着棺椁绕银杏树走，结白果，放入水中变为银色
+首富房子承志堂，六十万两白银！!木雕石雕砖雕。大门各有一撇一捺，有钱，能挂到官职。一对石户，门当户对。墙体的突出，门千金门楼四两五。文革期间被红卫兵征收。破四旧，打破封建思想。佛堂，家族家庭富贵以后，想让家族绵延更长。几百年人家无非积善，行善积德，第一等好事只是读书，让所有孩子接受到教育，徽商兴建学堂。先生受村民照顾。不开窗，防火防盗防小偷。给管家开一个门，钱进口袋不乱跑。桌子半圆形四条腿，表示男主人不在家，若回来，半圆桌会拼在一起变六条腿，表示夫妻团圆。木雕损坏与文革有关，村民用黄泥封锁木雕，刻上毛主席万岁。栏杆上方形小孔，看帅哥，山清孔。快乐每从辛苦得，便宜多自吃亏来。创业难受成难知难不难，读书好营商好效好便好。福禄寿三星，老年人对钟很忌讳。横梁架上去之后再雕刻。门当，四根木柱，贫民百姓家没有，富人有。汪氏宗祠中有女性画像。弘。
+汪姓第一人?。汪华徽州汪姓第一人，收复十五州，被供奉。宏村族长，宏村汪姓第一人。胡重，宏村水系由她主持设计修建，巨大贡献，巾帼丈夫。守拙园
+仁教永垂 一步进房三步上床四步撞墙
+男子住的比较好，终身平静指经商能够平平安安
+以帽去人，下雪就是下白银，肥水不流外人田，大石槽镇宅。请先生到家中上课。
+五柳堂。阁楼建在过道两边。老气横秋雨一鸣天地响。
+祠堂用来祭祖或操办重要的事情，以仓库为主要使用形式。女子在结婚和去世时才能入堂。看不起我可以，但要进我家门要从商下过。商门有提升家族地位的寓意。
+文昌宫。北有孔子南有文昌。以文会友，文人聚会。石木砖雕。十里红妆，从小准备嫁妆和棺椁。
+酒楼。喝酒办宴席之地。鸿案春长。明方清圆。小厅堂大厢房，明。大厅堂小厢房，清。</p>
+<h1 id="day-3">DAY 3</h1>
+<p>黄山行
+“光明顶上彩云飞，忽见仙桃石已归；石去天涯无歇处，仍回松岭伴朝辉。”研学的第三天，我们来到了黄山市市名的来源地–黄山。乘坐缆车登山，我们遇到了一年只有50多天的云海。缆车上升时，向下望去，下方有着各种各样的奇石，翠绿茂密的松树，
+有时还能看到险峻的徒步登山通道。 [图片 65.jpg]
+升入云海中时，窗外视野渐渐模糊，隐约看到松树上雪白的雾凇，晶莹剔透。
+[图片 66.jpg]
+一段时间后，我们升入云海上方，顿时豁然开朗，云海上方的美丽景色逐渐展现在眼前。蓝天白云，头上的云彩与脚下的云海在远处连为一体，甚是美丽。
+[图片 67.jpg]</p>
+<p>爬过好汉坡，经过迎客松，我们的登山之行就此开始。我们翻过了几座山峰，走过了各种各样的阶梯。我们终于登上了一座小山峰。
+[图片 68.jpg]
+在这里我们看到了奇形怪状的石头，远处美丽的山脉和湖泊，远远望去，感觉我们的目标光明顶已经唾手可得。
+[图片 69.jpg]
+继续跨过一次山峰，我们即将到达光明顶。在这里，我们看到脚下整齐划一的松树，经历过前两天的大雨，松树们都显得格外苍翠挺拔。
+[图片 70.jpg]
+继续爬了一个坡后，我们到达了此次黄山之行的最高点–光明顶。光明顶是黄山的主峰之一，位于黄山中部，海拔1860米，为黄山第二高峰，与天都峰、莲花峰并称黄山三大主峰。顶上平坦而高旷，各个高峰尽收眼底。
+[图片 73.jpg]
+在这里，我们还见到了光明顶气象站，他的前身便是建于明代的大悲院寺庙，据说周围的地区天气预报都来源于这里。
+[图片 72.jpg]
+在光明顶上进行了放飞理想活动后，我们便开启了下山的行程。下山途中我们见到了《红楼梦》中出现的飞来石。飞来石为自然风化生成，两大岩石之间的接触面很小，似从天外飞来，故名“飞来石”。
+[图片 74.jpg]
+本次爬黄山的研学活动，让我们欣赏到了黄山的美丽景象，也让我们体会到了大自然的奇特，秀美。</p>
+<h1 id="day-4">DAY 4</h1>
+<p>屯溪老街
+研学最后一天的第一站，我们来到了徽商发源地-屯溪老街。屯溪老街坐落于新安江的渐江段旁边，此地三江汇聚，西水屯局，故得名屯溪。
+[图片 77.jpg]
+屯溪整条街像一条鱼骨头，主巷为最大的主心骨，旁边小巷子就是鱼骨的分支。街旁的店铺也有着一些文化，徽商以前都是是小作坊
+，临街的地方是商铺，后院是制作商品的地方，二楼就是店铺主人休息生活的地方。
+[图片 78.jpg]
+对于毛豆腐，各个地方也有各个地方的特色。宏村的毛豆腐是方块形，方方正正，呈坎村则是长条形。游客来此地旅游，买的最多的就是黄山烧饼。黄山烧饼作为徽商重要的干粮
+，得益于其方便保存的特点。徽商行商的路程很长，所以带很多烧饼便能解决粮食问题。
+这里的主要特色还有茶。茶自古以来就是此地的的主要经济收入。在这里，四月份放还能一周的假
+用来采茶叶。每次采茶，都需要爬到海拔800以上的山里。祁红巷是之前专门储存祁门红茶的地方，祁门红茶，是世界三大高香名茶之一
+，听导游说英国皇室的下午茶就是祁门红茶。 [图片 81.jpg]
+祁门红茶因为大部分都最为出口商品，为了方便运输，所以制成了碎茶的形式。
+在屯溪老街，我们见到了各种各样的安徽特色，也领略到了各种特色商品食品背后的历史背景和文化内涵。</p>
+]]></content>
+      <categories>
+        <category>学习</category>
+        <category>研学</category>
+      </categories>
+      <tags>
+        <tag>徽州</tag>
+        <tag>研学</tag>
       </tags>
   </entry>
   <entry>
@@ -2007,99 +2100,6 @@ xxx.github.io（xxx 是你 GitHub
         <tag>Github</tag>
         <tag>Hexo</tag>
         <tag>博客</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>徽州行</title>
-    <url>/blog/posts/huizhou.html</url>
-    <content><![CDATA[<h1 id="活动简介">活动简介</h1>
-<p>一、活动时间 : 2023 年 11 月 11-14 日 (4 天) 二、活动地点: 徽州黄山
-三、活动内容: 11 月 11
-日乘高铁到黄山北站研学徽州文化博物馆、黄山城市展览馆 11 月 12
-日参观历史文化遗产影县–宏村、守拙园 11 月 13 日黄山“放飞理想”教育活动 11
-月 14 日参观徽菜博物馆，参观屯溪老街，乘高铁回京</p>
-<h1 id="day-1">DAY 1</h1>
-<p>惠州城市展馆
-徽商：徽州最有名的是徽商，从十三四岁开始外出经商，以木头等资源 黄山
-惠州有更多的人文历史，黄山人们希望改回徽州（人文情感丰富）
-黄山市依托山水天城，大力传承历史文化，坚持以人为本，加强规划管理，保徽建徽改徽，山水融城
-水墨徽州 歙砚 歙州再到徽州 方腊歙州人 1987改为黄山市
-建筑集中，徽派建筑形成，马头墙，放众木头多，马头墙用来防止火灾，封锁火势。
-拐弯抹角，在惠州历史中富有美德。直角，邻里之间方便搬运东西上不让天，下不让地，中间让邻里和气。
-作退一步想 徽商随家人外出，才能得到帮助 建筑：墙倒屋不塌，
-即使塌了，整体结构也不会被破坏。 榫卯 基：稳固 础：支撑
-马头墙：封锁火势，封火墙。南方房子人字形，方便排水，在人字形两边，略高，挡住火势，不至于烧到邻里。
-明堂天井：一楼不开窗，防火防盗防小偷。在二楼开天井，由于采光和通风（直接）隐喻：
-牌坊：代表家族的地位（取决于皇上）主任对社会的贡献。玉质 恩荣 圣旨
-哧剑（普遍）?徽州牌坊多。大多数牌坊被摧毁，为了建设新思想
-戏剧造型：京剧（不断融和）前身为徽剧。
-徽州人才辈出，教育发达，科举发达。詹天佑，第一批公派留学人物。十户之村不废诵读，教育重视程度高。
-徽州文化： 黄山：黄山松精神：……
-云海三四月份徽商依托新安江发展商业（农夫山泉最早水厂在千岛湖水深七十米处）
-徽商：云纹五注铜器。徽商创造的物质财富和精神财富是惠州社会历史全面高度发展的重要方面。人口暴增，导致资源匮乏，不得不外出。经商人回乡次数少，惠州人结婚早。惠州女人留在家中掌管家事。
-七山半水半分田，二分道路和庄园。 渔梁送别，母亲在岸边挥泪告别。
-胡裕泰，卖茶。惠州自古以来种茶。
-徽商普遍出现在江苏，苏州园林的主人大多数为惠州人。建筑有徽州的风格。徽州火腿制作工艺穿到金华
-。 江春“布衣上交天子” 商人 瘦西湖旁用盐打了一座白塔。
-河坊街：红顶商人胡雪岩，运用政治势力发展商业。 房屋摆设 胡适陶行知朱熹
-做人做事懂分寸 戚继光由胡宗宪一手提拔 祠堂：惩戒不孝子孙</p>
-<h1 id="day-2">DAY 2</h1>
-<p>宏村 南湖书院坐落于村子南边，学校，义务教育，汪姓男孩可免费接受教育
-村落聚族而居 hua桥 宏村牛型村：四座桥四条腿 两棵大树两角 村子身体
-从奇树村搬迁，逃不掉火灾，hkd选中了宏村，落户生根 南方的水有回甘，软水
-两棵大树：红娘，跟喜事有关，抬着花轿桃树走三圈，拉；老人高寿去世，抬着棺椁绕银杏树走，结白果，放入水中变为银色
-首富房子承志堂，六十万两白银！!木雕石雕砖雕。大门各有一撇一捺，有钱，能挂到官职。一对石户，门当户对。墙体的突出，门千金门楼四两五。文革期间被红卫兵征收。破四旧，打破封建思想。佛堂，家族家庭富贵以后，想让家族绵延更长。几百年人家无非积善，行善积德，第一等好事只是读书，让所有孩子接受到教育，徽商兴建学堂。先生受村民照顾。不开窗，防火防盗防小偷。给管家开一个门，钱进口袋不乱跑。桌子半圆形四条腿，表示男主人不在家，若回来，半圆桌会拼在一起变六条腿，表示夫妻团圆。木雕损坏与文革有关，村民用黄泥封锁木雕，刻上毛主席万岁。栏杆上方形小孔，看帅哥，山清孔。快乐每从辛苦得，便宜多自吃亏来。创业难受成难知难不难，读书好营商好效好便好。福禄寿三星，老年人对钟很忌讳。横梁架上去之后再雕刻。门当，四根木柱，贫民百姓家没有，富人有。汪氏宗祠中有女性画像。弘。
-汪姓第一人?。汪华徽州汪姓第一人，收复十五州，被供奉。宏村族长，宏村汪姓第一人。胡重，宏村水系由她主持设计修建，巨大贡献，巾帼丈夫。守拙园
-仁教永垂 一步进房三步上床四步撞墙
-男子住的比较好，终身平静指经商能够平平安安
-以帽去人，下雪就是下白银，肥水不流外人田，大石槽镇宅。请先生到家中上课。
-五柳堂。阁楼建在过道两边。老气横秋雨一鸣天地响。
-祠堂用来祭祖或操办重要的事情，以仓库为主要使用形式。女子在结婚和去世时才能入堂。看不起我可以，但要进我家门要从商下过。商门有提升家族地位的寓意。
-文昌宫。北有孔子南有文昌。以文会友，文人聚会。石木砖雕。十里红妆，从小准备嫁妆和棺椁。
-酒楼。喝酒办宴席之地。鸿案春长。明方清圆。小厅堂大厢房，明。大厅堂小厢房，清。</p>
-<h1 id="day-3">DAY 3</h1>
-<p>黄山行
-“光明顶上彩云飞，忽见仙桃石已归；石去天涯无歇处，仍回松岭伴朝辉。”研学的第三天，我们来到了黄山市市名的来源地–黄山。乘坐缆车登山，我们遇到了一年只有50多天的云海。缆车上升时，向下望去，下方有着各种各样的奇石，翠绿茂密的松树，
-有时还能看到险峻的徒步登山通道。 [图片 65.jpg]
-升入云海中时，窗外视野渐渐模糊，隐约看到松树上雪白的雾凇，晶莹剔透。
-[图片 66.jpg]
-一段时间后，我们升入云海上方，顿时豁然开朗，云海上方的美丽景色逐渐展现在眼前。蓝天白云，头上的云彩与脚下的云海在远处连为一体，甚是美丽。
-[图片 67.jpg]</p>
-<p>爬过好汉坡，经过迎客松，我们的登山之行就此开始。我们翻过了几座山峰，走过了各种各样的阶梯。我们终于登上了一座小山峰。
-[图片 68.jpg]
-在这里我们看到了奇形怪状的石头，远处美丽的山脉和湖泊，远远望去，感觉我们的目标光明顶已经唾手可得。
-[图片 69.jpg]
-继续跨过一次山峰，我们即将到达光明顶。在这里，我们看到脚下整齐划一的松树，经历过前两天的大雨，松树们都显得格外苍翠挺拔。
-[图片 70.jpg]
-继续爬了一个坡后，我们到达了此次黄山之行的最高点–光明顶。光明顶是黄山的主峰之一，位于黄山中部，海拔1860米，为黄山第二高峰，与天都峰、莲花峰并称黄山三大主峰。顶上平坦而高旷，各个高峰尽收眼底。
-[图片 73.jpg]
-在这里，我们还见到了光明顶气象站，他的前身便是建于明代的大悲院寺庙，据说周围的地区天气预报都来源于这里。
-[图片 72.jpg]
-在光明顶上进行了放飞理想活动后，我们便开启了下山的行程。下山途中我们见到了《红楼梦》中出现的飞来石。飞来石为自然风化生成，两大岩石之间的接触面很小，似从天外飞来，故名“飞来石”。
-[图片 74.jpg]
-本次爬黄山的研学活动，让我们欣赏到了黄山的美丽景象，也让我们体会到了大自然的奇特，秀美。</p>
-<h1 id="day-4">DAY 4</h1>
-<p>屯溪老街
-研学最后一天的第一站，我们来到了徽商发源地-屯溪老街。屯溪老街坐落于新安江的渐江段旁边，此地三江汇聚，西水屯局，故得名屯溪。
-[图片 77.jpg]
-屯溪整条街像一条鱼骨头，主巷为最大的主心骨，旁边小巷子就是鱼骨的分支。街旁的店铺也有着一些文化，徽商以前都是是小作坊
-，临街的地方是商铺，后院是制作商品的地方，二楼就是店铺主人休息生活的地方。
-[图片 78.jpg]
-对于毛豆腐，各个地方也有各个地方的特色。宏村的毛豆腐是方块形，方方正正，呈坎村则是长条形。游客来此地旅游，买的最多的就是黄山烧饼。黄山烧饼作为徽商重要的干粮
-，得益于其方便保存的特点。徽商行商的路程很长，所以带很多烧饼便能解决粮食问题。
-这里的主要特色还有茶。茶自古以来就是此地的的主要经济收入。在这里，四月份放还能一周的假
-用来采茶叶。每次采茶，都需要爬到海拔800以上的山里。祁红巷是之前专门储存祁门红茶的地方，祁门红茶，是世界三大高香名茶之一
-，听导游说英国皇室的下午茶就是祁门红茶。 [图片 81.jpg]
-祁门红茶因为大部分都最为出口商品，为了方便运输，所以制成了碎茶的形式。
-在屯溪老街，我们见到了各种各样的安徽特色，也领略到了各种特色商品食品背后的历史背景和文化内涵。</p>
-]]></content>
-      <categories>
-        <category>学习</category>
-        <category>研学</category>
-      </categories>
-      <tags>
-        <tag>徽州</tag>
-        <tag>研学</tag>
       </tags>
   </entry>
   <entry>
