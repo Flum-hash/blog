@@ -1,3 +1,3 @@
-var posts=["posts/minifier.html","posts/githubsc.html","posts/hexozlj.html","posts/linuxrm.html","posts/hexoycwz.html","posts/mdyf.html","posts/dloby.html","posts/alist.html","posts/TED1.html","posts/npminstall.html","posts/algoliasearch.html","posts/chemistry.html","posts/ruanjian.html","posts/jianzhan.html","posts/huizhou.html","posts/githubfangwen.html","posts/Fengling.html"];function toRandomPost(){
+var posts=["posts/minifier.html","posts/githubsc.html","posts/hexoycwz.html","posts/hexozlj.html","posts/TED1.html","posts/linuxrm.html","posts/mdyf.html","posts/dloby.html","posts/npminstall.html","posts/algoliasearch.html","posts/alist.html","posts/chemistry.html","posts/ruanjian.html","posts/jianzhan.html","posts/githubfangwen.html","posts/huizhou.html","posts/Fengling.html"];function toRandomPost(){
     pjax.loadUrl('/'+posts[Math.floor(Math.random() * posts.length)]);
   };
