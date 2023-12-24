@@ -1,6 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hexo如何隐藏文章</title>
+    <url>/blog/posts/hexoycwz.html</url>
+    <content><![CDATA[<p>本 Hexo
+插件可以在博客中隐藏指定的文章，并使它们仅可通过链接访问。</p>
+<p>当一篇文章被设置为「隐藏」时，它不会出现在任何列表中（包括首页、存档、分类页面、标签页面、Feed、站点地图等），也不会被搜索引擎索引（前提是搜索引擎遵守
+noindex 标签）。</p>
+<p>只有知道文章链接的人才可以访问被隐藏的文章。</p>
+<p>Github地址：<a href="https://github.com/printempw/hexo-hide-posts">https://github.com/printempw/hexo-hide-posts</a></p>
+<h3 id="安装">安装</h3>
+<p>在站点根目录下执行<code>npm install hexo-hide-posts --save</code></p>
+<h3 id="配置">配置</h3>
+<p>在站点目录下的<code>_config.yml</code>中如下配置：</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># hexo-hide-posts</span></span><br><span class="line"><span class="attr">hide_posts:</span></span><br><span class="line">  <span class="comment"># 可以改成其他你喜欢的名字</span></span><br><span class="line">  <span class="attr">filter:</span> <span class="string">hidden</span></span><br><span class="line">  <span class="comment"># 指定你想要传递隐藏文章的位置，比如让所有隐藏文章在存档页面可见</span></span><br><span class="line">  <span class="comment"># 常见的位置有：index, tag, category, archive, sitemap, feed, etc.</span></span><br><span class="line">  <span class="comment"># 留空则默认全部隐藏</span></span><br><span class="line">  <span class="attr">public_generators:</span> []</span><br><span class="line">  <span class="comment"># 为隐藏的文章添加 noindex meta 标签，阻止搜索引擎收录</span></span><br><span class="line">  <span class="attr">noindex:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<p>举个栗子：设置 <code>filter: secret</code> 之后，你就可以在
+front-matter 中使用 <code>secret: true</code> 来隐藏文章了。</p>
+<h3 id="使用">使用</h3>
+<p>在文章的属性中定义 <code>hidden: true</code> 即可隐藏文章。</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 'Hidden Post'</span><br><span class="line">date: '2021/03/05 21:45:14'</span><br><span class="line">hidden: true</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<p>虽然首页上被隐藏了，但你仍然可以通过 <code>https://hexo.test/lorem-ipsum/</code> 链接访问它。</p>
+<p>你可以在命令行运行 <code>hexo hidden:list</code> 来获取当前所有的已隐藏文章列表。</p>
+<p>插件也在 <a href="https://hexo.io/api/locals">Local
+Variables</a> 中添加了 <code>all_posts</code> 和 <code>hidden_posts</code> 变量，供自定义主题使用。</p>
+<p>文章摘自：https://blog.garryde.com/archives/37712.html</p>
+]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Github文件上传(Git)</title>
     <url>/blog/posts/githubsc.html</url>
     <content><![CDATA[<h2 id="1创建-github-代码仓库">1.创建 GitHub 代码仓库</h2>
@@ -91,6 +125,104 @@ portfolio即为我的项目名。</p>
       <tags>
         <tag>Github</tag>
         <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo压缩资源插件</title>
+    <url>/blog/posts/minifier.html</url>
+    <content><![CDATA[<p>文章来自插件hexo-all-minifier<a href="https://www.npmjs.com/package/hexo-all-minifier">官方文档</a></p>
+<h2 id="安装">安装</h2>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">npm install hexo-all-minifier --save</span></span><br></pre></td></tr></table></figure>
+
+<p>对于Mac用户，也许您需要安装更多的东西</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">brew install libtool automake autoconf nasm</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="用法">用法</h2>
+<p>只需将这一行放在 hexo-site 的配置文件中即可启用此插件。</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">all_minifier:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<p>如果您需要进一步控制此插件，请参阅以下选项。</p>
+<h2 id="选项">选项</h2>
+<p>🌟🆕 <strong>！新增功能</strong></p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">js_concator:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">bundle_path:</span> <span class="string">'/js/bundle.js'</span></span><br><span class="line">  <span class="attr">front:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">silent:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>enable</strong> - 启用 Js concator。缺省值为
+.<code>false</code></li>
+<li><strong>bundle_path</strong> -
+捆绑脚本的输出路径。它将被设置为根目录的绝对路径。</li>
+<li><strong>front</strong> - 将捆绑脚本放在标记中所有脚本的前面。默认为
+，这意味着捆绑脚本将放在其他脚本的后面。<code>body``false</code></li>
+<li><strong>silent</strong> - 禁用日志记录优化信息。缺省值为
+.<code>false</code></li>
+</ul>
+<p>concator 会将所有本地脚本连接成一个 bundle 脚本，并将其附加到 html
+标签的末尾。 在未来的版本中将允许更多细节控制。<code>body</code></p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">html_minifier:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">ignore_error:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">silent:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">exclude:</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>enable</strong> - 启用 HTML 压缩器。缺省值为
+.<code>true</code></li>
+<li><strong>ignore_error</strong> - 忽略解析html时发生的错误。</li>
+<li><strong>silent</strong> - 禁用日志记录优化信息。缺省值为
+.<code>false</code></li>
+<li><strong>exclude</strong> - 排除文件。Glob 是支持。</li>
+</ul>
+<hr>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">css_minifier:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">silent:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">exclude:</span> </span><br><span class="line">    <span class="bullet">-</span> <span class="string">'*.min.css'</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>enable</strong> - 启用 CSS 压缩器。缺省值为
+.<code>true</code></li>
+<li><strong>silent</strong> - 禁用日志记录优化信息。缺省值为
+.<code>false</code></li>
+<li><strong>exclude</strong> - 排除文件。Glob 是支持。</li>
+</ul>
+<hr>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">js_minifier:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">mangle:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">silent:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">output:</span></span><br><span class="line">  <span class="attr">compress:</span></span><br><span class="line">  <span class="attr">exclude:</span> </span><br><span class="line">    <span class="bullet">-</span> <span class="string">'*.min.js'</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>enable</strong> - 启用 JS 压缩器。缺省值为
+.<code>true</code></li>
+<li><strong>mangle</strong>：Mangle 文件名</li>
+<li><strong>output</strong>：输出选项。如果它是空的，请将其从 .yml
+文件中删除！否则，它将设置为 ，这与
+不同。<code>null``undefined</code></li>
+<li><strong>compress</strong>：压缩选项。如果它是空的，请将其从 .yml
+文件中删除！否则，它将设置为 ，这与
+不同。<code>null``undefined</code></li>
+<li><strong>silent</strong> - 禁用日志记录优化信息。缺省值为
+.<code>false</code></li>
+<li><strong>exclude</strong>：排除文件。Glob 是支持。</li>
+</ul>
+<hr>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">image_minifier:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">interlaced:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">multipass:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">optimizationLevel:</span> <span class="number">2</span></span><br><span class="line">  <span class="attr">pngquant:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">progressive:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">silent:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>enable</strong> - 启用图像缩小器。缺省值为
+.<code>true</code></li>
+<li><strong>interlaced</strong> - 用于渐进式渲染的隔行扫描 gif.缺省值为
+.<code>false</code></li>
+<li><strong>multipass</strong> - 多次优化 svg，直到完全优化。缺省值为
+.<code>false</code></li>
+<li><strong>optimizationLevel</strong> - 选择介于 0 和 7
+之间的优化级别。缺省值为 .<code>2</code></li>
+<li><strong>pngquant</strong> - 启用 <a href="https://github.com/imagemin/imagemin-pngquant">imagemin-pngquant</a> 插件。缺省值为
+.<code>false</code></li>
+<li><strong>progressive</strong> - 无损转换为渐进式。缺省值为
+.<code>false</code></li>
+<li><strong>silent</strong> - 禁用日志记录优化信息。缺省值为
+.<code>false</code></li>
+<li><strong>exclude</strong> - 排除特定类型的图像文件，输入值可以是 ,, ,
+或 。默认值为 null。不支持 Glob。<code>gif``jpg``png``svg</code></li>
+</ul>
+]]></content>
+      <categories>
+        <category>代码</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>插件</tag>
       </tags>
   </entry>
   <entry>
@@ -252,138 +384,6 @@ YAML 和 JSON 文件。</p>
       </tags>
   </entry>
   <entry>
-    <title>Hexo如何隐藏文章</title>
-    <url>/blog/posts/hexoycwz.html</url>
-    <content><![CDATA[<p>本 Hexo
-插件可以在博客中隐藏指定的文章，并使它们仅可通过链接访问。</p>
-<p>当一篇文章被设置为「隐藏」时，它不会出现在任何列表中（包括首页、存档、分类页面、标签页面、Feed、站点地图等），也不会被搜索引擎索引（前提是搜索引擎遵守
-noindex 标签）。</p>
-<p>只有知道文章链接的人才可以访问被隐藏的文章。</p>
-<p>Github地址：<a href="https://github.com/printempw/hexo-hide-posts">https://github.com/printempw/hexo-hide-posts</a></p>
-<h3 id="安装">安装</h3>
-<p>在站点根目录下执行<code>npm install hexo-hide-posts --save</code></p>
-<h3 id="配置">配置</h3>
-<p>在站点目录下的<code>_config.yml</code>中如下配置：</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># hexo-hide-posts</span></span><br><span class="line"><span class="attr">hide_posts:</span></span><br><span class="line">  <span class="comment"># 可以改成其他你喜欢的名字</span></span><br><span class="line">  <span class="attr">filter:</span> <span class="string">hidden</span></span><br><span class="line">  <span class="comment"># 指定你想要传递隐藏文章的位置，比如让所有隐藏文章在存档页面可见</span></span><br><span class="line">  <span class="comment"># 常见的位置有：index, tag, category, archive, sitemap, feed, etc.</span></span><br><span class="line">  <span class="comment"># 留空则默认全部隐藏</span></span><br><span class="line">  <span class="attr">public_generators:</span> []</span><br><span class="line">  <span class="comment"># 为隐藏的文章添加 noindex meta 标签，阻止搜索引擎收录</span></span><br><span class="line">  <span class="attr">noindex:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-
-<p>举个栗子：设置 <code>filter: secret</code> 之后，你就可以在
-front-matter 中使用 <code>secret: true</code> 来隐藏文章了。</p>
-<h3 id="使用">使用</h3>
-<p>在文章的属性中定义 <code>hidden: true</code> 即可隐藏文章。</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 'Hidden Post'</span><br><span class="line">date: '2021/03/05 21:45:14'</span><br><span class="line">hidden: true</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-
-<p>虽然首页上被隐藏了，但你仍然可以通过 <code>https://hexo.test/lorem-ipsum/</code> 链接访问它。</p>
-<p>你可以在命令行运行 <code>hexo hidden:list</code> 来获取当前所有的已隐藏文章列表。</p>
-<p>插件也在 <a href="https://hexo.io/api/locals">Local
-Variables</a> 中添加了 <code>all_posts</code> 和 <code>hidden_posts</code> 变量，供自定义主题使用。</p>
-<p>文章摘自：https://blog.garryde.com/archives/37712.html</p>
-]]></content>
-      <categories>
-        <category>教程</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo压缩资源插件</title>
-    <url>/blog/posts/minifier.html</url>
-    <content><![CDATA[<p>文章来自插件hexo-all-minifier<a href="https://www.npmjs.com/package/hexo-all-minifier">官方文档</a></p>
-<h2 id="安装">安装</h2>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">npm install hexo-all-minifier --save</span></span><br></pre></td></tr></table></figure>
-
-<p>对于Mac用户，也许您需要安装更多的东西</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">brew install libtool automake autoconf nasm</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="用法">用法</h2>
-<p>只需将这一行放在 hexo-site 的配置文件中即可启用此插件。</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">all_minifier:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-
-<p>如果您需要进一步控制此插件，请参阅以下选项。</p>
-<h2 id="选项">选项</h2>
-<p>🌟🆕 <strong>！新增功能</strong></p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">js_concator:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">bundle_path:</span> <span class="string">'/js/bundle.js'</span></span><br><span class="line">  <span class="attr">front:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">silent:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><strong>enable</strong> - 启用 Js concator。缺省值为
-.<code>false</code></li>
-<li><strong>bundle_path</strong> -
-捆绑脚本的输出路径。它将被设置为根目录的绝对路径。</li>
-<li><strong>front</strong> - 将捆绑脚本放在标记中所有脚本的前面。默认为
-，这意味着捆绑脚本将放在其他脚本的后面。<code>body``false</code></li>
-<li><strong>silent</strong> - 禁用日志记录优化信息。缺省值为
-.<code>false</code></li>
-</ul>
-<p>concator 会将所有本地脚本连接成一个 bundle 脚本，并将其附加到 html
-标签的末尾。 在未来的版本中将允许更多细节控制。<code>body</code></p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">html_minifier:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">ignore_error:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">silent:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">exclude:</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><strong>enable</strong> - 启用 HTML 压缩器。缺省值为
-.<code>true</code></li>
-<li><strong>ignore_error</strong> - 忽略解析html时发生的错误。</li>
-<li><strong>silent</strong> - 禁用日志记录优化信息。缺省值为
-.<code>false</code></li>
-<li><strong>exclude</strong> - 排除文件。Glob 是支持。</li>
-</ul>
-<hr>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">css_minifier:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">silent:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">exclude:</span> </span><br><span class="line">    <span class="bullet">-</span> <span class="string">'*.min.css'</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><strong>enable</strong> - 启用 CSS 压缩器。缺省值为
-.<code>true</code></li>
-<li><strong>silent</strong> - 禁用日志记录优化信息。缺省值为
-.<code>false</code></li>
-<li><strong>exclude</strong> - 排除文件。Glob 是支持。</li>
-</ul>
-<hr>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">js_minifier:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">mangle:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">silent:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">output:</span></span><br><span class="line">  <span class="attr">compress:</span></span><br><span class="line">  <span class="attr">exclude:</span> </span><br><span class="line">    <span class="bullet">-</span> <span class="string">'*.min.js'</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><strong>enable</strong> - 启用 JS 压缩器。缺省值为
-.<code>true</code></li>
-<li><strong>mangle</strong>：Mangle 文件名</li>
-<li><strong>output</strong>：输出选项。如果它是空的，请将其从 .yml
-文件中删除！否则，它将设置为 ，这与
-不同。<code>null``undefined</code></li>
-<li><strong>compress</strong>：压缩选项。如果它是空的，请将其从 .yml
-文件中删除！否则，它将设置为 ，这与
-不同。<code>null``undefined</code></li>
-<li><strong>silent</strong> - 禁用日志记录优化信息。缺省值为
-.<code>false</code></li>
-<li><strong>exclude</strong>：排除文件。Glob 是支持。</li>
-</ul>
-<hr>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">image_minifier:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">interlaced:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">multipass:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">optimizationLevel:</span> <span class="number">2</span></span><br><span class="line">  <span class="attr">pngquant:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">progressive:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">silent:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><strong>enable</strong> - 启用图像缩小器。缺省值为
-.<code>true</code></li>
-<li><strong>interlaced</strong> - 用于渐进式渲染的隔行扫描 gif.缺省值为
-.<code>false</code></li>
-<li><strong>multipass</strong> - 多次优化 svg，直到完全优化。缺省值为
-.<code>false</code></li>
-<li><strong>optimizationLevel</strong> - 选择介于 0 和 7
-之间的优化级别。缺省值为 .<code>2</code></li>
-<li><strong>pngquant</strong> - 启用 <a href="https://github.com/imagemin/imagemin-pngquant">imagemin-pngquant</a> 插件。缺省值为
-.<code>false</code></li>
-<li><strong>progressive</strong> - 无损转换为渐进式。缺省值为
-.<code>false</code></li>
-<li><strong>silent</strong> - 禁用日志记录优化信息。缺省值为
-.<code>false</code></li>
-<li><strong>exclude</strong> - 排除特定类型的图像文件，输入值可以是 ,, ,
-或 。默认值为 null。不支持 Glob。<code>gif``jpg``png``svg</code></li>
-</ul>
-]]></content>
-      <categories>
-        <category>代码</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>插件</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Linux入门-初识Linux</title>
     <url>/blog/posts/linuxrm.html</url>
     <content><![CDATA[<p>最近我打算学习一下Linux 以本文记录一下我的学习过程</p>
@@ -423,27 +423,6 @@ Linux内核是免费开源的，任何人都可以下载内核源码并查看且
       </categories>
       <tags>
         <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>TED视频分享</title>
-    <url>/blog/posts/TED1.html</url>
-    <content><![CDATA[<p>本页将分享一些TED的听力视频 将提供视频文件和中英字幕文件
-下载后放置同一文件夹内 并使用相同名称即可</p>
-<h2 id="the-first-20-hours--how-to-learn-anything">The first 20 hours –
-how to learn anything</h2>
-<p><img src="https://pic.imgdb.cn/item/6541053fc458853aef4b2d0f.webp">
-原视频链接：<a href="https://www.youtube.com/watch?v=5MgBikgcWnY&amp;t=10s">前往YouTube</a>
-官网文章链接：<a href="https://ideas.ted.com/dont-have-10000-hours-to-learn-something-new-thats-fine-all-you-need-is-20-hours/">前往TED官网</a>
-官网文章转载：<a href="https://flumbrix1145.github.io/blog/2023/10/31/Don%E2%80%99t-have-10-000-hours-to-learn-something-new-That%E2%80%99s-fine-%E2%80%94-all-you-need-is-20-hours/">点击前往</a></p>
-<a class="btn-anzhiyu " href="regular::下载视频文件::https://gofile.cc/deLy/the-first-20-hours-how-to-learn-anything-josh-kaufman-tedxcsu.mp4::fa-solid fa-download" title=""></a><a class="btn-anzhiyu " href="regular::下载字幕文件::https://gofile.cc/prDW/the-first-20-hours-how-to-learn-anything-josh-kaufman-tedxcsu.srt::fa-solid fa-download" title=""></a>
-]]></content>
-      <categories>
-        <category>学习</category>
-        <category>英语</category>
-      </categories>
-      <tags>
-        <tag>TED</tag>
       </tags>
   </entry>
   <entry>
@@ -1346,54 +1325,24 @@ HTML 实体。）</p>
       </tags>
   </entry>
   <entry>
-    <title>alist分享站合集</title>
-    <url>/blog/posts/alist.html</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="e05549df2db6f70cee2593aa154e3af6285f20e66c9830b6c64be5b2f8a34547">01079e04cb506c854a329d33ee789b0bc61f2bce16c53d5fbd79ea03009524ed18e4b635dae6709b6be8427a40aeab0aa4583f955ef77e9c24482f3bde710dda3e697867b3e9e51b507b8580e1981f7ac770533ecff62db0c29f8ed157fef3ad0c2b75924501a5d218ba92c68c2bf9d0b11fc26c329f8f8fb7c165e5ca43051a69d35757e33eeccc6a7bfef89a4276fbc06de2653fbd1ccc933f2bc0d8403a6690dc565c7bed4248fae1e145b5e3009bb58c30d14b42c621cc7e4b8c972b0cda7978edf09f1826bb0404c527c9e72c8484f91f5dab0665eeb96945551ce10cba5cc011ec7ce35887bf5baa061bb90331b8ad7da5f41acf2a43b46fad925799bb0f75b0ac31b29e3b83d11b137e43f41ad6cf07ed015c56d080c9f722c9cf5e228104e6114df34bd9faa78366658ebba63821ecabb9dc16c2c9b214cfdf7339e0359d4ea34aa6e834eac6697cca9d4ac095f4b389c310c30ad70038d5070d574f55e26db075e858b5dec8e41035c73000bf723eef0ddcf1fe51ab2c51121d118a931fd51c94c6b2862427c3bfdc993cdeeeb2f3306a3fc16edc1adcfecc0b54fc72cace46d6b41df46fdf6dc3a23cd503b2789c5f4d1a49d2157af8b199af592a519b4abd897284023f84725a2ecc7abc565178c1a1255bc82eb815df040838af1cd1f049dbc82e513020d274005f5e5df52fe46cf3bd156d40377e57990eae19b0e384b4f5d1dcab23413fc4f0cf87209d667053c47817811cf82ea4d5019db2ec47227cc8ceda28552483d793203de7c76038ecd040aa4d414b4ee3bea54828b77656e994fc41c4c6de68b05bcde63d9b6bc26893d2df4aef59637b602b9002cadbc1a95fb617b0b922fb6bdce8d502f89bf5170603bdf073565ad7eb2fe2feef66c96836efdbea25d16c4aba51fc22f670fd1104f33490f9c46b6a747945d45c13d59b43a994e536202b8bf6b023ffa815895e1dd3b0a48febafe96b46187bc764b08f65ec4ff3b88877064f4f1c2ecf8f24ce9b8adb64d3b14230b55fea49d4dda3c1f7f55e90929147a4590dc859371142d89363a142a73e04c184b0d94a6675f42cedab83b396c7701ba343c6f7291a79c3072abd7414098803ab449056ee4f704b200a6c999170bfeb6a4784fc3dab9285ee930743609173e66dbf8430ccc195f28cb23db0e8356bc90730f4c32e437b1f00bedc71d3eb7b8ab144bc35a0a8bcc2c40af61ac52d62bd1ede855fb166a9a0b280414d7add4d7e531faa76e4cfa896cdc82212a8caaa214262b21dbb8fccc227cf2fdb3abfd6cac2be02f0bdc1223f3ed9a7f29d79dc0d69480151377d8b222fd8bf8319a253205e13b76f5830d21acab8139f5678b218cd4daef8e1d10fa252f62da3a24da0be03b7965b2d7d52134fbb5fcd9283d41aae752ca35e648b5ec2099cf5115d27450534ca214b3e0c38ac8d2b9017bc1303bd34af8fe3ddef71fc3c3e5996fce68a8621d1e1bcd7c8d06fa96332900318cba48c83e1cc67a08ec04761349f8c125da4f9a5af927df92bba7735cb8eec0dd89ea041ad1ffa6b9a72dfbb9ad7e0cd25ccfe86b2c03b5fb7bfd60f191d1f8d82e91a17c7e996ea1a208f93fce2be31d97f2d22e815b60694b79f91d6feb3c45cff978f2ba13cb71fe644709cb6a2f3439bae81e7396edfa940cb1a4df2c229e7f4a4960db2a8ac041baae954bf3baffd41dab6b186380084a4d863bc07e3eb8c193b5f092ec51c30b55123f2aa32f83391b9a3e0d41e28b5b5f1a4abd86e7b2f5bce0ff0bce9a220b522e6c190491d8a7b3494e3235bcd0f2d2509a5448dc466b0390faa2d0935fdc9217ee656082e3041ca5efe95f7c3df8ddc6651d63b7b752694860c4a7ff180be934ac44d89e365ddf555e8028aaabdffa807a1f934de5143fff71351d9f0bf00289935babae58b0f798003cc2e61042f24c8bd10c0994e98bcef407cf5653df4c05bfbdc490a27fcb8d7e57f9d0f4f3bdc0c0f4e442f261876197d75b63e58cb6ec209e17476fe2751564de865201c5a604a4f68961204e614e3535399ab769b782739ab96815301494919ae75f8871f2afeffaa7a2b8aa6079bf183ae88cba11a1b349080f9bebf154c68346002e1cd5c37ebe7edff5c31824721653e5a3c263b244ccc44ef0449950c0fc4548e8eeb0ba578a4b4bc74090606e7c08afa3bd3518b88fe1dc59c9a366335bb0e6847d215849db50a0dec8f7635ba9c7f5b158468bcf347e720252fcaa56667597f3d5bb87512fbef65838be5ba8be8a419c568eed4b3fff642e1970eda73375b8cb88da2aad74f25875f24c293b6ecba7d526bf126fe69c1a874877f011ebe550ae9fc268194ae4264a9e20d826e4bf3a94e38846dfe5db64b53bedaf40fdca09664d0bb430f2faa9ae7e0fedb908c74b3f44524b03f8c551ebec36de0971186d683104510b10cc37fc45ed3a835592ca2d74df76c7ef913fc0808d82771d855a036971543f1b04739ead12d09251752326e780854b1e1dff297d440b8fe02d7085ff2acf40cdc27fcb56ae4a40ac2bc6cc804a6fdc89932c240a7d74a7abcef83227eec2a57da614137c22b91a0ac875899764d9d90b0b358092e2b8ca81620a25f9db62eccb1bac8f29dfbd8c862a160a34fac7fb81aa17a8fd1dec6777b2c90c13a5d1423c497dc0a6dacf908cc1a0be8ef82d90eccab74f63bf4763560bcc45cddb30c6cd9becd17f5343d44dad860c9a740c7ecbc74592002c0df122e7728ac1628281a7b47f937ff892b50f1d006e3ff11a47e82e6dc438630ea8dc48200062539dfb1cc11191b0ad2eeef8db29275cc7836aadfbf0c470ff2d464da3fa16f22e6da3cf0d363d6b52b6c6f7735995c139075a4b5588725c87f6275c73a96be030b128a7c8a6fb823e2c94d0bff5fe9f187fcd728b5a425c02c77d6aab4eb9cce64dfb3bff354e12b641c28cdcb5d19569a15f00246d59b0cc55310f1e832d491c12c93d3d8d0e2ec03534f995209bdb556a1923cd0dc458ffcf2d1235acd6cd98a1ccee21e4dcc3de7f9d8ba446bde14e028da882cea01af707cb029bebc840b119537f12211b265648a8aa141b7dc44409cfff603141aa7de46ec583c507d46502359ccb139f0b7491e4d3e50c50af118166f5bc0ec0a8faae3e1c141eb5820ba1d5a4166ec81c466ce09af664969b10d4fb36278f856a8f20d54bf6389aea23b5833f078f32a9520a15f533afd7c981bba3d65bdd974b8a07b5adf2bf3c9fecb6c866863c1d2976a523ff8803b32ce3fe1e2f53023a14a4e86dc5309835e7bcfc2f961b874957a0790acfd40c4e5d7b3d780001e6ce81cdf662cc2bf81dd0abf87240bde71dfecaa22fc581bf46bdf131cdf37882b6e622fd00f4cecf22fdd543d655164ed22f45f19819a7ef5e4e3bfd54fc62c7c9af7673a8d526f1cb66ca2b65b55534c28aef89f76e89137f7cea453df7b056bf76793364cd340fa50c7cd3ec812409e7d46b88f0c3edfdcbbb08724cd6331f6f6589b7ecc31fe67391c4a404109ec3c4044a2029c748aaa179c574e2240537f4532f28ab148b287e9e623721649b5b42a973b5a3d03020fd5b0ec677ccb46d603d5bdd5c88f4a718bc65552e9ac56806aa6cf89a7050e8cd22fa4dbaa4dcdf77175e2b728c8c4645c66864576af01a3675b4bab37bf8f85408a8ee4c0e869a97c303c149a57638af05f7aacaea6a80eba828e9c821781eb24f61e2b99353e057720784ab9aaee2aa4e45d0cd5402ee90b532d7f58b6e90dfa0f86ba0adeb6b3de7ec964ce911ec03945eb2a2b1101524c92e224b84e80c206778cc321c01c7833b31ce5a6</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Hey, password is required here.</span>
-      </label>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/blog/lib/hbe.js"></script><link href="/blog/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-      <categories>
-        <category>内容分享</category>
-      </categories>
-      <tags>
-        <tag>alist</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>解决npm install安装太慢</title>
-    <url>/blog/posts/npminstall.html</url>
-    <content><![CDATA[<h2 id="设置-npm-registry">设置 npm registry</h2>
-<ul>
-<li>本文方法为将npm
-registry更改为<strong>淘宝镜像</strong>，提升安装速度。</li>
-</ul>
-<h3 id="1临时使用">1.临时使用</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm --registry https://registry.npm.taobao.org install express</span><br></pre></td></tr></table></figure>
-
-<h3 id="2持久使用">2.持久使用</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> registry https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
-
-<p>使用<strong>mac</strong>需要权限的话，前面需要加<strong>sudo</strong>，然后输入密码。<br>
-配置后可通过下面方式来验证是否成功：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm config get registry</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://pic.imgdb.cn/item/6579c2efc458853aef76618c.webp"></p>
-<h3 id="3通过cnpm使用">3.通过cnpm使用</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g cnpm --registry=https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+    <title>TED视频分享</title>
+    <url>/blog/posts/TED1.html</url>
+    <content><![CDATA[<p>本页将分享一些TED的听力视频 将提供视频文件和中英字幕文件
+下载后放置同一文件夹内 并使用相同名称即可</p>
+<h2 id="the-first-20-hours--how-to-learn-anything">The first 20 hours –
+how to learn anything</h2>
+<p><img src="https://pic.imgdb.cn/item/6541053fc458853aef4b2d0f.webp">
+原视频链接：<a href="https://www.youtube.com/watch?v=5MgBikgcWnY&amp;t=10s">前往YouTube</a>
+官网文章链接：<a href="https://ideas.ted.com/dont-have-10000-hours-to-learn-something-new-thats-fine-all-you-need-is-20-hours/">前往TED官网</a>
+官网文章转载：<a href="https://flumbrix1145.github.io/blog/2023/10/31/Don%E2%80%99t-have-10-000-hours-to-learn-something-new-That%E2%80%99s-fine-%E2%80%94-all-you-need-is-20-hours/">点击前往</a></p>
+<a class="btn-anzhiyu " href="regular::下载视频文件::https://gofile.cc/deLy/the-first-20-hours-how-to-learn-anything-josh-kaufman-tedxcsu.mp4::fa-solid fa-download" title=""></a><a class="btn-anzhiyu " href="regular::下载字幕文件::https://gofile.cc/prDW/the-first-20-hours-how-to-learn-anything-josh-kaufman-tedxcsu.srt::fa-solid fa-download" title=""></a>
 ]]></content>
       <categories>
-        <category>教程</category>
+        <category>学习</category>
+        <category>英语</category>
       </categories>
       <tags>
-        <tag>npm</tag>
+        <tag>TED</tag>
       </tags>
   </entry>
   <entry>
@@ -1489,6 +1438,92 @@ DVD 或蓝光。</p>
       <tags>
         <tag>Windows</tag>
         <tag>杜比</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>alist分享站合集</title>
+    <url>/blog/posts/alist.html</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="e05549df2db6f70cee2593aa154e3af6285f20e66c9830b6c64be5b2f8a34547">01079e04cb506c854a329d33ee789b0bc61f2bce16c53d5fbd79ea03009524ed18e4b635dae6709b6be8427a40aeab0aa4583f955ef77e9c24482f3bde710dda3e697867b3e9e51b507b8580e1981f7ac770533ecff62db0c29f8ed157fef3ad0c2b75924501a5d218ba92c68c2bf9d0b11fc26c329f8f8fb7c165e5ca43051a69d35757e33eeccc6a7bfef89a4276fbc06de2653fbd1ccc933f2bc0d8403a6690dc565c7bed4248fae1e145b5e3009bb58c30d14b42c621cc7e4b8c972b0cda7978edf09f1826bb0404c527c9e72c8484f91f5dab0665eeb96945551ce10cba5cc011ec7ce35887bf5baa061bb90331b8ad7da5f41acf2a43b46fad925799bb0f75b0ac31b29e3b83d11b137e43f41ad6cf07ed015c56d080c9f722c9cf5e228104e6114df34bd9faa78366658ebba63821ecabb9dc16c2c9b214cfdf7339e0359d4ea34aa6e834eac6697cca9d4ac095f4b389c310c30ad70038d5070d574f55e26db075e858b5dec8e41035c73000bf723eef0ddcf1fe51ab2c51121d118a931fd51c94c6b2862427c3bfdc993cdeeeb2f3306a3fc16edc1adcfecc0b54fc72cace46d6b41df46fdf6dc3a23cd503b2789c5f4d1a49d2157af8b199af592a519b4abd897284023f84725a2ecc7abc565178c1a1255bc82eb815df040838af1cd1f049dbc82e513020d274005f5e5df52fe46cf3bd156d40377e57990eae19b0e384b4f5d1dcab23413fc4f0cf87209d667053c47817811cf82ea4d5019db2ec47227cc8ceda28552483d793203de7c76038ecd040aa4d414b4ee3bea54828b77656e994fc41c4c6de68b05bcde63d9b6bc26893d2df4aef59637b602b9002cadbc1a95fb617b0b922fb6bdce8d502f89bf5170603bdf073565ad7eb2fe2feef66c96836efdbea25d16c4aba51fc22f670fd1104f33490f9c46b6a747945d45c13d59b43a994e536202b8bf6b023ffa815895e1dd3b0a48febafe96b46187bc764b08f65ec4ff3b88877064f4f1c2ecf8f24ce9b8adb64d3b14230b55fea49d4dda3c1f7f55e90929147a4590dc859371142d89363a142a73e04c184b0d94a6675f42cedab83b396c7701ba343c6f7291a79c3072abd7414098803ab449056ee4f704b200a6c999170bfeb6a4784fc3dab9285ee930743609173e66dbf8430ccc195f28cb23db0e8356bc90730f4c32e437b1f00bedc71d3eb7b8ab144bc35a0a8bcc2c40af61ac52d62bd1ede855fb166a9a0b280414d7add4d7e531faa76e4cfa896cdc82212a8caaa214262b21dbb8fccc227cf2fdb3abfd6cac2be02f0bdc1223f3ed9a7f29d79dc0d69480151377d8b222fd8bf8319a253205e13b76f5830d21acab8139f5678b218cd4daef8e1d10fa252f62da3a24da0be03b7965b2d7d52134fbb5fcd9283d41aae752ca35e648b5ec2099cf5115d27450534ca214b3e0c38ac8d2b9017bc1303bd34af8fe3ddef71fc3c3e5996fce68a8621d1e1bcd7c8d06fa96332900318cba48c83e1cc67a08ec04761349f8c125da4f9a5af927df92bba7735cb8eec0dd89ea041ad1ffa6b9a72dfbb9ad7e0cd25ccfe86b2c03b5fb7bfd60f191d1f8d82e91a17c7e996ea1a208f93fce2be31d97f2d22e815b60694b79f91d6feb3c45cff978f2ba13cb71fe644709cb6a2f3439bae81e7396edfa940cb1a4df2c229e7f4a4960db2a8ac041baae954bf3baffd41dab6b186380084a4d863bc07e3eb8c193b5f092ec51c30b55123f2aa32f83391b9a3e0d41e28b5b5f1a4abd86e7b2f5bce0ff0bce9a220b522e6c190491d8a7b3494e3235bcd0f2d2509a5448dc466b0390faa2d0935fdc9217ee656082e3041ca5efe95f7c3df8ddc6651d63b7b752694860c4a7ff180be934ac44d89e365ddf555e8028aaabdffa807a1f934de5143fff71351d9f0bf00289935babae58b0f798003cc2e61042f24c8bd10c0994e98bcef407cf5653df4c05bfbdc490a27fcb8d7e57f9d0f4f3bdc0c0f4e442f261876197d75b63e58cb6ec209e17476fe2751564de865201c5a604a4f68961204e614e3535399ab769b782739ab96815301494919ae75f8871f2afeffaa7a2b8aa6079bf183ae88cba11a1b349080f9bebf154c68346002e1cd5c37ebe7edff5c31824721653e5a3c263b244ccc44ef0449950c0fc4548e8eeb0ba578a4b4bc74090606e7c08afa3bd3518b88fe1dc59c9a366335bb0e6847d215849db50a0dec8f7635ba9c7f5b158468bcf347e720252fcaa56667597f3d5bb87512fbef65838be5ba8be8a419c568eed4b3fff642e1970eda73375b8cb88da2aad74f25875f24c293b6ecba7d526bf126fe69c1a874877f011ebe550ae9fc268194ae4264a9e20d826e4bf3a94e38846dfe5db64b53bedaf40fdca09664d0bb430f2faa9ae7e0fedb908c74b3f44524b03f8c551ebec36de0971186d683104510b10cc37fc45ed3a835592ca2d74df76c7ef913fc0808d82771d855a036971543f1b04739ead12d09251752326e780854b1e1dff297d440b8fe02d7085ff2acf40cdc27fcb56ae4a40ac2bc6cc804a6fdc89932c240a7d74a7abcef83227eec2a57da614137c22b91a0ac875899764d9d90b0b358092e2b8ca81620a25f9db62eccb1bac8f29dfbd8c862a160a34fac7fb81aa17a8fd1dec6777b2c90c13a5d1423c497dc0a6dacf908cc1a0be8ef82d90eccab74f63bf4763560bcc45cddb30c6cd9becd17f5343d44dad860c9a740c7ecbc74592002c0df122e7728ac1628281a7b47f937ff892b50f1d006e3ff11a47e82e6dc438630ea8dc48200062539dfb1cc11191b0ad2eeef8db29275cc7836aadfbf0c470ff2d464da3fa16f22e6da3cf0d363d6b52b6c6f7735995c139075a4b5588725c87f6275c73a96be030b128a7c8a6fb823e2c94d0bff5fe9f187fcd728b5a425c02c77d6aab4eb9cce64dfb3bff354e12b641c28cdcb5d19569a15f00246d59b0cc55310f1e832d491c12c93d3d8d0e2ec03534f995209bdb556a1923cd0dc458ffcf2d1235acd6cd98a1ccee21e4dcc3de7f9d8ba446bde14e028da882cea01af707cb029bebc840b119537f12211b265648a8aa141b7dc44409cfff603141aa7de46ec583c507d46502359ccb139f0b7491e4d3e50c50af118166f5bc0ec0a8faae3e1c141eb5820ba1d5a4166ec81c466ce09af664969b10d4fb36278f856a8f20d54bf6389aea23b5833f078f32a9520a15f533afd7c981bba3d65bdd974b8a07b5adf2bf3c9fecb6c866863c1d2976a523ff8803b32ce3fe1e2f53023a14a4e86dc5309835e7bcfc2f961b874957a0790acfd40c4e5d7b3d780001e6ce81cdf662cc2bf81dd0abf87240bde71dfecaa22fc581bf46bdf131cdf37882b6e622fd00f4cecf22fdd543d655164ed22f45f19819a7ef5e4e3bfd54fc62c7c9af7673a8d526f1cb66ca2b65b55534c28aef89f76e89137f7cea453df7b056bf76793364cd340fa50c7cd3ec812409e7d46b88f0c3edfdcbbb08724cd6331f6f6589b7ecc31fe67391c4a404109ec3c4044a2029c748aaa179c574e2240537f4532f28ab148b287e9e623721649b5b42a973b5a3d03020fd5b0ec677ccb46d603d5bdd5c88f4a718bc65552e9ac56806aa6cf89a7050e8cd22fa4dbaa4dcdf77175e2b728c8c4645c66864576af01a3675b4bab37bf8f85408a8ee4c0e869a97c303c149a57638af05f7aacaea6a80eba828e9c821781eb24f61e2b99353e057720784ab9aaee2aa4e45d0cd5402ee90b532d7f58b6e90dfa0f86ba0adeb6b3de7ec964ce911ec03945eb2a2b1101524c92e224b84e80c206778cc321c01c7833b31ce5a6</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Hey, password is required here.</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/blog/lib/hbe.js"></script><link href="/blog/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+      <categories>
+        <category>内容分享</category>
+      </categories>
+      <tags>
+        <tag>alist</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>为你的博客添加搜索功能</title>
+    <url>/blog/posts/algoliasearch.html</url>
+    <content><![CDATA[<h1 id="安装插件--写入配置">安装插件 &amp; 写入配置</h1>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-algoliasearch --save</span><br></pre></td></tr></table></figure>
+
+<p>打开博客根目录的<code>_config.yml</code>,粘贴以下内容</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">algolia:</span></span><br><span class="line">  <span class="attr">appId:</span> <span class="string">"your applicationID"</span></span><br><span class="line">  <span class="attr">apiKey:</span> <span class="string">"your Search-Only API Key"</span></span><br><span class="line">  <span class="attr">adminApiKey:</span> <span class="string">"your Admin API Key"</span></span><br><span class="line">  <span class="attr">chunkSize:</span> <span class="number">5000</span></span><br><span class="line">  <span class="attr">indexName:</span> <span class="string">"your indexName"</span></span><br><span class="line">  <span class="attr">fields:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">content:strip:truncate,0,500</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">excerpt:strip</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">gallery</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">permalink</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">photos</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">slug</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">tags</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">title</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="获取key">获取Key</h1>
+<p>打开<a href="https://www.algolia.com">Algolia官网</a>，注册账号
+进入主界面后，点击<u>Indices</u>，新建<code>Index</code> <img src="https://pic.imgdb.cn/item/65844ab7c458853aef1b5e34.webp">
+名称随便填 <img src="https://pic.imgdb.cn/item/65844ab7c458853aef1b5f33.webp">
+点击左下角<u>设置</u>，查看<code>Application ID</code>、<code>Search-Only API Key</code>和<code>Admin API Key</code>
+<img src="https://pic.imgdb.cn/item/65844ab7c458853aef1b5ffe.webp">
+返回<code>_config.yml</code>,填入你自己的数据，运行</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo algolia</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://pic.imgdb.cn/item/65844ab7c458853aef1b602f.webp">
+出现以下提示，就是成功了 <img src="https://pic.imgdb.cn/item/65844ab7c458853aef1b6063.webp"></p>
+<h1 id="修改主题配置文件">修改主题配置文件</h1>
+<p>打开<code>_config.anzhiyu.yml</code>,将algolia搜索设为允许</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Algolia search</span></span><br><span class="line"><span class="attr">algolia_search:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">hits:</span></span><br><span class="line">    <span class="attr">per_page:</span> <span class="number">6</span></span><br><span class="line">  <span class="attr">tags:</span></span><br><span class="line">     <span class="bullet">-</span> <span class="string">Github</span></span><br><span class="line">     <span class="bullet">-</span> <span class="string">Hexo</span></span><br></pre></td></tr></table></figure>
+
+<p>最后hexo三件套长传就完成了</p>
+]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>插件</tag>
+        <tag>搜索</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>解决npm install安装太慢</title>
+    <url>/blog/posts/npminstall.html</url>
+    <content><![CDATA[<h2 id="设置-npm-registry">设置 npm registry</h2>
+<ul>
+<li>本文方法为将npm
+registry更改为<strong>淘宝镜像</strong>，提升安装速度。</li>
+</ul>
+<h3 id="1临时使用">1.临时使用</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm --registry https://registry.npm.taobao.org install express</span><br></pre></td></tr></table></figure>
+
+<h3 id="2持久使用">2.持久使用</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> registry https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+
+<p>使用<strong>mac</strong>需要权限的话，前面需要加<strong>sudo</strong>，然后输入密码。<br>
+配置后可通过下面方式来验证是否成功：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm config get registry</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://pic.imgdb.cn/item/6579c2efc458853aef76618c.webp"></p>
+<h3 id="3通过cnpm使用">3.通过cnpm使用</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g cnpm --registry=https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>npm</tag>
       </tags>
   </entry>
   <entry>
@@ -1665,98 +1700,6 @@ DVD 或蓝光。</p>
       </categories>
       <tags>
         <tag>化学方程式</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>实用软件&amp;网站整理</title>
-    <url>/blog/posts/ruanjian.html</url>
-    <content><![CDATA[<h2 id="软件分享">软件分享</h2>
-<p>注：以下大部分内容为免费或破解版本</p>
-<h3 id="coodesker">Coodesker</h3>
-<p>Coodesker：自动分类整理桌面上的快捷方式、目录、图片等文件
-以前为免费软件，虽然在github上，但是就挂了个仓库
-现在已经开始收费了，但是我感觉老版本就够用</p>
-<a class="btn-anzhiyu " href="regular::Coodesker最后一个免费版本::https://wwll.lanzout.com/iveV71c8woyh::fa-solid fa-play-circle" title=""></a>
-
-<a class="btn-anzhiyu " href="regular::Coodesker20.0.7激活版本::https://wwll.lanzout.com/iEhYW1cbw46h::fa-solid fa-play-circle" title=""></a>
-
-<p>激活版下载密码：bpwp</p>
-<h3 id="kms激活工具">KMS激活工具</h3>
-<p>采用当前最先进的激活技术，几乎涵盖了Windows全版本同Office全版本的激活，支持最新的Win11系统、Win10全版本包括Win10
-LTSC的数字权利激活，非常强大，是激活系统首选的一款激活工具。</p>
-<a class="btn-anzhiyu " href="regular::前往下载::https://wwll.lanzout.com/iIXeE1c8wp8h::fa-solid fa-play-circle" title=""></a>
-
-<h3 id="potplayer视频播放器">PotPlayer视频播放器</h3>
-<p>PotPlayer继承了 KMPlayer
-所有的优点，拥有异常强大的内置音视频解码器，可以支持几乎全部音乐、视频文件格式的播放。采用
-VC++ 进行了全面重构，并且原生支持64位操作系统，使得 PotPlayer 在 Windows
-10 等新系统上，无论性能、兼容性和稳定性上的表现均比 KMP
-要好不少；硬件加速、流畅优秀的全高清视
-频播放效果、强大的选项、滤镜、外挂式管理、DXVA等硬件解码；以及非常丰富且强大的设置选项，被誉为Win平台上最优秀的免费影音全能格式播放器。</p>
-<a class="btn-anzhiyu " href="regular::前往下载::https://wwll.lanzout.com/i53vQ1c8wpgf::fa-solid fa-play-circle" title=""></a>
-
-<p>密码:a2k0</p>
-<h3 id="rainmeter雨滴">Rainmeter雨滴</h3>
-<p>雨滴皮肤（Rainmeter皮肤），是一些有特定功能的Windows桌面小工具。一些复杂的皮肤则看起来像是小型应用程序，风格相近的皮肤则可以组成一个套装或者主题。任何一个雨滴皮肤在不同电脑上工作都是不完全相同的，这取决于使用者对它的调整和修饰。</p>
-<a class="btn-anzhiyu " href="regular::前往官网下载::https://www.rainmeter.net/::fa-solid fa-play-circle" title=""></a>
-
-<h3 id="几何画板已破解">几何画板(已破解)</h3>
-<p>几何画板为从三年级到大学的各个级别的学生提供了一种有形的，可视化的方
-式来学习数学，从而提高他们的参与度、理解力和成就。
-几何画板现已停售，这里准备了v5.0.6的破解版本</p>
-<a class="btn-anzhiyu " href="regular::前往下载::https://wwll.lanzout.com/iLwf71c8wqyj::fa-solid fa-play-circle" title=""></a>
-
-<p>https://gofile.cc/lre4/bandizip.exe
-https://gofile.cc/jrY7/coodesker.zip https://gofile.cc/551a/kms.zip
-https://gofile.cc/QrEQ/firpe-v182.exe https://gofile.cc/WW5E/idm.exe
-https://gofile.cc/K7Xk/potplayer.exe
-https://gofile.cc/1kYp/rustdesk-64.exe
-https://gofile.cc/zq40/ventoy-1095-windows.zip
-https://gofile.cc/0L0l/.zip
-https://gofile.cc/DJyq/acrobat-pro-dc-pdf.iso</p>
-]]></content>
-      <categories>
-        <category>内容分享</category>
-        <category>软件</category>
-      </categories>
-      <tags>
-        <tag>软件</tag>
-        <tag>网站</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>为你的博客添加搜索功能</title>
-    <url>/blog/posts/algoliasearch.html</url>
-    <content><![CDATA[<h1 id="安装插件--写入配置">安装插件 &amp; 写入配置</h1>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-algoliasearch --save</span><br></pre></td></tr></table></figure>
-
-<p>打开博客根目录的<code>_config.yml</code>,粘贴以下内容</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">algolia:</span></span><br><span class="line">  <span class="attr">appId:</span> <span class="string">"your applicationID"</span></span><br><span class="line">  <span class="attr">apiKey:</span> <span class="string">"your Search-Only API Key"</span></span><br><span class="line">  <span class="attr">adminApiKey:</span> <span class="string">"your Admin API Key"</span></span><br><span class="line">  <span class="attr">chunkSize:</span> <span class="number">5000</span></span><br><span class="line">  <span class="attr">indexName:</span> <span class="string">"your indexName"</span></span><br><span class="line">  <span class="attr">fields:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">content:strip:truncate,0,500</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">excerpt:strip</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">gallery</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">permalink</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">photos</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">slug</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">tags</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">title</span></span><br></pre></td></tr></table></figure>
-
-<h1 id="获取key">获取Key</h1>
-<p>打开<a href="https://www.algolia.com">Algolia官网</a>，注册账号
-进入主界面后，点击<u>Indices</u>，新建<code>Index</code> <img src="https://pic.imgdb.cn/item/65844ab7c458853aef1b5e34.webp">
-名称随便填 <img src="https://pic.imgdb.cn/item/65844ab7c458853aef1b5f33.webp">
-点击左下角<u>设置</u>，查看<code>Application ID</code>、<code>Search-Only API Key</code>和<code>Admin API Key</code>
-<img src="https://pic.imgdb.cn/item/65844ab7c458853aef1b5ffe.webp">
-返回<code>_config.yml</code>,填入你自己的数据，运行</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo algolia</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://pic.imgdb.cn/item/65844ab7c458853aef1b602f.webp">
-出现以下提示，就是成功了 <img src="https://pic.imgdb.cn/item/65844ab7c458853aef1b6063.webp"></p>
-<h1 id="修改主题配置文件">修改主题配置文件</h1>
-<p>打开<code>_config.anzhiyu.yml</code>,将algolia搜索设为允许</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Algolia search</span></span><br><span class="line"><span class="attr">algolia_search:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">hits:</span></span><br><span class="line">    <span class="attr">per_page:</span> <span class="number">6</span></span><br><span class="line">  <span class="attr">tags:</span></span><br><span class="line">     <span class="bullet">-</span> <span class="string">Github</span></span><br><span class="line">     <span class="bullet">-</span> <span class="string">Hexo</span></span><br></pre></td></tr></table></figure>
-
-<p>最后hexo三件套长传就完成了</p>
-]]></content>
-      <categories>
-        <category>教程</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>插件</tag>
-        <tag>搜索</tag>
       </tags>
   </entry>
   <entry>
@@ -2004,76 +1947,9 @@ xxx.github.io（xxx 是你 GitHub
         <category>代码</category>
       </categories>
       <tags>
-        <tag>Github</tag>
         <tag>Hexo</tag>
-        <tag>博客</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>解决Github的访问问题</title>
-    <url>/blog/posts/githubfangwen.html</url>
-    <content><![CDATA[<p>Github是一个基于Git版本控制系统的代码托管平台。</p>
-<p>Github上有着很多开源的免费的软件及资料，但是因为网络问腿，导致Github的访问速度极其的慢，甚至有的时候上不去
-下面，我给出了几个方法，能够解决这个问题</p>
-<h2 id="1watt-toolkit">1.Watt Toolkit</h2>
-<p>「Watt Toolkit」原名Steam++，是一个开源跨平台的多功能 Steam 工具箱。
-<img src="https://s2.loli.net/2023/10/22/oWHj9GgrPe7NVyC.webp"></p>
-<a class="btn-anzhiyu " href="/blog/center%20large::%E5%89%8D%E5%BE%80Watt%20Toolkit%E5%AE%98%E7%BD%91%E4%B8%8B%E8%BD%BD::https:/steampp.net/::fa-solid%20fa-download" title=""></a>
-
-<p>进入软件界面后，点击左侧的网络加速选项卡，勾选Github，点击右上角的“一键加速“
-<img src="https://s2.loli.net/2023/10/22/MsDri4PQEy5lFLc.webp"></p>
-<h2 id="2更改hosts文件">2.更改hosts文件</h2>
-<p>通过修改本地 hosts 文件，试图解决：</p>
-<p>GitHub 访问速度慢的问题 GitHub 项目中的图片显示不出的问题</p>
-<h3 id="1下载hosts管理工具switchhosts">1.下载hosts管理工具<strong>SwitchHosts</strong></h3>
-<p><img src="https://s2.loli.net/2023/10/22/LXJjSyzU4cZdrTC.webp"></p>
-<a class="btn-anzhiyu " href="/blog/center%20large::SwitchHosts%E7%9A%84Github%E4%B8%BB%E9%A1%B5::https:/github.com/oldj/SwitchHosts/tree/v4.1.2::fa-solid%20fa-arrow-right" title=""></a>
-
-<p>当然，如果上不去Github的话，可以通过下面蓝奏云链接下载最新版本（目前截至v4.1.2）</p>
-<a class="btn-anzhiyu " href="regular::前往蓝奏云分享链接::https://wwll.lanzout.com/b04es5obc::fa-solid fa-download" title=""></a>密码:7s3t
-
-<h3 id="2安装配置">2.安装配置</h3>
-<p>安装完成后，我们打开软件，就可以看到如下界面: <img src="https://s2.loli.net/2023/10/22/6n7ipcA5CUdfBLt.webp">
-我们点击左侧的加号，进入配置界面 Hosts类型：远程 Hosts标题：随意
-URL：https://raw.hellogithub.com/hosts</p>
-<div class="note warning flat"><p>请将此链接粘贴到选项框中</p>
-</div>
-
-<p>自动刷新：建议选择1小时 <img src="https://s2.loli.net/2023/10/22/CMzHoDT3PhpFQ5i.webp">
-填写完成后，点击确定，就配置完成了</p>
-<h3 id="3问题解决">3.问题解决</h3>
-<p>点击左侧名称后的按钮，如果你显示的如下界面（提示操作成功） <img src="https://s2.loli.net/2023/10/22/V5aJKjuG9QTLfcA.webp">
-那么恭喜你，你的配置完成了 如果是下面这种： <img src="https://s2.loli.net/2023/10/22/qrQyT4w5Ks3j7uB.webp">
-请继续往下设置</p>
-<h4 id="31-找到hosts文件">3.1 找到hosts文件</h4>
-<p>Hosts文件一般都在电脑的“C:\Windows\System32\drivers\etc“文件夹下，我们打开这个文件夹，找到hosts文件
-<img src="https://s2.loli.net/2023/10/22/cmrDo9vPJsafNiw.webp"></p>
-<h4 id="32-修改hosts文件权限">3.2 修改hosts文件权限</h4>
-<p>右键hosts文件，选择<strong>属性</strong>， <img src="https://s2.loli.net/2023/10/22/b6qCFxJQwd5Ep9B.webp">
-选择<strong>编辑</strong> <img src="https://s2.loli.net/2023/10/22/Ac3lXS9YWut7wmV.webp">
-将<strong>组成用户名</strong>中第一个和最后一个选项（Users）的<strong>修改</strong>和<strong>写入</strong>勾选
-<img src="https://s2.loli.net/2023/10/22/v5fbjVmGrAEkX6M.webp"></p>
-<h4 id="33-验证修改">3.3 验证修改</h4>
-<p>点击确定，返回<strong>SwitchHosts</strong>界面，若显示如下界面，那么就修改成功了
-<img src="https://s2.loli.net/2023/10/22/V5aJKjuG9QTLfcA.webp"></p>
-<h4 id="34-清除dns缓存">3.4 清除DNS缓存</h4>
-<p>若发现以上设置都没有问题了，但是仍然访问不了Github，那么可以试试清除电脑的DNS缓存
-这里以Win11举例：
-鼠标右键点击“开始菜单”或者按“Win+X”弹出窗口，找到“Windows
-终端(管理员)”。如下图： <img src="https://s2.loli.net/2023/10/22/4eamPvjlhMqI6rn.webp">
-在命令窗口输入:</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ipconfig /flushdns</span><br></pre></td></tr></table></figure>
-
-<p>按**Enter（回车键）**运行，看到已成功刷新DNS解析缓存的提示就说明DNS刷新成功了。（注：命令中间空格不可少）如下图：
-<img src="https://s2.loli.net/2023/10/22/Go41KbrZTingAzt.webp"></p>
-]]></content>
-      <categories>
-        <category>教程</category>
-        <category>代码</category>
-      </categories>
-      <tags>
         <tag>Github</tag>
-        <tag>Windows</tag>
+        <tag>博客</tag>
       </tags>
   </entry>
   <entry>
@@ -2167,6 +2043,130 @@ URL：https://raw.hellogithub.com/hosts</p>
       <tags>
         <tag>徽州</tag>
         <tag>研学</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>实用软件&amp;网站整理</title>
+    <url>/blog/posts/ruanjian.html</url>
+    <content><![CDATA[<h2 id="软件分享">软件分享</h2>
+<p>注：以下大部分内容为免费或破解版本</p>
+<h3 id="coodesker">Coodesker</h3>
+<p>Coodesker：自动分类整理桌面上的快捷方式、目录、图片等文件
+以前为免费软件，虽然在github上，但是就挂了个仓库
+现在已经开始收费了，但是我感觉老版本就够用</p>
+<a class="btn-anzhiyu " href="regular::Coodesker最后一个免费版本::https://wwll.lanzout.com/iveV71c8woyh::fa-solid fa-play-circle" title=""></a>
+
+<a class="btn-anzhiyu " href="regular::Coodesker20.0.7激活版本::https://wwll.lanzout.com/iEhYW1cbw46h::fa-solid fa-play-circle" title=""></a>
+
+<p>激活版下载密码：bpwp</p>
+<h3 id="kms激活工具">KMS激活工具</h3>
+<p>采用当前最先进的激活技术，几乎涵盖了Windows全版本同Office全版本的激活，支持最新的Win11系统、Win10全版本包括Win10
+LTSC的数字权利激活，非常强大，是激活系统首选的一款激活工具。</p>
+<a class="btn-anzhiyu " href="regular::前往下载::https://wwll.lanzout.com/iIXeE1c8wp8h::fa-solid fa-play-circle" title=""></a>
+
+<h3 id="potplayer视频播放器">PotPlayer视频播放器</h3>
+<p>PotPlayer继承了 KMPlayer
+所有的优点，拥有异常强大的内置音视频解码器，可以支持几乎全部音乐、视频文件格式的播放。采用
+VC++ 进行了全面重构，并且原生支持64位操作系统，使得 PotPlayer 在 Windows
+10 等新系统上，无论性能、兼容性和稳定性上的表现均比 KMP
+要好不少；硬件加速、流畅优秀的全高清视
+频播放效果、强大的选项、滤镜、外挂式管理、DXVA等硬件解码；以及非常丰富且强大的设置选项，被誉为Win平台上最优秀的免费影音全能格式播放器。</p>
+<a class="btn-anzhiyu " href="regular::前往下载::https://wwll.lanzout.com/i53vQ1c8wpgf::fa-solid fa-play-circle" title=""></a>
+
+<p>密码:a2k0</p>
+<h3 id="rainmeter雨滴">Rainmeter雨滴</h3>
+<p>雨滴皮肤（Rainmeter皮肤），是一些有特定功能的Windows桌面小工具。一些复杂的皮肤则看起来像是小型应用程序，风格相近的皮肤则可以组成一个套装或者主题。任何一个雨滴皮肤在不同电脑上工作都是不完全相同的，这取决于使用者对它的调整和修饰。</p>
+<a class="btn-anzhiyu " href="regular::前往官网下载::https://www.rainmeter.net/::fa-solid fa-play-circle" title=""></a>
+
+<h3 id="几何画板已破解">几何画板(已破解)</h3>
+<p>几何画板为从三年级到大学的各个级别的学生提供了一种有形的，可视化的方
+式来学习数学，从而提高他们的参与度、理解力和成就。
+几何画板现已停售，这里准备了v5.0.6的破解版本</p>
+<a class="btn-anzhiyu " href="regular::前往下载::https://wwll.lanzout.com/iLwf71c8wqyj::fa-solid fa-play-circle" title=""></a>
+
+<p>https://gofile.cc/lre4/bandizip.exe
+https://gofile.cc/jrY7/coodesker.zip https://gofile.cc/551a/kms.zip
+https://gofile.cc/QrEQ/firpe-v182.exe https://gofile.cc/WW5E/idm.exe
+https://gofile.cc/K7Xk/potplayer.exe
+https://gofile.cc/1kYp/rustdesk-64.exe
+https://gofile.cc/zq40/ventoy-1095-windows.zip
+https://gofile.cc/0L0l/.zip
+https://gofile.cc/DJyq/acrobat-pro-dc-pdf.iso</p>
+]]></content>
+      <categories>
+        <category>内容分享</category>
+        <category>软件</category>
+      </categories>
+      <tags>
+        <tag>软件</tag>
+        <tag>网站</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>解决Github的访问问题</title>
+    <url>/blog/posts/githubfangwen.html</url>
+    <content><![CDATA[<p>Github是一个基于Git版本控制系统的代码托管平台。</p>
+<p>Github上有着很多开源的免费的软件及资料，但是因为网络问腿，导致Github的访问速度极其的慢，甚至有的时候上不去
+下面，我给出了几个方法，能够解决这个问题</p>
+<h2 id="1watt-toolkit">1.Watt Toolkit</h2>
+<p>「Watt Toolkit」原名Steam++，是一个开源跨平台的多功能 Steam 工具箱。
+<img src="https://s2.loli.net/2023/10/22/oWHj9GgrPe7NVyC.webp"></p>
+<a class="btn-anzhiyu " href="/blog/center%20large::%E5%89%8D%E5%BE%80Watt%20Toolkit%E5%AE%98%E7%BD%91%E4%B8%8B%E8%BD%BD::https:/steampp.net/::fa-solid%20fa-download" title=""></a>
+
+<p>进入软件界面后，点击左侧的网络加速选项卡，勾选Github，点击右上角的“一键加速“
+<img src="https://s2.loli.net/2023/10/22/MsDri4PQEy5lFLc.webp"></p>
+<h2 id="2更改hosts文件">2.更改hosts文件</h2>
+<p>通过修改本地 hosts 文件，试图解决：</p>
+<p>GitHub 访问速度慢的问题 GitHub 项目中的图片显示不出的问题</p>
+<h3 id="1下载hosts管理工具switchhosts">1.下载hosts管理工具<strong>SwitchHosts</strong></h3>
+<p><img src="https://s2.loli.net/2023/10/22/LXJjSyzU4cZdrTC.webp"></p>
+<a class="btn-anzhiyu " href="/blog/center%20large::SwitchHosts%E7%9A%84Github%E4%B8%BB%E9%A1%B5::https:/github.com/oldj/SwitchHosts/tree/v4.1.2::fa-solid%20fa-arrow-right" title=""></a>
+
+<p>当然，如果上不去Github的话，可以通过下面蓝奏云链接下载最新版本（目前截至v4.1.2）</p>
+<a class="btn-anzhiyu " href="regular::前往蓝奏云分享链接::https://wwll.lanzout.com/b04es5obc::fa-solid fa-download" title=""></a>密码:7s3t
+
+<h3 id="2安装配置">2.安装配置</h3>
+<p>安装完成后，我们打开软件，就可以看到如下界面: <img src="https://s2.loli.net/2023/10/22/6n7ipcA5CUdfBLt.webp">
+我们点击左侧的加号，进入配置界面 Hosts类型：远程 Hosts标题：随意
+URL：https://raw.hellogithub.com/hosts</p>
+<div class="note warning flat"><p>请将此链接粘贴到选项框中</p>
+</div>
+
+<p>自动刷新：建议选择1小时 <img src="https://s2.loli.net/2023/10/22/CMzHoDT3PhpFQ5i.webp">
+填写完成后，点击确定，就配置完成了</p>
+<h3 id="3问题解决">3.问题解决</h3>
+<p>点击左侧名称后的按钮，如果你显示的如下界面（提示操作成功） <img src="https://s2.loli.net/2023/10/22/V5aJKjuG9QTLfcA.webp">
+那么恭喜你，你的配置完成了 如果是下面这种： <img src="https://s2.loli.net/2023/10/22/qrQyT4w5Ks3j7uB.webp">
+请继续往下设置</p>
+<h4 id="31-找到hosts文件">3.1 找到hosts文件</h4>
+<p>Hosts文件一般都在电脑的“C:\Windows\System32\drivers\etc“文件夹下，我们打开这个文件夹，找到hosts文件
+<img src="https://s2.loli.net/2023/10/22/cmrDo9vPJsafNiw.webp"></p>
+<h4 id="32-修改hosts文件权限">3.2 修改hosts文件权限</h4>
+<p>右键hosts文件，选择<strong>属性</strong>， <img src="https://s2.loli.net/2023/10/22/b6qCFxJQwd5Ep9B.webp">
+选择<strong>编辑</strong> <img src="https://s2.loli.net/2023/10/22/Ac3lXS9YWut7wmV.webp">
+将<strong>组成用户名</strong>中第一个和最后一个选项（Users）的<strong>修改</strong>和<strong>写入</strong>勾选
+<img src="https://s2.loli.net/2023/10/22/v5fbjVmGrAEkX6M.webp"></p>
+<h4 id="33-验证修改">3.3 验证修改</h4>
+<p>点击确定，返回<strong>SwitchHosts</strong>界面，若显示如下界面，那么就修改成功了
+<img src="https://s2.loli.net/2023/10/22/V5aJKjuG9QTLfcA.webp"></p>
+<h4 id="34-清除dns缓存">3.4 清除DNS缓存</h4>
+<p>若发现以上设置都没有问题了，但是仍然访问不了Github，那么可以试试清除电脑的DNS缓存
+这里以Win11举例：
+鼠标右键点击“开始菜单”或者按“Win+X”弹出窗口，找到“Windows
+终端(管理员)”。如下图： <img src="https://s2.loli.net/2023/10/22/4eamPvjlhMqI6rn.webp">
+在命令窗口输入:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ipconfig /flushdns</span><br></pre></td></tr></table></figure>
+
+<p>按**Enter（回车键）**运行，看到已成功刷新DNS解析缓存的提示就说明DNS刷新成功了。（注：命令中间空格不可少）如下图：
+<img src="https://s2.loli.net/2023/10/22/Go41KbrZTingAzt.webp"></p>
+]]></content>
+      <categories>
+        <category>教程</category>
+        <category>代码</category>
+      </categories>
+      <tags>
+        <tag>Github</tag>
+        <tag>Windows</tag>
       </tags>
   </entry>
   <entry>
