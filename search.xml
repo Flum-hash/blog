@@ -226,48 +226,6 @@ Variables</a> 中添加了 <code>all_posts</code> 和 <code>hidden_posts</co
       </tags>
   </entry>
   <entry>
-    <title>Linux入门-初识Linux</title>
-    <url>/blog/posts/linuxrm.html</url>
-    <content><![CDATA[<p>最近我打算学习一下Linux 以本文记录一下我的学习过程</p>
-<h1 id="一关于linux">一、关于Linux</h1>
-<h2 id="linux的诞生">Linux的诞生</h2>
-<p>Linux创始人: 林纳斯 托瓦兹 Linux 诞生于1991年，作者上大学期间
-因为创始人在上大学期间经常需要浏览新闻和处理邮件，发现现有的操作系统不好用,
-于是他决心自己写一个保护模式下的操作系统，这就是Linux的原型，
-当时他21岁，后来经过全世界网友的支持,
-现在能够兼容多种硬件，成为最为流行的服务器操作系统之一。 <img src="https://pic.imgdb.cn/item/65634875c458853aef5abdbb.webp"> <img src="https://pic.imgdb.cn/item/65634875c458853aef5abe42.webp"></p>
-<h2 id="linux内核">Linux内核</h2>
-<p>Linux系统的组成如下：
-<strong>Linux系统内核</strong>、<strong>系统级应用程序</strong>两部分组成。
-内核提供系统最核心的功能，如：调度CPU、调度内存、调度文件系统、调度网络通讯、调度IO等。
-系统级应用程序，可以理解为出厂自带程序，可供用户快速上手操作系统，如：文件管理器、任务管理器、图片查看、音乐播放等。</p>
-<p>比如，播放音乐，无论用户使用自带音乐播放器或是自行安装的第三方播放器均是由播放器程序，调用内核提供的相关功能，由内核调度CPU解码、音响发声等。
-<img src="https://pic.imgdb.cn/item/65634875c458853aef5abeb4.webp">
-<img src="https://pic.imgdb.cn/item/65634875c458853aef5abf1c.webp">
-可以看出，内核是Linux操作系统最核心的所在，系统级应用程序只是锦上添花。
-Linux内核是免费开源的，任何人都可以下载内核源码并查看且修改。
-可以通过：https://www.kernel.org 去下载Linux内核</p>
-<p>内核是免费、开源的，这也就代表了：
-任何人都可以获得并修改内核，并且自行集成系统级程序
-提供了内核+系统级程序的完整封装，称之为Linux发行版 <img src="https://pic.imgdb.cn/item/65634875c458853aef5abf5e.webp"> <img src="https://pic.imgdb.cn/item/656348afc458853aef5be85b.webp"></p>
-<h1 id="二安装linux">二、安装Linux</h1>
-<p>在这里我用了虚拟机的方法安装Linux CentOS系统</p>
-<div class="note warning flat"><p>Linux不同发行版中的基础命令100%是相同的，只有个别软件细节不同</p>
-</div>
-
-<p>我个人认为Hyper-V虚拟机比VMware要稍微流畅一些
-所以我在这里选用Hyper-V安装CentOS
-如果你不是Windows11，那就只能用别的啦，比如VMware</p>
-<h2 id="1下载centos镜像">1.下载CentOS镜像</h2>
-]]></content>
-      <categories>
-        <category>记录</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hexo常用指令集</title>
     <url>/blog/posts/hexozlj.html</url>
     <content><![CDATA[<a class="btn-anzhiyu " href="/blog/center%20large::%E5%89%8D%E5%BE%80HEXO%E5%AE%98%E6%96%B9%E6%8C%87%E4%BB%A4%E6%95%99%E7%A8%8B::https:/hexo.io/zh-cn/docs/commands.html::fa-solid%20fa-play-circle" title=""></a>
@@ -423,6 +381,69 @@ YAML 和 JSON 文件。</p>
       </categories>
       <tags>
         <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux入门-初识Linux</title>
+    <url>/blog/posts/linuxrm.html</url>
+    <content><![CDATA[<p>最近我打算学习一下Linux 以本文记录一下我的学习过程</p>
+<h1 id="一关于linux">一、关于Linux</h1>
+<h2 id="linux的诞生">Linux的诞生</h2>
+<p>Linux创始人: 林纳斯 托瓦兹 Linux 诞生于1991年，作者上大学期间
+因为创始人在上大学期间经常需要浏览新闻和处理邮件，发现现有的操作系统不好用,
+于是他决心自己写一个保护模式下的操作系统，这就是Linux的原型，
+当时他21岁，后来经过全世界网友的支持,
+现在能够兼容多种硬件，成为最为流行的服务器操作系统之一。 <img src="https://pic.imgdb.cn/item/65634875c458853aef5abdbb.webp"> <img src="https://pic.imgdb.cn/item/65634875c458853aef5abe42.webp"></p>
+<h2 id="linux内核">Linux内核</h2>
+<p>Linux系统的组成如下：
+<strong>Linux系统内核</strong>、<strong>系统级应用程序</strong>两部分组成。
+内核提供系统最核心的功能，如：调度CPU、调度内存、调度文件系统、调度网络通讯、调度IO等。
+系统级应用程序，可以理解为出厂自带程序，可供用户快速上手操作系统，如：文件管理器、任务管理器、图片查看、音乐播放等。</p>
+<p>比如，播放音乐，无论用户使用自带音乐播放器或是自行安装的第三方播放器均是由播放器程序，调用内核提供的相关功能，由内核调度CPU解码、音响发声等。
+<img src="https://pic.imgdb.cn/item/65634875c458853aef5abeb4.webp">
+<img src="https://pic.imgdb.cn/item/65634875c458853aef5abf1c.webp">
+可以看出，内核是Linux操作系统最核心的所在，系统级应用程序只是锦上添花。
+Linux内核是免费开源的，任何人都可以下载内核源码并查看且修改。
+可以通过：https://www.kernel.org 去下载Linux内核</p>
+<p>内核是免费、开源的，这也就代表了：
+任何人都可以获得并修改内核，并且自行集成系统级程序
+提供了内核+系统级程序的完整封装，称之为Linux发行版 <img src="https://pic.imgdb.cn/item/65634875c458853aef5abf5e.webp"> <img src="https://pic.imgdb.cn/item/656348afc458853aef5be85b.webp"></p>
+<h1 id="二安装linux">二、安装Linux</h1>
+<p>在这里我用了虚拟机的方法安装Linux CentOS系统</p>
+<div class="note warning flat"><p>Linux不同发行版中的基础命令100%是相同的，只有个别软件细节不同</p>
+</div>
+
+<p>我个人认为Hyper-V虚拟机比VMware要稍微流畅一些
+所以我在这里选用Hyper-V安装CentOS
+如果你不是Windows11，那就只能用别的啦，比如VMware</p>
+<h2 id="1下载centos镜像">1.下载CentOS镜像</h2>
+]]></content>
+      <categories>
+        <category>记录</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>TED视频分享</title>
+    <url>/blog/posts/TED1.html</url>
+    <content><![CDATA[<p>本页将分享一些TED的听力视频 将提供视频文件和中英字幕文件
+下载后放置同一文件夹内 并使用相同名称即可</p>
+<h2 id="the-first-20-hours--how-to-learn-anything">The first 20 hours –
+how to learn anything</h2>
+<p><img src="https://pic.imgdb.cn/item/6541053fc458853aef4b2d0f.webp">
+原视频链接：<a href="https://www.youtube.com/watch?v=5MgBikgcWnY&amp;t=10s">前往YouTube</a>
+官网文章链接：<a href="https://ideas.ted.com/dont-have-10000-hours-to-learn-something-new-thats-fine-all-you-need-is-20-hours/">前往TED官网</a>
+官网文章转载：<a href="https://flumbrix1145.github.io/blog/2023/10/31/Don%E2%80%99t-have-10-000-hours-to-learn-something-new-That%E2%80%99s-fine-%E2%80%94-all-you-need-is-20-hours/">点击前往</a></p>
+<a class="btn-anzhiyu " href="regular::下载视频文件::https://gofile.cc/deLy/the-first-20-hours-how-to-learn-anything-josh-kaufman-tedxcsu.mp4::fa-solid fa-download" title=""></a><a class="btn-anzhiyu " href="regular::下载字幕文件::https://gofile.cc/prDW/the-first-20-hours-how-to-learn-anything-josh-kaufman-tedxcsu.srt::fa-solid fa-download" title=""></a>
+]]></content>
+      <categories>
+        <category>学习</category>
+        <category>英语</category>
+      </categories>
+      <tags>
+        <tag>TED</tag>
       </tags>
   </entry>
   <entry>
@@ -1325,27 +1346,6 @@ HTML 实体。）</p>
       </tags>
   </entry>
   <entry>
-    <title>TED视频分享</title>
-    <url>/blog/posts/TED1.html</url>
-    <content><![CDATA[<p>本页将分享一些TED的听力视频 将提供视频文件和中英字幕文件
-下载后放置同一文件夹内 并使用相同名称即可</p>
-<h2 id="the-first-20-hours--how-to-learn-anything">The first 20 hours –
-how to learn anything</h2>
-<p><img src="https://pic.imgdb.cn/item/6541053fc458853aef4b2d0f.webp">
-原视频链接：<a href="https://www.youtube.com/watch?v=5MgBikgcWnY&amp;t=10s">前往YouTube</a>
-官网文章链接：<a href="https://ideas.ted.com/dont-have-10000-hours-to-learn-something-new-thats-fine-all-you-need-is-20-hours/">前往TED官网</a>
-官网文章转载：<a href="https://flumbrix1145.github.io/blog/2023/10/31/Don%E2%80%99t-have-10-000-hours-to-learn-something-new-That%E2%80%99s-fine-%E2%80%94-all-you-need-is-20-hours/">点击前往</a></p>
-<a class="btn-anzhiyu " href="regular::下载视频文件::https://gofile.cc/deLy/the-first-20-hours-how-to-learn-anything-josh-kaufman-tedxcsu.mp4::fa-solid fa-download" title=""></a><a class="btn-anzhiyu " href="regular::下载字幕文件::https://gofile.cc/prDW/the-first-20-hours-how-to-learn-anything-josh-kaufman-tedxcsu.srt::fa-solid fa-download" title=""></a>
-]]></content>
-      <categories>
-        <category>学习</category>
-        <category>英语</category>
-      </categories>
-      <tags>
-        <tag>TED</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Win11安装杜比全景声方法</title>
     <url>/blog/posts/dloby.html</url>
     <content><![CDATA[<h1 id="在-windows-11-中安装杜比全景声">在 Windows 11
@@ -1463,35 +1463,6 @@ DVD 或蓝光。</p>
       </tags>
   </entry>
   <entry>
-    <title>解决npm install安装太慢</title>
-    <url>/blog/posts/npminstall.html</url>
-    <content><![CDATA[<h2 id="设置-npm-registry">设置 npm registry</h2>
-<ul>
-<li>本文方法为将npm
-registry更改为<strong>淘宝镜像</strong>，提升安装速度。</li>
-</ul>
-<h3 id="1临时使用">1.临时使用</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm --registry https://registry.npm.taobao.org install express</span><br></pre></td></tr></table></figure>
-
-<h3 id="2持久使用">2.持久使用</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> registry https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
-
-<p>使用<strong>mac</strong>需要权限的话，前面需要加<strong>sudo</strong>，然后输入密码。<br>
-配置后可通过下面方式来验证是否成功：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm config get registry</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://pic.imgdb.cn/item/6579c2efc458853aef76618c.webp"></p>
-<h3 id="3通过cnpm使用">3.通过cnpm使用</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g cnpm --registry=https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>教程</category>
-      </categories>
-      <tags>
-        <tag>npm</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>为你的博客添加搜索功能</title>
     <url>/blog/posts/algoliasearch.html</url>
     <content><![CDATA[<h1 id="安装插件--写入配置">安装插件 &amp; 写入配置</h1>
@@ -1524,6 +1495,35 @@ registry更改为<strong>淘宝镜像</strong>，提升安装速度。</li>
         <tag>Hexo</tag>
         <tag>插件</tag>
         <tag>搜索</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>解决npm install安装太慢</title>
+    <url>/blog/posts/npminstall.html</url>
+    <content><![CDATA[<h2 id="设置-npm-registry">设置 npm registry</h2>
+<ul>
+<li>本文方法为将npm
+registry更改为<strong>淘宝镜像</strong>，提升安装速度。</li>
+</ul>
+<h3 id="1临时使用">1.临时使用</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm --registry https://registry.npm.taobao.org install express</span><br></pre></td></tr></table></figure>
+
+<h3 id="2持久使用">2.持久使用</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> registry https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+
+<p>使用<strong>mac</strong>需要权限的话，前面需要加<strong>sudo</strong>，然后输入密码。<br>
+配置后可通过下面方式来验证是否成功：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm config get registry</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://pic.imgdb.cn/item/6579c2efc458853aef76618c.webp"></p>
+<h3 id="3通过cnpm使用">3.通过cnpm使用</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g cnpm --registry=https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>npm</tag>
       </tags>
   </entry>
   <entry>
@@ -1703,163 +1703,60 @@ registry更改为<strong>淘宝镜像</strong>，提升安装速度。</li>
       </tags>
   </entry>
   <entry>
-    <title>徽州行</title>
-    <url>/blog/posts/huizhou.html</url>
-    <content><![CDATA[<h1 id="活动简介">活动简介</h1>
-<p>一、活动时间 : 2023 年 11 月 11-14 日 (4 天) 二、活动地点: 徽州黄山
-三、活动内容: 11 月 11
-日乘高铁到黄山北站研学徽州文化博物馆、黄山城市展览馆 11 月 12
-日参观历史文化遗产影县–宏村、守拙园 11 月 13 日黄山“放飞理想”教育活动 11
-月 14 日参观徽菜博物馆，参观屯溪老街，乘高铁回京</p>
-<h1 id="day-1">DAY 1</h1>
-<p>惠州城市展馆
-徽商：徽州最有名的是徽商，从十三四岁开始外出经商，以木头等资源 黄山
-惠州有更多的人文历史，黄山人们希望改回徽州（人文情感丰富）
-黄山市依托山水天城，大力传承历史文化，坚持以人为本，加强规划管理，保徽建徽改徽，山水融城
-水墨徽州 歙砚 歙州再到徽州 方腊歙州人 1987改为黄山市
-建筑集中，徽派建筑形成，马头墙，放众木头多，马头墙用来防止火灾，封锁火势。
-拐弯抹角，在惠州历史中富有美德。直角，邻里之间方便搬运东西上不让天，下不让地，中间让邻里和气。
-作退一步想 徽商随家人外出，才能得到帮助 建筑：墙倒屋不塌，
-即使塌了，整体结构也不会被破坏。 榫卯 基：稳固 础：支撑
-马头墙：封锁火势，封火墙。南方房子人字形，方便排水，在人字形两边，略高，挡住火势，不至于烧到邻里。
-明堂天井：一楼不开窗，防火防盗防小偷。在二楼开天井，由于采光和通风（直接）隐喻：
-牌坊：代表家族的地位（取决于皇上）主任对社会的贡献。玉质 恩荣 圣旨
-哧剑（普遍）?徽州牌坊多。大多数牌坊被摧毁，为了建设新思想
-戏剧造型：京剧（不断融和）前身为徽剧。
-徽州人才辈出，教育发达，科举发达。詹天佑，第一批公派留学人物。十户之村不废诵读，教育重视程度高。
-徽州文化： 黄山：黄山松精神：……
-云海三四月份徽商依托新安江发展商业（农夫山泉最早水厂在千岛湖水深七十米处）
-徽商：云纹五注铜器。徽商创造的物质财富和精神财富是惠州社会历史全面高度发展的重要方面。人口暴增，导致资源匮乏，不得不外出。经商人回乡次数少，惠州人结婚早。惠州女人留在家中掌管家事。
-七山半水半分田，二分道路和庄园。 渔梁送别，母亲在岸边挥泪告别。
-胡裕泰，卖茶。惠州自古以来种茶。
-徽商普遍出现在江苏，苏州园林的主人大多数为惠州人。建筑有徽州的风格。徽州火腿制作工艺穿到金华
-。 江春“布衣上交天子” 商人 瘦西湖旁用盐打了一座白塔。
-河坊街：红顶商人胡雪岩，运用政治势力发展商业。 房屋摆设 胡适陶行知朱熹
-做人做事懂分寸 戚继光由胡宗宪一手提拔 祠堂：惩戒不孝子孙</p>
-<h1 id="day-2">DAY 2</h1>
-<p>宏村 南湖书院坐落于村子南边，学校，义务教育，汪姓男孩可免费接受教育
-村落聚族而居 hua桥 宏村牛型村：四座桥四条腿 两棵大树两角 村子身体
-从奇树村搬迁，逃不掉火灾，hkd选中了宏村，落户生根 南方的水有回甘，软水
-两棵大树：红娘，跟喜事有关，抬着花轿桃树走三圈，拉；老人高寿去世，抬着棺椁绕银杏树走，结白果，放入水中变为银色
-首富房子承志堂，六十万两白银！!木雕石雕砖雕。大门各有一撇一捺，有钱，能挂到官职。一对石户，门当户对。墙体的突出，门千金门楼四两五。文革期间被红卫兵征收。破四旧，打破封建思想。佛堂，家族家庭富贵以后，想让家族绵延更长。几百年人家无非积善，行善积德，第一等好事只是读书，让所有孩子接受到教育，徽商兴建学堂。先生受村民照顾。不开窗，防火防盗防小偷。给管家开一个门，钱进口袋不乱跑。桌子半圆形四条腿，表示男主人不在家，若回来，半圆桌会拼在一起变六条腿，表示夫妻团圆。木雕损坏与文革有关，村民用黄泥封锁木雕，刻上毛主席万岁。栏杆上方形小孔，看帅哥，山清孔。快乐每从辛苦得，便宜多自吃亏来。创业难受成难知难不难，读书好营商好效好便好。福禄寿三星，老年人对钟很忌讳。横梁架上去之后再雕刻。门当，四根木柱，贫民百姓家没有，富人有。汪氏宗祠中有女性画像。弘。
-汪姓第一人?。汪华徽州汪姓第一人，收复十五州，被供奉。宏村族长，宏村汪姓第一人。胡重，宏村水系由她主持设计修建，巨大贡献，巾帼丈夫。守拙园
-仁教永垂 一步进房三步上床四步撞墙
-男子住的比较好，终身平静指经商能够平平安安
-以帽去人，下雪就是下白银，肥水不流外人田，大石槽镇宅。请先生到家中上课。
-五柳堂。阁楼建在过道两边。老气横秋雨一鸣天地响。
-祠堂用来祭祖或操办重要的事情，以仓库为主要使用形式。女子在结婚和去世时才能入堂。看不起我可以，但要进我家门要从商下过。商门有提升家族地位的寓意。
-文昌宫。北有孔子南有文昌。以文会友，文人聚会。石木砖雕。十里红妆，从小准备嫁妆和棺椁。
-酒楼。喝酒办宴席之地。鸿案春长。明方清圆。小厅堂大厢房，明。大厅堂小厢房，清。</p>
-<h1 id="day-3">DAY 3</h1>
-<p>黄山行
-“光明顶上彩云飞，忽见仙桃石已归；石去天涯无歇处，仍回松岭伴朝辉。”研学的第三天，我们来到了黄山市市名的来源地–黄山。乘坐缆车登山，我们遇到了一年只有50多天的云海。缆车上升时，向下望去，下方有着各种各样的奇石，翠绿茂密的松树，
-有时还能看到险峻的徒步登山通道。 [图片 65.jpg]
-升入云海中时，窗外视野渐渐模糊，隐约看到松树上雪白的雾凇，晶莹剔透。
-[图片 66.jpg]
-一段时间后，我们升入云海上方，顿时豁然开朗，云海上方的美丽景色逐渐展现在眼前。蓝天白云，头上的云彩与脚下的云海在远处连为一体，甚是美丽。
-[图片 67.jpg]</p>
-<p>爬过好汉坡，经过迎客松，我们的登山之行就此开始。我们翻过了几座山峰，走过了各种各样的阶梯。我们终于登上了一座小山峰。
-[图片 68.jpg]
-在这里我们看到了奇形怪状的石头，远处美丽的山脉和湖泊，远远望去，感觉我们的目标光明顶已经唾手可得。
-[图片 69.jpg]
-继续跨过一次山峰，我们即将到达光明顶。在这里，我们看到脚下整齐划一的松树，经历过前两天的大雨，松树们都显得格外苍翠挺拔。
-[图片 70.jpg]
-继续爬了一个坡后，我们到达了此次黄山之行的最高点–光明顶。光明顶是黄山的主峰之一，位于黄山中部，海拔1860米，为黄山第二高峰，与天都峰、莲花峰并称黄山三大主峰。顶上平坦而高旷，各个高峰尽收眼底。
-[图片 73.jpg]
-在这里，我们还见到了光明顶气象站，他的前身便是建于明代的大悲院寺庙，据说周围的地区天气预报都来源于这里。
-[图片 72.jpg]
-在光明顶上进行了放飞理想活动后，我们便开启了下山的行程。下山途中我们见到了《红楼梦》中出现的飞来石。飞来石为自然风化生成，两大岩石之间的接触面很小，似从天外飞来，故名“飞来石”。
-[图片 74.jpg]
-本次爬黄山的研学活动，让我们欣赏到了黄山的美丽景象，也让我们体会到了大自然的奇特，秀美。</p>
-<h1 id="day-4">DAY 4</h1>
-<p>屯溪老街
-研学最后一天的第一站，我们来到了徽商发源地-屯溪老街。屯溪老街坐落于新安江的渐江段旁边，此地三江汇聚，西水屯局，故得名屯溪。
-[图片 77.jpg]
-屯溪整条街像一条鱼骨头，主巷为最大的主心骨，旁边小巷子就是鱼骨的分支。街旁的店铺也有着一些文化，徽商以前都是是小作坊
-，临街的地方是商铺，后院是制作商品的地方，二楼就是店铺主人休息生活的地方。
-[图片 78.jpg]
-对于毛豆腐，各个地方也有各个地方的特色。宏村的毛豆腐是方块形，方方正正，呈坎村则是长条形。游客来此地旅游，买的最多的就是黄山烧饼。黄山烧饼作为徽商重要的干粮
-，得益于其方便保存的特点。徽商行商的路程很长，所以带很多烧饼便能解决粮食问题。
-这里的主要特色还有茶。茶自古以来就是此地的的主要经济收入。在这里，四月份放还能一周的假
-用来采茶叶。每次采茶，都需要爬到海拔800以上的山里。祁红巷是之前专门储存祁门红茶的地方，祁门红茶，是世界三大高香名茶之一
-，听导游说英国皇室的下午茶就是祁门红茶。 [图片 81.jpg]
-祁门红茶因为大部分都最为出口商品，为了方便运输，所以制成了碎茶的形式。
-在屯溪老街，我们见到了各种各样的安徽特色，也领略到了各种特色商品食品背后的历史背景和文化内涵。</p>
+    <title>实用软件&amp;网站整理</title>
+    <url>/blog/posts/ruanjian.html</url>
+    <content><![CDATA[<h2 id="软件分享">软件分享</h2>
+<p>注：以下大部分内容为免费或破解版本</p>
+<h3 id="coodesker">Coodesker</h3>
+<p>Coodesker：自动分类整理桌面上的快捷方式、目录、图片等文件
+以前为免费软件，虽然在github上，但是就挂了个仓库
+现在已经开始收费了，但是我感觉老版本就够用</p>
+<a class="btn-anzhiyu " href="regular::Coodesker最后一个免费版本::https://wwll.lanzout.com/iveV71c8woyh::fa-solid fa-play-circle" title=""></a>
+
+<a class="btn-anzhiyu " href="regular::Coodesker20.0.7激活版本::https://wwll.lanzout.com/iEhYW1cbw46h::fa-solid fa-play-circle" title=""></a>
+
+<p>激活版下载密码：bpwp</p>
+<h3 id="kms激活工具">KMS激活工具</h3>
+<p>采用当前最先进的激活技术，几乎涵盖了Windows全版本同Office全版本的激活，支持最新的Win11系统、Win10全版本包括Win10
+LTSC的数字权利激活，非常强大，是激活系统首选的一款激活工具。</p>
+<a class="btn-anzhiyu " href="regular::前往下载::https://wwll.lanzout.com/iIXeE1c8wp8h::fa-solid fa-play-circle" title=""></a>
+
+<h3 id="potplayer视频播放器">PotPlayer视频播放器</h3>
+<p>PotPlayer继承了 KMPlayer
+所有的优点，拥有异常强大的内置音视频解码器，可以支持几乎全部音乐、视频文件格式的播放。采用
+VC++ 进行了全面重构，并且原生支持64位操作系统，使得 PotPlayer 在 Windows
+10 等新系统上，无论性能、兼容性和稳定性上的表现均比 KMP
+要好不少；硬件加速、流畅优秀的全高清视
+频播放效果、强大的选项、滤镜、外挂式管理、DXVA等硬件解码；以及非常丰富且强大的设置选项，被誉为Win平台上最优秀的免费影音全能格式播放器。</p>
+<a class="btn-anzhiyu " href="regular::前往下载::https://wwll.lanzout.com/i53vQ1c8wpgf::fa-solid fa-play-circle" title=""></a>
+
+<p>密码:a2k0</p>
+<h3 id="rainmeter雨滴">Rainmeter雨滴</h3>
+<p>雨滴皮肤（Rainmeter皮肤），是一些有特定功能的Windows桌面小工具。一些复杂的皮肤则看起来像是小型应用程序，风格相近的皮肤则可以组成一个套装或者主题。任何一个雨滴皮肤在不同电脑上工作都是不完全相同的，这取决于使用者对它的调整和修饰。</p>
+<a class="btn-anzhiyu " href="regular::前往官网下载::https://www.rainmeter.net/::fa-solid fa-play-circle" title=""></a>
+
+<h3 id="几何画板已破解">几何画板(已破解)</h3>
+<p>几何画板为从三年级到大学的各个级别的学生提供了一种有形的，可视化的方
+式来学习数学，从而提高他们的参与度、理解力和成就。
+几何画板现已停售，这里准备了v5.0.6的破解版本</p>
+<a class="btn-anzhiyu " href="regular::前往下载::https://wwll.lanzout.com/iLwf71c8wqyj::fa-solid fa-play-circle" title=""></a>
+
+<p>https://gofile.cc/lre4/bandizip.exe
+https://gofile.cc/jrY7/coodesker.zip https://gofile.cc/551a/kms.zip
+https://gofile.cc/QrEQ/firpe-v182.exe https://gofile.cc/WW5E/idm.exe
+https://gofile.cc/K7Xk/potplayer.exe
+https://gofile.cc/1kYp/rustdesk-64.exe
+https://gofile.cc/zq40/ventoy-1095-windows.zip
+https://gofile.cc/0L0l/.zip
+https://gofile.cc/DJyq/acrobat-pro-dc-pdf.iso</p>
 ]]></content>
       <categories>
-        <category>学习</category>
-        <category>研学</category>
+        <category>内容分享</category>
+        <category>软件</category>
       </categories>
       <tags>
-        <tag>徽州</tag>
-        <tag>研学</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>解决Github的访问问题</title>
-    <url>/blog/posts/githubfangwen.html</url>
-    <content><![CDATA[<p>Github是一个基于Git版本控制系统的代码托管平台。</p>
-<p>Github上有着很多开源的免费的软件及资料，但是因为网络问腿，导致Github的访问速度极其的慢，甚至有的时候上不去
-下面，我给出了几个方法，能够解决这个问题</p>
-<h2 id="1watt-toolkit">1.Watt Toolkit</h2>
-<p>「Watt Toolkit」原名Steam++，是一个开源跨平台的多功能 Steam 工具箱。
-<img src="https://s2.loli.net/2023/10/22/oWHj9GgrPe7NVyC.webp"></p>
-<a class="btn-anzhiyu " href="/blog/center%20large::%E5%89%8D%E5%BE%80Watt%20Toolkit%E5%AE%98%E7%BD%91%E4%B8%8B%E8%BD%BD::https:/steampp.net/::fa-solid%20fa-download" title=""></a>
-
-<p>进入软件界面后，点击左侧的网络加速选项卡，勾选Github，点击右上角的“一键加速“
-<img src="https://s2.loli.net/2023/10/22/MsDri4PQEy5lFLc.webp"></p>
-<h2 id="2更改hosts文件">2.更改hosts文件</h2>
-<p>通过修改本地 hosts 文件，试图解决：</p>
-<p>GitHub 访问速度慢的问题 GitHub 项目中的图片显示不出的问题</p>
-<h3 id="1下载hosts管理工具switchhosts">1.下载hosts管理工具<strong>SwitchHosts</strong></h3>
-<p><img src="https://s2.loli.net/2023/10/22/LXJjSyzU4cZdrTC.webp"></p>
-<a class="btn-anzhiyu " href="/blog/center%20large::SwitchHosts%E7%9A%84Github%E4%B8%BB%E9%A1%B5::https:/github.com/oldj/SwitchHosts/tree/v4.1.2::fa-solid%20fa-arrow-right" title=""></a>
-
-<p>当然，如果上不去Github的话，可以通过下面蓝奏云链接下载最新版本（目前截至v4.1.2）</p>
-<a class="btn-anzhiyu " href="regular::前往蓝奏云分享链接::https://wwll.lanzout.com/b04es5obc::fa-solid fa-download" title=""></a>密码:7s3t
-
-<h3 id="2安装配置">2.安装配置</h3>
-<p>安装完成后，我们打开软件，就可以看到如下界面: <img src="https://s2.loli.net/2023/10/22/6n7ipcA5CUdfBLt.webp">
-我们点击左侧的加号，进入配置界面 Hosts类型：远程 Hosts标题：随意
-URL：https://raw.hellogithub.com/hosts</p>
-<div class="note warning flat"><p>请将此链接粘贴到选项框中</p>
-</div>
-
-<p>自动刷新：建议选择1小时 <img src="https://s2.loli.net/2023/10/22/CMzHoDT3PhpFQ5i.webp">
-填写完成后，点击确定，就配置完成了</p>
-<h3 id="3问题解决">3.问题解决</h3>
-<p>点击左侧名称后的按钮，如果你显示的如下界面（提示操作成功） <img src="https://s2.loli.net/2023/10/22/V5aJKjuG9QTLfcA.webp">
-那么恭喜你，你的配置完成了 如果是下面这种： <img src="https://s2.loli.net/2023/10/22/qrQyT4w5Ks3j7uB.webp">
-请继续往下设置</p>
-<h4 id="31-找到hosts文件">3.1 找到hosts文件</h4>
-<p>Hosts文件一般都在电脑的“C:\Windows\System32\drivers\etc“文件夹下，我们打开这个文件夹，找到hosts文件
-<img src="https://s2.loli.net/2023/10/22/cmrDo9vPJsafNiw.webp"></p>
-<h4 id="32-修改hosts文件权限">3.2 修改hosts文件权限</h4>
-<p>右键hosts文件，选择<strong>属性</strong>， <img src="https://s2.loli.net/2023/10/22/b6qCFxJQwd5Ep9B.webp">
-选择<strong>编辑</strong> <img src="https://s2.loli.net/2023/10/22/Ac3lXS9YWut7wmV.webp">
-将<strong>组成用户名</strong>中第一个和最后一个选项（Users）的<strong>修改</strong>和<strong>写入</strong>勾选
-<img src="https://s2.loli.net/2023/10/22/v5fbjVmGrAEkX6M.webp"></p>
-<h4 id="33-验证修改">3.3 验证修改</h4>
-<p>点击确定，返回<strong>SwitchHosts</strong>界面，若显示如下界面，那么就修改成功了
-<img src="https://s2.loli.net/2023/10/22/V5aJKjuG9QTLfcA.webp"></p>
-<h4 id="34-清除dns缓存">3.4 清除DNS缓存</h4>
-<p>若发现以上设置都没有问题了，但是仍然访问不了Github，那么可以试试清除电脑的DNS缓存
-这里以Win11举例：
-鼠标右键点击“开始菜单”或者按“Win+X”弹出窗口，找到“Windows
-终端(管理员)”。如下图： <img src="https://s2.loli.net/2023/10/22/4eamPvjlhMqI6rn.webp">
-在命令窗口输入:</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ipconfig /flushdns</span><br></pre></td></tr></table></figure>
-
-<p>按**Enter（回车键）**运行，看到已成功刷新DNS解析缓存的提示就说明DNS刷新成功了。（注：命令中间空格不可少）如下图：
-<img src="https://s2.loli.net/2023/10/22/Go41KbrZTingAzt.webp"></p>
-]]></content>
-      <categories>
-        <category>教程</category>
-        <category>代码</category>
-      </categories>
-      <tags>
-        <tag>Github</tag>
-        <tag>Windows</tag>
+        <tag>软件</tag>
+        <tag>网站</tag>
       </tags>
   </entry>
   <entry>
@@ -2113,60 +2010,163 @@ xxx.github.io（xxx 是你 GitHub
       </tags>
   </entry>
   <entry>
-    <title>实用软件&amp;网站整理</title>
-    <url>/blog/posts/ruanjian.html</url>
-    <content><![CDATA[<h2 id="软件分享">软件分享</h2>
-<p>注：以下大部分内容为免费或破解版本</p>
-<h3 id="coodesker">Coodesker</h3>
-<p>Coodesker：自动分类整理桌面上的快捷方式、目录、图片等文件
-以前为免费软件，虽然在github上，但是就挂了个仓库
-现在已经开始收费了，但是我感觉老版本就够用</p>
-<a class="btn-anzhiyu " href="regular::Coodesker最后一个免费版本::https://wwll.lanzout.com/iveV71c8woyh::fa-solid fa-play-circle" title=""></a>
-
-<a class="btn-anzhiyu " href="regular::Coodesker20.0.7激活版本::https://wwll.lanzout.com/iEhYW1cbw46h::fa-solid fa-play-circle" title=""></a>
-
-<p>激活版下载密码：bpwp</p>
-<h3 id="kms激活工具">KMS激活工具</h3>
-<p>采用当前最先进的激活技术，几乎涵盖了Windows全版本同Office全版本的激活，支持最新的Win11系统、Win10全版本包括Win10
-LTSC的数字权利激活，非常强大，是激活系统首选的一款激活工具。</p>
-<a class="btn-anzhiyu " href="regular::前往下载::https://wwll.lanzout.com/iIXeE1c8wp8h::fa-solid fa-play-circle" title=""></a>
-
-<h3 id="potplayer视频播放器">PotPlayer视频播放器</h3>
-<p>PotPlayer继承了 KMPlayer
-所有的优点，拥有异常强大的内置音视频解码器，可以支持几乎全部音乐、视频文件格式的播放。采用
-VC++ 进行了全面重构，并且原生支持64位操作系统，使得 PotPlayer 在 Windows
-10 等新系统上，无论性能、兼容性和稳定性上的表现均比 KMP
-要好不少；硬件加速、流畅优秀的全高清视
-频播放效果、强大的选项、滤镜、外挂式管理、DXVA等硬件解码；以及非常丰富且强大的设置选项，被誉为Win平台上最优秀的免费影音全能格式播放器。</p>
-<a class="btn-anzhiyu " href="regular::前往下载::https://wwll.lanzout.com/i53vQ1c8wpgf::fa-solid fa-play-circle" title=""></a>
-
-<p>密码:a2k0</p>
-<h3 id="rainmeter雨滴">Rainmeter雨滴</h3>
-<p>雨滴皮肤（Rainmeter皮肤），是一些有特定功能的Windows桌面小工具。一些复杂的皮肤则看起来像是小型应用程序，风格相近的皮肤则可以组成一个套装或者主题。任何一个雨滴皮肤在不同电脑上工作都是不完全相同的，这取决于使用者对它的调整和修饰。</p>
-<a class="btn-anzhiyu " href="regular::前往官网下载::https://www.rainmeter.net/::fa-solid fa-play-circle" title=""></a>
-
-<h3 id="几何画板已破解">几何画板(已破解)</h3>
-<p>几何画板为从三年级到大学的各个级别的学生提供了一种有形的，可视化的方
-式来学习数学，从而提高他们的参与度、理解力和成就。
-几何画板现已停售，这里准备了v5.0.6的破解版本</p>
-<a class="btn-anzhiyu " href="regular::前往下载::https://wwll.lanzout.com/iLwf71c8wqyj::fa-solid fa-play-circle" title=""></a>
-
-<p>https://gofile.cc/lre4/bandizip.exe
-https://gofile.cc/jrY7/coodesker.zip https://gofile.cc/551a/kms.zip
-https://gofile.cc/QrEQ/firpe-v182.exe https://gofile.cc/WW5E/idm.exe
-https://gofile.cc/K7Xk/potplayer.exe
-https://gofile.cc/1kYp/rustdesk-64.exe
-https://gofile.cc/zq40/ventoy-1095-windows.zip
-https://gofile.cc/0L0l/.zip
-https://gofile.cc/DJyq/acrobat-pro-dc-pdf.iso</p>
+    <title>徽州行</title>
+    <url>/blog/posts/huizhou.html</url>
+    <content><![CDATA[<h1 id="活动简介">活动简介</h1>
+<p>一、活动时间 : 2023 年 11 月 11-14 日 (4 天) 二、活动地点: 徽州黄山
+三、活动内容: 11 月 11
+日乘高铁到黄山北站研学徽州文化博物馆、黄山城市展览馆 11 月 12
+日参观历史文化遗产影县–宏村、守拙园 11 月 13 日黄山“放飞理想”教育活动 11
+月 14 日参观徽菜博物馆，参观屯溪老街，乘高铁回京</p>
+<h1 id="day-1">DAY 1</h1>
+<p>惠州城市展馆
+徽商：徽州最有名的是徽商，从十三四岁开始外出经商，以木头等资源 黄山
+惠州有更多的人文历史，黄山人们希望改回徽州（人文情感丰富）
+黄山市依托山水天城，大力传承历史文化，坚持以人为本，加强规划管理，保徽建徽改徽，山水融城
+水墨徽州 歙砚 歙州再到徽州 方腊歙州人 1987改为黄山市
+建筑集中，徽派建筑形成，马头墙，放众木头多，马头墙用来防止火灾，封锁火势。
+拐弯抹角，在惠州历史中富有美德。直角，邻里之间方便搬运东西上不让天，下不让地，中间让邻里和气。
+作退一步想 徽商随家人外出，才能得到帮助 建筑：墙倒屋不塌，
+即使塌了，整体结构也不会被破坏。 榫卯 基：稳固 础：支撑
+马头墙：封锁火势，封火墙。南方房子人字形，方便排水，在人字形两边，略高，挡住火势，不至于烧到邻里。
+明堂天井：一楼不开窗，防火防盗防小偷。在二楼开天井，由于采光和通风（直接）隐喻：
+牌坊：代表家族的地位（取决于皇上）主任对社会的贡献。玉质 恩荣 圣旨
+哧剑（普遍）?徽州牌坊多。大多数牌坊被摧毁，为了建设新思想
+戏剧造型：京剧（不断融和）前身为徽剧。
+徽州人才辈出，教育发达，科举发达。詹天佑，第一批公派留学人物。十户之村不废诵读，教育重视程度高。
+徽州文化： 黄山：黄山松精神：……
+云海三四月份徽商依托新安江发展商业（农夫山泉最早水厂在千岛湖水深七十米处）
+徽商：云纹五注铜器。徽商创造的物质财富和精神财富是惠州社会历史全面高度发展的重要方面。人口暴增，导致资源匮乏，不得不外出。经商人回乡次数少，惠州人结婚早。惠州女人留在家中掌管家事。
+七山半水半分田，二分道路和庄园。 渔梁送别，母亲在岸边挥泪告别。
+胡裕泰，卖茶。惠州自古以来种茶。
+徽商普遍出现在江苏，苏州园林的主人大多数为惠州人。建筑有徽州的风格。徽州火腿制作工艺穿到金华
+。 江春“布衣上交天子” 商人 瘦西湖旁用盐打了一座白塔。
+河坊街：红顶商人胡雪岩，运用政治势力发展商业。 房屋摆设 胡适陶行知朱熹
+做人做事懂分寸 戚继光由胡宗宪一手提拔 祠堂：惩戒不孝子孙</p>
+<h1 id="day-2">DAY 2</h1>
+<p>宏村 南湖书院坐落于村子南边，学校，义务教育，汪姓男孩可免费接受教育
+村落聚族而居 hua桥 宏村牛型村：四座桥四条腿 两棵大树两角 村子身体
+从奇树村搬迁，逃不掉火灾，hkd选中了宏村，落户生根 南方的水有回甘，软水
+两棵大树：红娘，跟喜事有关，抬着花轿桃树走三圈，拉；老人高寿去世，抬着棺椁绕银杏树走，结白果，放入水中变为银色
+首富房子承志堂，六十万两白银！!木雕石雕砖雕。大门各有一撇一捺，有钱，能挂到官职。一对石户，门当户对。墙体的突出，门千金门楼四两五。文革期间被红卫兵征收。破四旧，打破封建思想。佛堂，家族家庭富贵以后，想让家族绵延更长。几百年人家无非积善，行善积德，第一等好事只是读书，让所有孩子接受到教育，徽商兴建学堂。先生受村民照顾。不开窗，防火防盗防小偷。给管家开一个门，钱进口袋不乱跑。桌子半圆形四条腿，表示男主人不在家，若回来，半圆桌会拼在一起变六条腿，表示夫妻团圆。木雕损坏与文革有关，村民用黄泥封锁木雕，刻上毛主席万岁。栏杆上方形小孔，看帅哥，山清孔。快乐每从辛苦得，便宜多自吃亏来。创业难受成难知难不难，读书好营商好效好便好。福禄寿三星，老年人对钟很忌讳。横梁架上去之后再雕刻。门当，四根木柱，贫民百姓家没有，富人有。汪氏宗祠中有女性画像。弘。
+汪姓第一人?。汪华徽州汪姓第一人，收复十五州，被供奉。宏村族长，宏村汪姓第一人。胡重，宏村水系由她主持设计修建，巨大贡献，巾帼丈夫。守拙园
+仁教永垂 一步进房三步上床四步撞墙
+男子住的比较好，终身平静指经商能够平平安安
+以帽去人，下雪就是下白银，肥水不流外人田，大石槽镇宅。请先生到家中上课。
+五柳堂。阁楼建在过道两边。老气横秋雨一鸣天地响。
+祠堂用来祭祖或操办重要的事情，以仓库为主要使用形式。女子在结婚和去世时才能入堂。看不起我可以，但要进我家门要从商下过。商门有提升家族地位的寓意。
+文昌宫。北有孔子南有文昌。以文会友，文人聚会。石木砖雕。十里红妆，从小准备嫁妆和棺椁。
+酒楼。喝酒办宴席之地。鸿案春长。明方清圆。小厅堂大厢房，明。大厅堂小厢房，清。</p>
+<h1 id="day-3">DAY 3</h1>
+<p>黄山行
+“光明顶上彩云飞，忽见仙桃石已归；石去天涯无歇处，仍回松岭伴朝辉。”研学的第三天，我们来到了黄山市市名的来源地–黄山。乘坐缆车登山，我们遇到了一年只有50多天的云海。缆车上升时，向下望去，下方有着各种各样的奇石，翠绿茂密的松树，
+有时还能看到险峻的徒步登山通道。 [图片 65.jpg]
+升入云海中时，窗外视野渐渐模糊，隐约看到松树上雪白的雾凇，晶莹剔透。
+[图片 66.jpg]
+一段时间后，我们升入云海上方，顿时豁然开朗，云海上方的美丽景色逐渐展现在眼前。蓝天白云，头上的云彩与脚下的云海在远处连为一体，甚是美丽。
+[图片 67.jpg]</p>
+<p>爬过好汉坡，经过迎客松，我们的登山之行就此开始。我们翻过了几座山峰，走过了各种各样的阶梯。我们终于登上了一座小山峰。
+[图片 68.jpg]
+在这里我们看到了奇形怪状的石头，远处美丽的山脉和湖泊，远远望去，感觉我们的目标光明顶已经唾手可得。
+[图片 69.jpg]
+继续跨过一次山峰，我们即将到达光明顶。在这里，我们看到脚下整齐划一的松树，经历过前两天的大雨，松树们都显得格外苍翠挺拔。
+[图片 70.jpg]
+继续爬了一个坡后，我们到达了此次黄山之行的最高点–光明顶。光明顶是黄山的主峰之一，位于黄山中部，海拔1860米，为黄山第二高峰，与天都峰、莲花峰并称黄山三大主峰。顶上平坦而高旷，各个高峰尽收眼底。
+[图片 73.jpg]
+在这里，我们还见到了光明顶气象站，他的前身便是建于明代的大悲院寺庙，据说周围的地区天气预报都来源于这里。
+[图片 72.jpg]
+在光明顶上进行了放飞理想活动后，我们便开启了下山的行程。下山途中我们见到了《红楼梦》中出现的飞来石。飞来石为自然风化生成，两大岩石之间的接触面很小，似从天外飞来，故名“飞来石”。
+[图片 74.jpg]
+本次爬黄山的研学活动，让我们欣赏到了黄山的美丽景象，也让我们体会到了大自然的奇特，秀美。</p>
+<h1 id="day-4">DAY 4</h1>
+<p>屯溪老街
+研学最后一天的第一站，我们来到了徽商发源地-屯溪老街。屯溪老街坐落于新安江的渐江段旁边，此地三江汇聚，西水屯局，故得名屯溪。
+[图片 77.jpg]
+屯溪整条街像一条鱼骨头，主巷为最大的主心骨，旁边小巷子就是鱼骨的分支。街旁的店铺也有着一些文化，徽商以前都是是小作坊
+，临街的地方是商铺，后院是制作商品的地方，二楼就是店铺主人休息生活的地方。
+[图片 78.jpg]
+对于毛豆腐，各个地方也有各个地方的特色。宏村的毛豆腐是方块形，方方正正，呈坎村则是长条形。游客来此地旅游，买的最多的就是黄山烧饼。黄山烧饼作为徽商重要的干粮
+，得益于其方便保存的特点。徽商行商的路程很长，所以带很多烧饼便能解决粮食问题。
+这里的主要特色还有茶。茶自古以来就是此地的的主要经济收入。在这里，四月份放还能一周的假
+用来采茶叶。每次采茶，都需要爬到海拔800以上的山里。祁红巷是之前专门储存祁门红茶的地方，祁门红茶，是世界三大高香名茶之一
+，听导游说英国皇室的下午茶就是祁门红茶。 [图片 81.jpg]
+祁门红茶因为大部分都最为出口商品，为了方便运输，所以制成了碎茶的形式。
+在屯溪老街，我们见到了各种各样的安徽特色，也领略到了各种特色商品食品背后的历史背景和文化内涵。</p>
 ]]></content>
       <categories>
-        <category>内容分享</category>
-        <category>软件</category>
+        <category>学习</category>
+        <category>研学</category>
       </categories>
       <tags>
-        <tag>软件</tag>
-        <tag>网站</tag>
+        <tag>徽州</tag>
+        <tag>研学</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>解决Github的访问问题</title>
+    <url>/blog/posts/githubfangwen.html</url>
+    <content><![CDATA[<p>Github是一个基于Git版本控制系统的代码托管平台。</p>
+<p>Github上有着很多开源的免费的软件及资料，但是因为网络问腿，导致Github的访问速度极其的慢，甚至有的时候上不去
+下面，我给出了几个方法，能够解决这个问题</p>
+<h2 id="1watt-toolkit">1.Watt Toolkit</h2>
+<p>「Watt Toolkit」原名Steam++，是一个开源跨平台的多功能 Steam 工具箱。
+<img src="https://s2.loli.net/2023/10/22/oWHj9GgrPe7NVyC.webp"></p>
+<a class="btn-anzhiyu " href="/blog/center%20large::%E5%89%8D%E5%BE%80Watt%20Toolkit%E5%AE%98%E7%BD%91%E4%B8%8B%E8%BD%BD::https:/steampp.net/::fa-solid%20fa-download" title=""></a>
+
+<p>进入软件界面后，点击左侧的网络加速选项卡，勾选Github，点击右上角的“一键加速“
+<img src="https://s2.loli.net/2023/10/22/MsDri4PQEy5lFLc.webp"></p>
+<h2 id="2更改hosts文件">2.更改hosts文件</h2>
+<p>通过修改本地 hosts 文件，试图解决：</p>
+<p>GitHub 访问速度慢的问题 GitHub 项目中的图片显示不出的问题</p>
+<h3 id="1下载hosts管理工具switchhosts">1.下载hosts管理工具<strong>SwitchHosts</strong></h3>
+<p><img src="https://s2.loli.net/2023/10/22/LXJjSyzU4cZdrTC.webp"></p>
+<a class="btn-anzhiyu " href="/blog/center%20large::SwitchHosts%E7%9A%84Github%E4%B8%BB%E9%A1%B5::https:/github.com/oldj/SwitchHosts/tree/v4.1.2::fa-solid%20fa-arrow-right" title=""></a>
+
+<p>当然，如果上不去Github的话，可以通过下面蓝奏云链接下载最新版本（目前截至v4.1.2）</p>
+<a class="btn-anzhiyu " href="regular::前往蓝奏云分享链接::https://wwll.lanzout.com/b04es5obc::fa-solid fa-download" title=""></a>密码:7s3t
+
+<h3 id="2安装配置">2.安装配置</h3>
+<p>安装完成后，我们打开软件，就可以看到如下界面: <img src="https://s2.loli.net/2023/10/22/6n7ipcA5CUdfBLt.webp">
+我们点击左侧的加号，进入配置界面 Hosts类型：远程 Hosts标题：随意
+URL：https://raw.hellogithub.com/hosts</p>
+<div class="note warning flat"><p>请将此链接粘贴到选项框中</p>
+</div>
+
+<p>自动刷新：建议选择1小时 <img src="https://s2.loli.net/2023/10/22/CMzHoDT3PhpFQ5i.webp">
+填写完成后，点击确定，就配置完成了</p>
+<h3 id="3问题解决">3.问题解决</h3>
+<p>点击左侧名称后的按钮，如果你显示的如下界面（提示操作成功） <img src="https://s2.loli.net/2023/10/22/V5aJKjuG9QTLfcA.webp">
+那么恭喜你，你的配置完成了 如果是下面这种： <img src="https://s2.loli.net/2023/10/22/qrQyT4w5Ks3j7uB.webp">
+请继续往下设置</p>
+<h4 id="31-找到hosts文件">3.1 找到hosts文件</h4>
+<p>Hosts文件一般都在电脑的“C:\Windows\System32\drivers\etc“文件夹下，我们打开这个文件夹，找到hosts文件
+<img src="https://s2.loli.net/2023/10/22/cmrDo9vPJsafNiw.webp"></p>
+<h4 id="32-修改hosts文件权限">3.2 修改hosts文件权限</h4>
+<p>右键hosts文件，选择<strong>属性</strong>， <img src="https://s2.loli.net/2023/10/22/b6qCFxJQwd5Ep9B.webp">
+选择<strong>编辑</strong> <img src="https://s2.loli.net/2023/10/22/Ac3lXS9YWut7wmV.webp">
+将<strong>组成用户名</strong>中第一个和最后一个选项（Users）的<strong>修改</strong>和<strong>写入</strong>勾选
+<img src="https://s2.loli.net/2023/10/22/v5fbjVmGrAEkX6M.webp"></p>
+<h4 id="33-验证修改">3.3 验证修改</h4>
+<p>点击确定，返回<strong>SwitchHosts</strong>界面，若显示如下界面，那么就修改成功了
+<img src="https://s2.loli.net/2023/10/22/V5aJKjuG9QTLfcA.webp"></p>
+<h4 id="34-清除dns缓存">3.4 清除DNS缓存</h4>
+<p>若发现以上设置都没有问题了，但是仍然访问不了Github，那么可以试试清除电脑的DNS缓存
+这里以Win11举例：
+鼠标右键点击“开始菜单”或者按“Win+X”弹出窗口，找到“Windows
+终端(管理员)”。如下图： <img src="https://s2.loli.net/2023/10/22/4eamPvjlhMqI6rn.webp">
+在命令窗口输入:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ipconfig /flushdns</span><br></pre></td></tr></table></figure>
+
+<p>按**Enter（回车键）**运行，看到已成功刷新DNS解析缓存的提示就说明DNS刷新成功了。（注：命令中间空格不可少）如下图：
+<img src="https://s2.loli.net/2023/10/22/Go41KbrZTingAzt.webp"></p>
+]]></content>
+      <categories>
+        <category>教程</category>
+        <category>代码</category>
+      </categories>
+      <tags>
+        <tag>Github</tag>
+        <tag>Windows</tag>
       </tags>
   </entry>
   <entry>
