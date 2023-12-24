@@ -1,99 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Github文件上传(Git)</title>
-    <url>/blog/posts/githubsc.html</url>
-    <content><![CDATA[<h2 id="1创建-github-代码仓库">1.创建 GitHub 代码仓库</h2>
-<p>首先在 GitHub 上创建自己的仓库，进入 GitHub
-官网并登陆，点击 <strong>New repository</strong> 如下图 <img src="https://s2.loli.net/2023/10/27/Zvkpj2in6XJCBUO.webp"></p>
-<p>然后输入自己的仓库名称及仓库说明，输入完毕后点击 <strong>Create repository</strong>
-<img src="https://s2.loli.net/2023/10/27/fGE1h8xjNSAu3Hl.webp"></p>
-<blockquote>
-<ul>
-<li>Repository name: 仓库名称</li>
-<li>Description(可选): 仓库描述介绍</li>
-<li>Public, Private : 仓库权限（公开共享，私有或指定合作者）</li>
-<li>Initialize this repository with a README: 添加一个README.md</li>
-<li>gitignore: 不需要进行版本管理的仓库类型，对应生成文件.gitignore</li>
-<li>license: 证书类型，对应生成文件LICENSE</li>
-</ul>
-</blockquote>
-<p>如下图所示，建立好了一个代码仓库，可将项目的文件、文件夹通过
-Git 上传至此 <img src="https://s2.loli.net/2023/10/27/SRiryGc2Y7sLbMu.webp"></p>
-<h2 id="2获取-git">2.获取 Git</h2>
-<p>在Git官网下载最新版本的Git软件安装到本地：</p>
-<a class="btn-anzhiyu " href="regular::Giit下载::https://www.git-scm.com/download/::fa-solid fa-play-circle" title=""></a>
-
-<h2 id="3上传本地项目文件到-github-新建仓库">3.上传本地项目文件到 GitHub
-新建仓库</h2>
-<p>点击<strong>Clone or
-dowload</strong>会出现一个地址，copy这个地址备用。</p>
-<p><img src="https://s2.loli.net/2023/10/27/V4Qw6HXv3hIepft.webp"></p>
-<p>接下来回到本地操作，首先右键你的项目，如果你之前安装git成功的话，右键会出现两个新选项，分别为
-<strong>Git Gui Here , Git Bash Here</strong> ,这里我们选择 <strong>Git
-Bash Here</strong> ，进入如下界面，personal
-portfolio即为我的项目名。</p>
-<p><img src="https://s2.loli.net/2023/10/29/Mt5aewXp68vsnAi.webp"></p>
-<p>接下来输入如下命令（关键步骤），把github上面的仓库克隆到本地</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> 仓库地址</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://s2.loli.net/2023/10/29/npKIQE9TmoRZ2Sz.webp"></p>
-<p>执行完成后，本地项目文件夹中<strong>会多出一个和github上面的仓库名相同的文件夹</strong>，我们把本地项目文件夹下的所有文件（除了新多出的那个文件夹）都复制到那个新多出的文件夹下</p>
-<p>输入命令,进入本地仓库文件夹</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> 仓库名称</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://s2.loli.net/2023/10/29/8AcyDvYIH4lnVsG.webp">
-<strong>9.接下来依次输入以下代码即可完成其他剩余操作：</strong></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git add .</span><br></pre></td></tr></table></figure>
-
-<p>格式：<strong>add + 空格 + 英文句号</strong>
-,后面的“<strong>.</strong>“是把该文件夹下面的文件都添加进来）</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git commit -m <span class="string">"first"</span></span><br></pre></td></tr></table></figure>
-
-<p><img src="https://s2.loli.net/2023/10/29/3m1saHzLRrpudQS.webp">
-<strong>提交信息</strong>  （<em>“提交信息”是自定义的，如“first”</em>）</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git pull origin master</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://s2.loli.net/2023/10/29/cXJQ6KGAL5HR2xe.webp">
-<em>先使用pull，进行合并然后再进行push，即先使用pull将远程文件同步下来。</em></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://s2.loli.net/2023/10/29/kAbHtxioMcQlNf7.webp">
-<em>此操作目的是把本地仓库push到github上面</em>
-<strong>完成以上步骤后，查看代码仓库会发现项目已经上传成功</strong> <img src="https://s2.loli.net/2023/10/29/7SX6aRs1dULWMHV.webp"></p>
-<h2 id="4使用git更新github仓库文件">4.使用Git更新GitHub仓库文件</h2>
-<p>如果想更新整体文件夹，使用</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git add .</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
-
-<p>即可</p>
-<h2 id="5使用git删除github仓库文件夹">5.使用Git删除Github仓库文件夹</h2>
-<p><strong>拉取远程的Repo到本地</strong>(如果已在本地，可以略过)</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> 仓库地址</span><br></pre></td></tr></table></figure>
-
-<p><strong>在本地删除文件</strong></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">rm</span> 我的文件</span><br></pre></td></tr></table></figure>
-
-<p><strong>在本地仓库删除文件夹</strong></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">rm</span> -r 我的文件夹/</span><br></pre></td></tr></table></figure>
-
-<p>此处<font color="#00b0f0">-r</font>表示递归所有子目录，如果你要删除的是空文件夹，则不需要带上<font color="#00b0f0">-r</font>
-<strong>提交代码</strong></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git commit -m <span class="string">"我的修改"</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>推送到Github仓库</strong></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git push --mirror master</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>教程</category>
-      </categories>
-      <tags>
-        <tag>Github</tag>
-        <tag>Git</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hexo压缩资源插件</title>
     <url>/blog/posts/minifier.html</url>
     <content><![CDATA[<p>文章来自插件hexo-all-minifier<a href="https://www.npmjs.com/package/hexo-all-minifier">官方文档</a></p>
@@ -189,6 +96,353 @@ portfolio即为我的项目名。</p>
       <tags>
         <tag>Hexo</tag>
         <tag>插件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Github文件上传(Git)</title>
+    <url>/blog/posts/githubsc.html</url>
+    <content><![CDATA[<h2 id="1创建-github-代码仓库">1.创建 GitHub 代码仓库</h2>
+<p>首先在 GitHub 上创建自己的仓库，进入 GitHub
+官网并登陆，点击 <strong>New repository</strong> 如下图 <img src="https://s2.loli.net/2023/10/27/Zvkpj2in6XJCBUO.webp"></p>
+<p>然后输入自己的仓库名称及仓库说明，输入完毕后点击 <strong>Create repository</strong>
+<img src="https://s2.loli.net/2023/10/27/fGE1h8xjNSAu3Hl.webp"></p>
+<blockquote>
+<ul>
+<li>Repository name: 仓库名称</li>
+<li>Description(可选): 仓库描述介绍</li>
+<li>Public, Private : 仓库权限（公开共享，私有或指定合作者）</li>
+<li>Initialize this repository with a README: 添加一个README.md</li>
+<li>gitignore: 不需要进行版本管理的仓库类型，对应生成文件.gitignore</li>
+<li>license: 证书类型，对应生成文件LICENSE</li>
+</ul>
+</blockquote>
+<p>如下图所示，建立好了一个代码仓库，可将项目的文件、文件夹通过
+Git 上传至此 <img src="https://s2.loli.net/2023/10/27/SRiryGc2Y7sLbMu.webp"></p>
+<h2 id="2获取-git">2.获取 Git</h2>
+<p>在Git官网下载最新版本的Git软件安装到本地：</p>
+<a class="btn-anzhiyu " href="regular::Giit下载::https://www.git-scm.com/download/::fa-solid fa-play-circle" title=""></a>
+
+<h2 id="3上传本地项目文件到-github-新建仓库">3.上传本地项目文件到 GitHub
+新建仓库</h2>
+<p>点击<strong>Clone or
+dowload</strong>会出现一个地址，copy这个地址备用。</p>
+<p><img src="https://s2.loli.net/2023/10/27/V4Qw6HXv3hIepft.webp"></p>
+<p>接下来回到本地操作，首先右键你的项目，如果你之前安装git成功的话，右键会出现两个新选项，分别为
+<strong>Git Gui Here , Git Bash Here</strong> ,这里我们选择 <strong>Git
+Bash Here</strong> ，进入如下界面，personal
+portfolio即为我的项目名。</p>
+<p><img src="https://s2.loli.net/2023/10/29/Mt5aewXp68vsnAi.webp"></p>
+<p>接下来输入如下命令（关键步骤），把github上面的仓库克隆到本地</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> 仓库地址</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://s2.loli.net/2023/10/29/npKIQE9TmoRZ2Sz.webp"></p>
+<p>执行完成后，本地项目文件夹中<strong>会多出一个和github上面的仓库名相同的文件夹</strong>，我们把本地项目文件夹下的所有文件（除了新多出的那个文件夹）都复制到那个新多出的文件夹下</p>
+<p>输入命令,进入本地仓库文件夹</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> 仓库名称</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://s2.loli.net/2023/10/29/8AcyDvYIH4lnVsG.webp">
+<strong>9.接下来依次输入以下代码即可完成其他剩余操作：</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git add .</span><br></pre></td></tr></table></figure>
+
+<p>格式：<strong>add + 空格 + 英文句号</strong>
+,后面的“<strong>.</strong>“是把该文件夹下面的文件都添加进来）</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git commit -m <span class="string">"first"</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://s2.loli.net/2023/10/29/3m1saHzLRrpudQS.webp">
+<strong>提交信息</strong>  （<em>“提交信息”是自定义的，如“first”</em>）</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git pull origin master</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://s2.loli.net/2023/10/29/cXJQ6KGAL5HR2xe.webp">
+<em>先使用pull，进行合并然后再进行push，即先使用pull将远程文件同步下来。</em></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://s2.loli.net/2023/10/29/kAbHtxioMcQlNf7.webp">
+<em>此操作目的是把本地仓库push到github上面</em>
+<strong>完成以上步骤后，查看代码仓库会发现项目已经上传成功</strong> <img src="https://s2.loli.net/2023/10/29/7SX6aRs1dULWMHV.webp"></p>
+<h2 id="4使用git更新github仓库文件">4.使用Git更新GitHub仓库文件</h2>
+<p>如果想更新整体文件夹，使用</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git add .</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
+
+<p>即可</p>
+<h2 id="5使用git删除github仓库文件夹">5.使用Git删除Github仓库文件夹</h2>
+<p><strong>拉取远程的Repo到本地</strong>(如果已在本地，可以略过)</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> 仓库地址</span><br></pre></td></tr></table></figure>
+
+<p><strong>在本地删除文件</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">rm</span> 我的文件</span><br></pre></td></tr></table></figure>
+
+<p><strong>在本地仓库删除文件夹</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">rm</span> -r 我的文件夹/</span><br></pre></td></tr></table></figure>
+
+<p>此处<font color="#00b0f0">-r</font>表示递归所有子目录，如果你要删除的是空文件夹，则不需要带上<font color="#00b0f0">-r</font>
+<strong>提交代码</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git commit -m <span class="string">"我的修改"</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>推送到Github仓库</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git push --mirror master</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>Github</tag>
+        <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo如何隐藏文章</title>
+    <url>/blog/posts/hexoycwz.html</url>
+    <content><![CDATA[<p>本 Hexo
+插件可以在博客中隐藏指定的文章，并使它们仅可通过链接访问。</p>
+<p>当一篇文章被设置为「隐藏」时，它不会出现在任何列表中（包括首页、存档、分类页面、标签页面、Feed、站点地图等），也不会被搜索引擎索引（前提是搜索引擎遵守
+noindex 标签）。</p>
+<p>只有知道文章链接的人才可以访问被隐藏的文章。</p>
+<p>Github地址：<a href="https://github.com/printempw/hexo-hide-posts">https://github.com/printempw/hexo-hide-posts</a></p>
+<h3 id="安装">安装</h3>
+<p>在站点根目录下执行<code>npm install hexo-hide-posts --save</code></p>
+<h3 id="配置">配置</h3>
+<p>在站点目录下的<code>_config.yml</code>中如下配置：</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># hexo-hide-posts</span></span><br><span class="line"><span class="attr">hide_posts:</span></span><br><span class="line">  <span class="comment"># 可以改成其他你喜欢的名字</span></span><br><span class="line">  <span class="attr">filter:</span> <span class="string">hidden</span></span><br><span class="line">  <span class="comment"># 指定你想要传递隐藏文章的位置，比如让所有隐藏文章在存档页面可见</span></span><br><span class="line">  <span class="comment"># 常见的位置有：index, tag, category, archive, sitemap, feed, etc.</span></span><br><span class="line">  <span class="comment"># 留空则默认全部隐藏</span></span><br><span class="line">  <span class="attr">public_generators:</span> []</span><br><span class="line">  <span class="comment"># 为隐藏的文章添加 noindex meta 标签，阻止搜索引擎收录</span></span><br><span class="line">  <span class="attr">noindex:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<p>举个栗子：设置 <code>filter: secret</code> 之后，你就可以在
+front-matter 中使用 <code>secret: true</code> 来隐藏文章了。</p>
+<h3 id="使用">使用</h3>
+<p>在文章的属性中定义 <code>hidden: true</code> 即可隐藏文章。</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 'Hidden Post'</span><br><span class="line">date: '2021/03/05 21:45:14'</span><br><span class="line">hidden: true</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<p>虽然首页上被隐藏了，但你仍然可以通过 <code>https://hexo.test/lorem-ipsum/</code> 链接访问它。</p>
+<p>你可以在命令行运行 <code>hexo hidden:list</code> 来获取当前所有的已隐藏文章列表。</p>
+<p>插件也在 <a href="https://hexo.io/api/locals">Local
+Variables</a> 中添加了 <code>all_posts</code> 和 <code>hidden_posts</code> 变量，供自定义主题使用。</p>
+<p>文章摘自：https://blog.garryde.com/archives/37712.html</p>
+]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo常用指令集</title>
+    <url>/blog/posts/hexozlj.html</url>
+    <content><![CDATA[<a class="btn-anzhiyu " href="/blog/center%20large::%E5%89%8D%E5%BE%80HEXO%E5%AE%98%E6%96%B9%E6%8C%87%E4%BB%A4%E6%95%99%E7%A8%8B::https:/hexo.io/zh-cn/docs/commands.html::fa-solid%20fa-play-circle" title=""></a>
+
+<h2 id="指令部分">指令部分</h2>
+<h3 id="创建">创建</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo init [folder]</span><br></pre></td></tr></table></figure>
+
+<p>新建一个网站。如果没有设置 folder ，Hexo
+默认在目前的文件夹建立网站。</p>
+<p>本命令相当于执行了以下几步：</p>
+<p>Git clone hexo-starter 和 hexo-theme-landscape
+主题到当前目录或指定目录。 使用 Yarn 1、pnpm 或 npm
+包管理器下载依赖（如有已安装多个，则列在前面的优先）。npm 默认随 Node.js
+安装。</p>
+<h3 id="new">new</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new [layout] &lt;title&gt;</span><br></pre></td></tr></table></figure>
+
+<p>新建一篇文章。如果没有设置 layout 的话，默认使用 _config.yml 中的
+default_layout 参数代替。如果标题包含空格的话，请使用引号括起来。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new <span class="string">"post title with whitespace"</span></span><br></pre></td></tr></table></figure>
+
+<p>参数 描述 -p, –path 自定义新文章的路径 -r, –replace
+如果存在同名文章，将其替换 -s, –slug 文章的
+Slug，作为新文章的文件名和发布后的 URL 默认情况下，Hexo
+会使用文章的标题来决定文章文件的路径。对于独立页面来说，Hexo
+会创建一个以标题为名字的目录，并在目录中放置一个 index.md
+文件。你可以使用 –path 参数来覆盖上述行为、自行决定文件的目录：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new page --path about/me <span class="string">"About me"</span></span><br></pre></td></tr></table></figure>
+
+<p>以上命令会创建一个 source/about/me.md 文件，同时 Front Matter 中的
+title 为 “About me”</p>
+<p>注意！title 是必须指定的！如果你这么做并不能达到你的目的：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new page --path about/me</span><br></pre></td></tr></table></figure>
+
+<p>此时 Hexo 会创建 source/_posts/about/me.md，同时 me.md 的 Front
+Matter 中的 title 为 “page”。这是因为在上述命令中，hexo-cli 将 page
+视为指定文章的标题、并采用默认的 layout。</p>
+<h3 id="generate">generate</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>生成静态文件。</p>
+<p>选项 描述 -d, –deploy 文件生成后立即部署网站 -w, –watch 监视文件变动
+-b, –bail 生成过程中如果发生任何未处理的异常则抛出异常 -f, –force
+强制重新生成文件</p>
+<p>Hexo 引入了差分机制，如果 public 目录存在，那么 hexo g
+只会重新生成改动的文件。 使用该参数的效果接近 hexo clean &amp;&amp; hexo
+generate -c, –concurrency 最大同时生成文件的数量，默认无限制
+该命令可以简写为</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
+
+<h3 id="publish">publish</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo publish [layout] &lt;filename&gt;</span><br></pre></td></tr></table></figure>
+
+<p>发表草稿。</p>
+<h3 id="server">server</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+
+<p>或者</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+
+<p>启动服务器。默认情况下，访问网址为： http://localhost:4000/。</p>
+<p>选项 描述 -p, –port 重设端口 -s, –static 只使用静态文件 -l, –log
+启动日记记录，使用覆盖记录格式</p>
+<h3 id="deploy">deploy</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>部署网站。</p>
+<p>参数 描述 -g, –generate 部署之前预先生成静态文件
+该命令可以简写为：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+<h3 id="render">render</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo render &lt;file1&gt; [file2] ...</span><br></pre></td></tr></table></figure>
+
+<p>渲染文件。</p>
+<p>参数 描述 -o, –output 设置输出路径</p>
+<h3 id="migrate">migrate</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo migrate &lt;<span class="built_in">type</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<p>从其他博客系统 迁移内容。</p>
+<h3 id="clean">clean</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure>
+
+<p>清除缓存文件 (db.json) 和已生成的静态文件 (public)。</p>
+<p>在某些情况（尤其是更换主题后），如果发现您对站点的更改无论如何也不生效，您可能需要运行该命令。</p>
+<h3 id="list">list</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo list &lt;<span class="built_in">type</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<p>列出网站资料。</p>
+<h3 id="version">version</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo version</span><br></pre></td></tr></table></figure>
+
+<p>显示 Hexo 版本。</p>
+<h3 id="选项">选项</h3>
+<h4 id="安全模式">安全模式</h4>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo --safe</span><br></pre></td></tr></table></figure>
+
+<p>在安全模式下，不会载入插件和脚本。当您在安装新插件遭遇问题时，可以尝试以安全模式重新执行。</p>
+<h4 id="调试模式">调试模式</h4>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo --debug</span><br></pre></td></tr></table></figure>
+
+<p>在终端中显示调试信息并记录到
+debug.log。当您碰到问题时，可以尝试用调试模式重新执行一次，并
+提交调试信息到 GitHub。</p>
+<h4 id="简洁模式">简洁模式</h4>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo --silent</span><br></pre></td></tr></table></figure>
+
+<p>隐藏终端信息。</p>
+<h3 id="自定义配置文件的路径">自定义配置文件的路径</h3>
+<h4 id="-使用-customyml-代替默认的-_configyml"># 使用 custom.yml
+代替默认的 _config.yml</h4>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo server --config custom.yml</span><br></pre></td></tr></table></figure>
+
+<h4 id="-使用-customyml-和-custom2json其中-custom2json-优先级更高">#
+使用 custom.yml 和 custom2.json，其中 custom2.json 优先级更高</h4>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo generate --config custom.yml,custom2.json,custom3.yml</span><br></pre></td></tr></table></figure>
+
+<p>自定义配置文件的路径，指定这个参数后将不再使用默认的 _config.yml。
+你可以使用一个 YAML 或 JSON
+文件的路径，也可以使用逗号分隔（无空格）的多个 YAML 或 JSON
+文件的路径。例如：</p>
+<h4 id="-使用-customyml-代替默认的-_configyml-1"># 使用 custom.yml
+代替默认的 _config.yml</h4>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo server --config custom.yml</span><br></pre></td></tr></table></figure>
+
+<h4 id="-使用-customyml-custom2json-和-custom3yml其中-custom3yml-优先级最高其次是-custom2json">#
+使用 custom.yml, custom2.json 和 custom3.yml，其中 custom3.yml
+优先级最高，其次是 custom2.json</h4>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo generate --config custom.yml,custom2.json,custom3.yml</span><br></pre></td></tr></table></figure>
+
+<p>当你指定了多个配置文件以后，Hexo 会按顺序将这部分配置文件合并成一个
+_multiconfig.yml。如果遇到重复的配置，排在后面的文件的配置会覆盖排在前面的文件的配置。这个原则适用于任意数量、任意深度的
+YAML 和 JSON 文件。</p>
+<h3 id="显示草稿">显示草稿</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo --draft</span><br></pre></td></tr></table></figure>
+
+<p>显示 source/_drafts 文件夹中的草稿文章。</p>
+<h3 id="自定义-cwd">自定义 CWD</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo --cwd /path/to/cwd</span><br></pre></td></tr></table></figure>
+
+<p>自定义当前工作目录（Current working directory）的路径。</p>
+<h2 id="问题解决方案">问题解决方案</h2>
+<p>以下是我遇到过的问题的解决方案 可能并不适用于所有情况</p>
+<h3 id="hexo--d报错">hexo -d报错</h3>
+<p>在博客目录中选择“在终端中打开”，输入：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
+<p>如果使用了加速器加速了GitHub，可以尝试关闭加速器重试</p>
+]]></content>
+      <categories>
+        <category>代码</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux入门-初识Linux</title>
+    <url>/blog/posts/linuxrm.html</url>
+    <content><![CDATA[<p>最近我打算学习一下Linux 以本文记录一下我的学习过程</p>
+<h1 id="一关于linux">一、关于Linux</h1>
+<h2 id="linux的诞生">Linux的诞生</h2>
+<p>Linux创始人: 林纳斯 托瓦兹 Linux 诞生于1991年，作者上大学期间
+因为创始人在上大学期间经常需要浏览新闻和处理邮件，发现现有的操作系统不好用,
+于是他决心自己写一个保护模式下的操作系统，这就是Linux的原型，
+当时他21岁，后来经过全世界网友的支持,
+现在能够兼容多种硬件，成为最为流行的服务器操作系统之一。 <img src="https://pic.imgdb.cn/item/65634875c458853aef5abdbb.webp"> <img src="https://pic.imgdb.cn/item/65634875c458853aef5abe42.webp"></p>
+<h2 id="linux内核">Linux内核</h2>
+<p>Linux系统的组成如下：
+<strong>Linux系统内核</strong>、<strong>系统级应用程序</strong>两部分组成。
+内核提供系统最核心的功能，如：调度CPU、调度内存、调度文件系统、调度网络通讯、调度IO等。
+系统级应用程序，可以理解为出厂自带程序，可供用户快速上手操作系统，如：文件管理器、任务管理器、图片查看、音乐播放等。</p>
+<p>比如，播放音乐，无论用户使用自带音乐播放器或是自行安装的第三方播放器均是由播放器程序，调用内核提供的相关功能，由内核调度CPU解码、音响发声等。
+<img src="https://pic.imgdb.cn/item/65634875c458853aef5abeb4.webp">
+<img src="https://pic.imgdb.cn/item/65634875c458853aef5abf1c.webp">
+可以看出，内核是Linux操作系统最核心的所在，系统级应用程序只是锦上添花。
+Linux内核是免费开源的，任何人都可以下载内核源码并查看且修改。
+可以通过：https://www.kernel.org 去下载Linux内核</p>
+<p>内核是免费、开源的，这也就代表了：
+任何人都可以获得并修改内核，并且自行集成系统级程序
+提供了内核+系统级程序的完整封装，称之为Linux发行版 <img src="https://pic.imgdb.cn/item/65634875c458853aef5abf5e.webp"> <img src="https://pic.imgdb.cn/item/656348afc458853aef5be85b.webp"></p>
+<h1 id="二安装linux">二、安装Linux</h1>
+<p>在这里我用了虚拟机的方法安装Linux CentOS系统</p>
+<div class="note warning flat"><p>Linux不同发行版中的基础命令100%是相同的，只有个别软件细节不同</p>
+</div>
+
+<p>我个人认为Hyper-V虚拟机比VMware要稍微流畅一些
+所以我在这里选用Hyper-V安装CentOS
+如果你不是Windows11，那就只能用别的啦，比如VMware</p>
+]]></content>
+      <categories>
+        <category>记录</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>TED视频分享</title>
+    <url>/blog/posts/TED1.html</url>
+    <content><![CDATA[<p>本页将分享一些TED的听力视频 将提供视频文件和中英字幕文件
+下载后放置同一文件夹内 并使用相同名称即可</p>
+<h2 id="the-first-20-hours--how-to-learn-anything">The first 20 hours –
+how to learn anything</h2>
+<p><img src="https://pic.imgdb.cn/item/6541053fc458853aef4b2d0f.webp">
+原视频链接：<a href="https://www.youtube.com/watch?v=5MgBikgcWnY&amp;t=10s">前往YouTube</a>
+官网文章链接：<a href="https://ideas.ted.com/dont-have-10000-hours-to-learn-something-new-thats-fine-all-you-need-is-20-hours/">前往TED官网</a>
+官网文章转载：<a href="https://flumbrix1145.github.io/blog/2023/10/31/Don%E2%80%99t-have-10-000-hours-to-learn-something-new-That%E2%80%99s-fine-%E2%80%94-all-you-need-is-20-hours/">点击前往</a></p>
+<a class="btn-anzhiyu " href="regular::下载视频文件::https://gofile.cc/deLy/the-first-20-hours-how-to-learn-anything-josh-kaufman-tedxcsu.mp4::fa-solid fa-download" title=""></a><a class="btn-anzhiyu " href="regular::下载字幕文件::https://gofile.cc/prDW/the-first-20-hours-how-to-learn-anything-josh-kaufman-tedxcsu.srt::fa-solid fa-download" title=""></a>
+]]></content>
+      <categories>
+        <category>学习</category>
+        <category>英语</category>
+      </categories>
+      <tags>
+        <tag>TED</tag>
       </tags>
   </entry>
   <entry>
@@ -1091,102 +1345,6 @@ HTML 实体。）</p>
       </tags>
   </entry>
   <entry>
-    <title>TED视频分享</title>
-    <url>/blog/posts/TED1.html</url>
-    <content><![CDATA[<p>本页将分享一些TED的听力视频 将提供视频文件和中英字幕文件
-下载后放置同一文件夹内 并使用相同名称即可</p>
-<h2 id="the-first-20-hours--how-to-learn-anything">The first 20 hours –
-how to learn anything</h2>
-<p><img src="https://pic.imgdb.cn/item/6541053fc458853aef4b2d0f.webp">
-原视频链接：<a href="https://www.youtube.com/watch?v=5MgBikgcWnY&amp;t=10s">前往YouTube</a>
-官网文章链接：<a href="https://ideas.ted.com/dont-have-10000-hours-to-learn-something-new-thats-fine-all-you-need-is-20-hours/">前往TED官网</a>
-官网文章转载：<a href="https://flumbrix1145.github.io/blog/2023/10/31/Don%E2%80%99t-have-10-000-hours-to-learn-something-new-That%E2%80%99s-fine-%E2%80%94-all-you-need-is-20-hours/">点击前往</a></p>
-<a class="btn-anzhiyu " href="regular::下载视频文件::https://gofile.cc/deLy/the-first-20-hours-how-to-learn-anything-josh-kaufman-tedxcsu.mp4::fa-solid fa-download" title=""></a><a class="btn-anzhiyu " href="regular::下载字幕文件::https://gofile.cc/prDW/the-first-20-hours-how-to-learn-anything-josh-kaufman-tedxcsu.srt::fa-solid fa-download" title=""></a>
-]]></content>
-      <categories>
-        <category>学习</category>
-        <category>英语</category>
-      </categories>
-      <tags>
-        <tag>TED</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Linux入门-初识Linux</title>
-    <url>/blog/posts/linuxrm.html</url>
-    <content><![CDATA[<p>最近我打算学习一下Linux 以本文记录一下我的学习过程</p>
-<h1 id="一关于linux">一、关于Linux</h1>
-<h2 id="linux的诞生">Linux的诞生</h2>
-<p>Linux创始人: 林纳斯 托瓦兹 Linux 诞生于1991年，作者上大学期间
-因为创始人在上大学期间经常需要浏览新闻和处理邮件，发现现有的操作系统不好用,
-于是他决心自己写一个保护模式下的操作系统，这就是Linux的原型，
-当时他21岁，后来经过全世界网友的支持,
-现在能够兼容多种硬件，成为最为流行的服务器操作系统之一。 <img src="https://pic.imgdb.cn/item/65634875c458853aef5abdbb.webp"> <img src="https://pic.imgdb.cn/item/65634875c458853aef5abe42.webp"></p>
-<h2 id="linux内核">Linux内核</h2>
-<p>Linux系统的组成如下：
-<strong>Linux系统内核</strong>、<strong>系统级应用程序</strong>两部分组成。
-内核提供系统最核心的功能，如：调度CPU、调度内存、调度文件系统、调度网络通讯、调度IO等。
-系统级应用程序，可以理解为出厂自带程序，可供用户快速上手操作系统，如：文件管理器、任务管理器、图片查看、音乐播放等。</p>
-<p>比如，播放音乐，无论用户使用自带音乐播放器或是自行安装的第三方播放器均是由播放器程序，调用内核提供的相关功能，由内核调度CPU解码、音响发声等。
-<img src="https://pic.imgdb.cn/item/65634875c458853aef5abeb4.webp">
-<img src="https://pic.imgdb.cn/item/65634875c458853aef5abf1c.webp">
-可以看出，内核是Linux操作系统最核心的所在，系统级应用程序只是锦上添花。
-Linux内核是免费开源的，任何人都可以下载内核源码并查看且修改。
-可以通过：https://www.kernel.org 去下载Linux内核</p>
-<p>内核是免费、开源的，这也就代表了：
-任何人都可以获得并修改内核，并且自行集成系统级程序
-提供了内核+系统级程序的完整封装，称之为Linux发行版 <img src="https://pic.imgdb.cn/item/65634875c458853aef5abf5e.webp"> <img src="https://pic.imgdb.cn/item/656348afc458853aef5be85b.webp"></p>
-<h1 id="二安装linux">二、安装Linux</h1>
-<p>在这里我用了虚拟机的方法安装Linux CentOS系统</p>
-<div class="note warning flat"><p>Linux不同发行版中的基础命令100%是相同的，只有个别软件细节不同</p>
-</div>
-
-<p>我个人认为Hyper-V虚拟机比VMware要稍微流畅一些
-所以我在这里选用Hyper-V安装CentOS
-如果你不是Windows11，那就只能用别的啦，比如VMware</p>
-]]></content>
-      <categories>
-        <category>记录</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo如何隐藏文章</title>
-    <url>/blog/posts/hexoycwz.html</url>
-    <content><![CDATA[<p>本 Hexo
-插件可以在博客中隐藏指定的文章，并使它们仅可通过链接访问。</p>
-<p>当一篇文章被设置为「隐藏」时，它不会出现在任何列表中（包括首页、存档、分类页面、标签页面、Feed、站点地图等），也不会被搜索引擎索引（前提是搜索引擎遵守
-noindex 标签）。</p>
-<p>只有知道文章链接的人才可以访问被隐藏的文章。</p>
-<p>Github地址：<a href="https://github.com/printempw/hexo-hide-posts">https://github.com/printempw/hexo-hide-posts</a></p>
-<h3 id="安装">安装</h3>
-<p>在站点根目录下执行<code>npm install hexo-hide-posts --save</code></p>
-<h3 id="配置">配置</h3>
-<p>在站点目录下的<code>_config.yml</code>中如下配置：</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># hexo-hide-posts</span></span><br><span class="line"><span class="attr">hide_posts:</span></span><br><span class="line">  <span class="comment"># 可以改成其他你喜欢的名字</span></span><br><span class="line">  <span class="attr">filter:</span> <span class="string">hidden</span></span><br><span class="line">  <span class="comment"># 指定你想要传递隐藏文章的位置，比如让所有隐藏文章在存档页面可见</span></span><br><span class="line">  <span class="comment"># 常见的位置有：index, tag, category, archive, sitemap, feed, etc.</span></span><br><span class="line">  <span class="comment"># 留空则默认全部隐藏</span></span><br><span class="line">  <span class="attr">public_generators:</span> []</span><br><span class="line">  <span class="comment"># 为隐藏的文章添加 noindex meta 标签，阻止搜索引擎收录</span></span><br><span class="line">  <span class="attr">noindex:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-
-<p>举个栗子：设置 <code>filter: secret</code> 之后，你就可以在
-front-matter 中使用 <code>secret: true</code> 来隐藏文章了。</p>
-<h3 id="使用">使用</h3>
-<p>在文章的属性中定义 <code>hidden: true</code> 即可隐藏文章。</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 'Hidden Post'</span><br><span class="line">date: '2021/03/05 21:45:14'</span><br><span class="line">hidden: true</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-
-<p>虽然首页上被隐藏了，但你仍然可以通过 <code>https://hexo.test/lorem-ipsum/</code> 链接访问它。</p>
-<p>你可以在命令行运行 <code>hexo hidden:list</code> 来获取当前所有的已隐藏文章列表。</p>
-<p>插件也在 <a href="https://hexo.io/api/locals">Local
-Variables</a> 中添加了 <code>all_posts</code> 和 <code>hidden_posts</code> 变量，供自定义主题使用。</p>
-<p>文章摘自：https://blog.garryde.com/archives/37712.html</p>
-]]></content>
-      <categories>
-        <category>教程</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Win11安装杜比全景声方法</title>
     <url>/blog/posts/dloby.html</url>
     <content><![CDATA[<h1 id="在-windows-11-中安装杜比全景声">在 Windows 11
@@ -1311,6 +1469,85 @@ registry更改为<strong>淘宝镜像</strong>，提升安装速度。</li>
       </tags>
   </entry>
   <entry>
+    <title>alist分享站合集</title>
+    <url>/blog/posts/alist.html</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="e05549df2db6f70cee2593aa154e3af6285f20e66c9830b6c64be5b2f8a34547">01079e04cb506c854a329d33ee789b0bc61f2bce16c53d5fbd79ea03009524ed18e4b635dae6709b6be8427a40aeab0aa4583f955ef77e9c24482f3bde710dda3e697867b3e9e51b507b8580e1981f7ac770533ecff62db0c29f8ed157fef3ad0c2b75924501a5d218ba92c68c2bf9d0b11fc26c329f8f8fb7c165e5ca43051a69d35757e33eeccc6a7bfef89a4276fbc06de2653fbd1ccc933f2bc0d8403a6690dc565c7bed4248fae1e145b5e3009bb58c30d14b42c621cc7e4b8c972b0cda7978edf09f1826bb0404c527c9e72c8484f91f5dab0665eeb96945551ce10cba5cc011ec7ce35887bf5baa061bb90331b8ad7da5f41acf2a43b46fad925799bb0f75b0ac31b29e3b83d11b137e43f41ad6cf07ed015c56d080c9f722c9cf5e228104e6114df34bd9faa78366658ebba63821ecabb9dc16c2c9b214cfdf7339e0359d4ea34aa6e834eac6697cca9d4ac095f4b389c310c30ad70038d5070d574f55e26db075e858b5dec8e41035c73000bf723eef0ddcf1fe51ab2c51121d118a931fd51c94c6b2862427c3bfdc993cdeeeb2f3306a3fc16edc1adcfecc0b54fc72cace46d6b41df46fdf6dc3a23cd503b2789c5f4d1a49d2157af8b199af592a519b4abd897284023f84725a2ecc7abc565178c1a1255bc82eb815df040838af1cd1f049dbc82e513020d274005f5e5df52fe46cf3bd156d40377e57990eae19b0e384b4f5d1dcab23413fc4f0cf87209d667053c47817811cf82ea4d5019db2ec47227cc8ceda28552483d793203de7c76038ecd040aa4d414b4ee3bea54828b77656e994fc41c4c6de68b05bcde63d9b6bc26893d2df4aef59637b602b9002cadbc1a95fb617b0b922fb6bdce8d502f89bf5170603bdf073565ad7eb2fe2feef66c96836efdbea25d16c4aba51fc22f670fd1104f33490f9c46b6a747945d45c13d59b43a994e536202b8bf6b023ffa815895e1dd3b0a48febafe96b46187bc764b08f65ec4ff3b88877064f4f1c2ecf8f24ce9b8adb64d3b14230b55fea49d4dda3c1f7f55e90929147a4590dc859371142d89363a142a73e04c184b0d94a6675f42cedab83b396c7701ba343c6f7291a79c3072abd7414098803ab449056ee4f704b200a6c999170bfeb6a4784fc3dab9285ee930743609173e66dbf8430ccc195f28cb23db0e8356bc90730f4c32e437b1f00bedc71d3eb7b8ab144bc35a0a8bcc2c40af61ac52d62bd1ede855fb166a9a0b280414d7add4d7e531faa76e4cfa896cdc82212a8caaa214262b21dbb8fccc227cf2fdb3abfd6cac2be02f0bdc1223f3ed9a7f29d79dc0d69480151377d8b222fd8bf8319a253205e13b76f5830d21acab8139f5678b218cd4daef8e1d10fa252f62da3a24da0be03b7965b2d7d52134fbb5fcd9283d41aae752ca35e648b5ec2099cf5115d27450534ca214b3e0c38ac8d2b9017bc1303bd34af8fe3ddef71fc3c3e5996fce68a8621d1e1bcd7c8d06fa96332900318cba48c83e1cc67a08ec04761349f8c125da4f9a5af927df92bba7735cb8eec0dd89ea041ad1ffa6b9a72dfbb9ad7e0cd25ccfe86b2c03b5fb7bfd60f191d1f8d82e91a17c7e996ea1a208f93fce2be31d97f2d22e815b60694b79f91d6feb3c45cff978f2ba13cb71fe644709cb6a2f3439bae81e7396edfa940cb1a4df2c229e7f4a4960db2a8ac041baae954bf3baffd41dab6b186380084a4d863bc07e3eb8c193b5f092ec51c30b55123f2aa32f83391b9a3e0d41e28b5b5f1a4abd86e7b2f5bce0ff0bce9a220b522e6c190491d8a7b3494e3235bcd0f2d2509a5448dc466b0390faa2d0935fdc9217ee656082e3041ca5efe95f7c3df8ddc6651d63b7b752694860c4a7ff180be934ac44d89e365ddf555e8028aaabdffa807a1f934de5143fff71351d9f0bf00289935babae58b0f798003cc2e61042f24c8bd10c0994e98bcef407cf5653df4c05bfbdc490a27fcb8d7e57f9d0f4f3bdc0c0f4e442f261876197d75b63e58cb6ec209e17476fe2751564de865201c5a604a4f68961204e614e3535399ab769b782739ab96815301494919ae75f8871f2afeffaa7a2b8aa6079bf183ae88cba11a1b349080f9bebf154c68346002e1cd5c37ebe7edff5c31824721653e5a3c263b244ccc44ef0449950c0fc4548e8eeb0ba578a4b4bc74090606e7c08afa3bd3518b88fe1dc59c9a366335bb0e6847d215849db50a0dec8f7635ba9c7f5b158468bcf347e720252fcaa56667597f3d5bb87512fbef65838be5ba8be8a419c568eed4b3fff642e1970eda73375b8cb88da2aad74f25875f24c293b6ecba7d526bf126fe69c1a874877f011ebe550ae9fc268194ae4264a9e20d826e4bf3a94e38846dfe5db64b53bedaf40fdca09664d0bb430f2faa9ae7e0fedb908c74b3f44524b03f8c551ebec36de0971186d683104510b10cc37fc45ed3a835592ca2d74df76c7ef913fc0808d82771d855a036971543f1b04739ead12d09251752326e780854b1e1dff297d440b8fe02d7085ff2acf40cdc27fcb56ae4a40ac2bc6cc804a6fdc89932c240a7d74a7abcef83227eec2a57da614137c22b91a0ac875899764d9d90b0b358092e2b8ca81620a25f9db62eccb1bac8f29dfbd8c862a160a34fac7fb81aa17a8fd1dec6777b2c90c13a5d1423c497dc0a6dacf908cc1a0be8ef82d90eccab74f63bf4763560bcc45cddb30c6cd9becd17f5343d44dad860c9a740c7ecbc74592002c0df122e7728ac1628281a7b47f937ff892b50f1d006e3ff11a47e82e6dc438630ea8dc48200062539dfb1cc11191b0ad2eeef8db29275cc7836aadfbf0c470ff2d464da3fa16f22e6da3cf0d363d6b52b6c6f7735995c139075a4b5588725c87f6275c73a96be030b128a7c8a6fb823e2c94d0bff5fe9f187fcd728b5a425c02c77d6aab4eb9cce64dfb3bff354e12b641c28cdcb5d19569a15f00246d59b0cc55310f1e832d491c12c93d3d8d0e2ec03534f995209bdb556a1923cd0dc458ffcf2d1235acd6cd98a1ccee21e4dcc3de7f9d8ba446bde14e028da882cea01af707cb029bebc840b119537f12211b265648a8aa141b7dc44409cfff603141aa7de46ec583c507d46502359ccb139f0b7491e4d3e50c50af118166f5bc0ec0a8faae3e1c141eb5820ba1d5a4166ec81c466ce09af664969b10d4fb36278f856a8f20d54bf6389aea23b5833f078f32a9520a15f533afd7c981bba3d65bdd974b8a07b5adf2bf3c9fecb6c866863c1d2976a523ff8803b32ce3fe1e2f53023a14a4e86dc5309835e7bcfc2f961b874957a0790acfd40c4e5d7b3d780001e6ce81cdf662cc2bf81dd0abf87240bde71dfecaa22fc581bf46bdf131cdf37882b6e622fd00f4cecf22fdd543d655164ed22f45f19819a7ef5e4e3bfd54fc62c7c9af7673a8d526f1cb66ca2b65b55534c28aef89f76e89137f7cea453df7b056bf76793364cd340fa50c7cd3ec812409e7d46b88f0c3edfdcbbb08724cd6331f6f6589b7ecc31fe67391c4a404109ec3c4044a2029c748aaa179c574e2240537f4532f28ab148b287e9e623721649b5b42a973b5a3d03020fd5b0ec677ccb46d603d5bdd5c88f4a718bc65552e9ac56806aa6cf89a7050e8cd22fa4dbaa4dcdf77175e2b728c8c4645c66864576af01a3675b4bab37bf8f85408a8ee4c0e869a97c303c149a57638af05f7aacaea6a80eba828e9c821781eb24f61e2b99353e057720784ab9aaee2aa4e45d0cd5402ee90b532d7f58b6e90dfa0f86ba0adeb6b3de7ec964ce911ec03945eb2a2b1101524c92e224b84e80c206778cc321c01c7833b31ce5a6</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">输入正确的访问密码才可查看呦</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/blog/lib/hbe.js"></script><link href="/blog/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+      <categories>
+        <category>内容分享</category>
+      </categories>
+      <tags>
+        <tag>alist</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>实用软件&amp;网站整理</title>
+    <url>/blog/posts/ruanjian.html</url>
+    <content><![CDATA[<h2 id="软件分享">软件分享</h2>
+<p>注：以下大部分内容为免费或破解版本</p>
+<h3 id="coodesker">Coodesker</h3>
+<p>Coodesker：自动分类整理桌面上的快捷方式、目录、图片等文件
+以前为免费软件，虽然在github上，但是就挂了个仓库
+现在已经开始收费了，但是我感觉老版本就够用</p>
+<a class="btn-anzhiyu " href="regular::Coodesker最后一个免费版本::https://wwll.lanzout.com/iveV71c8woyh::fa-solid fa-play-circle" title=""></a>
+
+<a class="btn-anzhiyu " href="regular::Coodesker20.0.7激活版本::https://wwll.lanzout.com/iEhYW1cbw46h::fa-solid fa-play-circle" title=""></a>
+
+<p>激活版下载密码：bpwp</p>
+<h3 id="kms激活工具">KMS激活工具</h3>
+<p>采用当前最先进的激活技术，几乎涵盖了Windows全版本同Office全版本的激活，支持最新的Win11系统、Win10全版本包括Win10
+LTSC的数字权利激活，非常强大，是激活系统首选的一款激活工具。</p>
+<a class="btn-anzhiyu " href="regular::前往下载::https://wwll.lanzout.com/iIXeE1c8wp8h::fa-solid fa-play-circle" title=""></a>
+
+<h3 id="potplayer视频播放器">PotPlayer视频播放器</h3>
+<p>PotPlayer继承了 KMPlayer
+所有的优点，拥有异常强大的内置音视频解码器，可以支持几乎全部音乐、视频文件格式的播放。采用
+VC++ 进行了全面重构，并且原生支持64位操作系统，使得 PotPlayer 在 Windows
+10 等新系统上，无论性能、兼容性和稳定性上的表现均比 KMP
+要好不少；硬件加速、流畅优秀的全高清视
+频播放效果、强大的选项、滤镜、外挂式管理、DXVA等硬件解码；以及非常丰富且强大的设置选项，被誉为Win平台上最优秀的免费影音全能格式播放器。</p>
+<a class="btn-anzhiyu " href="regular::前往下载::https://wwll.lanzout.com/i53vQ1c8wpgf::fa-solid fa-play-circle" title=""></a>
+
+<p>密码:a2k0</p>
+<h3 id="rainmeter雨滴">Rainmeter雨滴</h3>
+<p>雨滴皮肤（Rainmeter皮肤），是一些有特定功能的Windows桌面小工具。一些复杂的皮肤则看起来像是小型应用程序，风格相近的皮肤则可以组成一个套装或者主题。任何一个雨滴皮肤在不同电脑上工作都是不完全相同的，这取决于使用者对它的调整和修饰。</p>
+<a class="btn-anzhiyu " href="regular::前往官网下载::https://www.rainmeter.net/::fa-solid fa-play-circle" title=""></a>
+
+<h3 id="几何画板已破解">几何画板(已破解)</h3>
+<p>几何画板为从三年级到大学的各个级别的学生提供了一种有形的，可视化的方
+式来学习数学，从而提高他们的参与度、理解力和成就。
+几何画板现已停售，这里准备了v5.0.6的破解版本</p>
+<a class="btn-anzhiyu " href="regular::前往下载::https://wwll.lanzout.com/iLwf71c8wqyj::fa-solid fa-play-circle" title=""></a>
+
+<p>https://gofile.cc/lre4/bandizip.exe
+https://gofile.cc/jrY7/coodesker.zip https://gofile.cc/551a/kms.zip
+https://gofile.cc/QrEQ/firpe-v182.exe https://gofile.cc/WW5E/idm.exe
+https://gofile.cc/K7Xk/potplayer.exe
+https://gofile.cc/1kYp/rustdesk-64.exe
+https://gofile.cc/zq40/ventoy-1095-windows.zip
+https://gofile.cc/0L0l/.zip
+https://gofile.cc/DJyq/acrobat-pro-dc-pdf.iso</p>
+]]></content>
+      <categories>
+        <category>内容分享</category>
+        <category>软件</category>
+      </categories>
+      <tags>
+        <tag>软件</tag>
+        <tag>网站</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>为你的博客添加搜索功能</title>
     <url>/blog/posts/algoliasearch.html</url>
     <content><![CDATA[<h1 id="安装插件--写入配置">安装插件 &amp; 写入配置</h1>
@@ -1343,186 +1580,6 @@ registry更改为<strong>淘宝镜像</strong>，提升安装速度。</li>
         <tag>Hexo</tag>
         <tag>插件</tag>
         <tag>搜索</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>alist分享站合集</title>
-    <url>/blog/posts/alist.html</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="e05549df2db6f70cee2593aa154e3af6285f20e66c9830b6c64be5b2f8a34547">01079e04cb506c854a329d33ee789b0bc61f2bce16c53d5fbd79ea03009524ed18e4b635dae6709b6be8427a40aeab0aa4583f955ef77e9c24482f3bde710dda3e697867b3e9e51b507b8580e1981f7ac770533ecff62db0c29f8ed157fef3ad0c2b75924501a5d218ba92c68c2bf9d0b11fc26c329f8f8fb7c165e5ca43051a69d35757e33eeccc6a7bfef89a4276fbc06de2653fbd1ccc933f2bc0d8403a6690dc565c7bed4248fae1e145b5e3009bb58c30d14b42c621cc7e4b8c972b0cda7978edf09f1826bb0404c527c9e72c8484f91f5dab0665eeb96945551ce10cba5cc011ec7ce35887bf5baa061bb90331b8ad7da5f41acf2a43b46fad925799bb0f75b0ac31b29e3b83d11b137e43f41ad6cf07ed015c56d080c9f722c9cf5e228104e6114df34bd9faa78366658ebba63821ecabb9dc16c2c9b214cfdf7339e0359d4ea34aa6e834eac6697cca9d4ac095f4b389c310c30ad70038d5070d574f55e26db075e858b5dec8e41035c73000bf723eef0ddcf1fe51ab2c51121d118a931fd51c94c6b2862427c3bfdc993cdeeeb2f3306a3fc16edc1adcfecc0b54fc72cace46d6b41df46fdf6dc3a23cd503b2789c5f4d1a49d2157af8b199af592a519b4abd897284023f84725a2ecc7abc565178c1a1255bc82eb815df040838af1cd1f049dbc82e513020d274005f5e5df52fe46cf3bd156d40377e57990eae19b0e384b4f5d1dcab23413fc4f0cf87209d667053c47817811cf82ea4d5019db2ec47227cc8ceda28552483d793203de7c76038ecd040aa4d414b4ee3bea54828b77656e994fc41c4c6de68b05bcde63d9b6bc26893d2df4aef59637b602b9002cadbc1a95fb617b0b922fb6bdce8d502f89bf5170603bdf073565ad7eb2fe2feef66c96836efdbea25d16c4aba51fc22f670fd1104f33490f9c46b6a747945d45c13d59b43a994e536202b8bf6b023ffa815895e1dd3b0a48febafe96b46187bc764b08f65ec4ff3b88877064f4f1c2ecf8f24ce9b8adb64d3b14230b55fea49d4dda3c1f7f55e90929147a4590dc859371142d89363a142a73e04c184b0d94a6675f42cedab83b396c7701ba343c6f7291a79c3072abd7414098803ab449056ee4f704b200a6c999170bfeb6a4784fc3dab9285ee930743609173e66dbf8430ccc195f28cb23db0e8356bc90730f4c32e437b1f00bedc71d3eb7b8ab144bc35a0a8bcc2c40af61ac52d62bd1ede855fb166a9a0b280414d7add4d7e531faa76e4cfa896cdc82212a8caaa214262b21dbb8fccc227cf2fdb3abfd6cac2be02f0bdc1223f3ed9a7f29d79dc0d69480151377d8b222fd8bf8319a253205e13b76f5830d21acab8139f5678b218cd4daef8e1d10fa252f62da3a24da0be03b7965b2d7d52134fbb5fcd9283d41aae752ca35e648b5ec2099cf5115d27450534ca214b3e0c38ac8d2b9017bc1303bd34af8fe3ddef71fc3c3e5996fce68a8621d1e1bcd7c8d06fa96332900318cba48c83e1cc67a08ec04761349f8c125da4f9a5af927df92bba7735cb8eec0dd89ea041ad1ffa6b9a72dfbb9ad7e0cd25ccfe86b2c03b5fb7bfd60f191d1f8d82e91a17c7e996ea1a208f93fce2be31d97f2d22e815b60694b79f91d6feb3c45cff978f2ba13cb71fe644709cb6a2f3439bae81e7396edfa940cb1a4df2c229e7f4a4960db2a8ac041baae954bf3baffd41dab6b186380084a4d863bc07e3eb8c193b5f092ec51c30b55123f2aa32f83391b9a3e0d41e28b5b5f1a4abd86e7b2f5bce0ff0bce9a220b522e6c190491d8a7b3494e3235bcd0f2d2509a5448dc466b0390faa2d0935fdc9217ee656082e3041ca5efe95f7c3df8ddc6651d63b7b752694860c4a7ff180be934ac44d89e365ddf555e8028aaabdffa807a1f934de5143fff71351d9f0bf00289935babae58b0f798003cc2e61042f24c8bd10c0994e98bcef407cf5653df4c05bfbdc490a27fcb8d7e57f9d0f4f3bdc0c0f4e442f261876197d75b63e58cb6ec209e17476fe2751564de865201c5a604a4f68961204e614e3535399ab769b782739ab96815301494919ae75f8871f2afeffaa7a2b8aa6079bf183ae88cba11a1b349080f9bebf154c68346002e1cd5c37ebe7edff5c31824721653e5a3c263b244ccc44ef0449950c0fc4548e8eeb0ba578a4b4bc74090606e7c08afa3bd3518b88fe1dc59c9a366335bb0e6847d215849db50a0dec8f7635ba9c7f5b158468bcf347e720252fcaa56667597f3d5bb87512fbef65838be5ba8be8a419c568eed4b3fff642e1970eda73375b8cb88da2aad74f25875f24c293b6ecba7d526bf126fe69c1a874877f011ebe550ae9fc268194ae4264a9e20d826e4bf3a94e38846dfe5db64b53bedaf40fdca09664d0bb430f2faa9ae7e0fedb908c74b3f44524b03f8c551ebec36de0971186d683104510b10cc37fc45ed3a835592ca2d74df76c7ef913fc0808d82771d855a036971543f1b04739ead12d09251752326e780854b1e1dff297d440b8fe02d7085ff2acf40cdc27fcb56ae4a40ac2bc6cc804a6fdc89932c240a7d74a7abcef83227eec2a57da614137c22b91a0ac875899764d9d90b0b358092e2b8ca81620a25f9db62eccb1bac8f29dfbd8c862a160a34fac7fb81aa17a8fd1dec6777b2c90c13a5d1423c497dc0a6dacf908cc1a0be8ef82d90eccab74f63bf4763560bcc45cddb30c6cd9becd17f5343d44dad860c9a740c7ecbc74592002c0df122e7728ac1628281a7b47f937ff892b50f1d006e3ff11a47e82e6dc438630ea8dc48200062539dfb1cc11191b0ad2eeef8db29275cc7836aadfbf0c470ff2d464da3fa16f22e6da3cf0d363d6b52b6c6f7735995c139075a4b5588725c87f6275c73a96be030b128a7c8a6fb823e2c94d0bff5fe9f187fcd728b5a425c02c77d6aab4eb9cce64dfb3bff354e12b641c28cdcb5d19569a15f00246d59b0cc55310f1e832d491c12c93d3d8d0e2ec03534f995209bdb556a1923cd0dc458ffcf2d1235acd6cd98a1ccee21e4dcc3de7f9d8ba446bde14e028da882cea01af707cb029bebc840b119537f12211b265648a8aa141b7dc44409cfff603141aa7de46ec583c507d46502359ccb139f0b7491e4d3e50c50af118166f5bc0ec0a8faae3e1c141eb5820ba1d5a4166ec81c466ce09af664969b10d4fb36278f856a8f20d54bf6389aea23b5833f078f32a9520a15f533afd7c981bba3d65bdd974b8a07b5adf2bf3c9fecb6c866863c1d2976a523ff8803b32ce3fe1e2f53023a14a4e86dc5309835e7bcfc2f961b874957a0790acfd40c4e5d7b3d780001e6ce81cdf662cc2bf81dd0abf87240bde71dfecaa22fc581bf46bdf131cdf37882b6e622fd00f4cecf22fdd543d655164ed22f45f19819a7ef5e4e3bfd54fc62c7c9af7673a8d526f1cb66ca2b65b55534c28aef89f76e89137f7cea453df7b056bf76793364cd340fa50c7cd3ec812409e7d46b88f0c3edfdcbbb08724cd6331f6f6589b7ecc31fe67391c4a404109ec3c4044a2029c748aaa179c574e2240537f4532f28ab148b287e9e623721649b5b42a973b5a3d03020fd5b0ec677ccb46d603d5bdd5c88f4a718bc65552e9ac56806aa6cf89a7050e8cd22fa4dbaa4dcdf77175e2b728c8c4645c66864576af01a3675b4bab37bf8f85408a8ee4c0e869a97c303c149a57638af05f7aacaea6a80eba828e9c821781eb24f61e2b99353e057720784ab9aaee2aa4e45d0cd5402ee90b532d7f58b6e90dfa0f86ba0adeb6b3de7ec964ce911ec03945eb2a2b1101524c92e224b84e80c206778cc321c01c7833b31ce5a6</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">输入正确的访问密码才可查看呦</span>
-      </label>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/blog/lib/hbe.js"></script><link href="/blog/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-      <categories>
-        <category>内容分享</category>
-      </categories>
-      <tags>
-        <tag>alist</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo常用指令集</title>
-    <url>/blog/posts/hexozlj.html</url>
-    <content><![CDATA[<a class="btn-anzhiyu " href="/blog/center%20large::%E5%89%8D%E5%BE%80HEXO%E5%AE%98%E6%96%B9%E6%8C%87%E4%BB%A4%E6%95%99%E7%A8%8B::https:/hexo.io/zh-cn/docs/commands.html::fa-solid%20fa-play-circle" title=""></a>
-
-<h2 id="指令部分">指令部分</h2>
-<h3 id="创建">创建</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo init [folder]</span><br></pre></td></tr></table></figure>
-
-<p>新建一个网站。如果没有设置 folder ，Hexo
-默认在目前的文件夹建立网站。</p>
-<p>本命令相当于执行了以下几步：</p>
-<p>Git clone hexo-starter 和 hexo-theme-landscape
-主题到当前目录或指定目录。 使用 Yarn 1、pnpm 或 npm
-包管理器下载依赖（如有已安装多个，则列在前面的优先）。npm 默认随 Node.js
-安装。</p>
-<h3 id="new">new</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new [layout] &lt;title&gt;</span><br></pre></td></tr></table></figure>
-
-<p>新建一篇文章。如果没有设置 layout 的话，默认使用 _config.yml 中的
-default_layout 参数代替。如果标题包含空格的话，请使用引号括起来。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new <span class="string">"post title with whitespace"</span></span><br></pre></td></tr></table></figure>
-
-<p>参数 描述 -p, –path 自定义新文章的路径 -r, –replace
-如果存在同名文章，将其替换 -s, –slug 文章的
-Slug，作为新文章的文件名和发布后的 URL 默认情况下，Hexo
-会使用文章的标题来决定文章文件的路径。对于独立页面来说，Hexo
-会创建一个以标题为名字的目录，并在目录中放置一个 index.md
-文件。你可以使用 –path 参数来覆盖上述行为、自行决定文件的目录：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new page --path about/me <span class="string">"About me"</span></span><br></pre></td></tr></table></figure>
-
-<p>以上命令会创建一个 source/about/me.md 文件，同时 Front Matter 中的
-title 为 “About me”</p>
-<p>注意！title 是必须指定的！如果你这么做并不能达到你的目的：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new page --path about/me</span><br></pre></td></tr></table></figure>
-
-<p>此时 Hexo 会创建 source/_posts/about/me.md，同时 me.md 的 Front
-Matter 中的 title 为 “page”。这是因为在上述命令中，hexo-cli 将 page
-视为指定文章的标题、并采用默认的 layout。</p>
-<h3 id="generate">generate</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>生成静态文件。</p>
-<p>选项 描述 -d, –deploy 文件生成后立即部署网站 -w, –watch 监视文件变动
--b, –bail 生成过程中如果发生任何未处理的异常则抛出异常 -f, –force
-强制重新生成文件</p>
-<p>Hexo 引入了差分机制，如果 public 目录存在，那么 hexo g
-只会重新生成改动的文件。 使用该参数的效果接近 hexo clean &amp;&amp; hexo
-generate -c, –concurrency 最大同时生成文件的数量，默认无限制
-该命令可以简写为</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
-
-<h3 id="publish">publish</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo publish [layout] &lt;filename&gt;</span><br></pre></td></tr></table></figure>
-
-<p>发表草稿。</p>
-<h3 id="server">server</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
-
-<p>或者</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-
-<p>启动服务器。默认情况下，访问网址为： http://localhost:4000/。</p>
-<p>选项 描述 -p, –port 重设端口 -s, –static 只使用静态文件 -l, –log
-启动日记记录，使用覆盖记录格式</p>
-<h3 id="deploy">deploy</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>部署网站。</p>
-<p>参数 描述 -g, –generate 部署之前预先生成静态文件
-该命令可以简写为：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-
-<h3 id="render">render</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo render &lt;file1&gt; [file2] ...</span><br></pre></td></tr></table></figure>
-
-<p>渲染文件。</p>
-<p>参数 描述 -o, –output 设置输出路径</p>
-<h3 id="migrate">migrate</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo migrate &lt;<span class="built_in">type</span>&gt;</span><br></pre></td></tr></table></figure>
-
-<p>从其他博客系统 迁移内容。</p>
-<h3 id="clean">clean</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure>
-
-<p>清除缓存文件 (db.json) 和已生成的静态文件 (public)。</p>
-<p>在某些情况（尤其是更换主题后），如果发现您对站点的更改无论如何也不生效，您可能需要运行该命令。</p>
-<h3 id="list">list</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo list &lt;<span class="built_in">type</span>&gt;</span><br></pre></td></tr></table></figure>
-
-<p>列出网站资料。</p>
-<h3 id="version">version</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo version</span><br></pre></td></tr></table></figure>
-
-<p>显示 Hexo 版本。</p>
-<h3 id="选项">选项</h3>
-<h4 id="安全模式">安全模式</h4>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo --safe</span><br></pre></td></tr></table></figure>
-
-<p>在安全模式下，不会载入插件和脚本。当您在安装新插件遭遇问题时，可以尝试以安全模式重新执行。</p>
-<h4 id="调试模式">调试模式</h4>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo --debug</span><br></pre></td></tr></table></figure>
-
-<p>在终端中显示调试信息并记录到
-debug.log。当您碰到问题时，可以尝试用调试模式重新执行一次，并
-提交调试信息到 GitHub。</p>
-<h4 id="简洁模式">简洁模式</h4>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo --silent</span><br></pre></td></tr></table></figure>
-
-<p>隐藏终端信息。</p>
-<h3 id="自定义配置文件的路径">自定义配置文件的路径</h3>
-<h4 id="-使用-customyml-代替默认的-_configyml"># 使用 custom.yml
-代替默认的 _config.yml</h4>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo server --config custom.yml</span><br></pre></td></tr></table></figure>
-
-<h4 id="-使用-customyml-和-custom2json其中-custom2json-优先级更高">#
-使用 custom.yml 和 custom2.json，其中 custom2.json 优先级更高</h4>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo generate --config custom.yml,custom2.json,custom3.yml</span><br></pre></td></tr></table></figure>
-
-<p>自定义配置文件的路径，指定这个参数后将不再使用默认的 _config.yml。
-你可以使用一个 YAML 或 JSON
-文件的路径，也可以使用逗号分隔（无空格）的多个 YAML 或 JSON
-文件的路径。例如：</p>
-<h4 id="-使用-customyml-代替默认的-_configyml-1"># 使用 custom.yml
-代替默认的 _config.yml</h4>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo server --config custom.yml</span><br></pre></td></tr></table></figure>
-
-<h4 id="-使用-customyml-custom2json-和-custom3yml其中-custom3yml-优先级最高其次是-custom2json">#
-使用 custom.yml, custom2.json 和 custom3.yml，其中 custom3.yml
-优先级最高，其次是 custom2.json</h4>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo generate --config custom.yml,custom2.json,custom3.yml</span><br></pre></td></tr></table></figure>
-
-<p>当你指定了多个配置文件以后，Hexo 会按顺序将这部分配置文件合并成一个
-_multiconfig.yml。如果遇到重复的配置，排在后面的文件的配置会覆盖排在前面的文件的配置。这个原则适用于任意数量、任意深度的
-YAML 和 JSON 文件。</p>
-<h3 id="显示草稿">显示草稿</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo --draft</span><br></pre></td></tr></table></figure>
-
-<p>显示 source/_drafts 文件夹中的草稿文章。</p>
-<h3 id="自定义-cwd">自定义 CWD</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo --cwd /path/to/cwd</span><br></pre></td></tr></table></figure>
-
-<p>自定义当前工作目录（Current working directory）的路径。</p>
-<h2 id="问题解决方案">问题解决方案</h2>
-<p>以下是我遇到过的问题的解决方案 可能并不适用于所有情况</p>
-<h3 id="hexo--d报错">hexo -d报错</h3>
-<p>在博客目录中选择“在终端中打开”，输入：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-
-<p>如果使用了加速器加速了GitHub，可以尝试关闭加速器重试</p>
-]]></content>
-      <categories>
-        <category>代码</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -1699,63 +1756,6 @@ YAML 和 JSON 文件。</p>
       </categories>
       <tags>
         <tag>化学方程式</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>实用软件&amp;网站整理</title>
-    <url>/blog/posts/ruanjian.html</url>
-    <content><![CDATA[<h2 id="软件分享">软件分享</h2>
-<p>注：以下大部分内容为免费或破解版本</p>
-<h3 id="coodesker">Coodesker</h3>
-<p>Coodesker：自动分类整理桌面上的快捷方式、目录、图片等文件
-以前为免费软件，虽然在github上，但是就挂了个仓库
-现在已经开始收费了，但是我感觉老版本就够用</p>
-<a class="btn-anzhiyu " href="regular::Coodesker最后一个免费版本::https://wwll.lanzout.com/iveV71c8woyh::fa-solid fa-play-circle" title=""></a>
-
-<a class="btn-anzhiyu " href="regular::Coodesker20.0.7激活版本::https://wwll.lanzout.com/iEhYW1cbw46h::fa-solid fa-play-circle" title=""></a>
-
-<p>激活版下载密码：bpwp</p>
-<h3 id="kms激活工具">KMS激活工具</h3>
-<p>采用当前最先进的激活技术，几乎涵盖了Windows全版本同Office全版本的激活，支持最新的Win11系统、Win10全版本包括Win10
-LTSC的数字权利激活，非常强大，是激活系统首选的一款激活工具。</p>
-<a class="btn-anzhiyu " href="regular::前往下载::https://wwll.lanzout.com/iIXeE1c8wp8h::fa-solid fa-play-circle" title=""></a>
-
-<h3 id="potplayer视频播放器">PotPlayer视频播放器</h3>
-<p>PotPlayer继承了 KMPlayer
-所有的优点，拥有异常强大的内置音视频解码器，可以支持几乎全部音乐、视频文件格式的播放。采用
-VC++ 进行了全面重构，并且原生支持64位操作系统，使得 PotPlayer 在 Windows
-10 等新系统上，无论性能、兼容性和稳定性上的表现均比 KMP
-要好不少；硬件加速、流畅优秀的全高清视
-频播放效果、强大的选项、滤镜、外挂式管理、DXVA等硬件解码；以及非常丰富且强大的设置选项，被誉为Win平台上最优秀的免费影音全能格式播放器。</p>
-<a class="btn-anzhiyu " href="regular::前往下载::https://wwll.lanzout.com/i53vQ1c8wpgf::fa-solid fa-play-circle" title=""></a>
-
-<p>密码:a2k0</p>
-<h3 id="rainmeter雨滴">Rainmeter雨滴</h3>
-<p>雨滴皮肤（Rainmeter皮肤），是一些有特定功能的Windows桌面小工具。一些复杂的皮肤则看起来像是小型应用程序，风格相近的皮肤则可以组成一个套装或者主题。任何一个雨滴皮肤在不同电脑上工作都是不完全相同的，这取决于使用者对它的调整和修饰。</p>
-<a class="btn-anzhiyu " href="regular::前往官网下载::https://www.rainmeter.net/::fa-solid fa-play-circle" title=""></a>
-
-<h3 id="几何画板已破解">几何画板(已破解)</h3>
-<p>几何画板为从三年级到大学的各个级别的学生提供了一种有形的，可视化的方
-式来学习数学，从而提高他们的参与度、理解力和成就。
-几何画板现已停售，这里准备了v5.0.6的破解版本</p>
-<a class="btn-anzhiyu " href="regular::前往下载::https://wwll.lanzout.com/iLwf71c8wqyj::fa-solid fa-play-circle" title=""></a>
-
-<p>https://gofile.cc/lre4/bandizip.exe
-https://gofile.cc/jrY7/coodesker.zip https://gofile.cc/551a/kms.zip
-https://gofile.cc/QrEQ/firpe-v182.exe https://gofile.cc/WW5E/idm.exe
-https://gofile.cc/K7Xk/potplayer.exe
-https://gofile.cc/1kYp/rustdesk-64.exe
-https://gofile.cc/zq40/ventoy-1095-windows.zip
-https://gofile.cc/0L0l/.zip
-https://gofile.cc/DJyq/acrobat-pro-dc-pdf.iso</p>
-]]></content>
-      <categories>
-        <category>内容分享</category>
-        <category>软件</category>
-      </categories>
-      <tags>
-        <tag>软件</tag>
-        <tag>网站</tag>
       </tags>
   </entry>
   <entry>
@@ -2003,9 +2003,102 @@ xxx.github.io（xxx 是你 GitHub
         <category>代码</category>
       </categories>
       <tags>
-        <tag>Github</tag>
         <tag>Hexo</tag>
+        <tag>Github</tag>
         <tag>博客</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>徽州行</title>
+    <url>/blog/posts/huizhou.html</url>
+    <content><![CDATA[<h1 id="活动简介">活动简介</h1>
+<p>一、活动时间 : 2023 年 11 月 11-14 日 (4 天) 二、活动地点: 徽州黄山
+三、活动内容: 11 月 11
+日乘高铁到黄山北站研学徽州文化博物馆、黄山城市展览馆 11 月 12
+日参观历史文化遗产影县–宏村、守拙园 11 月 13 日黄山“放飞理想”教育活动 11
+月 14 日参观徽菜博物馆，参观屯溪老街，乘高铁回京</p>
+<h1 id="day-1">DAY 1</h1>
+<p>惠州城市展馆
+徽商：徽州最有名的是徽商，从十三四岁开始外出经商，以木头等资源 黄山
+惠州有更多的人文历史，黄山人们希望改回徽州（人文情感丰富）
+黄山市依托山水天城，大力传承历史文化，坚持以人为本，加强规划管理，保徽建徽改徽，山水融城
+水墨徽州 歙砚 歙州再到徽州 方腊歙州人 1987改为黄山市
+建筑集中，徽派建筑形成，马头墙，放众木头多，马头墙用来防止火灾，封锁火势。
+拐弯抹角，在惠州历史中富有美德。直角，邻里之间方便搬运东西上不让天，下不让地，中间让邻里和气。
+作退一步想 徽商随家人外出，才能得到帮助 建筑：墙倒屋不塌，
+即使塌了，整体结构也不会被破坏。 榫卯 基：稳固 础：支撑
+马头墙：封锁火势，封火墙。南方房子人字形，方便排水，在人字形两边，略高，挡住火势，不至于烧到邻里。
+明堂天井：一楼不开窗，防火防盗防小偷。在二楼开天井，由于采光和通风（直接）隐喻：
+牌坊：代表家族的地位（取决于皇上）主任对社会的贡献。玉质 恩荣 圣旨
+哧剑（普遍）?徽州牌坊多。大多数牌坊被摧毁，为了建设新思想
+戏剧造型：京剧（不断融和）前身为徽剧。
+徽州人才辈出，教育发达，科举发达。詹天佑，第一批公派留学人物。十户之村不废诵读，教育重视程度高。
+徽州文化： 黄山：黄山松精神：……
+云海三四月份徽商依托新安江发展商业（农夫山泉最早水厂在千岛湖水深七十米处）
+徽商：云纹五注铜器。徽商创造的物质财富和精神财富是惠州社会历史全面高度发展的重要方面。人口暴增，导致资源匮乏，不得不外出。经商人回乡次数少，惠州人结婚早。惠州女人留在家中掌管家事。
+七山半水半分田，二分道路和庄园。 渔梁送别，母亲在岸边挥泪告别。
+胡裕泰，卖茶。惠州自古以来种茶。
+徽商普遍出现在江苏，苏州园林的主人大多数为惠州人。建筑有徽州的风格。徽州火腿制作工艺穿到金华
+。 江春“布衣上交天子” 商人 瘦西湖旁用盐打了一座白塔。
+河坊街：红顶商人胡雪岩，运用政治势力发展商业。 房屋摆设 胡适陶行知朱熹
+做人做事懂分寸 戚继光由胡宗宪一手提拔 祠堂：惩戒不孝子孙</p>
+<h1 id="day-2">DAY 2</h1>
+<p>宏村 南湖书院坐落于村子南边，学校，义务教育，汪姓男孩可免费接受教育
+村落聚族而居 hua桥 宏村牛型村：四座桥四条腿 两棵大树两角 村子身体
+从奇树村搬迁，逃不掉火灾，hkd选中了宏村，落户生根 南方的水有回甘，软水
+两棵大树：红娘，跟喜事有关，抬着花轿桃树走三圈，拉；老人高寿去世，抬着棺椁绕银杏树走，结白果，放入水中变为银色
+首富房子承志堂，六十万两白银！!木雕石雕砖雕。大门各有一撇一捺，有钱，能挂到官职。一对石户，门当户对。墙体的突出，门千金门楼四两五。文革期间被红卫兵征收。破四旧，打破封建思想。佛堂，家族家庭富贵以后，想让家族绵延更长。几百年人家无非积善，行善积德，第一等好事只是读书，让所有孩子接受到教育，徽商兴建学堂。先生受村民照顾。不开窗，防火防盗防小偷。给管家开一个门，钱进口袋不乱跑。桌子半圆形四条腿，表示男主人不在家，若回来，半圆桌会拼在一起变六条腿，表示夫妻团圆。木雕损坏与文革有关，村民用黄泥封锁木雕，刻上毛主席万岁。栏杆上方形小孔，看帅哥，山清孔。快乐每从辛苦得，便宜多自吃亏来。创业难受成难知难不难，读书好营商好效好便好。福禄寿三星，老年人对钟很忌讳。横梁架上去之后再雕刻。门当，四根木柱，贫民百姓家没有，富人有。汪氏宗祠中有女性画像。弘。
+汪姓第一人?。汪华徽州汪姓第一人，收复十五州，被供奉。宏村族长，宏村汪姓第一人。胡重，宏村水系由她主持设计修建，巨大贡献，巾帼丈夫。守拙园
+仁教永垂 一步进房三步上床四步撞墙
+男子住的比较好，终身平静指经商能够平平安安
+以帽去人，下雪就是下白银，肥水不流外人田，大石槽镇宅。请先生到家中上课。
+五柳堂。阁楼建在过道两边。老气横秋雨一鸣天地响。
+祠堂用来祭祖或操办重要的事情，以仓库为主要使用形式。女子在结婚和去世时才能入堂。看不起我可以，但要进我家门要从商下过。商门有提升家族地位的寓意。
+文昌宫。北有孔子南有文昌。以文会友，文人聚会。石木砖雕。十里红妆，从小准备嫁妆和棺椁。
+酒楼。喝酒办宴席之地。鸿案春长。明方清圆。小厅堂大厢房，明。大厅堂小厢房，清。</p>
+<h1 id="day-3">DAY 3</h1>
+<p>黄山行
+“光明顶上彩云飞，忽见仙桃石已归；石去天涯无歇处，仍回松岭伴朝辉。”研学的第三天，我们来到了黄山市市名的来源地–黄山。乘坐缆车登山，我们遇到了一年只有50多天的云海。缆车上升时，向下望去，下方有着各种各样的奇石，翠绿茂密的松树，
+有时还能看到险峻的徒步登山通道。 [图片 65.jpg]
+升入云海中时，窗外视野渐渐模糊，隐约看到松树上雪白的雾凇，晶莹剔透。
+[图片 66.jpg]
+一段时间后，我们升入云海上方，顿时豁然开朗，云海上方的美丽景色逐渐展现在眼前。蓝天白云，头上的云彩与脚下的云海在远处连为一体，甚是美丽。
+[图片 67.jpg]</p>
+<p>爬过好汉坡，经过迎客松，我们的登山之行就此开始。我们翻过了几座山峰，走过了各种各样的阶梯。我们终于登上了一座小山峰。
+[图片 68.jpg]
+在这里我们看到了奇形怪状的石头，远处美丽的山脉和湖泊，远远望去，感觉我们的目标光明顶已经唾手可得。
+[图片 69.jpg]
+继续跨过一次山峰，我们即将到达光明顶。在这里，我们看到脚下整齐划一的松树，经历过前两天的大雨，松树们都显得格外苍翠挺拔。
+[图片 70.jpg]
+继续爬了一个坡后，我们到达了此次黄山之行的最高点–光明顶。光明顶是黄山的主峰之一，位于黄山中部，海拔1860米，为黄山第二高峰，与天都峰、莲花峰并称黄山三大主峰。顶上平坦而高旷，各个高峰尽收眼底。
+[图片 73.jpg]
+在这里，我们还见到了光明顶气象站，他的前身便是建于明代的大悲院寺庙，据说周围的地区天气预报都来源于这里。
+[图片 72.jpg]
+在光明顶上进行了放飞理想活动后，我们便开启了下山的行程。下山途中我们见到了《红楼梦》中出现的飞来石。飞来石为自然风化生成，两大岩石之间的接触面很小，似从天外飞来，故名“飞来石”。
+[图片 74.jpg]
+本次爬黄山的研学活动，让我们欣赏到了黄山的美丽景象，也让我们体会到了大自然的奇特，秀美。</p>
+<h1 id="day-4">DAY 4</h1>
+<p>屯溪老街
+研学最后一天的第一站，我们来到了徽商发源地-屯溪老街。屯溪老街坐落于新安江的渐江段旁边，此地三江汇聚，西水屯局，故得名屯溪。
+[图片 77.jpg]
+屯溪整条街像一条鱼骨头，主巷为最大的主心骨，旁边小巷子就是鱼骨的分支。街旁的店铺也有着一些文化，徽商以前都是是小作坊
+，临街的地方是商铺，后院是制作商品的地方，二楼就是店铺主人休息生活的地方。
+[图片 78.jpg]
+对于毛豆腐，各个地方也有各个地方的特色。宏村的毛豆腐是方块形，方方正正，呈坎村则是长条形。游客来此地旅游，买的最多的就是黄山烧饼。黄山烧饼作为徽商重要的干粮
+，得益于其方便保存的特点。徽商行商的路程很长，所以带很多烧饼便能解决粮食问题。
+这里的主要特色还有茶。茶自古以来就是此地的的主要经济收入。在这里，四月份放还能一周的假
+用来采茶叶。每次采茶，都需要爬到海拔800以上的山里。祁红巷是之前专门储存祁门红茶的地方，祁门红茶，是世界三大高香名茶之一
+，听导游说英国皇室的下午茶就是祁门红茶。 [图片 81.jpg]
+祁门红茶因为大部分都最为出口商品，为了方便运输，所以制成了碎茶的形式。
+在屯溪老街，我们见到了各种各样的安徽特色，也领略到了各种特色商品食品背后的历史背景和文化内涵。</p>
+]]></content>
+      <categories>
+        <category>学习</category>
+        <category>研学</category>
+      </categories>
+      <tags>
+        <tag>徽州</tag>
+        <tag>研学</tag>
       </tags>
   </entry>
   <entry>
@@ -2123,99 +2216,6 @@ URL：https://raw.hellogithub.com/hosts</p>
         <tag>投票</tag>
         <tag>风铃系统</tag>
         <tag>教程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>徽州行</title>
-    <url>/blog/posts/huizhou.html</url>
-    <content><![CDATA[<h1 id="活动简介">活动简介</h1>
-<p>一、活动时间 : 2023 年 11 月 11-14 日 (4 天) 二、活动地点: 徽州黄山
-三、活动内容: 11 月 11
-日乘高铁到黄山北站研学徽州文化博物馆、黄山城市展览馆 11 月 12
-日参观历史文化遗产影县–宏村、守拙园 11 月 13 日黄山“放飞理想”教育活动 11
-月 14 日参观徽菜博物馆，参观屯溪老街，乘高铁回京</p>
-<h1 id="day-1">DAY 1</h1>
-<p>惠州城市展馆
-徽商：徽州最有名的是徽商，从十三四岁开始外出经商，以木头等资源 黄山
-惠州有更多的人文历史，黄山人们希望改回徽州（人文情感丰富）
-黄山市依托山水天城，大力传承历史文化，坚持以人为本，加强规划管理，保徽建徽改徽，山水融城
-水墨徽州 歙砚 歙州再到徽州 方腊歙州人 1987改为黄山市
-建筑集中，徽派建筑形成，马头墙，放众木头多，马头墙用来防止火灾，封锁火势。
-拐弯抹角，在惠州历史中富有美德。直角，邻里之间方便搬运东西上不让天，下不让地，中间让邻里和气。
-作退一步想 徽商随家人外出，才能得到帮助 建筑：墙倒屋不塌，
-即使塌了，整体结构也不会被破坏。 榫卯 基：稳固 础：支撑
-马头墙：封锁火势，封火墙。南方房子人字形，方便排水，在人字形两边，略高，挡住火势，不至于烧到邻里。
-明堂天井：一楼不开窗，防火防盗防小偷。在二楼开天井，由于采光和通风（直接）隐喻：
-牌坊：代表家族的地位（取决于皇上）主任对社会的贡献。玉质 恩荣 圣旨
-哧剑（普遍）?徽州牌坊多。大多数牌坊被摧毁，为了建设新思想
-戏剧造型：京剧（不断融和）前身为徽剧。
-徽州人才辈出，教育发达，科举发达。詹天佑，第一批公派留学人物。十户之村不废诵读，教育重视程度高。
-徽州文化： 黄山：黄山松精神：……
-云海三四月份徽商依托新安江发展商业（农夫山泉最早水厂在千岛湖水深七十米处）
-徽商：云纹五注铜器。徽商创造的物质财富和精神财富是惠州社会历史全面高度发展的重要方面。人口暴增，导致资源匮乏，不得不外出。经商人回乡次数少，惠州人结婚早。惠州女人留在家中掌管家事。
-七山半水半分田，二分道路和庄园。 渔梁送别，母亲在岸边挥泪告别。
-胡裕泰，卖茶。惠州自古以来种茶。
-徽商普遍出现在江苏，苏州园林的主人大多数为惠州人。建筑有徽州的风格。徽州火腿制作工艺穿到金华
-。 江春“布衣上交天子” 商人 瘦西湖旁用盐打了一座白塔。
-河坊街：红顶商人胡雪岩，运用政治势力发展商业。 房屋摆设 胡适陶行知朱熹
-做人做事懂分寸 戚继光由胡宗宪一手提拔 祠堂：惩戒不孝子孙</p>
-<h1 id="day-2">DAY 2</h1>
-<p>宏村 南湖书院坐落于村子南边，学校，义务教育，汪姓男孩可免费接受教育
-村落聚族而居 hua桥 宏村牛型村：四座桥四条腿 两棵大树两角 村子身体
-从奇树村搬迁，逃不掉火灾，hkd选中了宏村，落户生根 南方的水有回甘，软水
-两棵大树：红娘，跟喜事有关，抬着花轿桃树走三圈，拉；老人高寿去世，抬着棺椁绕银杏树走，结白果，放入水中变为银色
-首富房子承志堂，六十万两白银！!木雕石雕砖雕。大门各有一撇一捺，有钱，能挂到官职。一对石户，门当户对。墙体的突出，门千金门楼四两五。文革期间被红卫兵征收。破四旧，打破封建思想。佛堂，家族家庭富贵以后，想让家族绵延更长。几百年人家无非积善，行善积德，第一等好事只是读书，让所有孩子接受到教育，徽商兴建学堂。先生受村民照顾。不开窗，防火防盗防小偷。给管家开一个门，钱进口袋不乱跑。桌子半圆形四条腿，表示男主人不在家，若回来，半圆桌会拼在一起变六条腿，表示夫妻团圆。木雕损坏与文革有关，村民用黄泥封锁木雕，刻上毛主席万岁。栏杆上方形小孔，看帅哥，山清孔。快乐每从辛苦得，便宜多自吃亏来。创业难受成难知难不难，读书好营商好效好便好。福禄寿三星，老年人对钟很忌讳。横梁架上去之后再雕刻。门当，四根木柱，贫民百姓家没有，富人有。汪氏宗祠中有女性画像。弘。
-汪姓第一人?。汪华徽州汪姓第一人，收复十五州，被供奉。宏村族长，宏村汪姓第一人。胡重，宏村水系由她主持设计修建，巨大贡献，巾帼丈夫。守拙园
-仁教永垂 一步进房三步上床四步撞墙
-男子住的比较好，终身平静指经商能够平平安安
-以帽去人，下雪就是下白银，肥水不流外人田，大石槽镇宅。请先生到家中上课。
-五柳堂。阁楼建在过道两边。老气横秋雨一鸣天地响。
-祠堂用来祭祖或操办重要的事情，以仓库为主要使用形式。女子在结婚和去世时才能入堂。看不起我可以，但要进我家门要从商下过。商门有提升家族地位的寓意。
-文昌宫。北有孔子南有文昌。以文会友，文人聚会。石木砖雕。十里红妆，从小准备嫁妆和棺椁。
-酒楼。喝酒办宴席之地。鸿案春长。明方清圆。小厅堂大厢房，明。大厅堂小厢房，清。</p>
-<h1 id="day-3">DAY 3</h1>
-<p>黄山行
-“光明顶上彩云飞，忽见仙桃石已归；石去天涯无歇处，仍回松岭伴朝辉。”研学的第三天，我们来到了黄山市市名的来源地–黄山。乘坐缆车登山，我们遇到了一年只有50多天的云海。缆车上升时，向下望去，下方有着各种各样的奇石，翠绿茂密的松树，
-有时还能看到险峻的徒步登山通道。 [图片 65.jpg]
-升入云海中时，窗外视野渐渐模糊，隐约看到松树上雪白的雾凇，晶莹剔透。
-[图片 66.jpg]
-一段时间后，我们升入云海上方，顿时豁然开朗，云海上方的美丽景色逐渐展现在眼前。蓝天白云，头上的云彩与脚下的云海在远处连为一体，甚是美丽。
-[图片 67.jpg]</p>
-<p>爬过好汉坡，经过迎客松，我们的登山之行就此开始。我们翻过了几座山峰，走过了各种各样的阶梯。我们终于登上了一座小山峰。
-[图片 68.jpg]
-在这里我们看到了奇形怪状的石头，远处美丽的山脉和湖泊，远远望去，感觉我们的目标光明顶已经唾手可得。
-[图片 69.jpg]
-继续跨过一次山峰，我们即将到达光明顶。在这里，我们看到脚下整齐划一的松树，经历过前两天的大雨，松树们都显得格外苍翠挺拔。
-[图片 70.jpg]
-继续爬了一个坡后，我们到达了此次黄山之行的最高点–光明顶。光明顶是黄山的主峰之一，位于黄山中部，海拔1860米，为黄山第二高峰，与天都峰、莲花峰并称黄山三大主峰。顶上平坦而高旷，各个高峰尽收眼底。
-[图片 73.jpg]
-在这里，我们还见到了光明顶气象站，他的前身便是建于明代的大悲院寺庙，据说周围的地区天气预报都来源于这里。
-[图片 72.jpg]
-在光明顶上进行了放飞理想活动后，我们便开启了下山的行程。下山途中我们见到了《红楼梦》中出现的飞来石。飞来石为自然风化生成，两大岩石之间的接触面很小，似从天外飞来，故名“飞来石”。
-[图片 74.jpg]
-本次爬黄山的研学活动，让我们欣赏到了黄山的美丽景象，也让我们体会到了大自然的奇特，秀美。</p>
-<h1 id="day-4">DAY 4</h1>
-<p>屯溪老街
-研学最后一天的第一站，我们来到了徽商发源地-屯溪老街。屯溪老街坐落于新安江的渐江段旁边，此地三江汇聚，西水屯局，故得名屯溪。
-[图片 77.jpg]
-屯溪整条街像一条鱼骨头，主巷为最大的主心骨，旁边小巷子就是鱼骨的分支。街旁的店铺也有着一些文化，徽商以前都是是小作坊
-，临街的地方是商铺，后院是制作商品的地方，二楼就是店铺主人休息生活的地方。
-[图片 78.jpg]
-对于毛豆腐，各个地方也有各个地方的特色。宏村的毛豆腐是方块形，方方正正，呈坎村则是长条形。游客来此地旅游，买的最多的就是黄山烧饼。黄山烧饼作为徽商重要的干粮
-，得益于其方便保存的特点。徽商行商的路程很长，所以带很多烧饼便能解决粮食问题。
-这里的主要特色还有茶。茶自古以来就是此地的的主要经济收入。在这里，四月份放还能一周的假
-用来采茶叶。每次采茶，都需要爬到海拔800以上的山里。祁红巷是之前专门储存祁门红茶的地方，祁门红茶，是世界三大高香名茶之一
-，听导游说英国皇室的下午茶就是祁门红茶。 [图片 81.jpg]
-祁门红茶因为大部分都最为出口商品，为了方便运输，所以制成了碎茶的形式。
-在屯溪老街，我们见到了各种各样的安徽特色，也领略到了各种特色商品食品背后的历史背景和文化内涵。</p>
-]]></content>
-      <categories>
-        <category>学习</category>
-        <category>研学</category>
-      </categories>
-      <tags>
-        <tag>徽州</tag>
-        <tag>研学</tag>
       </tags>
   </entry>
 </search>
