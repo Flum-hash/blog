@@ -36,6 +36,31 @@
       </tags>
   </entry>
   <entry>
+    <title>Hexo如何隐藏文章</title>
+    <url>/blog/posts/hexoycwz.html</url>
+    <content><![CDATA[<p>本 Hexo 插件可以在博客中隐藏指定的文章，并使它们仅可通过链接访问。</p>
+<p>当一篇文章被设置为「隐藏」时，它不会出现在任何列表中（包括首页、存档、分类页面、标签页面、Feed、站点地图等），也不会被搜索引擎索引（前提是搜索引擎遵守 noindex 标签）。</p>
+<p>只有知道文章链接的人才可以访问被隐藏的文章。</p>
+<p>Github地址：<a href="https://github.com/printempw/hexo-hide-posts">https://github.com/printempw/hexo-hide-posts</a></p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>在站点根目录下执行<code>npm install hexo-hide-posts --save</code></p>
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>在站点目录下的<code>_config.yml</code>中如下配置：</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># hexo-hide-posts</span></span><br><span class="line"><span class="attr">hide_posts:</span></span><br><span class="line">  <span class="comment"># 可以改成其他你喜欢的名字</span></span><br><span class="line">  <span class="attr">filter:</span> <span class="string">hidden</span></span><br><span class="line">  <span class="comment"># 指定你想要传递隐藏文章的位置，比如让所有隐藏文章在存档页面可见</span></span><br><span class="line">  <span class="comment"># 常见的位置有：index, tag, category, archive, sitemap, feed, etc.</span></span><br><span class="line">  <span class="comment"># 留空则默认全部隐藏</span></span><br><span class="line">  <span class="attr">public_generators:</span> []</span><br><span class="line">  <span class="comment"># 为隐藏的文章添加 noindex meta 标签，阻止搜索引擎收录</span></span><br><span class="line">  <span class="attr">noindex:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<p>举个栗子：设置 <code>filter: secret</code> 之后，你就可以在 front-matter 中使用 <code>secret: true</code> 来隐藏文章了。</p>
+<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><p>在文章的属性中定义 <code>hidden: true</code> 即可隐藏文章。</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 'Hidden Post'</span><br><span class="line">date: '2021/03/05 21:45:14'</span><br><span class="line">hidden: true</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<p>虽然首页上被隐藏了，但你仍然可以通过 <code>https://hexo.test/lorem-ipsum/</code> 链接访问它。</p>
+<p>你可以在命令行运行 <code>hexo hidden:list</code> 来获取当前所有的已隐藏文章列表。</p>
+<p>插件也在 <a href="https://hexo.io/api/locals">Local Variables</a> 中添加了 <code>all_posts</code> 和 <code>hidden_posts</code> 变量，供自定义主题使用。</p>
+<p>文章摘自：<a href="https://blog.garryde.com/archives/37712.html">https://blog.garryde.com/archives/37712.html</a></p>
+]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo压缩资源插件</title>
     <url>/blog/posts/minifier.html</url>
     <content><![CDATA[<p>文章来自插件hexo-all-minifier<a href="https://www.npmjs.com/package/hexo-all-minifier">官方文档</a></p>
@@ -97,31 +122,6 @@
       <tags>
         <tag>Hexo</tag>
         <tag>插件</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo如何隐藏文章</title>
-    <url>/blog/posts/hexoycwz.html</url>
-    <content><![CDATA[<p>本 Hexo 插件可以在博客中隐藏指定的文章，并使它们仅可通过链接访问。</p>
-<p>当一篇文章被设置为「隐藏」时，它不会出现在任何列表中（包括首页、存档、分类页面、标签页面、Feed、站点地图等），也不会被搜索引擎索引（前提是搜索引擎遵守 noindex 标签）。</p>
-<p>只有知道文章链接的人才可以访问被隐藏的文章。</p>
-<p>Github地址：<a href="https://github.com/printempw/hexo-hide-posts">https://github.com/printempw/hexo-hide-posts</a></p>
-<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>在站点根目录下执行<code>npm install hexo-hide-posts --save</code></p>
-<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>在站点目录下的<code>_config.yml</code>中如下配置：</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># hexo-hide-posts</span></span><br><span class="line"><span class="attr">hide_posts:</span></span><br><span class="line">  <span class="comment"># 可以改成其他你喜欢的名字</span></span><br><span class="line">  <span class="attr">filter:</span> <span class="string">hidden</span></span><br><span class="line">  <span class="comment"># 指定你想要传递隐藏文章的位置，比如让所有隐藏文章在存档页面可见</span></span><br><span class="line">  <span class="comment"># 常见的位置有：index, tag, category, archive, sitemap, feed, etc.</span></span><br><span class="line">  <span class="comment"># 留空则默认全部隐藏</span></span><br><span class="line">  <span class="attr">public_generators:</span> []</span><br><span class="line">  <span class="comment"># 为隐藏的文章添加 noindex meta 标签，阻止搜索引擎收录</span></span><br><span class="line">  <span class="attr">noindex:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-<p>举个栗子：设置 <code>filter: secret</code> 之后，你就可以在 front-matter 中使用 <code>secret: true</code> 来隐藏文章了。</p>
-<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><p>在文章的属性中定义 <code>hidden: true</code> 即可隐藏文章。</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 'Hidden Post'</span><br><span class="line">date: '2021/03/05 21:45:14'</span><br><span class="line">hidden: true</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-<p>虽然首页上被隐藏了，但你仍然可以通过 <code>https://hexo.test/lorem-ipsum/</code> 链接访问它。</p>
-<p>你可以在命令行运行 <code>hexo hidden:list</code> 来获取当前所有的已隐藏文章列表。</p>
-<p>插件也在 <a href="https://hexo.io/api/locals">Local Variables</a> 中添加了 <code>all_posts</code> 和 <code>hidden_posts</code> 变量，供自定义主题使用。</p>
-<p>文章摘自：<a href="https://blog.garryde.com/archives/37712.html">https://blog.garryde.com/archives/37712.html</a></p>
-]]></content>
-      <categories>
-        <category>教程</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -201,6 +201,20 @@
       </categories>
       <tags>
         <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>TED视频分享</title>
+    <url>/blog/posts/TED1.html</url>
+    <content><![CDATA[<p>本页将分享一些TED的听力视频<br>将提供视频文件和中英字幕文件<br>下载后放置同一文件夹内<br>并使用相同名称即可</p>
+<h2 id="The-first-20-hours-—-how-to-learn-anything"><a href="#The-first-20-hours-—-how-to-learn-anything" class="headerlink" title="The first 20 hours — how to learn anything"></a>The first 20 hours — how to learn anything</h2><p><img src="https://pic.imgdb.cn/item/6541053fc458853aef4b2d0f.webp" alt=""><br>原视频链接：<a href="https://www.youtube.com/watch?v=5MgBikgcWnY&amp;t=10s">前往YouTube</a><br>官网文章链接：<a href="https://ideas.ted.com/dont-have-10000-hours-to-learn-something-new-thats-fine-all-you-need-is-20-hours/">前往TED官网</a><br>官网文章转载：<a href="https://flumbrix1145.github.io/blog/2023/10/31/Don%E2%80%99t-have-10-000-hours-to-learn-something-new-That%E2%80%99s-fine-%E2%80%94-all-you-need-is-20-hours/">点击前往</a><br><a class="btn-anzhiyu " href="regular::下载视频文件::https://gofile.cc/deLy/the-first-20-hours-how-to-learn-anything-josh-kaufman-tedxcsu.mp4::fa-solid fa-download" title=""></a><a class="btn-anzhiyu " href="regular::下载字幕文件::https://gofile.cc/prDW/the-first-20-hours-how-to-learn-anything-josh-kaufman-tedxcsu.srt::fa-solid fa-download" title=""></a></p>
+]]></content>
+      <categories>
+        <category>学习</category>
+        <category>英语</category>
+      </categories>
+      <tags>
+        <tag>TED</tag>
       </tags>
   </entry>
   <entry>
@@ -999,20 +1013,6 @@
       </tags>
   </entry>
   <entry>
-    <title>TED视频分享</title>
-    <url>/blog/posts/TED1.html</url>
-    <content><![CDATA[<p>本页将分享一些TED的听力视频<br>将提供视频文件和中英字幕文件<br>下载后放置同一文件夹内<br>并使用相同名称即可</p>
-<h2 id="The-first-20-hours-—-how-to-learn-anything"><a href="#The-first-20-hours-—-how-to-learn-anything" class="headerlink" title="The first 20 hours — how to learn anything"></a>The first 20 hours — how to learn anything</h2><p><img src="https://pic.imgdb.cn/item/6541053fc458853aef4b2d0f.webp" alt=""><br>原视频链接：<a href="https://www.youtube.com/watch?v=5MgBikgcWnY&amp;t=10s">前往YouTube</a><br>官网文章链接：<a href="https://ideas.ted.com/dont-have-10000-hours-to-learn-something-new-thats-fine-all-you-need-is-20-hours/">前往TED官网</a><br>官网文章转载：<a href="https://flumbrix1145.github.io/blog/2023/10/31/Don%E2%80%99t-have-10-000-hours-to-learn-something-new-That%E2%80%99s-fine-%E2%80%94-all-you-need-is-20-hours/">点击前往</a><br><a class="btn-anzhiyu " href="regular::下载视频文件::https://gofile.cc/deLy/the-first-20-hours-how-to-learn-anything-josh-kaufman-tedxcsu.mp4::fa-solid fa-download" title=""></a><a class="btn-anzhiyu " href="regular::下载字幕文件::https://gofile.cc/prDW/the-first-20-hours-how-to-learn-anything-josh-kaufman-tedxcsu.srt::fa-solid fa-download" title=""></a></p>
-]]></content>
-      <categories>
-        <category>学习</category>
-        <category>英语</category>
-      </categories>
-      <tags>
-        <tag>TED</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Win11安装杜比全景声方法</title>
     <url>/blog/posts/dloby.html</url>
     <content><![CDATA[<h1 id="在-Windows-11-中安装杜比全景声"><a href="#在-Windows-11-中安装杜比全景声" class="headerlink" title="在 Windows 11 中安装杜比全景声"></a>在 Windows 11 中安装杜比全景声</h1><h4 id="一个人可以在剧院享受的氛围。-因此，在本指南中，您将学习-如何在-Windows-11-中免费启用或安装杜比全景声"><a href="#一个人可以在剧院享受的氛围。-因此，在本指南中，您将学习-如何在-Windows-11-中免费启用或安装杜比全景声" class="headerlink" title="一个人可以在剧院享受的氛围。 因此，在本指南中，您将学习 如何在 Windows 11 中免费启用或安装杜比全景声."></a>一个人可以在剧院享受的氛围。 因此，在本指南中，您将学习 <strong>如何在 Windows 11 中免费启用或安装杜比全景声</strong>.</h4><h4 id="同时，-杜比全景声-是目前可用的最具创新性的音响系统之一。-微软的-Xbox-One-和索尼的-PlayStation-4-都兼容出色的硬件，因此可以轻松地为游戏机使用经过杜比全景声-Dolby-Atmos-认证的音响系统。-不幸的是，对于-Windows-10-11-PC-来说，情况并非如此。"><a href="#同时，-杜比全景声-是目前可用的最具创新性的音响系统之一。-微软的-Xbox-One-和索尼的-PlayStation-4-都兼容出色的硬件，因此可以轻松地为游戏机使用经过杜比全景声-Dolby-Atmos-认证的音响系统。-不幸的是，对于-Windows-10-11-PC-来说，情况并非如此。" class="headerlink" title="同时， 杜比全景声 是目前可用的最具创新性的音响系统之一。 微软的 Xbox One 和索尼的 PlayStation 4 都兼容出色的硬件，因此可以轻松地为游戏机使用经过杜比全景声 (Dolby Atmos) 认证的音响系统。 不幸的是，对于 Windows 10/11 PC 来说，情况并非如此。"></a>同时， <strong>杜比全景声</strong> 是目前可用的最具创新性的音响系统之一。 微软的 Xbox One 和索尼的 PlayStation 4 都兼容出色的硬件，因此可以轻松地为游戏机使用经过杜比全景声 (Dolby Atmos) 认证的音响系统。 不幸的是，对于 Windows 10/11 PC 来说，情况并非如此。</h4><h2 id="杜比音频与杜比全景声：有什么区别？"><a href="#杜比音频与杜比全景声：有什么区别？" class="headerlink" title="杜比音频与杜比全景声：有什么区别？"></a>杜比音频与杜比全景声：有什么区别？</h2><p>杜比音频是一种 2D 音频技术，可以提高您正在观看的任何内容的音质，无论是体育赛事、流媒体电影，甚至是 DVD 或蓝光。</p>
@@ -1079,6 +1079,25 @@
       </tags>
   </entry>
   <entry>
+    <title>解决npm install安装太慢</title>
+    <url>/blog/posts/npminstall.html</url>
+    <content><![CDATA[<h2 id="设置-npm-registry"><a href="#设置-npm-registry" class="headerlink" title="设置 npm registry"></a>设置 npm registry</h2><ul>
+<li>本文方法为将npm registry更改为<strong>淘宝镜像</strong>，提升安装速度。</li>
+</ul>
+<h3 id="1-临时使用"><a href="#1-临时使用" class="headerlink" title="1.临时使用"></a>1.临时使用</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm --registry https://registry.npm.taobao.org install express</span><br></pre></td></tr></table></figure>
+<h3 id="2-持久使用"><a href="#2-持久使用" class="headerlink" title="2.持久使用"></a>2.持久使用</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> registry https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+<p>使用<strong>mac</strong>需要权限的话，前面需要加<strong>sudo</strong>，然后输入密码。<br>配置后可通过下面方式来验证是否成功：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm config get registry</span><br></pre></td></tr></table></figure>
+<p><img src="https://pic.imgdb.cn/item/6579c2efc458853aef76618c.webp" alt=""></p>
+<h3 id="3-通过cnpm使用"><a href="#3-通过cnpm使用" class="headerlink" title="3.通过cnpm使用"></a>3.通过cnpm使用</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g cnpm --registry=https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>npm</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>alist分享站合集</title>
     <url>/blog/posts/alist.html</url>
     <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
@@ -1101,25 +1120,6 @@
       </tags>
   </entry>
   <entry>
-    <title>解决npm install安装太慢</title>
-    <url>/blog/posts/npminstall.html</url>
-    <content><![CDATA[<h2 id="设置-npm-registry"><a href="#设置-npm-registry" class="headerlink" title="设置 npm registry"></a>设置 npm registry</h2><ul>
-<li>本文方法为将npm registry更改为<strong>淘宝镜像</strong>，提升安装速度。</li>
-</ul>
-<h3 id="1-临时使用"><a href="#1-临时使用" class="headerlink" title="1.临时使用"></a>1.临时使用</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm --registry https://registry.npm.taobao.org install express</span><br></pre></td></tr></table></figure>
-<h3 id="2-持久使用"><a href="#2-持久使用" class="headerlink" title="2.持久使用"></a>2.持久使用</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> registry https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
-<p>使用<strong>mac</strong>需要权限的话，前面需要加<strong>sudo</strong>，然后输入密码。<br>配置后可通过下面方式来验证是否成功：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm config get registry</span><br></pre></td></tr></table></figure>
-<p><img src="https://pic.imgdb.cn/item/6579c2efc458853aef76618c.webp" alt=""></p>
-<h3 id="3-通过cnpm使用"><a href="#3-通过cnpm使用" class="headerlink" title="3.通过cnpm使用"></a>3.通过cnpm使用</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g cnpm --registry=https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>教程</category>
-      </categories>
-      <tags>
-        <tag>npm</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>为你的博客添加搜索功能</title>
     <url>/blog/posts/algoliasearch.html</url>
     <content><![CDATA[<h1 id="安装插件-amp-写入配置"><a href="#安装插件-amp-写入配置" class="headerlink" title="安装插件 & 写入配置"></a>安装插件 &amp; 写入配置</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-algoliasearch --save</span><br></pre></td></tr></table></figure>
@@ -1134,152 +1134,6 @@
         <tag>Hexo</tag>
         <tag>插件</tag>
         <tag>搜索</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>建站过程</title>
-    <url>/blog/posts/jianzhan.html</url>
-    <content><![CDATA[<details class="folding-tag"><summary> 提示 </summary>
-              <div class="content">
-              <p>本文并非专业教程，请谨慎参考！</p>
-              </div>
-            </details>
-<h2 id="1-博客本地部署"><a href="#1-博客本地部署" class="headerlink" title="1. 博客本地部署"></a>1. 博客本地部署</h2><h3 id="1-1-安装-git"><a href="#1-1-安装-git" class="headerlink" title="1.1. 安装 git"></a>1.1. 安装 git</h3><p><a href="http://git-scm.com/download">Git 客户端</a>:<br>作用：把本地的 hexo 内容提交到 github </p>
-<p>安装过程无脑下一步，出现下面的选项就是安装成功。</p>
-<p><img src="https://s2.loli.net/2023/10/07/BchFwr3daYJO5ps.png" alt=""></p>
-<h3 id="1-2-Node-js-环境安装"><a href="#1-2-Node-js-环境安装" class="headerlink" title="1.2. Node.js 环境安装"></a>1.2. Node.js 环境安装</h3><p>Hexo 是基于 node.js 编写的，所以需要安装一下 nodeJs 和里面的 npm 工具。</p>
-<p>Windows：官网下载安装即可</p>
-<p>Linux:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Debian/Ubuntu等系统</span></span><br><span class="line">yum install nodejs</span><br><span class="line">yum install npm<span class="comment"># Centos/RedHat等系统apt-get install nodejs</span></span><br><span class="line">apt-get install npm</span><br></pre></td></tr></table></figure>
-<p>Mac OS:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">brew install npm</span><br></pre></td></tr></table></figure>
-<p>安装完成后打开 cmd，输入</p>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">node -v</span><br></pre></td></tr></table></figure>
-<p>如果出现版本号代表安装成功</p>
-<h3 id="1-3-安装-hexo"><a href="#1-3-安装-hexo" class="headerlink" title="1.3. 安装 hexo"></a>1.3. 安装 hexo</h3><p>安装之前在电脑一个位置新建一个文件夹，进入文件夹右键点击 git bash here,</p>
-<p>打开 hexo 官网复制下面的命令</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br><span class="line">hexo init blog</span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line">npm install</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
-<h3 id="1-4-博客的目录结构"><a href="#1-4-博客的目录结构" class="headerlink" title="1.4. 博客的目录结构"></a>1.4. 博客的目录结构</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml # 博客网站生成时需要用到的插件的配置文件</span><br><span class="line">├── db.json # 网站数据</span><br><span class="line">├── node_modules # 类库</span><br><span class="line">├── package-lock.json # 该博客网站生成需要的依赖项</span><br><span class="line">├── package.json # 博客网站生成需要的全局依赖项，执行npm install指令可以安装这些依赖项</span><br><span class="line">├── public # 博客网站的静态文件，会把该文件夹发布到远程服务器</span><br><span class="line">├── scaffolds # 新建一篇文章时的front-matter用到的模板，front-matter是后面静态文件生成时，文章显示参数的设置，包括文章标题，新建日期，标签等</span><br><span class="line">├── source # 里面存放着博客编写的文章</span><br><span class="line">└── themes # 博客用到的主题资源库</span><br></pre></td></tr></table></figure>
-<h3 id="1-5-博客内容更新"><a href="#1-5-博客内容更新" class="headerlink" title="1.5. 博客内容更新"></a>1.5. 博客内容更新</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new [post] new_paper <span class="comment"># 创建一篇新的文章，会在/source/_posts中生成new_paper.md</span></span><br><span class="line"></span><br><span class="line">hexo new page new page <span class="comment"># 生成一个新的页面，会在/source中生成new_page文件夹，又来存放该页面的文章</span></span><br><span class="line">hexo new new_page new_paper <span class="comment"># 在新的页面中生成一篇新的文章</span></span><br><span class="line"></span><br><span class="line">hexo new draft new_draft <span class="comment"># 生成一篇草稿，这个仅自己可见，不会出现在正式网站上</span></span><br><span class="line">hexo publish draft new_draft <span class="comment"># 将草稿发布到post页面</span></span><br><span class="line"></span><br><span class="line">hexo clean <span class="comment"># 清除以往生成的博客网站数据，非必须</span></span><br><span class="line">hexo g <span class="comment"># 生成网站</span></span><br><span class="line">hexo s <span class="comment"># 启动本地服务器，默认地址 http://localhost:4000</span></span><br></pre></td></tr></table></figure>
-<p>浏览器中输入 <code>http://localhost:4000</code> 即可访问刚刚建好的博客，当然，现在这个博客是破破烂烂的，还需要下面进行添砖加瓦。<br><div class="note info flat"><p>提示：在Bash窗口中Ctrl+鼠标单击该网站即可前往</p>
-</div></p>
-<h3 id="1-6-博客主题选择"><a href="#1-6-博客主题选择" class="headerlink" title="1.6. 博客主题选择"></a>1.6. 博客主题选择</h3><p>默认的模板是 <code>landscape</code>，看起来 low low 的，有必要自定义一个定制化的主题。官方的主题库中有不少精美的模板，可以根据喜好挑选一个。</p>
-<h2 id="2-主题安装"><a href="#2-主题安装" class="headerlink" title="2. 主题安装"></a>2. 主题安装</h2><h3 id="2-1-主题安装（建议参考主题自带的安装教程）"><a href="#2-1-主题安装（建议参考主题自带的安装教程）" class="headerlink" title="2.1. 主题安装（建议参考主题自带的安装教程）"></a>2.1. 主题安装（建议参考主题自带的安装教程）</h3><h4 id="可以采用两种方式进行安装"><a href="#可以采用两种方式进行安装" class="headerlink" title="可以采用两种方式进行安装"></a>可以采用两种方式进行安装</h4><div class="note warning flat"><p>注：以下方式可能并不适用于所有主题</p>
-</div>
-<h5 id="1-npm（示例）"><a href="#1-npm（示例）" class="headerlink" title="1.npm（示例）"></a>1.npm（示例）</h5><figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">npm install hexo-theme-redefine@latest</span><br></pre></td></tr></table></figure>
-<h5 id="2-git-bash（示例）"><a href="#2-git-bash（示例）" class="headerlink" title="2.git bash（示例）"></a>2.git bash（示例）</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> git@github.com:blinkfox/hexo-theme-matery.git themes/matery </span><br><span class="line"><span class="comment"># 找到主题的项目地址，把主题拉到本地的themes文件夹下</span></span><br></pre></td></tr></table></figure>
-<h4 id="2-1-1-切换主题"><a href="#2-1-1-切换主题" class="headerlink" title="2.1.1. 切换主题"></a>2.1.1. 切换主题</h4><p>修改 Hexo 根目录下的 <code>_config.yml</code> 的 <code>theme</code> 的值：<code>theme: 你的主题名称</code></p>
-<h5 id="2-1-1-1-config-yml-文件的其它修改建议"><a href="#2-1-1-1-config-yml-文件的其它修改建议" class="headerlink" title="2.1.1.1. _config.yml 文件的其它修改建议:"></a>2.1.1.1. _config.yml 文件的其它修改建议:</h5><ul>
-<li>请修改 <code>_config.yml</code> 的 <code>url</code> 的值为你的网站主 <code>URL</code>（如：<code>http://xxx.github.io</code>）。</li>
-<li>建议修改两个 <code>per_page</code> 的分页条数值为 <code>6</code> 的倍数，如：<code>12</code>、<code>18</code> 等，这样文章列表在各个屏幕下都能较好的显示。</li>
-<li>如果你是中文用户，则建议修改 <code>language</code> 的值为 <code>zh-CN</code>。</li>
-</ul>
-<h3 id="2-2-主题目录的文件结构"><a href="#2-2-主题目录的文件结构" class="headerlink" title="2.2. 主题目录的文件结构"></a>2.2. 主题目录的文件结构</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">themes</span><br><span class="line">└── matery</span><br><span class="line">    ├── LICENSE</span><br><span class="line">    ├── README.md</span><br><span class="line">    ├── README_CN.md</span><br><span class="line">    ├── _config.yml # 主题的配置文件</span><br><span class="line">    ├── languages # 默认是英文显示，若要其他语言显示，则需要在此添加对应语言的翻译规则，需要修改语言时，修改 /_config.yml 中的 “language:” 这一项</span><br><span class="line">    ├── layout # 页面js文件</span><br><span class="line">    └── source # 图片等资源存放目录，这个目录对应为生成的静态网站的root路径</span><br></pre></td></tr></table></figure>
-<p>在主题文件的根目录下，也是有一份 <code>_config.yml</code> 文件，博客根目录下的 <code>_config.yml</code> 是全局配置，优先级较高，主题的配置文件是全局配置的补充。</p>
-<h3 id="2-3-主题项配置"><a href="#2-3-主题项配置" class="headerlink" title="2.3. 主题项配置"></a>2.3. 主题项配置</h3><p>菜单栏中已有默认的页面有 <code>Index</code>, <code>Tags</code>, <code>Categories</code>, <code>Archives</code>, <code>About</code>, <code>Contact</code>, <code>Friends</code>，但这些页面都是还没有被初始化的，需要手动初始化，当然你也可以自定义自己的页面</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new page <span class="string">"categories"</span></span><br><span class="line">hexo new page <span class="string">"tags"</span></span><br><span class="line">hexo new page <span class="string">"about"</span></span><br><span class="line">hexo new page <span class="string">"contact"</span></span><br><span class="line">hexo new page <span class="string">"friends"</span></span><br><span class="line">hexo new page 404</span><br></pre></td></tr></table></figure>
-<h3 id="2-4-图片上传"><a href="#2-4-图片上传" class="headerlink" title="2.4. 图片上传"></a>2.4. 图片上传</h3><h4 id="转换图片格式"><a href="#转换图片格式" class="headerlink" title="转换图片格式"></a>转换图片格式</h4><ul>
-<li>使用 <a href="https://convertio.co/">Convertio</a> 将 jpg/png 格式的图片转换成 webp 格式。</li>
-<li><p>另：也可以使用 <code>ffmpeg</code> 完成格式转换：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ffmpeg -i input.jpg output.webp</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>转换格式的目的在于压缩图片大小，加快网站加载速度。</p>
-</li>
-</ul>
-<h4 id="上传图片至图床"><a href="#上传图片至图床" class="headerlink" title="上传图片至图床"></a>上传图片至图床</h4><ul>
-<li>我使用的是 <a href="https://sm.ms/">sm.ms</a> 图床。</li>
-<li>图片上传完成后需修改主题配置文件，将背景图片链接由本地路径改为图床提供的外链。</li>
-</ul>
-<div class="note info flat"><p>标签页图标和头像同理。</p>
-</div>
-<h2 id="3-博客插件安装"><a href="#3-博客插件安装" class="headerlink" title="3. 博客插件安装"></a>3. 博客插件安装</h2><p>原生态的 hexo 功能比较少，需要安装一些插件才能更好地运行。安装插件的指令为</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install plugins-name --save</span><br></pre></td></tr></table></figure>
-<p>其中 <code>--save</code> 会把依赖项添加进 <code>package.json</code> 文件中，新安装的插件源文件在 <code>/node_modules/plugins-name</code>，插件安装其实就是下载了一套模板，这些模板大多是一些 js 文件。其运行机制就是在生成网站的静态文件时，会根据 <code>/_config.yml</code> 中设置的参数，生成对应的 js 文件，在指定的位置插入或替换这些 js 文件。</p>
-<p>当你觉得这个插件满足不了你的功能时，可以直接到该插件的资源目录中修改其模板。</p>
-<p>这里有一个官方的插件库，下面介绍几个比较有用的插件。其实有不少插件已经默认在选择的主题中安装了，譬如下面的 valine 的评论插件，已经有的插件就不用重复安装了。</p>
-<h3 id="3-1-静态文件部署到远端-Git-服务器"><a href="#3-1-静态文件部署到远端-Git-服务器" class="headerlink" title="3.1. 静态文件部署到远端 Git 服务器"></a>3.1. 静态文件部署到远端 Git 服务器</h3><p><code>deployer-git</code> 可以在你使用 <code>hexo d</code> 指令时，自动把静态文件部署到 Git 服务器上。一般来说，只要你想要把你的博客发布到外网中，这个插件是必备，当然你也可以手动 <code>git push</code> 部署</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-<p>然后在 <code>_config.yml</code> 文件中修改</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">git@github.com:/YourgithubName/YourgithubName.io.git,master</span></span><br><span class="line">    <span class="comment"># 当有多个服务源时以下设置# github: git@github.com:/YourgithubName/YourgithubName.io.git,master# gitee: git@gitee.com:/YourgithubName/YourgithubName.git,master</span></span><br></pre></td></tr></table></figure>
-<h3 id="3-2-站点地图生成"><a href="#3-2-站点地图生成" class="headerlink" title="3.2. 站点地图生成"></a>3.2. 站点地图生成</h3><p>SEO 策略时需要用到的插件，生成网站的站点地图（sitemap），可以通过 sitemap 推送推送网站链接到搜索引擎中</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-sitemap --save</span><br><span class="line">npm install hexo-generator-baidu-sitemap --save</span><br></pre></td></tr></table></figure>
-<p>然后在 <code>_config.yml</code> 文件中添加</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">sitemap:path:</span> <span class="string">sitemap.xml</span></span><br><span class="line"><span class="attr">baidusitemap:path:</span> <span class="string">baidusitemap.xml</span></span><br></pre></td></tr></table></figure>
-<p>然后就会生成 <code>sitemap.xml</code> 和 <code>baidusitemap.xml</code> 这两个站点地图。</p>
-<h3 id="3-3-非中文链接生成"><a href="#3-3-非中文链接生成" class="headerlink" title="3.3. 非中文链接生成"></a>3.3. 非中文链接生成</h3><p>当我们使用中文生成文章的时候，例如 <code>hexo new 测试</code>，生成 <code>测试.md</code> 文件，<code>hexo d</code> 命令后，生成 <code>测试.html</code> 文件，对应的访问地址就是 <code>http://xxxx/.../测试.html</code>，这显然对搜索引擎不友好，这需要把中文地址自动转为数字或英文地址，当然这篇博文提到的方法可以参考一下。</p>
-<p>这里也可以安装abbrlink插件来自动生成非中文链接</p>
-<p><strong>bash</strong></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-abbrlink --save</span><br></pre></td></tr></table></figure>
-<p>然后在 <code>_config.yml</code> 文件中添加</p>
-<p><strong>yaml</strong></p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">abbrlink:alg:</span> <span class="string">crc16</span>   <span class="comment"># 算法：crc16(default) and crc32rep: hex     # 进制：dec(default) and hex: dec #输出进制：十进制和十六进制，默认为10进制。丨dec为十进制，hex为十六进制# permalink配置修改改为下面这个permalink: posts/:abbrlink.html</span></span><br></pre></td></tr></table></figure>
-<h3 id="3-4-外部链接跳转"><a href="#3-4-外部链接跳转" class="headerlink" title="3.4. 外部链接跳转"></a>3.4. 外部链接跳转</h3><p>hexo-external-link是一个跳转外链相关插件。自动为所有 html 文件中外链的 a 标签生成对应的属性。 比如 设置 <code>target=’_blank’, rel=’external nofollow noopener noreferrer’</code> 告诉搜索引擎这是外部链接,不要将该链接计入权重。 同时自动生成外链跳转页面,默认在根目录下 go.html;</p>
-<p><strong>bash</strong></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-external-link --save</span><br></pre></td></tr></table></figure>
-<p>然后在 <code>_config.yml</code> 文件中添加</p>
-<p><strong>yaml</strong></p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">hexo_external_link:enable:</span> <span class="string">&lt;strong&gt;true&lt;/strong&gt;enable_base64_encode:</span> <span class="string">&lt;strong&gt;true&lt;/strong&gt;url_param_name:</span> <span class="string">'u'</span><span class="attr">html_file_name:</span> <span class="string">'go.html'</span><span class="attr">target_blank:</span> <span class="string">&lt;strong&gt;true&lt;/strong&gt;link_rel:</span> <span class="string">'external nofollow noopener noreferrer'</span><span class="attr">domain:</span> <span class="string">'your_domain'</span> <span class="comment"># 如果开启了防盗链safety_chain: &lt;strong&gt;true&lt;/strong&gt;</span></span><br></pre></td></tr></table></figure>
-<h3 id="3-5-文章搜索"><a href="#3-5-文章搜索" class="headerlink" title="3.5. 文章搜索"></a>3.5. 文章搜索</h3><p>generator-search插件可以提供博客的内容搜索</p>
-<p><strong>bash</strong></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-search --save</span><br></pre></td></tr></table></figure>
-<p>然后在 <code>_config.yml</code> 文件中添加</p>
-<p><strong>bash</strong></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br></pre></td></tr></table></figure>
-<h3 id="3-6-字数统计"><a href="#3-6-字数统计" class="headerlink" title="3.6. 字数统计"></a>3.6. 字数统计</h3><p>wordcount插件可以统计文章中的字符，根据字数估算阅读时间。</p>
-<p><strong>bash</strong></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-wordcount --save</span><br></pre></td></tr></table></figure>
-<p>然后在 <code>_config.yml</code> 文件中添加</p>
-<p><strong>yaml</strong></p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">post_wordcount:item_text:</span> <span class="string">&lt;strong&gt;true&lt;/strong&gt;</span>               <span class="comment"># 是否显示“字数统计”及“阅读分钟”的文字wordcount: &lt;strong&gt;true&lt;/strong&gt;               # 是否显示字数统计min2read: &lt;strong&gt;true&lt;/strong&gt;                # 是否显示估算阅读分钟totalcount: &lt;strong&gt;true&lt;/strong&gt;          # 是否在网站底部显示所有文章字数之和separated_meta: &lt;strong&gt;true&lt;/strong&gt;</span></span><br></pre></td></tr></table></figure>
-<h2 id="4-博客发布"><a href="#4-博客发布" class="headerlink" title="4. 博客发布"></a>4. 博客发布</h2><p>现在都还只是本地部署，要想通过外网访问，就得部署到远程的服务器上。</p>
-<h3 id="4-1-Git-环境配置"><a href="#4-1-Git-环境配置" class="headerlink" title="4.1. Git 环境配置"></a>4.1. Git 环境配置</h3><p>Git 是一个分布式版本控制系统，一般来说，本地仓库为客户端，远端仓库为服务端。</p>
-<p>GitHub、gitee 等都是一些服务端 Git 代码托管平台。下面以 GitHub 为例，其他 gitee 等平台操作是差不多的，具体操作可以自行百度。</p>
-<p>gitee 不能使用自定义域名(我不用的理由)，github 百度爬虫不能爬取（但可以主动提交站点链接）</p>
-<h4 id="4-1-1-注册账号"><a href="#4-1-1-注册账号" class="headerlink" title="4.1.1. 注册账号"></a>4.1.1. 注册账号</h4><p>GitHub 官网按照指引创建一个账号。</p>
-<h4 id="4-1-2-创建-ssh-key"><a href="#4-1-2-创建-ssh-key" class="headerlink" title="4.1.2. 创建 ssh key"></a>4.1.2. 创建 ssh key</h4><p>由于你的本地 Git 仓库和 GitHub 仓库之间的传输是通过 SSH 加密的，可以通过密码的形式确认身份。如果不想每次连接时都要输入密码，可以通过公私钥鉴权的方式确认身份。</p>
-<p>所以首先通过下面指令在本地创建一个 ssh key</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">"your_email_address"</span></span><br></pre></td></tr></table></figure>
-<p>然后一直回车即可。</p>
-<p>指令操作成功后，会在用户文件夹（类 Unix 操作系统为 <code>~</code>，Windows 操作系统为 <code>%HOMEPATH%</code>）下生成 <code>.ssh</code> 文件夹，其文件结构如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.ssh</span><br><span class="line">├── config # 本地ssh的配置信息</span><br><span class="line">├── id_rsa # 私钥文件</span><br><span class="line">├── id_rsa.pub # 公钥存储文件，一行代表一个公钥</span><br><span class="line">└── known_hosts # 已经识别过的主机地址名单，名单中的主机会跳过警告部分</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>Windows 中系统路径含义系统路径（不区分大小写）对应的绝对路径：  </p>
-<ul>
-<li>当前系统盘符：<code>C:</code>、<code>%systemdrive%</code>、<code>%HOMEDRIVE%</code>  </li>
-<li>当前系统目录： <code>C:\WINDOWS</code> 、<code>%systemroot%</code>、<code>%Windir%</code>  </li>
-<li>当前用户文件夹：<code>C:\Administrator</code>、<code>%UserProfile%</code>、<code>%HOMEPATH%</code>  </li>
-<li>所有用户文件夹：<code>C:\ProgramData</code>、<code>%AllUsersProfile%</code>  </li>
-<li>临时文件夹 1：<code>C:\WINDOWS\Temp</code>、<code>%temp%</code>  </li>
-<li>临时文件夹 2：<code>%SystemRoot%\TEMP</code>  </li>
-<li>程序文件夹：<code>C:\Program Files</code>、<code>%ProgramFiles%</code>  </li>
-<li>程序快速启动设置文件夹：<code>C:\Administrator\AppData\Roaming</code>、<code>%AppData%</code></li>
-</ul>
-</blockquote>
-<h4 id="4-1-3-在-GitHub-中添加我们的公钥"><a href="#4-1-3-在-GitHub-中添加我们的公钥" class="headerlink" title="4.1.3. 在 GitHub 中添加我们的公钥"></a>4.1.3. 在 GitHub 中添加我们的公钥</h4><p>打开 GitHub -&gt; Account -&gt; Settings -&gt; SSH and GPG keys -&gt; New SSH key -&gt; Key 输入框中输入 <code>id_rsa.pub</code> 中的公钥，如果有多行，取一行就可以 -&gt; Add SSH key -&gt; 添加成功</p>
-<h4 id="4-1-4-验证鉴权结果"><a href="#4-1-4-验证鉴权结果" class="headerlink" title="4.1.4. 验证鉴权结果"></a>4.1.4. 验证鉴权结果</h4><p>本地输入以下指令</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
-<p>如果出现 <code>Hi xxx! You've successfully authenticated, but GitHub does not provide shell access.</code>，说明本地 Git 仓库和 GitHub 仓库已经成功通信</p>
-<h4 id="4-1-5-个人用户设置"><a href="#4-1-5-个人用户设置" class="headerlink" title="4.1.5. 个人用户设置"></a>4.1.5. 个人用户设置</h4><p>这一步是必要的，否则后面无法创建 GitHub page</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global user.name <span class="string">"account"</span> <span class="comment"># 用户名称</span></span><br><span class="line">git config --global user.email <span class="string">"your_email_address"</span> <span class="comment"># 电子信息</span></span><br><span class="line">git config --<span class="built_in">local</span> -e <span class="comment"># 直接编辑配置文件</span></span><br></pre></td></tr></table></figure>
-<h3 id="4-2-部署到远端服务器"><a href="#4-2-部署到远端服务器" class="headerlink" title="4.2. 部署到远端服务器"></a>4.2. 部署到远端服务器</h3><p>下面还是以 GitHub 为例。</p>
-<p>打开你的 GitHub，新建一个仓库，Repository name 命名为 xxx.github.io（xxx 是你 GitHub 账号，以免给自己后面添麻烦，一定要以这种格式命名，否则建好的博客根目录是 <a href="https://xxx.github.io/yyy">https://xxx.github.io/yyy</a>，博客的排版会乱掉或者直接就是 404 了）。</p>
-<p>这里一定要选 Public 自己的仓库，不然无法使用 github page</p>
-<p>创建后，点击仓库的 setting—-pages,在 Build and deployment 中 Source 选择 deploy from a branch ,branch 中选择 main root ，这时候会发现提示需要在仓库中写一些东西才行。在 bash 中写入：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">"# ronghao"</span> &gt;&gt; README.md</span><br><span class="line">git init</span><br><span class="line">git add README.md</span><br><span class="line">git commit -m <span class="string">"first commit"</span></span><br><span class="line">git branch -M main</span><br><span class="line">git remote add origin git@github.com:ronghao233/ronghao.git</span><br><span class="line">git push -u origin main</span><br></pre></td></tr></table></figure>
-<p>这时在打开看见仓库里面有东西了，GitHub Pages 创建成功</p>
-<p>你可以在新建仓库的 setting 的 GitHub Pages 一栏中看到 <code>Your site is published at https://xxx.github.io/</code> 信息时，说明你的博客主页已经成功开通了。</p>
-<p><img src="https://www.xrh.asia/static1/boxcnK9lPujGIh6JbafQ48Qsjhf.png" alt=""></p>
-<p>接下来就是 <code>hexo g -d</code>（前提是 Git 环境和 <code>hexo-deployer-git</code> 插件已经配置好）把你的博客更新上传。</p>
-<p>最后，浏览器中输入 <code>https://xxx.github.io</code> 即可访问你的博客了。</p>
-]]></content>
-      <categories>
-        <category>记录</category>
-        <category>代码</category>
-      </categories>
-      <tags>
-        <tag>Github</tag>
-        <tag>Hexo</tag>
-        <tag>博客</tag>
       </tags>
   </entry>
   <entry>
@@ -1536,6 +1390,173 @@
       </tags>
   </entry>
   <entry>
+    <title>建站过程</title>
+    <url>/blog/posts/jianzhan.html</url>
+    <content><![CDATA[<details class="folding-tag"><summary> 提示 </summary>
+              <div class="content">
+              <p>本文并非专业教程，请谨慎参考！</p>
+              </div>
+            </details>
+<h2 id="1-博客本地部署"><a href="#1-博客本地部署" class="headerlink" title="1. 博客本地部署"></a>1. 博客本地部署</h2><h3 id="1-1-安装-git"><a href="#1-1-安装-git" class="headerlink" title="1.1. 安装 git"></a>1.1. 安装 git</h3><p><a href="http://git-scm.com/download">Git 客户端</a>:<br>作用：把本地的 hexo 内容提交到 github </p>
+<p>安装过程无脑下一步，出现下面的选项就是安装成功。</p>
+<p><img src="https://s2.loli.net/2023/10/07/BchFwr3daYJO5ps.png" alt=""></p>
+<h3 id="1-2-Node-js-环境安装"><a href="#1-2-Node-js-环境安装" class="headerlink" title="1.2. Node.js 环境安装"></a>1.2. Node.js 环境安装</h3><p>Hexo 是基于 node.js 编写的，所以需要安装一下 nodeJs 和里面的 npm 工具。</p>
+<p>Windows：官网下载安装即可</p>
+<p>Linux:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Debian/Ubuntu等系统</span></span><br><span class="line">yum install nodejs</span><br><span class="line">yum install npm<span class="comment"># Centos/RedHat等系统apt-get install nodejs</span></span><br><span class="line">apt-get install npm</span><br></pre></td></tr></table></figure>
+<p>Mac OS:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">brew install npm</span><br></pre></td></tr></table></figure>
+<p>安装完成后打开 cmd，输入</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">node -v</span><br></pre></td></tr></table></figure>
+<p>如果出现版本号代表安装成功</p>
+<h3 id="1-3-安装-hexo"><a href="#1-3-安装-hexo" class="headerlink" title="1.3. 安装 hexo"></a>1.3. 安装 hexo</h3><p>安装之前在电脑一个位置新建一个文件夹，进入文件夹右键点击 git bash here,</p>
+<p>打开 hexo 官网复制下面的命令</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br><span class="line">hexo init blog</span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line">npm install</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+<h3 id="1-4-博客的目录结构"><a href="#1-4-博客的目录结构" class="headerlink" title="1.4. 博客的目录结构"></a>1.4. 博客的目录结构</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml # 博客网站生成时需要用到的插件的配置文件</span><br><span class="line">├── db.json # 网站数据</span><br><span class="line">├── node_modules # 类库</span><br><span class="line">├── package-lock.json # 该博客网站生成需要的依赖项</span><br><span class="line">├── package.json # 博客网站生成需要的全局依赖项，执行npm install指令可以安装这些依赖项</span><br><span class="line">├── public # 博客网站的静态文件，会把该文件夹发布到远程服务器</span><br><span class="line">├── scaffolds # 新建一篇文章时的front-matter用到的模板，front-matter是后面静态文件生成时，文章显示参数的设置，包括文章标题，新建日期，标签等</span><br><span class="line">├── source # 里面存放着博客编写的文章</span><br><span class="line">└── themes # 博客用到的主题资源库</span><br></pre></td></tr></table></figure>
+<h3 id="1-5-博客内容更新"><a href="#1-5-博客内容更新" class="headerlink" title="1.5. 博客内容更新"></a>1.5. 博客内容更新</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new [post] new_paper <span class="comment"># 创建一篇新的文章，会在/source/_posts中生成new_paper.md</span></span><br><span class="line"></span><br><span class="line">hexo new page new page <span class="comment"># 生成一个新的页面，会在/source中生成new_page文件夹，又来存放该页面的文章</span></span><br><span class="line">hexo new new_page new_paper <span class="comment"># 在新的页面中生成一篇新的文章</span></span><br><span class="line"></span><br><span class="line">hexo new draft new_draft <span class="comment"># 生成一篇草稿，这个仅自己可见，不会出现在正式网站上</span></span><br><span class="line">hexo publish draft new_draft <span class="comment"># 将草稿发布到post页面</span></span><br><span class="line"></span><br><span class="line">hexo clean <span class="comment"># 清除以往生成的博客网站数据，非必须</span></span><br><span class="line">hexo g <span class="comment"># 生成网站</span></span><br><span class="line">hexo s <span class="comment"># 启动本地服务器，默认地址 http://localhost:4000</span></span><br></pre></td></tr></table></figure>
+<p>浏览器中输入 <code>http://localhost:4000</code> 即可访问刚刚建好的博客，当然，现在这个博客是破破烂烂的，还需要下面进行添砖加瓦。<br><div class="note info flat"><p>提示：在Bash窗口中Ctrl+鼠标单击该网站即可前往</p>
+</div></p>
+<h3 id="1-6-博客主题选择"><a href="#1-6-博客主题选择" class="headerlink" title="1.6. 博客主题选择"></a>1.6. 博客主题选择</h3><p>默认的模板是 <code>landscape</code>，看起来 low low 的，有必要自定义一个定制化的主题。官方的主题库中有不少精美的模板，可以根据喜好挑选一个。</p>
+<h2 id="2-主题安装"><a href="#2-主题安装" class="headerlink" title="2. 主题安装"></a>2. 主题安装</h2><h3 id="2-1-主题安装（建议参考主题自带的安装教程）"><a href="#2-1-主题安装（建议参考主题自带的安装教程）" class="headerlink" title="2.1. 主题安装（建议参考主题自带的安装教程）"></a>2.1. 主题安装（建议参考主题自带的安装教程）</h3><h4 id="可以采用两种方式进行安装"><a href="#可以采用两种方式进行安装" class="headerlink" title="可以采用两种方式进行安装"></a>可以采用两种方式进行安装</h4><div class="note warning flat"><p>注：以下方式可能并不适用于所有主题</p>
+</div>
+<h5 id="1-npm（示例）"><a href="#1-npm（示例）" class="headerlink" title="1.npm（示例）"></a>1.npm（示例）</h5><figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">npm install hexo-theme-redefine@latest</span><br></pre></td></tr></table></figure>
+<h5 id="2-git-bash（示例）"><a href="#2-git-bash（示例）" class="headerlink" title="2.git bash（示例）"></a>2.git bash（示例）</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> git@github.com:blinkfox/hexo-theme-matery.git themes/matery </span><br><span class="line"><span class="comment"># 找到主题的项目地址，把主题拉到本地的themes文件夹下</span></span><br></pre></td></tr></table></figure>
+<h4 id="2-1-1-切换主题"><a href="#2-1-1-切换主题" class="headerlink" title="2.1.1. 切换主题"></a>2.1.1. 切换主题</h4><p>修改 Hexo 根目录下的 <code>_config.yml</code> 的 <code>theme</code> 的值：<code>theme: 你的主题名称</code></p>
+<h5 id="2-1-1-1-config-yml-文件的其它修改建议"><a href="#2-1-1-1-config-yml-文件的其它修改建议" class="headerlink" title="2.1.1.1. _config.yml 文件的其它修改建议:"></a>2.1.1.1. _config.yml 文件的其它修改建议:</h5><ul>
+<li>请修改 <code>_config.yml</code> 的 <code>url</code> 的值为你的网站主 <code>URL</code>（如：<code>http://xxx.github.io</code>）。</li>
+<li>建议修改两个 <code>per_page</code> 的分页条数值为 <code>6</code> 的倍数，如：<code>12</code>、<code>18</code> 等，这样文章列表在各个屏幕下都能较好的显示。</li>
+<li>如果你是中文用户，则建议修改 <code>language</code> 的值为 <code>zh-CN</code>。</li>
+</ul>
+<h3 id="2-2-主题目录的文件结构"><a href="#2-2-主题目录的文件结构" class="headerlink" title="2.2. 主题目录的文件结构"></a>2.2. 主题目录的文件结构</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">themes</span><br><span class="line">└── matery</span><br><span class="line">    ├── LICENSE</span><br><span class="line">    ├── README.md</span><br><span class="line">    ├── README_CN.md</span><br><span class="line">    ├── _config.yml # 主题的配置文件</span><br><span class="line">    ├── languages # 默认是英文显示，若要其他语言显示，则需要在此添加对应语言的翻译规则，需要修改语言时，修改 /_config.yml 中的 “language:” 这一项</span><br><span class="line">    ├── layout # 页面js文件</span><br><span class="line">    └── source # 图片等资源存放目录，这个目录对应为生成的静态网站的root路径</span><br></pre></td></tr></table></figure>
+<p>在主题文件的根目录下，也是有一份 <code>_config.yml</code> 文件，博客根目录下的 <code>_config.yml</code> 是全局配置，优先级较高，主题的配置文件是全局配置的补充。</p>
+<h3 id="2-3-主题项配置"><a href="#2-3-主题项配置" class="headerlink" title="2.3. 主题项配置"></a>2.3. 主题项配置</h3><p>菜单栏中已有默认的页面有 <code>Index</code>, <code>Tags</code>, <code>Categories</code>, <code>Archives</code>, <code>About</code>, <code>Contact</code>, <code>Friends</code>，但这些页面都是还没有被初始化的，需要手动初始化，当然你也可以自定义自己的页面</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new page <span class="string">"categories"</span></span><br><span class="line">hexo new page <span class="string">"tags"</span></span><br><span class="line">hexo new page <span class="string">"about"</span></span><br><span class="line">hexo new page <span class="string">"contact"</span></span><br><span class="line">hexo new page <span class="string">"friends"</span></span><br><span class="line">hexo new page 404</span><br></pre></td></tr></table></figure>
+<h3 id="2-4-图片上传"><a href="#2-4-图片上传" class="headerlink" title="2.4. 图片上传"></a>2.4. 图片上传</h3><h4 id="转换图片格式"><a href="#转换图片格式" class="headerlink" title="转换图片格式"></a>转换图片格式</h4><ul>
+<li>使用 <a href="https://convertio.co/">Convertio</a> 将 jpg/png 格式的图片转换成 webp 格式。</li>
+<li><p>另：也可以使用 <code>ffmpeg</code> 完成格式转换：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ffmpeg -i input.jpg output.webp</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>转换格式的目的在于压缩图片大小，加快网站加载速度。</p>
+</li>
+</ul>
+<h4 id="上传图片至图床"><a href="#上传图片至图床" class="headerlink" title="上传图片至图床"></a>上传图片至图床</h4><ul>
+<li>我使用的是 <a href="https://sm.ms/">sm.ms</a> 图床。</li>
+<li>图片上传完成后需修改主题配置文件，将背景图片链接由本地路径改为图床提供的外链。</li>
+</ul>
+<div class="note info flat"><p>标签页图标和头像同理。</p>
+</div>
+<h2 id="3-博客插件安装"><a href="#3-博客插件安装" class="headerlink" title="3. 博客插件安装"></a>3. 博客插件安装</h2><p>原生态的 hexo 功能比较少，需要安装一些插件才能更好地运行。安装插件的指令为</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install plugins-name --save</span><br></pre></td></tr></table></figure>
+<p>其中 <code>--save</code> 会把依赖项添加进 <code>package.json</code> 文件中，新安装的插件源文件在 <code>/node_modules/plugins-name</code>，插件安装其实就是下载了一套模板，这些模板大多是一些 js 文件。其运行机制就是在生成网站的静态文件时，会根据 <code>/_config.yml</code> 中设置的参数，生成对应的 js 文件，在指定的位置插入或替换这些 js 文件。</p>
+<p>当你觉得这个插件满足不了你的功能时，可以直接到该插件的资源目录中修改其模板。</p>
+<p>这里有一个官方的插件库，下面介绍几个比较有用的插件。其实有不少插件已经默认在选择的主题中安装了，譬如下面的 valine 的评论插件，已经有的插件就不用重复安装了。</p>
+<h3 id="3-1-静态文件部署到远端-Git-服务器"><a href="#3-1-静态文件部署到远端-Git-服务器" class="headerlink" title="3.1. 静态文件部署到远端 Git 服务器"></a>3.1. 静态文件部署到远端 Git 服务器</h3><p><code>deployer-git</code> 可以在你使用 <code>hexo d</code> 指令时，自动把静态文件部署到 Git 服务器上。一般来说，只要你想要把你的博客发布到外网中，这个插件是必备，当然你也可以手动 <code>git push</code> 部署</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<p>然后在 <code>_config.yml</code> 文件中修改</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">git@github.com:/YourgithubName/YourgithubName.io.git,master</span></span><br><span class="line">    <span class="comment"># 当有多个服务源时以下设置# github: git@github.com:/YourgithubName/YourgithubName.io.git,master# gitee: git@gitee.com:/YourgithubName/YourgithubName.git,master</span></span><br></pre></td></tr></table></figure>
+<h3 id="3-2-站点地图生成"><a href="#3-2-站点地图生成" class="headerlink" title="3.2. 站点地图生成"></a>3.2. 站点地图生成</h3><p>SEO 策略时需要用到的插件，生成网站的站点地图（sitemap），可以通过 sitemap 推送推送网站链接到搜索引擎中</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-sitemap --save</span><br><span class="line">npm install hexo-generator-baidu-sitemap --save</span><br></pre></td></tr></table></figure>
+<p>然后在 <code>_config.yml</code> 文件中添加</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">sitemap:path:</span> <span class="string">sitemap.xml</span></span><br><span class="line"><span class="attr">baidusitemap:path:</span> <span class="string">baidusitemap.xml</span></span><br></pre></td></tr></table></figure>
+<p>然后就会生成 <code>sitemap.xml</code> 和 <code>baidusitemap.xml</code> 这两个站点地图。</p>
+<h3 id="3-3-非中文链接生成"><a href="#3-3-非中文链接生成" class="headerlink" title="3.3. 非中文链接生成"></a>3.3. 非中文链接生成</h3><p>当我们使用中文生成文章的时候，例如 <code>hexo new 测试</code>，生成 <code>测试.md</code> 文件，<code>hexo d</code> 命令后，生成 <code>测试.html</code> 文件，对应的访问地址就是 <code>http://xxxx/.../测试.html</code>，这显然对搜索引擎不友好，这需要把中文地址自动转为数字或英文地址，当然这篇博文提到的方法可以参考一下。</p>
+<p>这里也可以安装abbrlink插件来自动生成非中文链接</p>
+<p><strong>bash</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-abbrlink --save</span><br></pre></td></tr></table></figure>
+<p>然后在 <code>_config.yml</code> 文件中添加</p>
+<p><strong>yaml</strong></p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">abbrlink:alg:</span> <span class="string">crc16</span>   <span class="comment"># 算法：crc16(default) and crc32rep: hex     # 进制：dec(default) and hex: dec #输出进制：十进制和十六进制，默认为10进制。丨dec为十进制，hex为十六进制# permalink配置修改改为下面这个permalink: posts/:abbrlink.html</span></span><br></pre></td></tr></table></figure>
+<h3 id="3-4-外部链接跳转"><a href="#3-4-外部链接跳转" class="headerlink" title="3.4. 外部链接跳转"></a>3.4. 外部链接跳转</h3><p>hexo-external-link是一个跳转外链相关插件。自动为所有 html 文件中外链的 a 标签生成对应的属性。 比如 设置 <code>target=’_blank’, rel=’external nofollow noopener noreferrer’</code> 告诉搜索引擎这是外部链接,不要将该链接计入权重。 同时自动生成外链跳转页面,默认在根目录下 go.html;</p>
+<p><strong>bash</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-external-link --save</span><br></pre></td></tr></table></figure>
+<p>然后在 <code>_config.yml</code> 文件中添加</p>
+<p><strong>yaml</strong></p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">hexo_external_link:enable:</span> <span class="string">&lt;strong&gt;true&lt;/strong&gt;enable_base64_encode:</span> <span class="string">&lt;strong&gt;true&lt;/strong&gt;url_param_name:</span> <span class="string">'u'</span><span class="attr">html_file_name:</span> <span class="string">'go.html'</span><span class="attr">target_blank:</span> <span class="string">&lt;strong&gt;true&lt;/strong&gt;link_rel:</span> <span class="string">'external nofollow noopener noreferrer'</span><span class="attr">domain:</span> <span class="string">'your_domain'</span> <span class="comment"># 如果开启了防盗链safety_chain: &lt;strong&gt;true&lt;/strong&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="3-5-文章搜索"><a href="#3-5-文章搜索" class="headerlink" title="3.5. 文章搜索"></a>3.5. 文章搜索</h3><p>generator-search插件可以提供博客的内容搜索</p>
+<p><strong>bash</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-search --save</span><br></pre></td></tr></table></figure>
+<p>然后在 <code>_config.yml</code> 文件中添加</p>
+<p><strong>bash</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br></pre></td></tr></table></figure>
+<h3 id="3-6-字数统计"><a href="#3-6-字数统计" class="headerlink" title="3.6. 字数统计"></a>3.6. 字数统计</h3><p>wordcount插件可以统计文章中的字符，根据字数估算阅读时间。</p>
+<p><strong>bash</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-wordcount --save</span><br></pre></td></tr></table></figure>
+<p>然后在 <code>_config.yml</code> 文件中添加</p>
+<p><strong>yaml</strong></p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">post_wordcount:item_text:</span> <span class="string">&lt;strong&gt;true&lt;/strong&gt;</span>               <span class="comment"># 是否显示“字数统计”及“阅读分钟”的文字wordcount: &lt;strong&gt;true&lt;/strong&gt;               # 是否显示字数统计min2read: &lt;strong&gt;true&lt;/strong&gt;                # 是否显示估算阅读分钟totalcount: &lt;strong&gt;true&lt;/strong&gt;          # 是否在网站底部显示所有文章字数之和separated_meta: &lt;strong&gt;true&lt;/strong&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="4-博客发布"><a href="#4-博客发布" class="headerlink" title="4. 博客发布"></a>4. 博客发布</h2><p>现在都还只是本地部署，要想通过外网访问，就得部署到远程的服务器上。</p>
+<h3 id="4-1-Git-环境配置"><a href="#4-1-Git-环境配置" class="headerlink" title="4.1. Git 环境配置"></a>4.1. Git 环境配置</h3><p>Git 是一个分布式版本控制系统，一般来说，本地仓库为客户端，远端仓库为服务端。</p>
+<p>GitHub、gitee 等都是一些服务端 Git 代码托管平台。下面以 GitHub 为例，其他 gitee 等平台操作是差不多的，具体操作可以自行百度。</p>
+<p>gitee 不能使用自定义域名(我不用的理由)，github 百度爬虫不能爬取（但可以主动提交站点链接）</p>
+<h4 id="4-1-1-注册账号"><a href="#4-1-1-注册账号" class="headerlink" title="4.1.1. 注册账号"></a>4.1.1. 注册账号</h4><p>GitHub 官网按照指引创建一个账号。</p>
+<h4 id="4-1-2-创建-ssh-key"><a href="#4-1-2-创建-ssh-key" class="headerlink" title="4.1.2. 创建 ssh key"></a>4.1.2. 创建 ssh key</h4><p>由于你的本地 Git 仓库和 GitHub 仓库之间的传输是通过 SSH 加密的，可以通过密码的形式确认身份。如果不想每次连接时都要输入密码，可以通过公私钥鉴权的方式确认身份。</p>
+<p>所以首先通过下面指令在本地创建一个 ssh key</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">"your_email_address"</span></span><br></pre></td></tr></table></figure>
+<p>然后一直回车即可。</p>
+<p>指令操作成功后，会在用户文件夹（类 Unix 操作系统为 <code>~</code>，Windows 操作系统为 <code>%HOMEPATH%</code>）下生成 <code>.ssh</code> 文件夹，其文件结构如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.ssh</span><br><span class="line">├── config # 本地ssh的配置信息</span><br><span class="line">├── id_rsa # 私钥文件</span><br><span class="line">├── id_rsa.pub # 公钥存储文件，一行代表一个公钥</span><br><span class="line">└── known_hosts # 已经识别过的主机地址名单，名单中的主机会跳过警告部分</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Windows 中系统路径含义系统路径（不区分大小写）对应的绝对路径：  </p>
+<ul>
+<li>当前系统盘符：<code>C:</code>、<code>%systemdrive%</code>、<code>%HOMEDRIVE%</code>  </li>
+<li>当前系统目录： <code>C:\WINDOWS</code> 、<code>%systemroot%</code>、<code>%Windir%</code>  </li>
+<li>当前用户文件夹：<code>C:\Administrator</code>、<code>%UserProfile%</code>、<code>%HOMEPATH%</code>  </li>
+<li>所有用户文件夹：<code>C:\ProgramData</code>、<code>%AllUsersProfile%</code>  </li>
+<li>临时文件夹 1：<code>C:\WINDOWS\Temp</code>、<code>%temp%</code>  </li>
+<li>临时文件夹 2：<code>%SystemRoot%\TEMP</code>  </li>
+<li>程序文件夹：<code>C:\Program Files</code>、<code>%ProgramFiles%</code>  </li>
+<li>程序快速启动设置文件夹：<code>C:\Administrator\AppData\Roaming</code>、<code>%AppData%</code></li>
+</ul>
+</blockquote>
+<h4 id="4-1-3-在-GitHub-中添加我们的公钥"><a href="#4-1-3-在-GitHub-中添加我们的公钥" class="headerlink" title="4.1.3. 在 GitHub 中添加我们的公钥"></a>4.1.3. 在 GitHub 中添加我们的公钥</h4><p>打开 GitHub -&gt; Account -&gt; Settings -&gt; SSH and GPG keys -&gt; New SSH key -&gt; Key 输入框中输入 <code>id_rsa.pub</code> 中的公钥，如果有多行，取一行就可以 -&gt; Add SSH key -&gt; 添加成功</p>
+<h4 id="4-1-4-验证鉴权结果"><a href="#4-1-4-验证鉴权结果" class="headerlink" title="4.1.4. 验证鉴权结果"></a>4.1.4. 验证鉴权结果</h4><p>本地输入以下指令</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+<p>如果出现 <code>Hi xxx! You've successfully authenticated, but GitHub does not provide shell access.</code>，说明本地 Git 仓库和 GitHub 仓库已经成功通信</p>
+<h4 id="4-1-5-个人用户设置"><a href="#4-1-5-个人用户设置" class="headerlink" title="4.1.5. 个人用户设置"></a>4.1.5. 个人用户设置</h4><p>这一步是必要的，否则后面无法创建 GitHub page</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global user.name <span class="string">"account"</span> <span class="comment"># 用户名称</span></span><br><span class="line">git config --global user.email <span class="string">"your_email_address"</span> <span class="comment"># 电子信息</span></span><br><span class="line">git config --<span class="built_in">local</span> -e <span class="comment"># 直接编辑配置文件</span></span><br></pre></td></tr></table></figure>
+<h3 id="4-2-部署到远端服务器"><a href="#4-2-部署到远端服务器" class="headerlink" title="4.2. 部署到远端服务器"></a>4.2. 部署到远端服务器</h3><p>下面还是以 GitHub 为例。</p>
+<p>打开你的 GitHub，新建一个仓库，Repository name 命名为 xxx.github.io（xxx 是你 GitHub 账号，以免给自己后面添麻烦，一定要以这种格式命名，否则建好的博客根目录是 <a href="https://xxx.github.io/yyy">https://xxx.github.io/yyy</a>，博客的排版会乱掉或者直接就是 404 了）。</p>
+<p>这里一定要选 Public 自己的仓库，不然无法使用 github page</p>
+<p>创建后，点击仓库的 setting—-pages,在 Build and deployment 中 Source 选择 deploy from a branch ,branch 中选择 main root ，这时候会发现提示需要在仓库中写一些东西才行。在 bash 中写入：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">"# ronghao"</span> &gt;&gt; README.md</span><br><span class="line">git init</span><br><span class="line">git add README.md</span><br><span class="line">git commit -m <span class="string">"first commit"</span></span><br><span class="line">git branch -M main</span><br><span class="line">git remote add origin git@github.com:ronghao233/ronghao.git</span><br><span class="line">git push -u origin main</span><br></pre></td></tr></table></figure>
+<p>这时在打开看见仓库里面有东西了，GitHub Pages 创建成功</p>
+<p>你可以在新建仓库的 setting 的 GitHub Pages 一栏中看到 <code>Your site is published at https://xxx.github.io/</code> 信息时，说明你的博客主页已经成功开通了。</p>
+<p><img src="https://www.xrh.asia/static1/boxcnK9lPujGIh6JbafQ48Qsjhf.png" alt=""></p>
+<p>接下来就是 <code>hexo g -d</code>（前提是 Git 环境和 <code>hexo-deployer-git</code> 插件已经配置好）把你的博客更新上传。</p>
+<p>最后，浏览器中输入 <code>https://xxx.github.io</code> 即可访问你的博客了。</p>
+]]></content>
+      <categories>
+        <category>记录</category>
+        <category>代码</category>
+      </categories>
+      <tags>
+        <tag>Github</tag>
+        <tag>Hexo</tag>
+        <tag>博客</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>风铃投票制作教程</title>
+    <url>/blog/posts/Fengling.html</url>
+    <content><![CDATA[<p>此文章为风铃系统制作逻辑问卷的教程</p>
+<p>本次研学展示完活动成果后需要进行投票选出3个大家喜欢的小组，<br>由此制作了此问卷，因为3班也要用，就写个文章吧，微信一条条发也怪麻烦的（这个好像也挺麻烦）</p>
+<p>需求一：3个类型，分别最佳创意小组，最专业小组，最受欢迎小组<br>需求二：一个人可以每项推荐一组，3项都要选，但是不能都选同一组（原话）<br>需求三：每个人只能完成一次（可选）</p>
+<h1 id="一、系统选取"><a href="#一、系统选取" class="headerlink" title="一、系统选取"></a>一、系统选取</h1><p>本来想用问卷星制作的，但是找了半天没有找到符合<strong>需求2</strong>中<strong>不能复选</strong>的题目逻辑<br>于是便找了半天，找到了一个支持此逻辑的问卷平台：<strong>风铃系统</strong><br><a class="btn-anzhiyu " href="/blog/center%20large::%E7%82%B9%E5%87%BB%E5%89%8D%E5%BE%80%E9%A3%8E%E9%93%83%E7%B3%BB%E7%BB%9F::https:/www.powercx.com/::fa-solid%20fa-arrow-right" title=""></a><br>进入官网后，点击 <strong>登录/注册</strong> 登陆账号<br><img src="https://pic.imgdb.cn/item/656b12e5c458853aef83edf2.webp" alt=""><br>登陆完成后，点击<strong>我的问卷</strong><br><img src="https://pic.imgdb.cn/item/656b12e5c458853aef83eed5.webp" alt=""><br>进入界面后，点击<strong>创建项目</strong> -&gt; <strong>空白创建</strong><br><img src="https://pic.imgdb.cn/item/656bdb39c458853aef3cfc7d.webp" alt=""><br><img src="https://pic.imgdb.cn/item/656b12e5c458853aef83efc6.webp" alt=""><br>填写问卷信息，选择<strong>经典模式</strong>，问卷就创建完成了</p>
+<h1 id="二、问卷制作"><a href="#二、问卷制作" class="headerlink" title="二、问卷制作"></a>二、问卷制作</h1><h1 id="1-创建题目"><a href="#1-创建题目" class="headerlink" title="1.创建题目"></a>1.创建题目</h1><p>点击<strong>添加问题</strong>，选择<strong>单选</strong><br><img src="https://pic.imgdb.cn/item/656b184ac458853aef9db6e4.webp" alt=""><br>点击题目下方的<strong>批量编辑</strong>，导入选项（小组的名称及姓名）<br><img src="https://pic.imgdb.cn/item/656b184ac458853aef9db5e6.webp" alt=""></p>
+<h1 id="2-创建逻辑"><a href="#2-创建逻辑" class="headerlink" title="2.创建逻辑"></a>2.创建逻辑</h1><p>新建<strong>第二题</strong>，删除其自带的选项，并点击右侧底部的<strong>选项带入</strong><br><img src="https://pic.imgdb.cn/item/656b184ac458853aef9db4d3.webp" alt=""><br>按照如图所示填写逻辑<br><img src="https://pic.imgdb.cn/item/656b184ac458853aef9db43b.webp" alt=""><br>点击确定，第二题的选项就导入成功了，第三题也是按照同样的方法，导入<strong>第二题的<em>未选中项</em></strong> 即可</p>
+<h1 id="三、问卷发布设置（可选）"><a href="#三、问卷发布设置（可选）" class="headerlink" title="三、问卷发布设置（可选）"></a>三、问卷发布设置（可选）</h1><h2 id="设置作答限制"><a href="#设置作答限制" class="headerlink" title="设置作答限制"></a>设置作答限制</h2><p><strong>需求3</strong>我采用了控制IP和设备作答频次限制的形式，这种方法并不能绝对的保证每个人只能做一次，但是可以大大减小刷题的概率<br>点击上方<strong>设置</strong>，选择<strong>作答设置</strong>，勾选<strong>设备作答频次限制</strong>和<strong>IP作答频次限制</strong><br><img src="https://pic.imgdb.cn/item/656b1bfbc458853aefb00040.webp" alt=""></p>
+<h1 id="四、发布及查看统计信息"><a href="#四、发布及查看统计信息" class="headerlink" title="四、发布及查看统计信息"></a>四、发布及查看统计信息</h1><p>点击上方的<strong>发布</strong>，选择<strong>发布问卷</strong>，在<strong>设置</strong>里找到<strong>发布链接</strong>，即可分享作答了<br>统计信息点击<strong>报表</strong>即可显示<br><img src="https://pic.imgdb.cn/item/656b1bfbc458853aefb000d8.webp" alt=""><br>如果想要把作答数据由高到低进行显示，按照如下图所示步骤执行即可（懒得打字了）<br><img src="https://pic.imgdb.cn/item/656b1bfcc458853aefb001b9.webp" alt=""></p>
+]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>投票</tag>
+        <tag>风铃系统</tag>
+        <tag>教程</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>徽州行</title>
     <url>/blog/posts/huizhou.html</url>
     <content><![CDATA[<h1 id="活动简介"><a href="#活动简介" class="headerlink" title="活动简介"></a>活动简介</h1><p>一、活动时间 : 2023 年 11 月 11-14 日 (4 天)<br>二、活动地点: 徽州黄山<br>三、活动内容:<br>11 月 11 日乘高铁到黄山北站研学徽州文化博物馆、黄山城市展览馆<br>11 月 12 日参观历史文化遗产影县—宏村、守拙园<br>11 月 13 日黄山“放飞理想”教育活动<br>11 月 14 日参观徽菜博物馆，参观屯溪老街，乘高铁回京</p>
@@ -1578,27 +1599,6 @@
       <tags>
         <tag>Github</tag>
         <tag>Windows</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>风铃投票制作教程</title>
-    <url>/blog/posts/Fengling.html</url>
-    <content><![CDATA[<p>此文章为风铃系统制作逻辑问卷的教程</p>
-<p>本次研学展示完活动成果后需要进行投票选出3个大家喜欢的小组，<br>由此制作了此问卷，因为3班也要用，就写个文章吧，微信一条条发也怪麻烦的（这个好像也挺麻烦）</p>
-<p>需求一：3个类型，分别最佳创意小组，最专业小组，最受欢迎小组<br>需求二：一个人可以每项推荐一组，3项都要选，但是不能都选同一组（原话）<br>需求三：每个人只能完成一次（可选）</p>
-<h1 id="一、系统选取"><a href="#一、系统选取" class="headerlink" title="一、系统选取"></a>一、系统选取</h1><p>本来想用问卷星制作的，但是找了半天没有找到符合<strong>需求2</strong>中<strong>不能复选</strong>的题目逻辑<br>于是便找了半天，找到了一个支持此逻辑的问卷平台：<strong>风铃系统</strong><br><a class="btn-anzhiyu " href="/blog/center%20large::%E7%82%B9%E5%87%BB%E5%89%8D%E5%BE%80%E9%A3%8E%E9%93%83%E7%B3%BB%E7%BB%9F::https:/www.powercx.com/::fa-solid%20fa-arrow-right" title=""></a><br>进入官网后，点击 <strong>登录/注册</strong> 登陆账号<br><img src="https://pic.imgdb.cn/item/656b12e5c458853aef83edf2.webp" alt=""><br>登陆完成后，点击<strong>我的问卷</strong><br><img src="https://pic.imgdb.cn/item/656b12e5c458853aef83eed5.webp" alt=""><br>进入界面后，点击<strong>创建项目</strong> -&gt; <strong>空白创建</strong><br><img src="https://pic.imgdb.cn/item/656bdb39c458853aef3cfc7d.webp" alt=""><br><img src="https://pic.imgdb.cn/item/656b12e5c458853aef83efc6.webp" alt=""><br>填写问卷信息，选择<strong>经典模式</strong>，问卷就创建完成了</p>
-<h1 id="二、问卷制作"><a href="#二、问卷制作" class="headerlink" title="二、问卷制作"></a>二、问卷制作</h1><h1 id="1-创建题目"><a href="#1-创建题目" class="headerlink" title="1.创建题目"></a>1.创建题目</h1><p>点击<strong>添加问题</strong>，选择<strong>单选</strong><br><img src="https://pic.imgdb.cn/item/656b184ac458853aef9db6e4.webp" alt=""><br>点击题目下方的<strong>批量编辑</strong>，导入选项（小组的名称及姓名）<br><img src="https://pic.imgdb.cn/item/656b184ac458853aef9db5e6.webp" alt=""></p>
-<h1 id="2-创建逻辑"><a href="#2-创建逻辑" class="headerlink" title="2.创建逻辑"></a>2.创建逻辑</h1><p>新建<strong>第二题</strong>，删除其自带的选项，并点击右侧底部的<strong>选项带入</strong><br><img src="https://pic.imgdb.cn/item/656b184ac458853aef9db4d3.webp" alt=""><br>按照如图所示填写逻辑<br><img src="https://pic.imgdb.cn/item/656b184ac458853aef9db43b.webp" alt=""><br>点击确定，第二题的选项就导入成功了，第三题也是按照同样的方法，导入<strong>第二题的<em>未选中项</em></strong> 即可</p>
-<h1 id="三、问卷发布设置（可选）"><a href="#三、问卷发布设置（可选）" class="headerlink" title="三、问卷发布设置（可选）"></a>三、问卷发布设置（可选）</h1><h2 id="设置作答限制"><a href="#设置作答限制" class="headerlink" title="设置作答限制"></a>设置作答限制</h2><p><strong>需求3</strong>我采用了控制IP和设备作答频次限制的形式，这种方法并不能绝对的保证每个人只能做一次，但是可以大大减小刷题的概率<br>点击上方<strong>设置</strong>，选择<strong>作答设置</strong>，勾选<strong>设备作答频次限制</strong>和<strong>IP作答频次限制</strong><br><img src="https://pic.imgdb.cn/item/656b1bfbc458853aefb00040.webp" alt=""></p>
-<h1 id="四、发布及查看统计信息"><a href="#四、发布及查看统计信息" class="headerlink" title="四、发布及查看统计信息"></a>四、发布及查看统计信息</h1><p>点击上方的<strong>发布</strong>，选择<strong>发布问卷</strong>，在<strong>设置</strong>里找到<strong>发布链接</strong>，即可分享作答了<br>统计信息点击<strong>报表</strong>即可显示<br><img src="https://pic.imgdb.cn/item/656b1bfbc458853aefb000d8.webp" alt=""><br>如果想要把作答数据由高到低进行显示，按照如下图所示步骤执行即可（懒得打字了）<br><img src="https://pic.imgdb.cn/item/656b1bfcc458853aefb001b9.webp" alt=""></p>
-]]></content>
-      <categories>
-        <category>教程</category>
-      </categories>
-      <tags>
-        <tag>投票</tag>
-        <tag>风铃系统</tag>
-        <tag>教程</tag>
       </tags>
   </entry>
 </search>
